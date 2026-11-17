@@ -11,6 +11,7 @@ install -Dm755 "$root/apps/fetian-desktop/fetian-power-status" "$root/profile/sw
 install -Dm755 "$root/apps/fetian-desktop/fetian-calendar.py" "$root/profile/sway/airootfs/usr/share/fetian-calendar/fetian-calendar.py"
 install -Dm755 "$root/apps/fetian-desktop/fetian-calendar.py" "$root/profile/sway/airootfs/usr/bin/fetian-calendar"
 install -Dm755 "$root/apps/fetian-desktop/fetian-apps" "$root/profile/sway/airootfs/usr/bin/fetian-apps"
+install -Dm755 "$root/scripts/migrate-kvantum-matcha.sh" "$root/profile/sway/airootfs/usr/lib/fetian/migrate-kvantum-matcha.sh"
 install -Dm644 "$root/apps/fetian-desktop/online.fetian.Calendar.desktop" "$root/profile/sway/airootfs/usr/share/applications/online.fetian.Calendar.desktop"
 install -Dm644 "$root/apps/fetian-desktop/online.fetian.Apps.desktop" "$root/profile/sway/airootfs/usr/share/applications/online.fetian.Apps.desktop"
 install -Dm644 "$root/apps/fetian-control-center/online.fetian.ControlCenter.desktop" "$root/profile/sway/airootfs/usr/share/applications/online.fetian.ControlCenter.desktop"

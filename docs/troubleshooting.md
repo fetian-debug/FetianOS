@@ -24,3 +24,21 @@ pacman -Q gtk-nocsd gtk3-nocsd
 ```
 
 The expected result is `gtk-nocsd` installed and `gtk3-nocsd` not found. Do not force-install both packages with `--overwrite`; they are mutually exclusive.
+
+## kvantum-theme-matcha and kvantum-theme-matchama conflict
+
+Manjaro Sway repositories may migrate the old `kvantum-theme-matcha` package to `kvantum-theme-matchama` (`20191119-1`). These packages provide the same Matcha Kvantum theme and intentionally conflict.
+
+Repair the migration with:
+
+```bash
+sudo pacman -S kvantum-theme-matchama
+```
+
+Or use the Fetian Control Center under **Software → Repair theme package conflicts**. Verify the result with:
+
+```bash
+pacman -Q kvantum-theme-matchama kvantum-theme-matcha
+```
+
+Only one of the two packages should remain installed. Do not use `--overwrite` to force both packages together.

@@ -213,8 +213,18 @@ class ControlCenter(Adw.Application):
         update = Gtk.Button(label="Check for updates"); update.connect("clicked", self.check_updates)
         box.append(card("System updates", "Updates are signed by the configured Manjaro repositories.", update))
         apps = Gtk.Button(label="Open Fetian Apps"); apps.connect("clicked", lambda _b: subprocess.Popen(["fetian-apps"]))
-        box.append(card("Packages", "Search, install, and remove applications. Changes require authentication.", apps))
+        repair = Gtk.Button(label="Repair theme package conflicts"); repair.connect("clicked", self.repair_theme_packages)
+        actions = Gtk.Box(spacing=8); actions.append(apps); actions.append(repair)
+        box.append(card("Packages", "Search, install, and remove applications. Changes require authentication.", actions))
         return self.scrolled(box)
+
+    def repair_theme_packages(self, _button):
+        root = os.environ.get("FETIAN_DEV_ROOT")
+        script = os.path.join(root, "scripts/migrate-kvantum-matcha.sh") if root else "/usr/lib/fetian/scripts/migrate-kvantum-matcha.sh"
+        result = run([script], timeout=120)
+        body = result.stdout[-1800:] if result.stdout else result.stderr[-1800:] or "No migration was needed."
+        dialog = Adw.MessageDialog(transient_for=self.window, heading="Theme package repair", body=body)
+        dialog.add_response("close", "Close"); dialog.present()
 
     def build_system(self):
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=12); margins(box, 24)
