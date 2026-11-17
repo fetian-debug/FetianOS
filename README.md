@@ -16,6 +16,16 @@ Do not use it on critical systems without backups. It is not yet a production-ce
 
 ## Included experience
 
+### Visual preview
+
+These are FetianOS design previews showing the intended Control Center and application-search experience:
+
+![Fetian Control Center preview](docs/images/control-center.svg)
+
+![Fetian application launcher preview](docs/images/app-launcher.svg)
+
+The live UI is available through `make dev-desktop`; these previews are kept in the repository so contributors can discuss the visual language without needing to build the ISO first.
+
 - Sway/Wayland desktop with keyboard-first controls
 - Warm dark Fetian design across GTK, Sway, Waybar, Wofi, and Foot
 - Gammastep night light and reduced-glare defaults
