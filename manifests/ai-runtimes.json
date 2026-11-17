@@ -1,0 +1,5 @@
+{
+  "policy": "Optional post-install runtimes; no models are bundled or downloaded.",
+  "cpu": ["ollama", "llama.cpp", "python", "jupyterlab", "transformers", "diffusers"],
+  "gpu": {"nvidia": "detect before CUDA installation", "amd": "detect before ROCm installation", "intel": "Vulkan/CPU fallback"}
+}

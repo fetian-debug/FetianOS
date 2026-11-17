@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec python3 "$FETIAN_DEV_ROOT/apps/fetian-desktop/fetian-calendar.py" "$@"

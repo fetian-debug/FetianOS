@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if command -v powerprofilesctl >/dev/null 2>&1; then
+  profile=$(powerprofilesctl get 2>/dev/null || echo balanced)
+else
+  profile=balanced
+fi
+printf ' POWER %s ' "$profile"

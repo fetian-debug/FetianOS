@@ -1,0 +1,7 @@
+NAME="FetianOS"
+PRETTY_NAME="FetianOS 0.1.0 Developer Preview"
+ID=fetianos
+ID_LIKE=manjaro arch
+VERSION_ID=0.1.0
+HOME_URL="https://fetian.online"
+DOCUMENTATION_URL="https://fetian.online"

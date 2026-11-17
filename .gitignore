@@ -1,0 +1,21 @@
+# Build output and generated ISO state
+/work/
+/output/*.iso
+/output/*.iso.sha256
+/output/package-manifest.txt
+/output/kernel-manifest.json
+/output/ai-compatibility.json
+/logs/
+
+# Local/editor/runtime files
+__pycache__/
+*.py[cod]
+.cache/
+.venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local hardware reports
+fetian-hardware-report.json

@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -euo pipefail
+mode="${1:---text}"
+model=$(cat /sys/class/dmi/id/product_name 2>/dev/null || echo unknown)
+vendor=$(cat /sys/class/dmi/id/sys_vendor 2>/dev/null || echo unknown)
+temperature=$(sensors 2>/dev/null | awk '/Package id 0:|Core 0:/ {for (i=1; i<=NF; i++) if ($i ~ /^\+[0-9]/) {gsub(/\+/, "", $i); print $i; exit}}' || true)
+wifi=$(nmcli -t -f TYPE,STATE device 2>/dev/null | awk -F: '$1 == "wifi" {print $2; exit}' || true)
+if [ "$mode" = "--json" ]; then
+  printf '{"vendor":"%s","model":"%s","kernel":"%s","wifi":"%s","temperature":"%s","timestamp":"%s"}\n' "$vendor" "$model" "$(uname -r)" "${wifi:-unknown}" "${temperature:-unknown}" "$(date -Is)"
+else
+  echo "FetianOS health"
+  echo "System: $vendor $model"
+  echo "Kernel: $(uname -r)"
+  echo "Wi-Fi: ${wifi:-unknown}"
+  echo "CPU temperature: ${temperature:-unknown}"
+fi

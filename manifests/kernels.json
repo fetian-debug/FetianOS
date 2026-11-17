@@ -1,0 +1,15 @@
+{
+  "distribution": "Manjaro",
+  "policy": "Use the current signed distribution kernel; never replace the only working host kernel.",
+  "checked": "2026-11-17",
+  "entries": [
+    {
+      "package": "linux72",
+      "version": "7.2.9-1",
+      "channel": "stable",
+      "repository": "Manjaro core",
+      "source": "https://www.kernel.org/",
+      "signed": true
+    }
+  ]
+}

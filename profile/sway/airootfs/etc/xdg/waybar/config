@@ -1,0 +1,16 @@
+{
+  "layer": "top", "position": "top",
+  "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode"],
+  "modules-center": ["sway/window"],
+  "modules-right": ["custom/control-center", "custom/power-profile", "cpu", "memory", "disk", "network", "pulseaudio", "battery", "clock"],
+  "custom/launcher": {"format": " APPS ", "tooltip": "Search applications (Super+D) · Apps manager (Super+Shift+A)", "on-click": "wofi --show drun --allow-images --prompt 'Search applications'", "on-click-right": "fetian-apps"},
+  "custom/control-center": {"format": " SETTINGS ", "tooltip": "Open Fetian Control Center", "on-click": "fetian-control-center"},
+  "custom/power-profile": {"exec": "fetian-power-status", "interval": 10, "on-click": "fetian-power-profile", "on-click-right": "powerprofilesctl set power-saver"},
+  "cpu": {"format": " CPU {usage}% ", "interval": 2, "on-click": "foot -e htop"},
+  "memory": {"format": " RAM {}% ", "interval": 2, "on-click": "foot -e htop"},
+  "disk": {"format": " DISK {percentage_used}% ", "path": "/", "interval": 30, "on-click": "foot -e btop"},
+  "network": {"format-wifi": " WIFI {signalStrength}% ", "format-ethernet": " LAN ", "format-disconnected": " OFFLINE ", "on-click": "nm-connection-editor", "on-click-right": "foot -e nmtui"},
+  "pulseaudio": {"format": " VOL {volume}% ", "format-muted": " MUTED ", "on-click": "pavucontrol", "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"},
+  "battery": {"format": " BAT {capacity}% ", "on-click": "powerprofilesctl set power-saver"},
+  "clock": {"format": " {:%a %d %b  %H:%M} ", "tooltip-format": "{:%A, %d %B %Y\\nWeek %V}", "on-click": "fetian-calendar", "on-click-right": "fetian-control-center"}
+}

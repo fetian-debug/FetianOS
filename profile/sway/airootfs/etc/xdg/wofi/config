@@ -1,0 +1,16 @@
+show=drun
+show-icons=true
+allow_images=true
+insensitive=true
+parse_search=true
+matching=fuzzy
+prompt=Search applications
+location=center
+width=720
+height=520
+lines=7
+columns=1
+gtk_dark=true
+term=foot
+hide_scroll=true
+no_actions=true

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Fetian Apps
+Comment=Install and remove applications safely
+Exec=fetian-apps
+Icon=system-software-install
+Terminal=false
+Type=Application
+Categories=System;Settings;
+Keywords=software;apps;install;remove;packages;

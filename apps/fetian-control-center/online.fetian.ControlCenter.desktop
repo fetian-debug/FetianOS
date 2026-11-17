@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Fetian Control Center
+Comment=Configure and maintain FetianOS
+Exec=fetian-control-center
+Icon=preferences-system
+Terminal=false
+Type=Application
+Categories=Settings;System;
+Keywords=settings;system;fetian;

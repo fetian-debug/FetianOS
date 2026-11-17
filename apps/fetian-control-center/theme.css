@@ -1,0 +1,14 @@
+window, .background { background: #17181b; color: #f1eee7; }
+label { color: #f1eee7; }
+.dim-label { color: #b8b4aa; }
+.title-1 { color: #f8f4ea; font-weight: 700; }
+.title-4 { color: #f2c879; }
+button { min-height: 36px; padding: 0 14px; border-radius: 9px; }
+button.suggested-action { background: #e4ad55; color: #17181b; }
+button:hover { background: #343238; }
+entry, textview, spinbutton { background: #232329; color: #f1eee7; border-color: #5e5a55; }
+frame { border-color: #3b393e; border-radius: 12px; }
+.navigation-sidebar { background: #202126; padding: 10px; }
+.navigation-sidebar row { min-height: 44px; border-radius: 9px; }
+.navigation-sidebar row:selected { background: #e4ad55; color: #17181b; }
+scale highlight, progressbar progress { background: #e4ad55; }

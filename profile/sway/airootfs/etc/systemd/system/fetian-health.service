@@ -1,0 +1,13 @@
+[Unit]
+Description=FetianOS hardware and system health snapshot
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/sh -c 'mkdir -p /var/lib/fetian; /usr/bin/fetian-health --json > /var/lib/fetian/health.json'
+ProtectSystem=strict
+ReadWritePaths=/var/lib/fetian
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

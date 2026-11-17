@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+command -v powerprofilesctl >/dev/null || { echo 'Power profiles unavailable'; exit 0; }
+current=$(powerprofilesctl get 2>/dev/null || echo balanced)
+case "$current" in
+  balanced) next=performance ;;
+  performance) next=power-saver ;;
+  *) next=balanced ;;
+esac
+powerprofilesctl set "$next"
+echo "$next"

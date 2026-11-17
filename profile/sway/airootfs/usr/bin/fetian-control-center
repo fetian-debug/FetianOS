@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec /usr/lib/fetian-control-center/fetian_control_center.py "$@"

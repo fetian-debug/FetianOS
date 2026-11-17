@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+exec "$FETIAN_DEV_ROOT/apps/fetian-desktop/fetian-power-profile" "$@"

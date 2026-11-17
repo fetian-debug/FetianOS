@@ -1,0 +1,9 @@
+* { font-family: Noto Sans, sans-serif; font-size: 12px; }
+window#waybar { background: #17181b; color: #f1eee7; }
+#workspaces button { color: #b8b4aa; padding: 0 8px; }
+#workspaces button.focused { color: #17181b; background: #e4ad55; }
+#clock, #cpu, #memory, #disk, #network, #pulseaudio, #battery { padding: 0 10px; }
+button, #custom-launcher, #custom-control-center, #custom-power-profile, #cpu, #memory, #disk, #network, #pulseaudio, #battery, #clock { padding: 0 10px; border-radius: 6px; }
+button:hover, #custom-launcher:hover, #custom-control-center:hover, #custom-power-profile:hover, #cpu:hover, #memory:hover, #disk:hover, #network:hover, #pulseaudio:hover, #battery:hover, #clock:hover { background: #343238; color: #f2c879; }
+#custom-launcher, #custom-control-center { color: #e4ad55; font-weight: bold; }
+#custom-power-profile { color: #9fc7a8; }

@@ -1,0 +1,10 @@
+window { background-color: #202126; border: 1px solid #5e5a55; border-radius: 18px; }
+#outer-box { margin: 18px; }
+#input { margin: 0 0 16px 0; padding: 14px 18px; color: #f8f4ea; background: #2a292f; border: 1px solid #e4ad55; border-radius: 12px; font-size: 17px; }
+#inner-box { margin: 0; padding: 4px; }
+#scroll { margin: 0; }
+#entry { margin: 4px 0; padding: 13px 16px; border-radius: 11px; color: #f1eee7; font-size: 15px; }
+#entry image { margin-right: 16px; }
+#entry:selected { background-color: #e4ad55; color: #17181b; }
+#entry:selected image { -gtk-icon-style: symbolic; }
+#text { margin: 2px 0; }

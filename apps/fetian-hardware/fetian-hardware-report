@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+format="${1:---text}"
+read_sys() { [ -r "$1" ] && tr '\n' ' ' < "$1" || true; }
+
+if [ "$format" = "--json" ]; then
+  python3 - <<'PY'
+import json, platform, subprocess
+def cmd(*args):
+    try: return subprocess.run(args, text=True, capture_output=True, check=False).stdout.strip()
+    except OSError: return ""
+def sys(path):
+    try: return open(path).read().strip()
+    except OSError: return ""
+print(json.dumps({"system": {"vendor": sys("/sys/class/dmi/id/sys_vendor"), "model": sys("/sys/class/dmi/id/product_name"), "bios": sys("/sys/class/dmi/id/bios_version"), "kernel": platform.release(), "architecture": platform.machine()}, "cpu": cmd("lscpu"), "pci": cmd("lspci", "-nnk"), "usb": cmd("lsusb"), "storage": cmd("lsblk", "-J", "-o", "NAME,MODEL,SIZE,TYPE,FSTYPE,MOUNTPOINTS"), "network": cmd("nmcli", "-t", "-f", "DEVICE,TYPE,STATE,CONNECTION", "device"), "sensors": cmd("sensors")}, indent=2))
+PY
+  exit 0
+fi
+
+echo "FetianOS Hardware Report"
+echo "========================"
+printf 'System: %s %s\n' "$(read_sys /sys/class/dmi/id/sys_vendor)" "$(read_sys /sys/class/dmi/id/product_name)"
+printf 'BIOS: %s\nKernel: %s\nArchitecture: %s\n' "$(read_sys /sys/class/dmi/id/bios_version)" "$(uname -r)" "$(uname -m)"
+echo; echo "CPU / memory"; lscpu | grep -E 'Model name|Socket|Core\(s\)|Thread\(s\)|CPU\(s\):' || true; free -h | sed -n '1,2p'
+echo; echo "PCI devices and active drivers"; lspci -nnk || true
+echo; echo "USB devices"; lsusb || true
+echo; echo "Storage"; lsblk -o NAME,MODEL,SIZE,TYPE,FSTYPE,MOUNTPOINTS || true
+echo; echo "Network"; nmcli device status || true
+echo; echo "Battery and sensors"; for battery in /sys/class/power_supply/BAT*; do [ -d "$battery" ] || continue; printf '%s: %s%% (%s)\n' "$(basename "$battery")" "$(read_sys "$battery/capacity")" "$(read_sys "$battery/status")"; done; sensors || true

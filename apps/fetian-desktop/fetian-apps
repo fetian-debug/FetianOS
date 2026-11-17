@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+wofi_menu() { wofi --dmenu --prompt "$1" --allow-images; }
+info() { printf '%s\n' "$1" | wofi --dmenu --prompt 'Fetian Apps'; }
+request=$(wofi_menu 'Try: install chrome  |  uninstall firefox  |  search browser')
+[ -n "${request:-}" ] || exit 0
+action=$(printf '%s' "$request" | awk '{print tolower($1)}')
+query=$(printf '%s' "$request" | cut -d' ' -f2- | tr -cd '[:alnum:] ._-')
+[ -n "$query" ] || { info 'Type an action and app name, for example: install chromium'; exit 0; }
+
+case "$action" in
+  install)
+    candidates=$(pacman -Slq 2>/dev/null | grep -i -- "$query" | sort -u || true)
+    ;;
+  uninstall|remove)
+    candidates=$(pacman -Qq 2>/dev/null | grep -i -- "$query" | sort -u || true)
+    ;;
+  search)
+    candidates=$(pacman -Slq 2>/dev/null | grep -i -- "$query" | sort -u || true)
+    [ -n "$candidates" ] && printf '%s\n' "$candidates" | wofi_menu "Results for $query"
+    exit 0
+    ;;
+  *)
+    info 'Use: install APP, uninstall APP, or search APP'
+    exit 0
+    ;;
+esac
+
+[ -n "$candidates" ] || { info "No matching package found for: $query. Try chromium instead of chrome."; exit 0; }
+package=$(printf '%s\n' "$candidates" | wofi_menu "Choose package for $action $query")
+[ -n "${package:-}" ] || exit 0
+confirm=$(printf 'Cancel\nConfirm %s %s' "$action" "$package" | wofi_menu 'Confirm package action')
+[ "$confirm" = "Confirm $action $package" ] || exit 0
+case "$action" in
+  install) pkexec pacman -S --needed "$package" ;;
+  uninstall|remove) pkexec pacman -Rns "$package" ;;
+esac
