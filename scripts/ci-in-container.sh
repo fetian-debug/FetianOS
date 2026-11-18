@@ -21,3 +21,4 @@ iso=$(python3 scripts/select-iso.py)
 seconds=$(python3 -c 'import json; print(json.load(open("ci/manjaro.json"))["boot_seconds"])')
 python3 scripts/vm-test.py --iso "$iso" --expect live-account --seconds "$seconds"
 python3 scripts/record-vm-evidence.py "$iso"
+python3 scripts/ci-artifact-handoff.py

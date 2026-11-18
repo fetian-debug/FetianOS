@@ -24,7 +24,7 @@ handoff demo uses -2047 through 2048 and correctly has expected result +2048.
 
 ## Test coverage
 
-- FCA Rust model/protocol/store suite: 16 tests covering IDs, contracts, terminal
+- FCA Rust model/protocol/store suite: 16 tests passed, covering IDs, contracts, terminal
   transitions, monotonic leases, integer ABI, frame bounds, idempotency/conflict,
   rollback, persistent fencing, invalid progress, missing capability, corruption,
   append-only guards, schema rejection, orphan admission and symlink rejection.
@@ -45,6 +45,15 @@ No tests replace persistence or process death with success-shaped mock outputs.
 Packaging tests use a clearly labeled fake telemetry payload only to exercise
 file copying; reference FCA programs and process tests use actual binaries.
 Fault admission requires an explicit test daemon and is absent from its user unit.
+
+[Hosted FCA validation](https://github.com/fetian-debug/FetianOS/actions/runs/44323523164)
+also passed on commit `f49ddcddfa860dec56235a0d6fb032eb29536dd1`: all 16 Rust
+tests and 19 release-process tests passed; the latter ran in 2.535 seconds on
+the GitHub Linux runner. Its downloadable `fca-handoff-<commit>` artifact contains
+fresh handoff and benchmark JSON. The downloaded handoff record independently
+confirmed real termination, epochs 1→2, result 2,048, 64 effects and STALE_EPOCH.
+The [documentation deployment](https://github.com/fetian-debug/FetianOS/actions/runs/44323523066)
+succeeded, and the published FCA guide, report and stylesheet returned HTTP 200.
 
 ## Measured costs
 
@@ -89,9 +98,11 @@ commit rejection passed. No hostile same-UID sandbox, signed audit, remote
 effects or automatic recovery execution is implemented. See [limitations](limitations.md).
 
 The independent desktop ISO pipeline constructed actual images and ran actual
-OVMF/QEMU boots. Its third recorded attempt reached Linux userspace but blocked
-on an interactive firstboot timezone prompt; publication remained gated. A
-live-only firstboot condition and console-font fix were pushed for another run.
+OVMF/QEMU boots. After a live-only firstboot condition and console-font fix,
+[run 44321545719](https://github.com/fetian-debug/FetianOS/actions/runs/44321545719)
+passed static checks and the real UEFI/live-account boot probe. Release packaging
+then could not read the container-owned bundle; a scoped ownership handoff is
+under hosted verification. Publication remains gated on complete packaging.
 That evidence does not validate FCA inside an ISO: default images exclude FCA.
 No FCA-enabled ISO, physical hardware, graphical login or installation was tested.
 

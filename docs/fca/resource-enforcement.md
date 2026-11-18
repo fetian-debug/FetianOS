@@ -12,6 +12,9 @@ and `pids.max` before attaching the waiting trusted launcher. The launcher has
 not executed workload code at that point. Replacement executors use the same
 authority cgroup, preserving its accounting identity and configured limits.
 CPU quota is a bandwidth rate, not a lifetime CPU-seconds allowance.
+The limits cover executor processes. Broker validation, SQLite work and their
+CPU/memory costs remain in the manager group and are not charged to a particular
+authority. Full attribution of these service costs is not implemented.
 
 If delegation is unavailable, default contracts explicitly report
 `mode: advisory`, `kernel_enforced: false`, and unavailable CPU/memory/pids
