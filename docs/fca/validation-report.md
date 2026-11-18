@@ -37,8 +37,8 @@ handoff demo uses -2047 through 2048 and correctly has expected result +2048.
 - The release suite found a real launcher buffering race. A raw FD gate read
   fixed it; a deterministic test coalesces the gate and following descriptor in
   one write and proves no bytes are lost across exec.
-- Default FETIANOS Python regression suite: 114 tests passed after packaging and
-  nested documentation changes. The existing six Rust metrics tests and default
+- Default FETIANOS Python regression suite: 116 tests passed after packaging,
+  artifact-ownership and nested documentation changes. The existing six Rust metrics tests and default
   offline checks are verified separately from the FCA dependency graph.
 
 No tests replace persistence or process death with success-shaped mock outputs.

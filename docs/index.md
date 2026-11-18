@@ -27,6 +27,7 @@ desktop is improved. Installation remains disabled pending acceptance.
 ## Validation and installation status
 
 - [Latest recorded local verification](verification-2026-11-18.md)
+- [Actual UEFI/live-account boot and greeter evidence](verification-2026-11-18-uefi.md)
 - [Test commands and earlier milestones](testing.md)
 - [Release acceptance gates](release-acceptance.md)
 - [Disabled installer architecture](installer-architecture.md)
