@@ -4,6 +4,9 @@ set -euo pipefail
 source /etc/os-release
 [[ ${ID:-} == manjaro && $(uname -m) == x86_64 ]] || exit 2
 mkdir -p logs
+# Return only build diagnostics to the runner user, including private VM dirs.
+# Do not change permissions on the build rootfs or generated ISO contents.
+trap 'find logs work/vm -type d -exec chmod a+rx {} + 2>/dev/null || true; find logs work/vm -type f ! -name disk.qcow2 ! -name OVMF_VARS.fd -exec chmod a+r {} + 2>/dev/null || true' EXIT
 exec > >(tee -a logs/ci-container.log) 2>&1
 pacman-key --init
 pacman-key --populate archlinux manjaro

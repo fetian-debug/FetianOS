@@ -147,6 +147,12 @@ def main():
         if process is not None and process.poll() is None: process.kill(); process.wait()
         (run_log / "evidence.json").write_text(json.dumps(evidence, indent=2) + "\n")
     print("Serial boot probe passed; graphical login and installation remain separate checks." if passed else "Boot evidence missing; inspect serial.log and qemu.log.")
+    if not passed:
+        for name in ("serial.log", "qemu.log"):
+            path = run_log / name
+            if path.exists():
+                print(f"VM {name} (last 160 lines):", flush=True)
+                print("\n".join(path.read_text(errors="replace").splitlines()[-160:]), flush=True)
     return 0 if passed else 1
 
 
