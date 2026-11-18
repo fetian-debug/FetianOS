@@ -27,8 +27,15 @@ This run failed afterward when the runner could not read the container-owned
 completed image directory. A scoped artifact-ownership handoff was added in
 commit `e4b220a9ddc1a1202a1e2fd2fda7a31e997fda7f`, with tests that exclude the
 embedded root filesystem and reject symlink escapes before changing ownership.
-The subsequent run must complete packaging and publication before its ISO is
-offered as a download. The booted image above is not a published release.
+[The subsequent run](https://github.com/fetian-debug/FetianOS/actions/runs/44327200378)
+passed all gates and published [preview-7-1](https://github.com/fetian-debug/FetianOS/releases/tag/preview-7-1).
+Its source is the ownership-fix commit above, and its 2,446,166,016-byte ISO has
+SHA-256 `bf400ab7801805d6375511d07f4c605667d73e539b1e70a06843fc33514ea11f`.
+It is split into two parts with an assembly helper, per-part digests, build and
+package records, serial log and matching boot evidence. The uploaded part hashes
+were independently compared with GitHub's server-side digests; downloaded
+metadata checksums were also verified. Use that release's evidence for that ISO;
+the earlier greeter image above belongs to the explicitly identified older build.
 
 Default images exclude experimental FCA. Its independent Rust/Python handoff
 and process recovery passed [hosted FCA validation](https://github.com/fetian-debug/FetianOS/actions/runs/44323523164);

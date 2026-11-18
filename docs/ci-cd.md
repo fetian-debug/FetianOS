@@ -22,6 +22,14 @@ privileged build container, deployment permissions or release write token.
 
 ## ISO builder
 
+The first published image is [preview-7-1](https://github.com/fetian-debug/FetianOS/releases/tag/preview-7-1),
+from [successful run 44327200378](https://github.com/fetian-debug/FetianOS/actions/runs/44327200378).
+Its two uploaded ISO-part digests and downloaded metadata checksums were verified
+against the release manifest; its own VM evidence identifies the tested image.
+The root build container returns only public output bundles to the checkout
+owner before host-side packaging. Atomic bundle directories remain private;
+the embedded OS root filesystem is not part of that ownership transfer.
+
 CI stages Zstandard-compressed SquashFS for faster image construction and
 decompression. Native builds default to XZ; `FETIAN_ISO_COMPRESSION=zstd` selects
 the explicit CI option locally. The staged profile records the actual choice.

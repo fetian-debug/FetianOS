@@ -101,10 +101,22 @@ The independent desktop ISO pipeline constructed actual images and ran actual
 OVMF/QEMU boots. After a live-only firstboot condition and console-font fix,
 [run 44321545719](https://github.com/fetian-debug/FetianOS/actions/runs/44321545719)
 passed static checks and the real UEFI/live-account boot probe. Release packaging
-then could not read the container-owned bundle; a scoped ownership handoff is
-under hosted verification. Publication remains gated on complete packaging.
+then could not read the container-owned bundle. A scoped ownership handoff fixed
+that boundary. [Run 44327200378](https://github.com/fetian-debug/FetianOS/actions/runs/44327200378)
+subsequently passed source checks, image checks, the real UEFI/live-account probe,
+packaging and publication. [Preview 7-1](https://github.com/fetian-debug/FetianOS/releases/tag/preview-7-1)
+contains the 2,446,166,016-byte ISO as two checksummed parts and nine companion
+assets. Both uploaded part digests were independently compared with GitHub's
+server-side SHA-256 values, and downloaded metadata checksums and matching boot
+evidence were verified. Its source is `e4b220a9ddc1a1202a1e2fd2fda7a31e997fda7f`.
 That evidence does not validate FCA inside an ISO: default images exclude FCA.
 No FCA-enabled ISO, physical hardware, graphical login or installation was tested.
+
+An additional isolated manual check exercised the actual user-facing CLI through
+daemon start/status/stop, input import, template/create, run/inspect/checkpoint,
+suspend/resume, handoff, events, verify, export, list and cancellation. It passed
+with result 524,800 and 16 effects for integers 1–1,024. This is separate from
+the numbered automated test counts above.
 
 ## Reproduction and next research step
 
@@ -122,7 +134,7 @@ The core APIs, files, dependencies and four-table schema are described in
 [architecture](architecture.md); wire ABI, lifecycle and exact handoff order
 have separate specifications. The optional GitHub workflow repeats lint, Rust
 tests and actual release-process checks and retains handoff JSON as an artifact.
-The [exact change manifest](change-manifest.json) lists created and modified
+The initial FCA implementation's [exact change manifest](change-manifest.json) lists created and modified
 repository paths, including the retained third-party notices.
 
 Next: run adversarial resource-exhaustion tests in a genuinely delegated user

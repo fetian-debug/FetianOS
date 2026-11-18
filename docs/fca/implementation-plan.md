@@ -6,8 +6,9 @@ baseline is 114 Python tests plus 6 Rust tests, with GTK/staged checks passing.
 Hosted source checks and Pages deployment passed. The first actual ISO was
 constructed but rejected for missing boot artifacts. Later images passed static
 validation and the third boot reached an interactive firstboot prompt. A live-only
-firstboot fix is under hosted verification. No graphical login or installation
-success is inferred from those runs.
+firstboot fix passed actual UEFI/live-account boot; the later artifact-ownership
+fix completed packaging and published preview-7-1. No graphical sign-in or
+installation success is inferred from those runs.
 
 FCA lives in `system/fetian-fca`, an independent experimental Rust package. Its
 small serialization/hash/SQLite/Unix-adapter dependencies are locked separately;

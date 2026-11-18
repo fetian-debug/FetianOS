@@ -11,6 +11,11 @@ developer-preview downloads. Hyprland builds are manually selected. Failed
 builds retain diagnostics. The downloads page lists only published release
 assets; the source ZIP is labeled separately. See [CI/CD](docs/ci-cd.md).
 
+[Preview 7-1](https://github.com/fetian-debug/FetianOS/releases/tag/preview-7-1)
+is the first published Sway ISO: image checks and actual UEFI/live-account boot
+passed. Download both numbered parts and use the included verification/assembly
+helper. Graphical sign-in, installation and hardware acceptance remain separate.
+
 The opt-in [Continuation Authority prototype](docs/fca/README.md) now keeps a
 durable workload identity, contract and transactional checkpoint across real
 Rust-to-Python executor replacement. It is isolated from default boot and

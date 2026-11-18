@@ -9,6 +9,24 @@ acceptance are separate checks.
 
 <noscript><p>JavaScript is disabled. Open <a href="https://github.com/fetian-debug/FetianOS/releases">GitHub Releases</a> to see actual published assets.</p></noscript>
 
+## First verified Sway preview — 18 November 2026
+
+[Preview 7-1](https://github.com/fetian-debug/FetianOS/releases/tag/preview-7-1)
+passed image validation and an actual disposable UEFI/live-account boot.
+Download all four files below into one folder, then run the assembly command
+shown below. Installation remains disabled.
+
+- [ISO part 1](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/fetianOS-0.1.0-x86_64.iso.part001)
+- [ISO part 2](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/fetianOS-0.1.0-x86_64.iso.part002)
+- [Download manifest](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/sway-downloads.json)
+- [Python 3 assembly helper](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/sway-assemble-iso.py)
+
+[All checksums](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/SHA256SUMS-sway)
+and [boot evidence](https://github.com/fetian-debug/FetianOS/releases/download/preview-7-1/sway-vm-evidence.json)
+are included with the release. Its full ISO SHA-256 is
+`bf400ab7801805d6375511d07f4c605667d73e539b1e70a06843fc33514ea11f`.
+Experimental FCA is available in source and is excluded from this default image.
+
 ## Verify before using an image
 
 Download the ISO and its `.sha256` sidecar. On Linux:
