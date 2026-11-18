@@ -1,0 +1,39 @@
+[package]
+name = "fetian-fca"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.89"
+license = "MIT"
+description = "Experimental unprivileged continuation-authority broker and semantic executor ABI"
+
+# Deliberately separate: the default telemetry workspace stays dependency-free.
+[workspace]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rusqlite = { version = "0.41.1", features = ["bundled"] }
+sha2 = "0.10.9"
+getrandom = "0.3.4"
+nix = { version = "0.31.3", features = ["fs", "process", "signal", "socket", "user"] }
+
+[[bin]]
+name = "fetian-authorityd"
+path = "src/bin/daemon.rs"
+
+[[bin]]
+name = "fetian-authority"
+path = "src/bin/cli.rs"
+
+[[bin]]
+name = "fetian-executor-rust"
+path = "src/bin/executor.rs"
+
+[[bin]]
+name = "fetian-fca-launcher"
+path = "src/bin/launcher.rs"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1

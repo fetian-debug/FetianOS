@@ -1,0 +1,22 @@
+[Unit]
+Description=Experimental Fetian Continuation Authority broker (opt-in)
+Documentation=https://fetian-debug.github.io/FetianOS/docs/fca/README.html
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/fetian-fca/fetian-authorityd
+UMask=0077
+Delegate=cpu memory pids
+KillMode=control-group
+TimeoutStopSec=10
+Restart=no
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=read-only
+StateDirectory=fetian-fca
+StateDirectoryMode=0700
+RuntimeDirectory=fetian-fca
+RuntimeDirectoryMode=0700
+ReadWritePaths=%S/fetian-fca %t/fetian-fca
+
+# Deliberately no [Install] target: manual user start only.

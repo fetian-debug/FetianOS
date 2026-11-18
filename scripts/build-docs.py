@@ -19,8 +19,8 @@ def build(root, output, repository='fetian-debug/FetianOS', revision='main'):
     if output.exists(): raise FileExistsError('Choose a fresh documentation destination')
     if any(output.resolve().is_relative_to((root / folder).resolve()) for folder in ('docs', 'website')):
         raise ValueError('Documentation output must be outside its source directories')
-    sources = list((root / 'docs').glob('*.md')) + [root / 'README.md', root / 'website/index.md', root / 'website/downloads.md']
-    mapping = {path.resolve(): Path('docs') / (path.stem + '.html') for path in sources}
+    sources = list((root / 'docs').rglob('*.md')) + [root / 'README.md', root / 'website/index.md', root / 'website/downloads.md']
+    mapping = {path.resolve(): path.relative_to(root).with_suffix('.html') for path in sources}
     mapping[(root / 'README.md').resolve()] = Path('docs/project-readme.html')
     mapping[(root / 'website/index.md').resolve()] = Path('index.html')
     mapping[(root / 'website/downloads.md').resolve()] = Path('downloads.html')

@@ -1,0 +1,589 @@
+{
+  "scope": "FCA implementation and integration relative to commit 3563925",
+  "files": [
+    {
+      "change": "M",
+      "path": ".gitignore"
+    },
+    {
+      "change": "M",
+      "path": "CHANGELOG.md"
+    },
+    {
+      "change": "M",
+      "path": "Cargo.toml"
+    },
+    {
+      "change": "M",
+      "path": "Makefile"
+    },
+    {
+      "change": "M",
+      "path": "README.md"
+    },
+    {
+      "change": "M",
+      "path": "docs/application-inventory.json"
+    },
+    {
+      "change": "M",
+      "path": "docs/index.md"
+    },
+    {
+      "change": "M",
+      "path": "scripts/build-docs.py"
+    },
+    {
+      "change": "M",
+      "path": "scripts/release-artifacts.py"
+    },
+    {
+      "change": "M",
+      "path": "scripts/stage-profile.py"
+    },
+    {
+      "change": "M",
+      "path": "tests/test_ci_downloads.py"
+    },
+    {
+      "change": "??",
+      "path": ".github/workflows/fca-checks.yml"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/README.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/architecture.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/capability-model.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/continuation-authority-spec.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/evidence/linux-wsl-release-2026-11-18.json"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/execution-contract.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/executor-protocol.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/fencing-and-handoff.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/implementation-plan.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/lifecycle.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/limitations.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/prior-art.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/recovery-model.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/resource-enforcement.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/security-threat-model.md"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/validation-report.md"
+    },
+    {
+      "change": "??",
+      "path": "scripts/build-fca.sh"
+    },
+    {
+      "change": "??",
+      "path": "scripts/fca-licenses.py"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/Cargo.lock"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/Cargo.toml"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/executors/fetian-executor-python.py"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/license-overrides/README.md"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/license-overrides/rsqlite-vfs-0.2.0/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/packaging/fetian-authority"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/packaging/fetian-authorityd.service"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/bin/cli.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/bin/daemon.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/bin/executor.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/bin/launcher.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/broker.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/cli.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/client.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/error.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/lib.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/model.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/paths.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/resources.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/store.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/wire.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/src/worker.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/tests/benchmark.py"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/tests/process_tests.py"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/tests/store_tests.rs"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/autocfg-1.5.1/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/autocfg-1.5.1/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/bitflags-2.13.2/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/bitflags-2.13.2/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/block-buffer-0.10.4/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/block-buffer-0.10.4/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cc-1.11.2/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cc-1.11.2/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cfg-if-1.0.5/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cfg-if-1.0.5/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cfg_aliases-0.2.2/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cfg_aliases-0.2.2/NOTICES.md"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cpufeatures-0.2.17/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/cpufeatures-0.2.17/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/crypto-common-0.1.7/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/crypto-common-0.1.7/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/digest-0.10.7/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/digest-0.10.7/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/fallible-iterator-0.3.0/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/fallible-iterator-0.3.0/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/fallible-streaming-iterator-0.1.9/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/fallible-streaming-iterator-0.1.9/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/find-msvc-tools-0.1.15/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/find-msvc-tools-0.1.15/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/foldhash-0.2.0/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/generic-array-0.14.7/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/getrandom-0.3.4/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/getrandom-0.3.4/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/hashbrown-0.17.1/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/hashbrown-0.17.1/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/hashlink-0.12.2/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/hashlink-0.12.2/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/index.json"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/itoa-1.0.19/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/itoa-1.0.19/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/libc-0.2.191/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/libc-0.2.191/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/libsqlite3-sys-0.39.1/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/memchr-2.8.3/COPYING"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/memchr-2.8.3/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/memchr-2.8.3/UNLICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/memoffset-0.9.1/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/nix-0.31.4/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/pkg-config-0.3.34/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/pkg-config-0.3.34/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/proc-macro2-1.0.107/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/proc-macro2-1.0.107/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/quote-1.0.47/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/quote-1.0.47/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/r-efi-5.3.0/AUTHORS"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/rsqlite-vfs-0.2.0/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/rusqlite-0.41.1/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde-1.0.229/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde-1.0.229/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_core-1.0.229/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_core-1.0.229/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_derive-1.0.229/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_derive-1.0.229/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_json-1.0.154/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/serde_json-1.0.154/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/sha2-0.10.9/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/sha2-0.10.9/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/shlex-2.0.1/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/shlex-2.0.1/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/smallvec-1.16.6/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/smallvec-1.16.6/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/sqlite-wasm-rs-0.6.3/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/syn-3.0.10/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/syn-3.0.10/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/thiserror-2.0.21/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/thiserror-2.0.21/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/thiserror-impl-2.0.21/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/thiserror-impl-2.0.21/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/typenum-1.20.1/LICENSE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/typenum-1.20.1/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/typenum-1.20.1/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/unicode-ident-1.0.27/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/unicode-ident-1.0.27/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/unicode-ident-1.0.27/LICENSE-UNICODE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/vcpkg-0.2.15/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/vcpkg-0.2.15/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/version_check-0.9.5/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/version_check-0.9.5/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wasip2-1.0.4+wasi-0.2.12/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wasip2-1.0.4+wasi-0.2.12/LICENSE-Apache-2.0_WITH_LLVM-exception"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wasip2-1.0.4+wasi-0.2.12/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wit-bindgen-0.57.1/LICENSE-APACHE"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wit-bindgen-0.57.1/LICENSE-Apache-2.0_WITH_LLVM-exception"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/wit-bindgen-0.57.1/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "system/fetian-fca/third-party-licenses/zmij-1.0.23/LICENSE-MIT"
+    },
+    {
+      "change": "??",
+      "path": "docs/fca/change-manifest.json"
+    }
+  ]
+}

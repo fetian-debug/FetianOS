@@ -1,0 +1,38 @@
+name: Experimental FCA validation
+on:
+  pull_request:
+    paths: ['system/fetian-fca/**', 'scripts/build-fca.sh', '.github/workflows/fca-checks.yml']
+  push:
+    branches: [main]
+    paths: ['system/fetian-fca/**', 'scripts/build-fca.sh', '.github/workflows/fca-checks.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fca:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Install isolated supported Rust toolchain
+        run: rustup toolchain install 1.89.0 --profile minimal --component rustfmt --component clippy
+      - name: Check formatting, lints and store/model tests
+        run: |
+          cargo +1.89.0 fetch --manifest-path system/fetian-fca/Cargo.toml --locked
+          cargo +1.89.0 fmt --manifest-path system/fetian-fca/Cargo.toml -- --check
+          cargo +1.89.0 clippy --manifest-path system/fetian-fca/Cargo.toml --locked --offline --all-targets -- -D warnings
+          cargo +1.89.0 test --manifest-path system/fetian-fca/Cargo.toml --locked --offline
+      - name: Build reference programs and run real process/crash tests
+        run: |
+          RUSTUP_TOOLCHAIN=1.89.0 bash scripts/build-fca.sh --release --offline
+          FCA_BIN_DIR="$PWD/system/fetian-fca/target/release" python3 system/fetian-fca/tests/process_tests.py
+          mkdir -p fca-evidence
+          system/fetian-fca/target/release/fetian-authority --json demo-handoff > fca-evidence/handoff.json
+          FCA_BIN_DIR="$PWD/system/fetian-fca/target/release" python3 system/fetian-fca/tests/benchmark.py > fca-evidence/benchmark.json
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: fca-handoff-${{ github.sha }}
+          path: fca-evidence/
+          if-no-files-found: error

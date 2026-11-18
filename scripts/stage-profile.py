@@ -12,7 +12,7 @@ def install(source, destination, mode=0o755):
     destination.chmod(mode)
 
 
-def stage(root, destination, desktop, native_binary, compression="xz"):
+def stage(root, destination, desktop, native_binary, compression="xz", fca=False):
     if destination.exists():
         raise ValueError("Staging destination already exists; choose a fresh directory")
     if desktop not in ("sway", "hyprland"):
@@ -50,6 +50,17 @@ def stage(root, destination, desktop, native_binary, compression="xz"):
     # Preserve the legacy path while keeping it synchronized with the real source.
     install(root / "apps/fetian-control-center/fetian_control_center.py", tree / "usr/lib/fetian-control-center/fetian_control_center.py")
     install(native_binary, tree / "usr/bin/fetian-health-rs")
+    fca_executables = []
+    if fca:
+        binaries = root / "system/fetian-fca/target/release"
+        for name in ("fetian-authority", "fetian-authorityd", "fetian-fca-launcher", "fetian-executor-rust"):
+            target = tree / "usr/lib/fetian-fca" / name
+            install(binaries / name, target)
+            fca_executables.append(target)
+        install(root / "system/fetian-fca/executors/fetian-executor-python.py", tree / "usr/lib/fetian-fca/fetian-executor-python.py", 0o644)
+        install(root / "system/fetian-fca/packaging/fetian-authority", tree / "usr/bin/fetian-authority")
+        install(root / "system/fetian-fca/packaging/fetian-authorityd.service", tree / "usr/lib/systemd/user/fetian-authorityd.service", 0o644)
+        shutil.copytree(root / "system/fetian-fca/third-party-licenses", tree / "usr/share/licenses/fetian-fca", dirs_exist_ok=True)
     install(root / "apps/fetian-control-center/theme.css", tree / "usr/share/fetian-control-center/theme.css", 0o644)
     install(root / "apps/fetian-desktop/fetian-calendar.py", tree / "usr/share/fetian-calendar/fetian-calendar.py")
     for app, file in (("fetian-control-center", "online.fetian.ControlCenter.desktop"),
@@ -102,7 +113,7 @@ def stage(root, destination, desktop, native_binary, compression="xz"):
     link.symlink_to("/usr/lib/systemd/system/cups.socket")
     # Archiso deliberately discards copied file modes. Explicitly preserve every
     # first-party executable, including the native Rust collector.
-    executables = list((tree / "usr/bin").iterdir()) + [tree / "usr/lib/fetian/display-manager"]
+    executables = list((tree / "usr/bin").iterdir()) + [tree / "usr/lib/fetian/display-manager"] + fca_executables
     with (destination / "profiledef.sh").open("a") as definition:
         if compression == "zstd":
             definition.write("\n# Fast CI compression, supported by the distribution kernel.\n")
@@ -121,9 +132,10 @@ if __name__ == "__main__":
     parser.add_argument("destination", type=Path)
     parser.add_argument("--desktop", choices=("sway", "hyprland"), default="sway")
     parser.add_argument("--compression", choices=("xz", "zstd"), default="xz")
+    parser.add_argument("--with-fca", action="store_true", help="Include separately built experimental FCA binaries; never enable the service")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     try:
-        stage(root, args.destination.resolve(), args.desktop, root / "target/release/fetian-health-rs", args.compression)
+        stage(root, args.destination.resolve(), args.desktop, root / "target/release/fetian-health-rs", args.compression, args.with_fca)
     except (OSError, ValueError) as error:
         parser.exit(1, f"Profile staging failed: {error}\n")

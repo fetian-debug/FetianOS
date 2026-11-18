@@ -27,7 +27,7 @@ def tree_manifest(root, selected=None):
         if path.is_symlink(): result[path.relative_to(root).as_posix()] = {"link": os.readlink(path)}
         elif path.is_dir():
             for child in sorted(path.iterdir()):
-                if child.name not in ("__pycache__", ".git"): scan(child)
+                if child.name not in ("__pycache__", ".git", "target"): scan(child)
         elif path.is_file(): result[path.relative_to(root).as_posix()] = {"sha256": digest(path)}
     for path in paths:
         if path.exists() or path.is_symlink(): scan(path)

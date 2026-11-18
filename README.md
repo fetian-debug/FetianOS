@@ -11,6 +11,12 @@ developer-preview downloads. Hyprland builds are manually selected. Failed
 builds retain diagnostics. The downloads page lists only published release
 assets; the source ZIP is labeled separately. See [CI/CD](docs/ci-cd.md).
 
+The opt-in [Continuation Authority prototype](docs/fca/README.md) now keeps a
+durable workload identity, contract and transactional checkpoint across real
+Rust-to-Python executor replacement. It is isolated from default boot and
+desktop startup. Read the [measured validation report](docs/fca/validation-report.md)
+for the handoff proof, resource availability and current limitations.
+
 FetianOS is an independent, Manjaro-compatible Linux operating system for developers and power users. It combines a Sway/Wayland desktop, automatic hardware detection, a unified eye-friendly design system, safe system tools, and live development without rebuilding the ISO.
 
 Authored for [fetian.online](https://fetian.online). Not affiliated with Manjaro or Arch Linux.

@@ -40,3 +40,12 @@ test-uefi:
 	python3 "$(PROJECT)/scripts/vm-test.py" --expect live-account
 clean:
 	$(PROJECT)/clean.sh
+
+.PHONY: fca fca-check fca-demo
+fca:
+	bash "$(PROJECT)/scripts/build-fca.sh" --release
+fca-check: fca
+	cargo test --manifest-path "$(PROJECT)/system/fetian-fca/Cargo.toml" --locked
+	FCA_BIN_DIR="$(PROJECT)/system/fetian-fca/target/release" python3 "$(PROJECT)/system/fetian-fca/tests/process_tests.py"
+fca-demo:
+	"$(PROJECT)/system/fetian-fca/target/release/fetian-authority" demo-handoff

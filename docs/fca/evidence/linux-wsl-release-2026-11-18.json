@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "recorded_utc": "2026-11-18T14:16:52Z",
+  "environment": {
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "python": "3.10.12",
+    "binary_profile": "release"
+  },
+  "workload": {
+    "items": 4096,
+    "chunk_size": 64,
+    "expected_result": -2048
+  },
+  "direct_python_parse_sum": {
+    "samples": 20,
+    "median_us": 502.6,
+    "min_us": 488.6,
+    "max_us": 731.4
+  },
+  "operator_status_rpc": {
+    "samples": 20,
+    "median_us": 5402.4005,
+    "min_us": 4167.3,
+    "max_us": 5725.1
+  },
+  "authority_creation": {
+    "samples": 5,
+    "median_us": 9163.2,
+    "min_us": 6387.2,
+    "max_us": 15436.4
+  },
+  "lease_and_gated_launch": {
+    "samples": 5,
+    "median_us": 24551.201,
+    "min_us": 20480.8,
+    "max_us": 27731.401
+  },
+  "managed_python_to_completion": {
+    "samples": 5,
+    "median_us": 501626.614,
+    "min_us": 478514.313,
+    "max_us": 669094.318
+  },
+  "broker_effect_checkpoint_transaction": {
+    "samples": 256,
+    "median_us": 4158.5,
+    "min_us": 1236,
+    "max_us": 79726
+  },
+  "checkpoint_barrier_rpc_us": 9701.0,
+  "revoke_kill_wait_replacement_rpc_us": 42014.701,
+  "daemon_restart_wall_us": 74185.902,
+  "startup_verification_recovery_us": 53216,
+  "broker_before": {
+    "cpu_seconds": 0.01,
+    "rss_kib": 4780
+  },
+  "broker_after": {
+    "cpu_seconds": 0.57,
+    "rss_kib": 6372
+  },
+  "rust_worker_at_barrier": {
+    "cpu_seconds": 0.0,
+    "rss_kib": 1972
+  },
+  "store_bytes": {
+    "authorities.sqlite3": 962560,
+    "authorities.sqlite3-wal": 329632,
+    "authorities.sqlite3-shm": 32768
+  },
+  "events_per_64_effect_run": [
+    268,
+    268,
+    268,
+    268,
+    268
+  ],
+  "resources": {
+    "budget": {
+      "cpu_quota": 1,
+      "memory_bytes": 134217728,
+      "pids_max": 8,
+      "strict": false
+    },
+    "cpu": "unavailable",
+    "gpu": "unsupported",
+    "kernel_enforced": false,
+    "memory": "unavailable",
+    "mode": "advisory",
+    "pids": "unavailable",
+    "reason": "DELEGATION_UNAVAILABLE"
+  },
+  "resource_enforcement_overhead": "unmeasured: delegated enforcement unavailable",
+  "notes": [
+    "Single local experiment; medians are descriptive, not guarantees.",
+    "Client wall timings include IPC, scheduling and state polling; direct baseline excludes process startup and durability.",
+    "Effect latency is coordinator monotonic time around the SQLite FULL transaction, excluding ACK transport.",
+    "CPU values cover broker only; RSS is a point sample; store sizes include other experiment authorities."
+  ],
+  "handoff_demo": {
+    "actual_result": 2048,
+    "authority_id": "ca_6fa40fcb483880e1abe25c087f912625",
+    "checkpoint_at_kill": {
+      "accumulated_result": -374688,
+      "last_committed_chunk": 3,
+      "next_input_position": 192,
+      "schema_version": 1
+    },
+    "demo": "rust-sigkill-python-resume",
+    "expected_result": 2048,
+    "measurements": {
+      "creation_us": 9325,
+      "direct_parse_sum_us": 168,
+      "kill_and_fence_us": 24185,
+      "managed_total_us": 576228,
+      "replacement_launch_us": 18240,
+      "sqlite_main_bytes": 229376
+    },
+    "passed": true,
+    "python_epoch": 2,
+    "python_pid": 257519,
+    "resources": {
+      "budget": {
+        "cpu_quota": 1,
+        "memory_bytes": 134217728,
+        "pids_max": 8,
+        "strict": false
+      },
+      "cpu": "unavailable",
+      "gpu": "unsupported",
+      "kernel_enforced": false,
+      "memory": "unavailable",
+      "mode": "advisory",
+      "pids": "unavailable",
+      "reason": "DELEGATION_UNAVAILABLE"
+    },
+    "rust_epoch": 1,
+    "rust_pid": 257517,
+    "rust_termination_confirmed": true,
+    "scope": "managed transactional sum effects only; trusted reference executors; no hostile same-user sandbox",
+    "stale_request_error": "STALE_EPOCH",
+    "verification": {
+      "authority_id": "ca_6fa40fcb483880e1abe25c087f912625",
+      "checkpoint": {
+        "accumulated_result": 2048,
+        "last_committed_chunk": 64,
+        "next_input_position": 4096,
+        "schema_version": 1
+      },
+      "effects": 64,
+      "events": 281,
+      "head_hash": "31d38b79aa6a26a0b01eae7349be5bd74a20b3438c5701f02ea55f3edb3317f0",
+      "journal_mode": "wal",
+      "signed": false,
+      "synchronous": "FULL",
+      "valid": true
+    }
+  }
+}

@@ -1,5 +1,6 @@
 [workspace]
 members = ["system/fetian-system"]
+exclude = ["system/fetian-fca"]
 resolver = "2"
 
 [profile.release]

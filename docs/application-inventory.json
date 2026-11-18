@@ -307,6 +307,15 @@
       "removal_risk": "unverified replacement or dependency closure"
     },
     {
+      "package": "terminus-font",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
       "package": "networkmanager",
       "classification": "delegated_backend",
       "primary_for": [],

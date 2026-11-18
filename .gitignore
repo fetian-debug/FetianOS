@@ -32,5 +32,6 @@ fetian-hardware-report.json
 
 # Native Rust artifacts and isolated local toolchains
 /target/
+/system/fetian-fca/target/
 /.build-tools/
 /profile/sway/airootfs/usr/bin/fetian-health-rs

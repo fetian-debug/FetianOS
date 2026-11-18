@@ -19,6 +19,7 @@ desktop is improved. Installation remains disabled pending acceptance.
 - [One primary application per task](application-strategy.md)
 - [FetianFiles features and limitations](fetian-files.md)
 - [Architecture and Rust system foundation](architecture.md)
+- [Experimental Continuation Authority architecture (FCA)](fca/README.md)
 - [Hyprland candidate integration](hyprland-integration.md)
 - [Development workflow](development.md)
 - [Security boundaries](security.md)
