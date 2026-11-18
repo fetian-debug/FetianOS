@@ -34,6 +34,8 @@ class DesktopTests(unittest.TestCase):
             definition = (destination / "profiledef.sh").read_text()
             self.assertIn("'-comp' 'zstd'", definition)
             self.assertTrue((destination / "airootfs/root/customize_airootfs.sh").is_file())
+            self.assertIn('ConditionKernelCommandLine=!archisobasedir', (destination / 'airootfs/etc/systemd/system/systemd-firstboot.service.d/10-fetian-live.conf').read_text())
+            self.assertIn('terminus-font', (destination / 'packages.x86_64').read_text().splitlines())
             with self.assertRaises(ValueError): stager.stage(ROOT, root / "invalid", "sway", binary, compression="unsafe")
     def test_unavailable_metrics_are_not_zeroed(self):
         with patch.object(desktop, "health", side_effect=OSError("missing")):

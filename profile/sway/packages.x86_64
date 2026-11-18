@@ -5,6 +5,7 @@ mkinitcpio-archiso
 sddm
 manjaro-release
 systemd
+terminus-font
 networkmanager
 sudo
 git
