@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FETIANOS — Sway recovery
+Comment=FetianOS desktop and recovery session
+Exec=/usr/bin/fetian-sway-session
+TryExec=/usr/bin/sway
+Type=Application
+DesktopNames=sway

@@ -1,0 +1,380 @@
+{
+  "schema_version": 1,
+  "intended_primary": "hyprland",
+  "default_promoted": false,
+  "runtime_tested": false,
+  "upstream_version": "0.56.2",
+  "upstream_commit": "efb50993780079460b0cbed1363e2166a2de1d9f",
+  "upstream_latest_observed": "0.57.2",
+  "observed_date": "2026-11-17",
+  "repository": "https://mirrors.cicku.me/manjaro/stable/extra/x86_64/",
+  "database_sha256": "9829438c1c7d2d55c50def1c2171522fc01b38cad6eca1ae09157727e343ab60",
+  "packages": {
+    "hyprland": {
+      "version": "0.56.2-4",
+      "filename": "hyprland-0.56.2-4-x86_64.pkg.tar.zst",
+      "sha256": "163bc740241880192d90027fad39ddb809b1705b04800a1f0185a58f3ce0884a",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "cairo",
+        "aquamarine",
+        "libaquamarine.so=14-64",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "glib2",
+        "libgio-2.0.so=0-64",
+        "libgobject-2.0.so=0-64",
+        "glslang",
+        "hyprcursor",
+        "libhyprcursor.so=0-64",
+        "hyprgraphics",
+        "libhyprgraphics.so=4-64",
+        "hyprland-guiutils",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "hyprwire",
+        "libhyprwire.so=3-64",
+        "lcms2",
+        "liblcms2.so=2-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libGLESv2.so=2-64",
+        "libinput",
+        "libx11",
+        "libxcb",
+        "libxcomposite",
+        "libxcursor",
+        "libxfixes",
+        "libxkbcommon",
+        "libxkbcommon.so=0-64",
+        "libxrender",
+        "lua",
+        "mesa",
+        "muparser",
+        "opengl-driver",
+        "pango",
+        "libpango-1.0.so=0-64",
+        "libpangocairo-1.0.so=0-64",
+        "pixman",
+        "libpixman-1.so=0-64",
+        "re2",
+        "libre2.so=11-64",
+        "tomlplusplus",
+        "libtomlplusplus.so",
+        "util-linux-libs",
+        "libuuid.so=1-64",
+        "wayland",
+        "libwayland-server.so=0-64",
+        "wayland-protocols",
+        "xcb-proto",
+        "xcb-util",
+        "xcb-util-errors",
+        "xcb-util-image",
+        "xcb-util-keysyms",
+        "xcb-util-renderutil",
+        "xcb-util-wm",
+        "xorg-xwayland"
+      ]
+    },
+    "hypridle": {
+      "version": "0.1.8-2",
+      "filename": "hypridle-0.1.8-2-x86_64.pkg.tar.zst",
+      "sha256": "bf492603336e83e36551dc16edbd3351c04b4a2e9cd571a9164b5393029b2e7a",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "wayland-protocols"
+      ]
+    },
+    "hyprlock": {
+      "version": "0.9.6-3",
+      "filename": "hyprlock-0.9.6-3-x86_64.pkg.tar.zst",
+      "sha256": "e1408ddf42d77c9babed0fac2e4022e9f45df44e9d3cd708ed8073242aaf1964",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "cairo",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprgraphics",
+        "libhyprgraphics.so=4-64",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libxkbcommon",
+        "libxkbcommon.so=0-64",
+        "mesa",
+        "pam",
+        "libpam.so=0-64",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "libwayland-egl.so=1-64",
+        "wayland-protocols"
+      ]
+    },
+    "sddm": {
+      "version": "0.21.0-7",
+      "filename": "sddm-0.21.0-7-x86_64.pkg.tar.zst",
+      "sha256": "927cc24362cdc83b8c48532252ae4d41ade99dc5e65cb0fdeb9b6d69f7601a7a",
+      "license": [
+        "GPL-2.0-or-later"
+      ],
+      "depends": [
+        "bash",
+        "glibc",
+        "libgcc",
+        "libstdc++",
+        "libxau",
+        "libxcb",
+        "pam",
+        "qt6-base",
+        "qt6-declarative",
+        "systemd-libs",
+        "ttf-font",
+        "xorg-server",
+        "xorg-xauth"
+      ]
+    },
+    "xdg-desktop-portal-hyprland": {
+      "version": "1.4.1-2",
+      "filename": "xdg-desktop-portal-hyprland-1.4.1-2-x86_64.pkg.tar.zst",
+      "sha256": "1df1cac8f5066998a937e848bcb8ff64d1a40de15a0ca24f328a40a805787d66",
+      "license": [
+        "MIT"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libinih",
+        "pipewire",
+        "qt6-base",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "util-linux-libs",
+        "libuuid.so",
+        "xdg-desktop-portal"
+      ]
+    },
+    "xdg-desktop-portal-gtk": {
+      "version": "1.15.3-1",
+      "filename": "xdg-desktop-portal-gtk-1.15.3-1-x86_64.pkg.tar.zst",
+      "sha256": "ff74ba4f426ff0d17c27aa556c041db7ee91b82d35748963f813b05637594a00",
+      "license": [
+        "LGPL-2.0-or-later"
+      ],
+      "depends": [
+        "fontconfig",
+        "gcc-libs",
+        "gdk-pixbuf2",
+        "glib2",
+        "glibc",
+        "gsettings-desktop-schemas",
+        "gtk3",
+        "xdg-desktop-portal"
+      ]
+    },
+    "aquamarine": {
+      "version": "0.15.1-1",
+      "filename": "aquamarine-0.15.1-1-x86_64.pkg.tar.zst",
+      "sha256": "ac96995cceea132e32cafd9bf63fd6cbe3d0599ab175e82bcee85b0c7da9706c",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdisplay-info",
+        "libdisplay-info.so=3-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libinput",
+        "mesa",
+        "opengl-driver",
+        "pixman",
+        "seatd",
+        "libseat.so=1-64",
+        "systemd-libs",
+        "libudev.so=1-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "wayland-protocols"
+      ]
+    },
+    "hyprcursor": {
+      "version": "0.1.13-7",
+      "filename": "hyprcursor-0.1.13-7-x86_64.pkg.tar.zst",
+      "sha256": "1a145509039b1914c179364c4a61fad0dadceea9cc039296ac69ffb48e983fce",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "cairo",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "librsvg",
+        "librsvg-2.so=2-64",
+        "libzip",
+        "libzip.so=5-64",
+        "tomlplusplus",
+        "libtomlplusplus.so=3-64"
+      ]
+    },
+    "hyprgraphics": {
+      "version": "0.5.1-4",
+      "filename": "hyprgraphics-0.5.1-4-x86_64.pkg.tar.zst",
+      "sha256": "c916b1fb9d7ad0e78fab2d94b0066dcdc8be0a2810be7e72df57ddf5b639fea3",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "cairo",
+        "file",
+        "libmagic.so=1-64",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libjpeg-turbo",
+        "libjpeg.so=8-64",
+        "libjxl",
+        "libjxl.so=0.12-64",
+        "libjxl_threads.so=0.12-64",
+        "libpng",
+        "librsvg",
+        "libwebp",
+        "libwebp.so=7-64",
+        "libglvnd",
+        "pango",
+        "libpangocairo-1.0.so=0-64",
+        "pixman"
+      ]
+    },
+    "hyprlang": {
+      "version": "0.6.8-5",
+      "filename": "hyprlang-0.6.8-5-x86_64.pkg.tar.zst",
+      "sha256": "212eb288e5a695650cdc4b91b59039ad80423ae5fb938de997e915d979948553",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64"
+      ]
+    },
+    "hyprutils": {
+      "version": "0.14.2-1",
+      "filename": "hyprutils-0.14.2-1-x86_64.pkg.tar.zst",
+      "sha256": "177dfe5d64dba65ef2f1274d84d647b12cc1bc0b808394fd556f135ac8d7e65e",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "pixman",
+        "libpixman-1.so=0-64"
+      ]
+    },
+    "hyprwire": {
+      "version": "0.3.1-3",
+      "filename": "hyprwire-0.3.1-3-x86_64.pkg.tar.zst",
+      "sha256": "21c889597fc33cf1c2a4c45d13c709f73606a48dfa63c676d4bd4db120de3914",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libffi",
+        "libffi.so=8-64",
+        "pugixml"
+      ]
+    },
+    "hyprland-guiutils": {
+      "version": "0.2.2-4",
+      "filename": "hyprland-guiutils-0.2.2-4-x86_64.pkg.tar.zst",
+      "sha256": "c0a0938005128c574fa0fb8fcb7061876db381213143d2ed3b37faf1ea21f09e",
+      "license": [
+        "BSD-3-Clause"
+      ],
+      "depends": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "hyprtoolkit",
+        "libhyprtoolkit.so=6-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdrm",
+        "pixman"
+      ]
+    },
+    "sdbus-cpp": {
+      "version": "2.3.1-1",
+      "filename": "sdbus-cpp-2.3.1-1-x86_64.pkg.tar.zst",
+      "sha256": "c57ce276078cfcc3b9ef55056ad8ef47f2cf35ffe6c1bf56bfabb6e8a55ded33",
+      "license": [
+        "LGPL-2.1-only",
+        "LicenseRef-sdbus-c++-LGPL-Exception-1.0"
+      ],
+      "depends": [
+        "expat",
+        "systemd-libs"
+      ]
+    },
+    "lua": {
+      "version": "5.5.1-1",
+      "filename": "lua-5.5.1-1-x86_64.pkg.tar.zst",
+      "sha256": "2cd360ab4590950b40adae136dd45a22a50b0621c67db5691e066751f6f2416f",
+      "license": [
+        "MIT"
+      ],
+      "depends": [
+        "readline"
+      ]
+    }
+  },
+  "plugins": []
+}

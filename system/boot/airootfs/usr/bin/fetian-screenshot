@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+set -euo pipefail
+case ${1:-region} in
+  region) selection=$(slurp) || exit 0; grim -g "$selection" - | wl-copy ;;
+  screen) grim - | wl-copy ;;
+  *) echo 'Usage: fetian-screenshot [region|screen]' >&2; exit 2 ;;
+esac

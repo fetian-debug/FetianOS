@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+if /usr/bin/python3 /usr/lib/fetian/live_setup.py --is-live; then
+  [[ -f /run/fetian/sddm-live.conf && ! -L /run/fetian/sddm-live.conf ]] || {
+    echo 'Live login preparation did not complete. Use the text recovery entry and inspect fetian-live-user.service.' >&2
+    exit 1
+  }
+  exec /usr/bin/sddm --config /run/fetian/sddm-live.conf
+fi
+exec /usr/bin/sddm

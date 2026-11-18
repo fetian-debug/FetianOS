@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "policy": "one primary application per task; keep backends and fallbacks until replacement acceptance",
+  "file_manager": {"primary": "thunar", "desktop": "thunar.desktop", "candidate": "fetian-files", "candidate_verified": false},
+  "installer": {"enabled": false, "vm_install_verified": false},
+  "tasks": {
+    "files": {"primary": "Thunar", "packages": ["thunar"], "backends": ["gvfs", "gvfs-mtp", "udisks2", "thunar-volman", "tumbler"], "candidate": "FetianFiles preview", "removal_eligible": false},
+    "browser_and_pdf": {"primary": "Firefox", "packages": ["firefox"], "backends": [], "removal_eligible": false},
+    "terminal": {"primary": "Foot", "packages": ["foot"], "optional": ["alacritty"], "backends": [], "removal_eligible": false},
+    "system_monitor": {"primary": "Fetian health dashboard", "packages": [], "backends": ["fetian-health-rs"], "optional": ["btop", "htop"], "removal_eligible": false},
+    "settings": {"primary": "Fetian Control Center", "packages": [], "backends": ["gtk4", "libadwaita", "python-gobject", "polkit"], "removal_eligible": false},
+    "network": {"primary": "Control Center network page", "packages": [], "backends": ["networkmanager", "network-manager-applet"], "optional": ["nm-connection-editor", "nmtui"], "removal_eligible": false},
+    "bluetooth": {"primary": "Control Center Bluetooth action", "packages": [], "backends": ["bluez", "bluez-utils", "blueman"], "removal_eligible": false},
+    "audio": {"primary": "Control Center audio action", "packages": [], "backends": ["pipewire", "pipewire-pulse", "wireplumber", "pavucontrol"], "removal_eligible": false},
+    "images": {"primary": "imv", "packages": ["imv"], "backends": [], "candidate": "bounded FetianFiles raster previews (partial viewer functionality)", "removal_eligible": false},
+    "audio_and_video": {"primary": "mpv", "packages": ["mpv"], "backends": [], "removal_eligible": false},
+    "archives": {"primary": "Thunar archive integration", "packages": [], "backends": ["thunar-archive-plugin", "xarchiver", "tar", "zip", "unzip"], "candidate": "FetianFiles ZIP/TAR integration", "removal_eligible": false},
+    "launcher": {"primary": "Wofi", "packages": ["wofi"], "backends": [], "removal_eligible": false},
+    "notifications": {"primary": "Mako", "packages": ["mako"], "backends": ["libnotify"], "removal_eligible": false},
+    "screenshots": {"primary": "fetian-screenshot", "packages": [], "backends": ["grim", "slurp", "wl-clipboard"], "removal_eligible": false},
+    "clipboard": {"primary": "Wayland clipboard", "packages": [], "backends": ["wl-clipboard"], "optional": ["cliphist"], "removal_eligible": false},
+    "lock": {"primary": "session-specific lock service", "packages": [], "backends": ["swaylock", "hyprlock"], "removal_eligible": false},
+    "panel": {"primary": "Waybar", "packages": ["waybar"], "backends": [], "removal_eligible": false},
+    "packages": {"primary": "Fetian Apps / Control Center updates", "packages": [], "backends": ["pacman", "pacman-contrib", "polkit"], "removal_eligible": false},
+    "calendar": {"primary": "Fetian Calendar", "packages": [], "backends": ["python-gobject", "gtk4"], "removal_eligible": false},
+    "printing": {"primary": "Control Center printer action", "packages": [], "backends": ["cups", "system-config-printer"], "removal_eligible": false},
+    "text_editing": {"primary": "Vim in Foot", "packages": ["vim"], "backends": ["foot"], "removal_eligible": false},
+    "disk_administration": {"primary": "GParted (explicit administrator utility)", "packages": ["gparted"], "backends": ["polkit"], "removal_eligible": false}
+  }
+}

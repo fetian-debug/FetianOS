@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=FetianFiles Preview
+Comment=Experimental native file manager; Thunar remains the primary
+Exec=fetian-files %U
+TryExec=fetian-files
+Icon=system-file-manager
+Type=Application
+Categories=System;FileTools;FileManager;
+MimeType=inode/directory;
+NoDisplay=true
+Terminal=false

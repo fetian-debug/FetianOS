@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ ${GITHUB_ACTIONS:-} == true && $EUID == 0 && -f /.dockerenv ]] || { echo 'Run only inside the disposable CI build container.' >&2; exit 2; }
+source /etc/os-release
+[[ ${ID:-} == manjaro && $(uname -m) == x86_64 ]] || exit 2
+mkdir -p logs
+exec > >(tee -a logs/ci-container.log) 2>&1
+pacman-key --init
+pacman-key --populate archlinux manjaro
+# A complete upgrade keeps the rolling builder coherent; normal signatures stay on.
+pacman -Syu --needed --noconfirm archlinux-keyring manjaro-keyring archiso \
+  libisoburn cdrtools qemu-desktop edk2-ovmf mtools squashfs-tools rust base-devel python git
+pacman -Q > logs/ci-builder-packages.txt
+python3 scripts/build-environment.py --json > logs/ci-build-environment.json
+bash scripts/validate-profile.sh
+bash scripts/build-iso.sh
+iso=$(python3 scripts/select-iso.py)
+seconds=$(python3 -c 'import json; print(json.load(open("ci/manjaro.json"))["boot_seconds"])')
+python3 scripts/vm-test.py --iso "$iso" --expect live-account --seconds "$seconds"
+python3 scripts/record-vm-evidence.py "$iso"

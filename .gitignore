@@ -5,7 +5,17 @@
 /output/package-manifest.txt
 /output/kernel-manifest.json
 /output/ai-compatibility.json
+/output/*.files.txt
+/output/*.desktop-lock.json
+/output/*/build.json
+/output/*/packages.json
+/output/*/*.iso
+/output/*/*.iso.sha256
+/output/.candidate-*/
 /logs/
+/_site/
+/release-assets/
+/output/release-assets/
 
 # Local/editor/runtime files
 __pycache__/
@@ -19,3 +29,8 @@ __pycache__/
 
 # Local hardware reports
 fetian-hardware-report.json
+
+# Native Rust artifacts and isolated local toolchains
+/target/
+/.build-tools/
+/profile/sway/airootfs/usr/bin/fetian-health-rs

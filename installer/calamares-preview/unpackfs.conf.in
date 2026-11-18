@@ -1,0 +1,5 @@
+# Inactive template. Never bind or unpack into a host root filesystem.
+unpack:
+  - source: /run/archiso/bootmnt/fetianos/x86_64/airootfs.sfs
+    sourcefs: squashfs
+    destination: ""

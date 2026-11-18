@@ -1,0 +1,10 @@
+[Trigger]
+Operation = Install
+Type = Package
+Target = linux72
+Target = mkinitcpio-archiso
+
+[Action]
+Description = Build FetianOS live kernel and archiso initramfs
+When = PostTransaction
+Exec = /usr/bin/python3 /usr/lib/fetian/build_live_initramfs.py

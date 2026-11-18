@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FETIANOS — Sway recovery
+Comment=Retained Sway session during Hyprland migration
+Exec=/usr/bin/fetian-sway-session
+TryExec=/usr/bin/sway
+Type=Application
+DesktopNames=sway

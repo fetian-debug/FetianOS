@@ -1,3 +1,10 @@
 # Installation
 
-Boot the ISO in a VM first. Launch Calamares from the live session and select a disposable virtual disk. Do not select the host disk during development. The Developer Preview has not been declared installation-tested until a VM installation report exists.
+Installation is disabled pending a reviewed target-cleanup implementation and
+disposable-VM acceptance. Calamares is packaged but its launchers are hidden
+during image construction. The inactive templates are not an executable
+installer configuration. No installation or installed reboot has been verified.
+
+See [installer architecture](installer-architecture.md),
+[VM workflow](vm-testing.md) and [release gates](release-acceptance.md).
+Do not use this developer preview for public installation.

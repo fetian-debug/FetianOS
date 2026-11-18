@@ -1,0 +1,12 @@
+[Unit]
+Description=FetianOS desktop shell processes (independent of system telemetry)
+PartOf=fetian-hyprland.target
+After=graphical-session-pre.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/fetian-shell
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5
+KillMode=control-group

@@ -1,0 +1,7 @@
+* { font-family: Noto Sans, sans-serif; font-size: 14px; min-height: 0; }
+window#waybar { background: #090e1b; color: #ffffff; border: 2px solid #8ea3c9; border-radius: 4px; }
+button, #custom-identity, #custom-apps, #custom-files, #custom-terminal, #custom-browser, #custom-workspaces, #custom-monitor, #custom-health, #network, #pulseaudio, #clock, #custom-quick, #custom-power { padding: 6px 10px; margin: 2px; color: #ffffff; }
+#workspaces button.active { background: #ffffff; color: #090e1b; }
+button:hover { background: #283a59; color: #ffffff; }
+button:focus { outline: 3px solid #ffffff; }
+tooltip { background: #090e1b; color: #ffffff; border: 2px solid #ffffff; }

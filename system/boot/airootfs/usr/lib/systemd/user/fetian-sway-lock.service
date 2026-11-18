@@ -1,0 +1,7 @@
+[Unit]
+Description=FetianOS Sway lock client independent of panels
+PartOf=fetian-sway.target
+
+[Service]
+ExecStart=/usr/bin/swaylock -f -c 090e1b
+Type=forking

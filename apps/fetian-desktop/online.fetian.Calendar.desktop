@@ -5,4 +5,4 @@ Exec=fetian-calendar
 Icon=org.gnome.Calendar
 Terminal=false
 Type=Application
-Categories=Office;Utility;
+Categories=Office;

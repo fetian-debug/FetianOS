@@ -1,0 +1,9 @@
+[Unit]
+Description=FetianOS idle and session-lock requests
+PartOf=fetian-hyprland.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hypridle -c /usr/share/fetian/hyprland/hypridle.conf
+Restart=on-failure
+RestartSec=3

@@ -1,0 +1,8 @@
+[Unit]
+Description=Check real battery levels during the desktop session
+PartOf=fetian-common.target
+
+[Timer]
+OnActiveSec=30
+OnUnitActiveSec=120
+Unit=fetian-battery.service

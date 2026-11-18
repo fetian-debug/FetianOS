@@ -1,0 +1,103 @@
+name: ISO build and preview downloads
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      desktop:
+        description: Desktop image (Hyprland remains opt-in)
+        type: choice
+        options: [sway, hyprland, both]
+        default: sway
+      publish:
+        description: Publish verified developer-preview downloads
+        type: boolean
+        default: true
+permissions:
+  contents: read
+concurrency:
+  group: iso-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  checks:
+    uses: ./.github/workflows/source-checks.yml
+  plan:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - id: matrix
+        env:
+          DESKTOP: ${{ inputs.desktop || 'sway' }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          choice = os.environ['DESKTOP']
+          if choice not in ('sway', 'hyprland', 'both'): raise SystemExit('Invalid desktop')
+          print('matrix=' + json.dumps({'desktop': ['sway', 'hyprland'] if choice == 'both' else [choice]}))
+          PY
+  build:
+    needs: [checks, plan]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    env:
+      FETIAN_DESKTOP: ${{ matrix.desktop }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Reclaim unused SDK space on this disposable hosted runner
+        run: |
+          [[ "$RUNNER_ENVIRONMENT" == github-hosted && "$GITHUB_WORKSPACE" == /home/runner/work/* ]]
+          sudo rm -rf -- /usr/local/lib/android /usr/share/dotnet /opt/ghc /opt/hostedtoolcache/CodeQL
+          df -h .
+      - name: Build in Manjaro and require actual UEFI serial/live-account boot
+        run: bash scripts/ci-build-iso.sh
+      - name: Prepare verified downloadable ISO and checksum/evidence assets
+        run: |
+          iso=$(python3 scripts/select-iso.py)
+          python3 scripts/package-downloads.py "$(dirname "$iso")" "output/release-assets/$FETIAN_DESKTOP"
+      - name: Preserve ISO assets
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: iso-${{ matrix.desktop }}-${{ github.sha }}
+          path: output/release-assets/${{ matrix.desktop }}/
+          compression-level: 0
+          if-no-files-found: error
+          retention-days: 14
+      - name: Preserve diagnostics even when building or booting fails
+        if: always()
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: diagnostics-${{ matrix.desktop }}-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            logs/
+            work/vm/*/evidence.json
+            work/vm/*/serial.log
+            work/vm/*/qemu.log
+            work/vm/*/screen.ppm
+          if-no-files-found: warn
+          retention-days: 14
+  publish:
+    needs: build
+    if: (github.event_name != 'workflow_dispatch' || inputs.publish) && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/v'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          pattern: iso-*-${{ github.sha }}
+          path: release-assets
+      - name: Validate current-run assets and publish a developer prerelease
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python3 scripts/publish-preview.py release-assets

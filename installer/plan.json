@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "enabled": false,
+  "engine": "Calamares",
+  "target": "disposable UEFI x86_64 VM only until acceptance",
+  "source": "/run/archiso/bootmnt/fetianos/x86_64/airootfs.sfs",
+  "pages": ["welcome", "locale", "keyboard", "partition", "users", "summary", "finished"],
+  "jobs": [
+    {"id": "partition", "module": "partition", "status": "blocked-explicit-disk-confirmation-required"},
+    {"id": "mount", "module": "mount", "status": "planned"},
+    {"id": "unpack", "module": "unpackfs", "status": "template"},
+    {"id": "machine-id", "module": "machineid", "status": "planned"},
+    {"id": "locale", "module": "locale", "status": "planned"},
+    {"id": "keyboard", "module": "keyboard", "status": "planned"},
+    {"id": "timezone", "module": "hwclock", "status": "planned"},
+    {"id": "fstab", "module": "fstab", "status": "planned"},
+    {"id": "users", "module": "users", "status": "template"},
+    {"id": "live-cleanup", "module": "fetian-target-cleanup", "status": "contract-only-no-mutation-implemented"},
+    {"id": "normal-initramfs", "module": "initcpio", "status": "planned-after-live-hook-removal"},
+    {"id": "services", "module": "services-systemd", "status": "planned"},
+    {"id": "bootloader", "module": "bootloader", "status": "blocked-UEFI-GRUB-layout-unverified"},
+    {"id": "security-audit", "module": "fetian-installed-audit", "status": "read-only-validator-implemented"},
+    {"id": "unmount", "module": "umount", "status": "planned"}
+  ],
+  "promotion_requires": ["explicit disposable disk confirmation", "matching installed Calamares module schema", "target cleanup implementation", "normal initramfs and UEFI bootloader validation", "security audit pass", "installed reboot without ISO", "Sway and text recovery", "passworded sudo and lock/unlock", "graphical and data persistence acceptance"],
+  "vm_install_verified": false
+}

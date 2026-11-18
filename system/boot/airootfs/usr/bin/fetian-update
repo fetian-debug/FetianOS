@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -u
+if [[ ${1:-check} == check ]]; then
+  exec python3 /usr/share/fetian-desktop/fetian_daily.py check-updates
+fi
+[[ ${1:-} == install ]] || { echo 'Usage: fetian-update [check|install]' >&2; exit 2; }
+[[ -t 0 && -t 1 ]] || { echo 'Run installation in a terminal to review and confirm the complete package transaction.' >&2; exit 2; }
+sudo pacman -Syu
+status=$?
+if [[ $status == 0 ]]; then echo 'Package transaction completed.'; else echo "Package transaction failed (exit $status). Review the output above."; fi
+read -r -p 'Press Enter to close this terminal.' _ || true
+exit "$status"

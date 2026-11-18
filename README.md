@@ -1,5 +1,16 @@
 # FetianOS
 
+[Downloads](https://fetian-debug.github.io/FetianOS/downloads.html) ·
+[Documentation](https://fetian-debug.github.io/FetianOS/docs/index.html) ·
+[Build status](https://github.com/fetian-debug/FetianOS/actions/workflows/iso-release.yml) ·
+[Releases](https://github.com/fetian-debug/FetianOS/releases)
+
+Main-branch CI checks source, builds the Sway ISO in a disposable Manjaro
+container and requires a real UEFI serial/live-account boot before publishing
+developer-preview downloads. Hyprland builds are manually selected. Failed
+builds retain diagnostics. The downloads page lists only published release
+assets; the source ZIP is labeled separately. See [CI/CD](docs/ci-cd.md).
+
 FetianOS is an independent, Manjaro-compatible Linux operating system for developers and power users. It combines a Sway/Wayland desktop, automatic hardware detection, a unified eye-friendly design system, safe system tools, and live development without rebuilding the ISO.
 
 Authored for [fetian.online](https://fetian.online). Not affiliated with Manjaro or Arch Linux.
@@ -13,6 +24,73 @@ FetianOS is designed to be automatic, understandable, comfortable, powerful, rec
 FetianOS is a developer preview. It currently includes Sway, Waybar, Wofi, Foot, Mako, PipeWire, NetworkManager, Bluetooth, Calamares, Fetian Control Center, hardware reporting, health reporting, Fetian Apps, Fetian Calendar, interactive power controls, eye-care defaults, and a source hot-reload workflow.
 
 Do not use it on critical systems without backups. It is not yet a production-certified distribution.
+
+### Boot/login and daily-use integration
+
+Both staged images now include guarded live-account provisioning, SDDM login,
+Sway recovery and an explicit text-recovery boot entry. The image pipeline builds
+Archiso initramfs artifacts and checks boot references, executable permissions
+and default applications before publishing a checksum. Shared desktop services
+wire audio, Bluetooth, user folders and real Rust-backed battery warnings.
+Update checking is read-only; installation opens an interactive terminal.
+
+The disposable live credential is **fetian / fetian**. It is created only on
+recognized live media; existing installed accounts are not reset. Real ISO boot,
+GUI/device tests and Calamares cleanup still need validation. See
+[boot/login](docs/boot-login.md) and [daily usability](docs/daily-usability.md).
+
+### Application policy and verification tooling
+
+The repository now includes a one-primary-per-task application inventory,
+FetianFiles GTK preview, guarded artifact bundles, a disposable OVMF/QEMU runner,
+guest evidence collection and a read-only installed-root policy validator.
+FetianFiles adds native file workflows and bounded previews/archives while
+Thunar remains the default. Existing packages and Rust services are retained.
+Calamares launchers are disabled during image construction; inactive installer
+templates do not perform partitioning or installation.
+
+See [application strategy](docs/application-strategy.md),
+[FetianFiles](docs/fetian-files.md), [VM testing](docs/vm-testing.md),
+[installer preparation](docs/installer-architecture.md),
+[release gates](docs/release-acceptance.md) and
+[latest verification](docs/verification-2026-11-18.md).
+
+### Hyprland 2090 migration
+
+Hyprland is the intended primary desktop. An opt-in candidate overlay now adds
+a pinned compositor cohort, SDDM session entries, a real application dock,
+workspace/window navigator, portal integration, Rust metrics views and four
+effects profiles. Sway remains available and stays the default build until
+graphical/hardware/VM acceptance passes. No plugins or simulated 3D previews
+are shipped; physical glass optics and an installation-tested ISO remain pending.
+
+```bash
+make native-check native profile-check
+sudo make build-hyprland  # on a disposable x86_64 Manjaro build host
+```
+
+See [Hyprland integration](docs/hyprland-integration.md),
+[candidate ISO steps](docs/iso-build.md) and [actual test evidence](docs/testing.md).
+
+### Rust system foundation
+
+New first-party system code is written in safe Rust. The dependency-free
+`fetian-system` library and `fetian-health-rs` command now collect real Linux CPU,
+memory, uptime, network, battery and temperature metrics. `fetian-health` delegates
+to that backend, and the image stages a sandboxed systemd health timer. Existing
+Sway and GTK applications are retained; the whole distribution is not pure Rust.
+
+```bash
+make native-check
+make native
+PATH="$PWD/target/release:$PATH" fetian-health-rs --json
+```
+
+Use x86_64 Linux with Rust, a C linker, rustfmt and Clippy. See
+[architecture and audit](docs/architecture.md), [test commands](docs/testing.md),
+[milestones](docs/roadmap.md) and [known limitations](docs/known-issues.md).
+The supplied live-session and installer setup still needs completion and VM
+verification; this source update does not constitute a tested bootable ISO.
 
 ## Included experience
 

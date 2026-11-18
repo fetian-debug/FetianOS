@@ -34,6 +34,30 @@ Install `inotify-tools` for immediate filesystem events. Without it, the workflo
 
 ## Service development
 
+### Hyprland development
+
+`make dev-desktop` detects an active Hyprland instance and uses its source Waybar
+configuration/styles and compositor reload command. The watcher also monitors
+`desktop/hyprland`. The native GTK tools can run from source with:
+
+```bash
+make native
+PATH="$PWD/target/release:$PATH" python3 desktop/hyprland/fetian_desktop.py monitor
+PATH="$PWD/target/release:$PATH" python3 desktop/hyprland/fetian_desktop.py widget
+make desktop-check
+```
+
+The workspace view needs a running pinned Hyprland session. GUI modes need
+GTK4/PyGObject and a display. A source watcher cannot apply edits to a compositor
+configuration still loaded from `/usr/share`: stage/install the candidate in a
+disposable VM to test those changes. Do not replace a production login config.
+
+On a candidate installation, use `systemctl --user restart fetian-shell.service`
+to restart panels and notifications. Idle/lock and system health units remain
+independent. Never use broad process-kill commands to refresh the shell.
+
+### Existing services
+
 Test a service without touching the installed system by running its executable directly, then validate the unit file separately:
 
 ```bash

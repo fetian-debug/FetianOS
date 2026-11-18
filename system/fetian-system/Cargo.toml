@@ -1,0 +1,11 @@
+[package]
+name = "fetian-system"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.74"
+license = "MIT"
+description = "Unprivileged, dependency-free Linux system telemetry for FetianOS"
+
+[[bin]]
+name = "fetian-health-rs"
+path = "src/main.rs"

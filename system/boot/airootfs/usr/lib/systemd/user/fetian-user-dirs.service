@@ -1,0 +1,7 @@
+[Unit]
+Description=Create standard user directories without replacing existing preferences
+PartOf=fetian-common.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/xdg-user-dirs-update

@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 root=$(dirname "$(dirname "$(readlink -f "$0")")")
-iso=$(find "$root/output" -maxdepth 1 -type f -name '*.iso' -printf '%T@ %p\n' 2>/dev/null | sort -nr | head -1 | cut -d' ' -f2-)
+iso=${FETIAN_ISO:-$(python3 "$root/scripts/select-iso.py")}
 [[ -n "$iso" && -s "$iso" ]] || { echo 'No ISO found.'; exit 1; }
-sha256sum -c "$iso.sha256"
+(cd "$(dirname "$iso")" && sha256sum -c "$(basename "$iso").sha256")
+mkdir -p "$root/logs"
 isoinfo -d -i "$iso" | tee "$root/logs/iso-descriptor.txt"
-isoinfo -f -i "$iso" | grep -Eq 'vmlinuz|initramfs' || { echo 'Kernel/initramfs not found in ISO'; exit 1; }
+python3 "$root/scripts/verify-boot-artifacts.py" "$iso"
 echo "ISO integrity checks passed: $iso"

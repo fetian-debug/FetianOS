@@ -1,0 +1,16 @@
+[Unit]
+Description=Prepare the disposable FetianOS live account
+After=local-fs.target
+Before=sddm.service getty@tty1.service serial-getty@ttyS0.service
+ConditionKernelCommandLine=archisobasedir=fetianos
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/lib/fetian/live_setup.py
+RemainAfterExit=yes
+TimeoutStartSec=60
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,3 @@
+[Unit]
+Description=FetianOS Sway session services
+Wants=fetian-common.target fetian-sway-idle.service

@@ -1,0 +1,4 @@
+[Unit]
+Description=FetianOS shared daily desktop services
+Wants=fetian-user-dirs.service fetian-bluetooth-agent.service fetian-battery.timer
+StopWhenUnneeded=yes

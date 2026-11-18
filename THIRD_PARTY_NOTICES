@@ -1,0 +1,146 @@
+# Third-party notices
+
+FetianOS is independent of Hyprland, Wayfire, Manjaro and Arch Linux. Project
+files retain their existing MIT license. Third-party components retain their
+own licenses and notices; inclusion does not imply upstream endorsement.
+
+Hyprland v0.56.2: BSD-3-Clause, copyright vaxerski. Full upstream notice:
+[licenses/Hyprland-BSD-3-Clause.txt](licenses/Hyprland-BSD-3-Clause.txt).
+Source: [Hyprland](https://github.com/hyprwm/Hyprland/tree/v0.56.2).
+
+Wayfire is a design/reference source only; no Wayfire code or plugins are
+packaged in the candidate. MIT, copyright Iliya Bozhinov. Its full notice is
+preserved in [licenses/Wayfire-MIT.txt](licenses/Wayfire-MIT.txt).
+Source: [Wayfire](https://github.com/WayfireWM/wayfire).
+
+Official Hyprland plugins were inspected as optional references; none is
+redistributed or loaded. Their BSD-3-Clause license and exact-version ABI
+requirements must be preserved if added later.
+
+The table below records direct selected package license metadata observed in
+Manjaro stable core/extra on 2026-11-17. It is not a complete transitive license
+or source-obligation audit. Distribution packages carry their own notices;
+preserve those and corresponding-source obligations before redistributing an
+ISO. Some metadata uses legacy license labels, reproduced here without guessing
+an SPDX interpretation. See the desktop lock for exact pinned package hashes.
+
+| Package | Observed version | Repository license metadata |
+|---|---|---|
+| alacritty | 0.17.0-1 | Apache-2.0, MIT |
+| amd-ucode | 20260916-1 | LicenseRef-amd-ucode |
+| aquamarine | 0.15.1-1 | BSD-3-Clause |
+| base | 3-5 | GPL |
+| base-devel | 1-3 | GPL |
+| blueman | 2.4.6-2 | GPL-3.0-or-later |
+| bluez | 5.87-2 | GPL-2.0-only |
+| bluez-utils | 5.87-2 | GPL-2.0-only |
+| brightnessctl | 0.5.1-3 | MIT |
+| btop | 1.4.7-1 | Apache-2.0 |
+| btrfs-progs | 7.1-1 | GPL-2.0-only |
+| calamares | 3.4.2-4 | BSD-2-Clause, CC0-1.0, CC-BY-4.0, GPL-3.0-or-later, LGPL-2.0-only, LGPL-2.1-only, LGPL-3.0-or-later, MIT |
+| cliphist | 1:0.7.0-2 | GPL3 |
+| cups | 2:2.4.20-1 | Apache-2.0 WITH LLVM-exception AND BSD-3-Clause AND Zlib AND BSD-2-Clause |
+| curl | 8.22.0-1 | curl |
+| dmidecode | 3.7-1 | GPL-2.0-or-later |
+| docker | 1:29.8.2-1 | Apache-2.0 |
+| dosfstools | 4.2-5 | GPL-3.0-or-later |
+| e2fsprogs | 1.47.4-1 | GPL, LGPL, MIT |
+| efibootmgr | 18-4 | GPL-2.0-or-later |
+| firefox | 160.0-1 | MPL-2.0 |
+| foot | 1.28.0-2 | MIT |
+| fwupd | 2.1.8-1 | LGPL-2.1-or-later |
+| gammastep | 2.0.11-2 | GPL-3.0-or-later |
+| git | 2.56.0-1 | GPL-2.0-only |
+| gnome-keyring | 1:50.0-1 | GPL-2.0-or-later, LGPL-2.1-or-later |
+| gparted | 1.8.1-2 | GPL-2.0-or-later, GFDL-1.2-or-later |
+| grim | 1.5.0-2 | MIT |
+| grub | 2:2.16-3.1 | GPL-3.0-or-later |
+| gtk4 | 1:4.22.5-1 | LGPL-2.1-or-later |
+| gvfs | 1.60.3-3 | LGPL-2.0-only |
+| gvfs-mtp | 1.60.3-3 | LGPL-2.0-only |
+| htop | 3.5.3-1 | GPL |
+| hwdata | 0.412-1 | GPL-2.0-or-later |
+| hyprcursor | 0.1.13-7 | BSD-3-Clause |
+| hyprgraphics | 0.5.1-4 | BSD-3-Clause |
+| hypridle | 0.1.8-2 | BSD-3-Clause |
+| hyprland | 0.56.2-4 | BSD-3-Clause |
+| hyprland-guiutils | 0.2.2-4 | BSD-3-Clause |
+| hyprlang | 0.6.8-5 | BSD-3-Clause |
+| hyprlock | 0.9.6-3 | BSD-3-Clause |
+| hyprutils | 0.14.2-1 | BSD-3-Clause |
+| hyprwire | 0.3.1-3 | BSD-3-Clause |
+| imv | 5.0.1-2 | MIT |
+| intel-ucode | 20260925-1 | custom |
+| less | 1:710-1 | GPL-3.0-or-later OR LicenseRef-Less |
+| libadwaita | 1:1.9.4-1 | LGPL-2.1-or-later |
+| libnotify | 0.8.8-1 | LGPL-2.1-or-later |
+| linux-firmware | 20260916-1 | CC0-1.0 |
+| linux72 | 7.2.9-1 | GPL-2.0-only |
+| lm_sensors | 1:3.6.2-1 | GPL-2.0-only OR LGPL-2.1-only |
+| lua | 5.5.1-1 | MIT |
+| mako | 1.11.0-1 | MIT |
+| man-db | 2.13.1-2 | GPL-2.0-or-later AND GPL-3.0-or-later |
+| man-pages | 6.19-1 | BSD-2-Clause, BSD-3-Clause, BSD-4.3TAHOE, BSD-4-Clause-UC, GPL-1.0-or-later, GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-or-later, LGPL-3.0-linking-exception, LGPL-3.0-or-later, LicenseRef-Public-Domain, LicenseRef-UltraPermissive, Linux-man-pages-1-para, Linux-man-pages-copyleft, Linux-man-pages-copyleft-2-para, Linux-man-pages-copyleft-var, MIT, Spencer-94 |
+| manjaro-release | 26.1.3-1 | GPL2 |
+| mesa | 1:26.2.4-1 | MIT AND BSD-3-Clause AND SGI-B-2.0 |
+| mkinitcpio-archiso | 73-1 | GPL-3.0-or-later |
+| mpv | 1:0.41.0-6 | GPL-2.0-or-later AND LGPL-2.1-or-later |
+| network-manager-applet | 1.36.0-2 | GPL-2.0-or-later |
+| networkmanager | 1.58.1-2 | LGPL-2.1-or-later, GPL-2.0-or-later |
+| networkmanager-qt | 6.30.0-1 | LGPL-2.0-only, LGPL-3.0-only |
+| nodejs | 26.10.0-2 | MIT |
+| noto-fonts | 1:2026.10.01-1 | OFL-1.1-no-RFN |
+| noto-fonts-cjk | 20240730-1 | OFL-1.1 |
+| noto-fonts-emoji | 1:2.051-1 | OFL-1.1-no-RFN |
+| noto-fonts-extra | 1:2026.10.01-1 | OFL-1.1-no-RFN |
+| npm | 12.2.0-1 | Artistic-2.0 |
+| ntfs-3g | 2026.9.28-1 | GPL-2.0-or-later |
+| openssh | 10.6p1-1 | 0BSD, BSD-2-Clause, BSD-3-Clause, ISC, LicenseRef-Public-Domain, MIT |
+| os-prober | 1.85-1 | GPL-3.0-or-later |
+| pacman-contrib | 1.13.1-1 | GPL-2.0-or-later |
+| pavucontrol | 1:6.2-1 | GPL-2.0-or-later |
+| pciutils | 3.15.0-1 | GPL-2.0-only |
+| pipewire | 1:1.6.9-1 | MIT, LGPL-2.1-or-later |
+| pipewire-pulse | 1:1.6.9-1 | MIT |
+| polkit | 127-3 | LGPL-2.0-or-later |
+| polkit-gnome | 0.105-12 | LGPL-2.0-or-later |
+| power-profiles-daemon | 0.30-1 | GPL-3.0-only |
+| python | 3.14.7-1 | PSF-2.0 |
+| python-gobject | 3.56.3-1 | LGPL-2.1-or-later |
+| python-pip | 26.2.1-1 | MIT |
+| sdbus-cpp | 2.3.1-1 | LGPL-2.1-only, LicenseRef-sdbus-c++-LGPL-Exception-1.0 |
+| sddm | 0.21.0-7 | GPL-2.0-or-later |
+| slurp | 1.5.0-2 | MIT |
+| sudo | 1.9.17.p2-6 | custom |
+| sway | 1:1.12-4 | MIT |
+| swaybg | 1.2.2-1 | MIT |
+| swayidle | 1.9.0-1 | MIT |
+| swaylock | 1.8.6-1 | MIT |
+| system-config-printer | 1.5.18-7 | GPL-2.0-or-later |
+| systemd | 261.3-1 | LGPL-2.1-or-later, CC0-1.0, GPL-2.0-or-later, MIT-0 |
+| tar | 1.35-5 | GPL-3.0-or-later |
+| thunar | 4.20.10-1 | GPL-2.0-or-later, LGPL-2.1-only |
+| thunar-archive-plugin | 0.6.0-1 | GPL-2.0-only |
+| thunar-volman | 4.20.0-2 | GPL-2.0-or-later |
+| ttf-dejavu | 2.37+18+g9b5d1b2f-8 | custom |
+| tumbler | 4.20.2-2 | GPL-2.0-or-later |
+| udisks2 | 2.11.2-1 | GPL-2.0-or-later, LGPL-2.0-or-later |
+| unzip | 6.0-23 | custom |
+| usbutils | 019-1 | GPL-2.0-only, GPL-2.0-or-later, GPL-3.0-only, LGPL-2.1-or-later, MIT |
+| vim | 9.2.1164-2 | custom:vim |
+| vulkan-intel | 1:26.2.4-1 | MIT AND BSD-3-Clause AND SGI-B-2.0 |
+| vulkan-radeon | 1:26.2.4-1 | MIT AND BSD-3-Clause AND SGI-B-2.0 |
+| waybar | 0.15.0-3 | MIT |
+| wget | 1.25.0-6 | GPL-3.0-or-later |
+| wireplumber | 0.5.18-1 | MIT |
+| wl-clipboard | 1:2.3.0-1 | GPL-3.0-or-later |
+| wofi | 1.5.3-1 | GPL-3.0-or-later |
+| xarchiver | 0.5.4.27-1 | GPL-2.0-or-later |
+| xdg-desktop-portal | 1.22.1-2 | LGPL-2.1-or-later |
+| xdg-desktop-portal-gtk | 1.15.3-1 | LGPL-2.0-or-later |
+| xdg-desktop-portal-hyprland | 1.4.1-2 | MIT |
+| xdg-desktop-portal-wlr | 0.8.4-1 | MIT |
+| xdg-user-dirs | 0.20-1 | GPL-2.0-or-later |
+| xdg-utils | 1.2.1-2 | MIT |
+| xorg-xwayland | 24.1.13-1 | LicenseRef-Adobe-Display-PostScript, BSD-3-Clause, LicenseRef-DEC-3-Clause, HPND, LicenseRef-HPND-sell-MIT-disclaimer-xserver, HPND-sell-variant, ICU, ISC, MIT, MIT-open-group, NTP, SGI-B-2.0, SMLNJ, X11, X11-distribute-modifications-variant |
+| zip | 3.0-14 | LicenseRef-Info-ZIP |

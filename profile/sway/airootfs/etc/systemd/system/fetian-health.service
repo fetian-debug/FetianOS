@@ -1,13 +1,25 @@
 [Unit]
-Description=FetianOS hardware and system health snapshot
-After=network-online.target
+Description=FetianOS Rust system health snapshot
+After=local-fs.target
+ConditionPathIsReadWrite=/var/lib
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/sh -c 'mkdir -p /var/lib/fetian; /usr/bin/fetian-health --json > /var/lib/fetian/health.json'
+ExecStart=/usr/bin/fetian-health-rs --output /var/lib/fetian/health.json
+DynamicUser=yes
+StateDirectory=fetian
+StateDirectoryMode=0755
+UMask=0022
+NoNewPrivileges=yes
+CapabilityBoundingSet=
 ProtectSystem=strict
-ReadWritePaths=/var/lib/fetian
-PrivateTmp=true
-
-[Install]
-WantedBy=multi-user.target
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+PrivateTmp=yes
+PrivateDevices=yes
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=yes
+LockPersonality=yes
+TimeoutStartSec=10s

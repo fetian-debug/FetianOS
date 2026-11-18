@@ -1,0 +1,35 @@
+name: Source and GTK checks
+on:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Native GUI test dependencies (ephemeral CI runner)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-gi python3-markdown python3-yaml gir1.2-gtk-4.0 xvfb dbus-x11 desktop-file-utils
+          rustup component add rustfmt clippy
+      - name: Rust formatting, lint, tests and Python regressions
+        run: PYTHON=/usr/bin/python3 bash scripts/check-native.sh
+      - name: Release build, profiles and staged unit syntax
+        run: |
+          bash scripts/build-native.sh
+          bash scripts/validate-profile.sh
+          python3 scripts/verify-staged.py
+      - name: Native GTK integration with disposable data
+        run: make gtk-check PYTHON=/usr/bin/python3
+      - name: Desktop entries
+        # Session entries use SDDM's DesktopNames key and have separate tests.
+        run: find apps desktop system profile -name '*.desktop' ! -path '*/wayland-sessions/*' -print0 | xargs -0 desktop-file-validate
+      - name: Capability report
+        run: python3 scripts/build-environment.py --json
+# This source job does not build an ISO, boot a VM, install an OS or publish a release.

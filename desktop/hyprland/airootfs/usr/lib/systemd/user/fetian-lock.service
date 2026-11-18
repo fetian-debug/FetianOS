@@ -1,0 +1,7 @@
+[Unit]
+Description=FetianOS session lock (independent of shell restarts)
+PartOf=fetian-hyprland.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/hyprlock --config /usr/share/fetian/hyprland/hyprlock.conf

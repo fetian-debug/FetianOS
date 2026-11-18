@@ -1,0 +1,12 @@
+# Inactive template, not installed under /etc/calamares. Review with target version.
+defaultGroups:
+  - wheel
+sudoersGroup: wheel
+sudoersConfigureWithGroup: true
+setRootPassword: false
+doAutologin: false
+allowWeakPasswords: false
+passwordRequirements:
+  minLength: 12
+  maxLength: -1
+userShell: /bin/bash

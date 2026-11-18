@@ -1,0 +1,6 @@
+.fetian-files { font-family: Noto Sans, sans-serif; }
+.fetian-files button { border-radius: 8px; }
+.fetian-files row { padding: 6px; }
+.fetian-files .compact row { padding: 1px; }
+.fetian-files flowboxchild { padding: 12px; border-radius: 10px; }
+.fetian-files :focus { outline-width: 2px; outline-offset: 2px; }

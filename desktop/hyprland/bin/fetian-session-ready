@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ -n ${HYPRLAND_INSTANCE_SIGNATURE:-} && -n ${WAYLAND_DISPLAY:-} ]] || exit 1
+variables=(WAYLAND_DISPLAY XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE HYPRLAND_INSTANCE_SIGNATURE)
+[[ -z ${DISPLAY:-} ]] || variables+=(DISPLAY)
+systemctl --user import-environment "${variables[@]}"
+dbus-update-activation-environment --systemd "${variables[@]}"
+systemctl --user start fetian-hyprland.target
+systemctl --user restart xdg-desktop-portal.service

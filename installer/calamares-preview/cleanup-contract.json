@@ -1,0 +1,18 @@
+{
+  "executable": false,
+  "preconditions": ["Calamares owns the mounted disposable target", "target is not host / or live /", "user and password created successfully", "target source matches verified image"],
+  "required_jobs": [
+    "remove disposable fetian account and home only after proving live-image provenance",
+    "remove /etc/sudoers.d/90-fetian-live",
+    "remove enabled fetian-live-user.service, provisioning scripts and runtime autologin state",
+    "remove SDDM 10-fetian-live.conf drop-in and live display-manager wrapper so normal SDDM starts independently",
+    "remove build markers, one-shot image hooks and runtime metrics/session state",
+    "remove archiso hooks from normal installed mkinitcpio configuration",
+    "generate normal initramfs against installed kernels",
+    "configure SDDM with no autologin and retain Sway session",
+    "install passworded wheel sudo rule; visudo must pass",
+    "validate locked root account, unique normal user, clean machine identity, fstab and UUID-based UEFI boot entries",
+    "run scripts/verify-installed.py; any failure aborts installer completion"
+  ],
+  "must_not": ["delete a preexisting account based only on its name", "log passwords or password hashes", "continue after cleanup failure", "use upstream removeuser as sole assurance because it never fails"]
+}

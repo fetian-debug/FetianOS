@@ -1,0 +1,8 @@
+[Unit]
+Description=FetianOS battery warnings from the Rust collector
+PartOf=fetian-common.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/share/fetian-desktop/fetian_daily.py battery-check
+TimeoutStartSec=15

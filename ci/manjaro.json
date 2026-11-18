@@ -1,0 +1,8 @@
+{
+  "image": "manjarolinux/base:latest",
+  "architecture": "linux/amd64",
+  "minimum_free_gib": 40,
+  "boot_seconds": 300,
+  "release_chunk_mib": 1900,
+  "policy": "Resolve and record the container digest; moving signed repositories are not a reproducibility guarantee."
+}

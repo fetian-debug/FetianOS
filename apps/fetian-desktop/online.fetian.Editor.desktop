@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Fetian Text Editor (Vim)
+Exec=/usr/bin/foot -e /usr/bin/vim %F
+Icon=accessories-text-editor
+Terminal=false
+NoDisplay=true
+MimeType=text/plain;text/markdown;application/json;
+Categories=Utility;TextEditor;

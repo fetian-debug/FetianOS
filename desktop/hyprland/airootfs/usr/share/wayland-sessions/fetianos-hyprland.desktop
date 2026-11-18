@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=FETIANOS — Hyprland
+Comment=FetianOS 2090 experimental Hyprland session
+Exec=/usr/bin/fetian-hyprland-session
+TryExec=/usr/bin/Hyprland
+Type=Application
+DesktopNames=Hyprland

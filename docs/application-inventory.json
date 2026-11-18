@@ -1,0 +1,1840 @@
+{
+  "schema_version": 1,
+  "scope": "declared source inventory, not an installed image inventory",
+  "policy": {
+    "schema_version": 1,
+    "policy": "one primary application per task; keep backends and fallbacks until replacement acceptance",
+    "file_manager": {
+      "primary": "thunar",
+      "desktop": "thunar.desktop",
+      "candidate": "fetian-files",
+      "candidate_verified": false
+    },
+    "installer": {
+      "enabled": false,
+      "vm_install_verified": false
+    },
+    "tasks": {
+      "files": {
+        "primary": "Thunar",
+        "packages": [
+          "thunar"
+        ],
+        "backends": [
+          "gvfs",
+          "gvfs-mtp",
+          "udisks2",
+          "thunar-volman",
+          "tumbler"
+        ],
+        "candidate": "FetianFiles preview",
+        "removal_eligible": false
+      },
+      "browser_and_pdf": {
+        "primary": "Firefox",
+        "packages": [
+          "firefox"
+        ],
+        "backends": [],
+        "removal_eligible": false
+      },
+      "terminal": {
+        "primary": "Foot",
+        "packages": [
+          "foot"
+        ],
+        "optional": [
+          "alacritty"
+        ],
+        "backends": [],
+        "removal_eligible": false
+      },
+      "system_monitor": {
+        "primary": "Fetian health dashboard",
+        "packages": [],
+        "backends": [
+          "fetian-health-rs"
+        ],
+        "optional": [
+          "btop",
+          "htop"
+        ],
+        "removal_eligible": false
+      },
+      "settings": {
+        "primary": "Fetian Control Center",
+        "packages": [],
+        "backends": [
+          "gtk4",
+          "libadwaita",
+          "python-gobject",
+          "polkit"
+        ],
+        "removal_eligible": false
+      },
+      "network": {
+        "primary": "Control Center network page",
+        "packages": [],
+        "backends": [
+          "networkmanager",
+          "network-manager-applet"
+        ],
+        "optional": [
+          "nm-connection-editor",
+          "nmtui"
+        ],
+        "removal_eligible": false
+      },
+      "bluetooth": {
+        "primary": "Control Center Bluetooth action",
+        "packages": [],
+        "backends": [
+          "bluez",
+          "bluez-utils",
+          "blueman"
+        ],
+        "removal_eligible": false
+      },
+      "audio": {
+        "primary": "Control Center audio action",
+        "packages": [],
+        "backends": [
+          "pipewire",
+          "pipewire-pulse",
+          "wireplumber",
+          "pavucontrol"
+        ],
+        "removal_eligible": false
+      },
+      "images": {
+        "primary": "imv",
+        "packages": [
+          "imv"
+        ],
+        "backends": [],
+        "candidate": "bounded FetianFiles raster previews (partial viewer functionality)",
+        "removal_eligible": false
+      },
+      "audio_and_video": {
+        "primary": "mpv",
+        "packages": [
+          "mpv"
+        ],
+        "backends": [],
+        "removal_eligible": false
+      },
+      "archives": {
+        "primary": "Thunar archive integration",
+        "packages": [],
+        "backends": [
+          "thunar-archive-plugin",
+          "xarchiver",
+          "tar",
+          "zip",
+          "unzip"
+        ],
+        "candidate": "FetianFiles ZIP/TAR integration",
+        "removal_eligible": false
+      },
+      "launcher": {
+        "primary": "Wofi",
+        "packages": [
+          "wofi"
+        ],
+        "backends": [],
+        "removal_eligible": false
+      },
+      "notifications": {
+        "primary": "Mako",
+        "packages": [
+          "mako"
+        ],
+        "backends": [
+          "libnotify"
+        ],
+        "removal_eligible": false
+      },
+      "screenshots": {
+        "primary": "fetian-screenshot",
+        "packages": [],
+        "backends": [
+          "grim",
+          "slurp",
+          "wl-clipboard"
+        ],
+        "removal_eligible": false
+      },
+      "clipboard": {
+        "primary": "Wayland clipboard",
+        "packages": [],
+        "backends": [
+          "wl-clipboard"
+        ],
+        "optional": [
+          "cliphist"
+        ],
+        "removal_eligible": false
+      },
+      "lock": {
+        "primary": "session-specific lock service",
+        "packages": [],
+        "backends": [
+          "swaylock",
+          "hyprlock"
+        ],
+        "removal_eligible": false
+      },
+      "panel": {
+        "primary": "Waybar",
+        "packages": [
+          "waybar"
+        ],
+        "backends": [],
+        "removal_eligible": false
+      },
+      "packages": {
+        "primary": "Fetian Apps / Control Center updates",
+        "packages": [],
+        "backends": [
+          "pacman",
+          "pacman-contrib",
+          "polkit"
+        ],
+        "removal_eligible": false
+      },
+      "calendar": {
+        "primary": "Fetian Calendar",
+        "packages": [],
+        "backends": [
+          "python-gobject",
+          "gtk4"
+        ],
+        "removal_eligible": false
+      },
+      "printing": {
+        "primary": "Control Center printer action",
+        "packages": [],
+        "backends": [
+          "cups",
+          "system-config-printer"
+        ],
+        "removal_eligible": false
+      },
+      "text_editing": {
+        "primary": "Vim in Foot",
+        "packages": [
+          "vim"
+        ],
+        "backends": [
+          "foot"
+        ],
+        "removal_eligible": false
+      },
+      "disk_administration": {
+        "primary": "GParted (explicit administrator utility)",
+        "packages": [
+          "gparted"
+        ],
+        "backends": [
+          "polkit"
+        ],
+        "removal_eligible": false
+      }
+    }
+  },
+  "base_packages": [
+    {
+      "package": "base",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "linux72",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "linux-firmware",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "mkinitcpio-archiso",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "sddm",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "manjaro-release",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "systemd",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "networkmanager",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "network"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "sudo",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "git",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "curl",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "wget",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "openssh",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "tar",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "archives"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "unzip",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "archives"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "zip",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "archives"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "less",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "man-db",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "man-pages",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "e2fsprogs",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "btrfs-progs",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "dosfstools",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "ntfs-3g",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "grub",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "efibootmgr",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "os-prober",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "intel-ucode",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "amd-ucode",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "mesa",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "vulkan-intel",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "vulkan-radeon",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xorg-xwayland",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "sway",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "swaybg",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "swayidle",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "swaylock",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "lock"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "waybar",
+      "classification": "primary_application",
+      "primary_for": [
+        "panel"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "wofi",
+      "classification": "primary_application",
+      "primary_for": [
+        "launcher"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "foot",
+      "classification": "primary_application",
+      "primary_for": [
+        "terminal"
+      ],
+      "backend_for": [
+        "text_editing"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "mako",
+      "classification": "primary_application",
+      "primary_for": [
+        "notifications"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "grim",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "screenshots"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "slurp",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "screenshots"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "wl-clipboard",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "screenshots",
+        "clipboard"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "cliphist",
+      "classification": "optional_application",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [
+        "clipboard"
+      ],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xdg-desktop-portal",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xdg-desktop-portal-wlr",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "polkit",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "settings",
+        "packages",
+        "disk_administration"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "polkit-gnome",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "network-manager-applet",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "network"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "bluez",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "bluetooth"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "bluez-utils",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "bluetooth"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "pipewire",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "audio"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "pipewire-pulse",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "audio"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "wireplumber",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "audio"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "pavucontrol",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "audio"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "brightnessctl",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "thunar",
+      "classification": "primary_application",
+      "primary_for": [
+        "files"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "firefox",
+      "classification": "primary_application",
+      "primary_for": [
+        "browser_and_pdf"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "alacritty",
+      "classification": "optional_application",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [
+        "terminal"
+      ],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "calamares",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gparted",
+      "classification": "primary_application",
+      "primary_for": [
+        "disk_administration"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "ttf-dejavu",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "noto-fonts",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "noto-fonts-emoji",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "noto-fonts-cjk",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "noto-fonts-extra",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "base-devel",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "vim",
+      "classification": "primary_application",
+      "primary_for": [
+        "text_editing"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "htop",
+      "classification": "optional_application",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [
+        "system_monitor"
+      ],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "python",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "python-pip",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "nodejs",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "npm",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "docker",
+      "classification": "developer_tool",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gtk4",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [
+        "settings",
+        "calendar"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "libadwaita",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [
+        "settings"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "python-gobject",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [
+        "settings",
+        "calendar"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "hwdata",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "pciutils",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "usbutils",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "dmidecode",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "lm_sensors",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "fwupd",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "power-profiles-daemon",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "udisks2",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "files"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gammastep",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "btop",
+      "classification": "optional_application",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [
+        "system_monitor"
+      ],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "networkmanager-qt",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xdg-desktop-portal-gtk",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xdg-user-dirs",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xdg-utils",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "pacman-contrib",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "packages"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "libnotify",
+      "classification": "library_or_data",
+      "primary_for": [],
+      "backend_for": [
+        "notifications"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "blueman",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "bluetooth"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gvfs",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "files"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gvfs-mtp",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "files"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "tumbler",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "files"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "thunar-volman",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "files"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "thunar-archive-plugin",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "archives"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "xarchiver",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "archives"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "mpv",
+      "classification": "primary_application",
+      "primary_for": [
+        "audio_and_video"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "imv",
+      "classification": "primary_application",
+      "primary_for": [
+        "images"
+      ],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "gnome-keyring",
+      "classification": "system_utility_or_service",
+      "primary_for": [],
+      "backend_for": [],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "cups",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "printing"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    },
+    {
+      "package": "system-config-printer",
+      "classification": "delegated_backend",
+      "primary_for": [],
+      "backend_for": [
+        "printing"
+      ],
+      "optional_for": [],
+      "removal_eligible": false,
+      "removal_risk": "unverified replacement or dependency closure"
+    }
+  ],
+  "source_desktop_entries": [
+    {
+      "source": "apps/fetian-control-center/online.fetian.ControlCenter.desktop",
+      "id": "online.fetian.ControlCenter.desktop",
+      "name": "Fetian Control Center",
+      "exec": "fetian-control-center",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "apps/fetian-desktop/online.fetian.Apps.desktop",
+      "id": "online.fetian.Apps.desktop",
+      "name": "Fetian Apps",
+      "exec": "fetian-apps",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "apps/fetian-desktop/online.fetian.Calendar.desktop",
+      "id": "online.fetian.Calendar.desktop",
+      "name": "Fetian Calendar",
+      "exec": "fetian-calendar",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "apps/fetian-desktop/online.fetian.Editor.desktop",
+      "id": "online.fetian.Editor.desktop",
+      "name": "Fetian Text Editor (Vim)",
+      "exec": "/usr/bin/foot -e /usr/bin/vim %F",
+      "mime": [
+        "text/plain",
+        "text/markdown",
+        "application/json",
+        ""
+      ],
+      "hidden": "true"
+    },
+    {
+      "source": "apps/fetian-files/online.fetian.Files.desktop",
+      "id": "online.fetian.Files.desktop",
+      "name": "FetianFiles Preview",
+      "exec": "fetian-files %U",
+      "mime": [
+        "inode/directory",
+        ""
+      ],
+      "hidden": "true"
+    },
+    {
+      "source": "system/boot/airootfs/usr/share/wayland-sessions/fetianos-sway.desktop",
+      "id": "fetianos-sway.desktop",
+      "name": "FETIANOS — Sway recovery",
+      "exec": "/usr/bin/fetian-sway-session",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "desktop/hyprland/airootfs/usr/share/wayland-sessions/fetianos-hyprland.desktop",
+      "id": "fetianos-hyprland.desktop",
+      "name": "FETIANOS — Hyprland",
+      "exec": "/usr/bin/fetian-hyprland-session",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "desktop/hyprland/airootfs/usr/share/wayland-sessions/fetianos-sway.desktop",
+      "id": "fetianos-sway.desktop",
+      "name": "FETIANOS — Sway recovery",
+      "exec": "/usr/bin/fetian-sway-session",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    },
+    {
+      "source": "profile/sway/airootfs/usr/share/applications/online.fetian.ControlCenter.desktop",
+      "id": "online.fetian.ControlCenter.desktop",
+      "name": "Fetian Control Center",
+      "exec": "fetian-control-center",
+      "mime": [
+        ""
+      ],
+      "hidden": "false"
+    }
+  ],
+  "mime_defaults": {
+    "text/html": "firefox.desktop",
+    "x-scheme-handler/http": "firefox.desktop",
+    "x-scheme-handler/https": "firefox.desktop",
+    "inode/directory": "thunar.desktop",
+    "application/pdf": "firefox.desktop",
+    "video/mp4": "mpv.desktop",
+    "video/webm": "mpv.desktop",
+    "audio/mpeg": "mpv.desktop",
+    "audio/flac": "mpv.desktop",
+    "image/png": "imv.desktop",
+    "image/jpeg": "imv.desktop",
+    "application/zip": "xarchiver.desktop",
+    "text/plain": "online.fetian.Editor.desktop",
+    "text/markdown": "online.fetian.Editor.desktop",
+    "application/json": "online.fetian.Editor.desktop"
+  },
+  "hyprland_cohort": [
+    {
+      "package": "hyprland",
+      "classification": "compositor",
+      "already_in_base": false,
+      "recorded_version": "0.56.2-4",
+      "recorded_dependencies": [
+        "cairo",
+        "aquamarine",
+        "libaquamarine.so=14-64",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "glib2",
+        "libgio-2.0.so=0-64",
+        "libgobject-2.0.so=0-64",
+        "glslang",
+        "hyprcursor",
+        "libhyprcursor.so=0-64",
+        "hyprgraphics",
+        "libhyprgraphics.so=4-64",
+        "hyprland-guiutils",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "hyprwire",
+        "libhyprwire.so=3-64",
+        "lcms2",
+        "liblcms2.so=2-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libGLESv2.so=2-64",
+        "libinput",
+        "libx11",
+        "libxcb",
+        "libxcomposite",
+        "libxcursor",
+        "libxfixes",
+        "libxkbcommon",
+        "libxkbcommon.so=0-64",
+        "libxrender",
+        "lua",
+        "mesa",
+        "muparser",
+        "opengl-driver",
+        "pango",
+        "libpango-1.0.so=0-64",
+        "libpangocairo-1.0.so=0-64",
+        "pixman",
+        "libpixman-1.so=0-64",
+        "re2",
+        "libre2.so=11-64",
+        "tomlplusplus",
+        "libtomlplusplus.so",
+        "util-linux-libs",
+        "libuuid.so=1-64",
+        "wayland",
+        "libwayland-server.so=0-64",
+        "wayland-protocols",
+        "xcb-proto",
+        "xcb-util",
+        "xcb-util-errors",
+        "xcb-util-image",
+        "xcb-util-keysyms",
+        "xcb-util-renderutil",
+        "xcb-util-wm",
+        "xorg-xwayland"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hypridle",
+      "classification": "session_backend",
+      "already_in_base": false,
+      "recorded_version": "0.1.8-2",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "wayland-protocols"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprlock",
+      "classification": "session_backend",
+      "already_in_base": false,
+      "recorded_version": "0.9.6-3",
+      "recorded_dependencies": [
+        "cairo",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprgraphics",
+        "libhyprgraphics.so=4-64",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libxkbcommon",
+        "libxkbcommon.so=0-64",
+        "mesa",
+        "pam",
+        "libpam.so=0-64",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "libwayland-egl.so=1-64",
+        "wayland-protocols"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "sddm",
+      "classification": "session_backend",
+      "already_in_base": true,
+      "recorded_version": "0.21.0-7",
+      "recorded_dependencies": [
+        "bash",
+        "glibc",
+        "libgcc",
+        "libstdc++",
+        "libxau",
+        "libxcb",
+        "pam",
+        "qt6-base",
+        "qt6-declarative",
+        "systemd-libs",
+        "ttf-font",
+        "xorg-server",
+        "xorg-xauth"
+      ],
+      "recorded_licenses": [
+        "GPL-2.0-or-later"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "xdg-desktop-portal-hyprland",
+      "classification": "session_backend",
+      "already_in_base": false,
+      "recorded_version": "1.4.1-2",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libinih",
+        "pipewire",
+        "qt6-base",
+        "sdbus-cpp",
+        "libsdbus-c++.so=2-64",
+        "util-linux-libs",
+        "libuuid.so",
+        "xdg-desktop-portal"
+      ],
+      "recorded_licenses": [
+        "MIT"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "xdg-desktop-portal-gtk",
+      "classification": "session_backend",
+      "already_in_base": true,
+      "recorded_version": "1.15.3-1",
+      "recorded_dependencies": [
+        "fontconfig",
+        "gcc-libs",
+        "gdk-pixbuf2",
+        "glib2",
+        "glibc",
+        "gsettings-desktop-schemas",
+        "gtk3",
+        "xdg-desktop-portal"
+      ],
+      "recorded_licenses": [
+        "LGPL-2.0-or-later"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "aquamarine",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.15.1-1",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdisplay-info",
+        "libdisplay-info.so=3-64",
+        "libdrm",
+        "libglvnd",
+        "libEGL.so=1-64",
+        "libinput",
+        "mesa",
+        "opengl-driver",
+        "pixman",
+        "seatd",
+        "libseat.so=1-64",
+        "systemd-libs",
+        "libudev.so=1-64",
+        "wayland",
+        "libwayland-client.so=0-64",
+        "wayland-protocols"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprcursor",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.1.13-7",
+      "recorded_dependencies": [
+        "cairo",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "libhyprlang.so=2-64",
+        "librsvg",
+        "librsvg-2.so=2-64",
+        "libzip",
+        "libzip.so=5-64",
+        "tomlplusplus",
+        "libtomlplusplus.so=3-64"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprgraphics",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.5.1-4",
+      "recorded_dependencies": [
+        "cairo",
+        "file",
+        "libmagic.so=1-64",
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libjpeg-turbo",
+        "libjpeg.so=8-64",
+        "libjxl",
+        "libjxl.so=0.12-64",
+        "libjxl_threads.so=0.12-64",
+        "libpng",
+        "librsvg",
+        "libwebp",
+        "libwebp.so=7-64",
+        "libglvnd",
+        "pango",
+        "libpangocairo-1.0.so=0-64",
+        "pixman"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprlang",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.6.8-5",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprutils",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.14.2-1",
+      "recorded_dependencies": [
+        "pixman",
+        "libpixman-1.so=0-64"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprwire",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.3.1-3",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libffi",
+        "libffi.so=8-64",
+        "pugixml"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "hyprland-guiutils",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "0.2.2-4",
+      "recorded_dependencies": [
+        "libgcc",
+        "libstdc++",
+        "glibc",
+        "hyprlang",
+        "hyprtoolkit",
+        "libhyprtoolkit.so=6-64",
+        "hyprutils",
+        "libhyprutils.so=13-64",
+        "libdrm",
+        "pixman"
+      ],
+      "recorded_licenses": [
+        "BSD-3-Clause"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "sdbus-cpp",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "2.3.1-1",
+      "recorded_dependencies": [
+        "expat",
+        "systemd-libs"
+      ],
+      "recorded_licenses": [
+        "LGPL-2.1-only",
+        "LicenseRef-sdbus-c++-LGPL-Exception-1.0"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    },
+    {
+      "package": "lua",
+      "classification": "library_or_runtime",
+      "already_in_base": false,
+      "recorded_version": "5.5.1-1",
+      "recorded_dependencies": [
+        "readline"
+      ],
+      "recorded_licenses": [
+        "MIT"
+      ],
+      "removal_eligible": false,
+      "status": "opt-in pinned cohort; not an installed-image inventory"
+    }
+  ],
+  "optional_post_install_runtimes": {
+    "policy": "Optional post-install runtimes; no models are bundled or downloaded.",
+    "cpu": [
+      "ollama",
+      "llama.cpp",
+      "python",
+      "jupyterlab",
+      "transformers",
+      "diffusers"
+    ],
+    "gpu": {
+      "nvidia": "detect before CUDA installation",
+      "amd": "detect before ROCm installation",
+      "intel": "Vulkan/CPU fallback"
+    }
+  },
+  "first_party_source_folders": [
+    "fetian-control-center",
+    "fetian-desktop",
+    "fetian-dev-bin",
+    "fetian-files",
+    "fetian-hardware",
+    "fetian-health"
+  ],
+  "packages_removed": [],
+  "dependency_resolution": "Transitive dependencies and exact licenses are recorded from the real image pacman database at build time"
+}

@@ -1,0 +1,12 @@
+* { font-family: Noto Sans, sans-serif; font-size: 12px; min-height: 0; }
+window#waybar { background: rgba(9, 14, 27, 0.92); color: #f1f5ff; border: 1px solid rgba(118, 228, 255, 0.35); border-radius: 16px; }
+window#waybar.fetian-dock { border-radius: 20px; background: rgba(15, 22, 40, 0.94); }
+button, #custom-identity, #custom-apps, #custom-files, #custom-terminal, #custom-browser, #custom-workspaces, #custom-monitor, #custom-health, #network, #pulseaudio, #clock, #custom-quick, #custom-power { padding: 5px 10px; margin: 3px 2px; border-radius: 10px; color: #eef3ff; }
+#custom-identity { color: #76e4ff; font-weight: bold; }
+#workspaces button { color: #aebbd2; background: transparent; border-bottom: 2px solid transparent; }
+#workspaces button.active { color: #ffffff; background: rgba(118, 228, 255, 0.16); border-bottom-color: #76e4ff; }
+#workspaces button.urgent { background: #835228; color: #ffffff; }
+button:hover, #custom-apps:hover, #custom-files:hover, #custom-terminal:hover, #custom-browser:hover, #custom-workspaces:hover, #custom-monitor:hover, #custom-quick:hover, #custom-power:hover { color: #76e4ff; background: rgba(180, 155, 255, 0.16); }
+button:focus { outline: 2px solid #ffffff; }
+tooltip { background: #10192c; color: #f1f5ff; border: 1px solid #76e4ff; border-radius: 8px; }
+#custom-health.unavailable { color: #ffd38c; }

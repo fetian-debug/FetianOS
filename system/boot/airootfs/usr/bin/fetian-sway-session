@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+set -euo pipefail
+[[ $EUID -ne 0 ]] || { echo 'Use a regular desktop account.' >&2; exit 1; }
+[[ -n ${XDG_RUNTIME_DIR:-} ]] || { echo 'A login-managed runtime directory is required.' >&2; exit 1; }
+[[ -z ${SWAYSOCK:-}${HYPRLAND_INSTANCE_SIGNATURE:-} ]] || { echo 'Log out of the current compositor first.' >&2; exit 1; }
+exec 9>"$XDG_RUNTIME_DIR/fetian-desktop-session.lock"
+flock -n 9 || { echo 'A FetianOS desktop session is already running.' >&2; exit 1; }
+export XDG_CURRENT_DESKTOP=sway XDG_SESSION_DESKTOP=sway XDG_SESSION_TYPE=wayland
+[[ -n ${DBUS_SESSION_BUS_ADDRESS:-} ]] || export DBUS_SESSION_BUS_ADDRESS="unix:path=$XDG_RUNTIME_DIR/bus"
+config="${XDG_CONFIG_HOME:-$HOME/.config}/sway/config"
+[[ -f "$config" ]] || config=/etc/sway/fetianos-session.conf
+compositor_pid=""
+cleanup() {
+  trap - EXIT INT TERM
+  if [[ -n "$compositor_pid" ]] && kill -0 "$compositor_pid" 2>/dev/null; then
+    kill "$compositor_pid" 2>/dev/null || true
+    wait "$compositor_pid" 2>/dev/null || true
+  fi
+  systemctl --user stop fetian-sway.target || true
+  systemctl --user stop xdg-desktop-portal-wlr.service || true
+  dbus-update-activation-environment WAYLAND_DISPLAY= SWAYSOCK= XDG_CURRENT_DESKTOP= XDG_SESSION_DESKTOP= XDG_SESSION_TYPE= || true
+  systemctl --user unset-environment WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP XDG_SESSION_DESKTOP XDG_SESSION_TYPE || true
+}
+trap cleanup EXIT
+trap 'exit 143' TERM
+trap 'exit 130' INT
+sway --config "$config" &
+compositor_pid=$!
+wait "$compositor_pid"

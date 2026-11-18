@@ -1,0 +1,16 @@
+[Default Applications]
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+inode/directory=thunar.desktop
+application/pdf=firefox.desktop
+video/mp4=mpv.desktop
+video/webm=mpv.desktop
+audio/mpeg=mpv.desktop
+audio/flac=mpv.desktop
+image/png=imv.desktop
+image/jpeg=imv.desktop
+application/zip=xarchiver.desktop
+text/plain=online.fetian.Editor.desktop
+text/markdown=online.fetian.Editor.desktop
+application/json=online.fetian.Editor.desktop

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-exec /usr/lib/fetian-control-center/fetian_control_center.py "$@"
+exec /usr/bin/python3 /usr/share/fetian-control-center/fetian_control_center.py "$@"

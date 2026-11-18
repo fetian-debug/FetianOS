@@ -1,0 +1,12 @@
+* text=auto eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.desktop text eol=lf
+*.service text eol=lf
+*.timer text eol=lf
+*.socket text eol=lf
+*.hook text eol=lf
+apps/fetian-dev-bin/* text eol=lf
+desktop/hyprland/bin/* text eol=lf
+system/boot/airootfs/usr/bin/* text eol=lf
+system/boot/airootfs/usr/lib/fetian/display-manager text eol=lf

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "status": "design tokens; no physical optics shader implemented",
+  "families": {
+    "crystal": {"name": "Crystal Glass", "surface": "#172236", "accent": "#b9f1ff", "use": "overlays"},
+    "cosmic": {"name": "Cosmic Liquid", "surface": "#101629", "accent": "#b49bff", "use": "workspace navigation"},
+    "titanium": {"name": "Titanium Glass", "surface": "#222935", "accent": "#c8d2e8", "use": "settings"},
+    "plasma": {"name": "Plasma Glass", "surface": "#102231", "accent": "#76e4ff", "use": "focus and activity"},
+    "pearl": {"name": "Pearl Glass", "surface": "#eef3ff", "accent": "#5c4b99", "use": "future light theme"},
+    "obsidian": {"name": "Obsidian Glass", "surface": "#090e1b", "accent": "#76e4ff", "use": "primary panels"}
+  }
+}

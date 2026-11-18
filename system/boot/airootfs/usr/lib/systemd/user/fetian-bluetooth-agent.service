@@ -1,0 +1,8 @@
+[Unit]
+Description=FetianOS Bluetooth pairing agent
+PartOf=fetian-common.target
+
+[Service]
+ExecStart=/usr/bin/blueman-applet
+Restart=on-failure
+RestartSec=5

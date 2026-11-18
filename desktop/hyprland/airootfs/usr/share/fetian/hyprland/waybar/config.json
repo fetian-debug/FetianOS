@@ -1,0 +1,29 @@
+[
+  {
+    "name": "fetian-status", "layer": "top", "position": "top", "height": 36,
+    "margin-top": 10, "margin-left": 14, "margin-right": 14,
+    "modules-left": ["custom/identity", "hyprland/workspaces"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/health", "network", "pulseaudio", "clock", "custom/quick", "custom/power"],
+    "custom/identity": {"format": " FETIANOS 2090 ", "on-click": "wofi --show drun --allow-images"},
+    "hyprland/workspaces": {"format": "{name}", "on-click": "activate", "all-outputs": false},
+    "hyprland/window": {"format": "{title}", "max-length": 45, "separate-outputs": true},
+    "custom/health": {"exec": "fetian-desktop widget", "return-type": "json", "interval": 10, "on-click": "fetian-desktop monitor"},
+    "network": {"format-wifi": "Wi-Fi {signalStrength}%", "format-ethernet": "LAN", "format-disconnected": "Offline", "on-click": "nm-connection-editor"},
+    "pulseaudio": {"format": "VOL {volume}%", "format-muted": "Muted", "on-click": "pavucontrol", "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"},
+    "clock": {"format": "{:%a %d %b  %H:%M}", "on-click": "fetian-calendar"},
+    "custom/quick": {"format": " Settings ", "on-click": "fetian-desktop quick", "on-click-right": "fetian-control-center"},
+    "custom/power": {"format": " Power ", "on-click": "fetian-desktop power"}
+  },
+  {
+    "name": "fetian-dock", "layer": "top", "position": "bottom", "height": 52,
+    "width": 640, "exclusive": true, "margin-bottom": 14,
+    "modules-center": ["custom/apps", "custom/files", "custom/terminal", "custom/browser", "custom/workspaces", "custom/monitor"],
+    "custom/apps": {"format": " Applications ", "on-click": "wofi --show drun --allow-images", "on-click-right": "fetian-apps"},
+    "custom/files": {"format": " Files ", "on-click": "thunar"},
+    "custom/terminal": {"format": " Terminal ", "on-click": "foot"},
+    "custom/browser": {"format": " Browser ", "on-click": "firefox"},
+    "custom/workspaces": {"format": " Spaces ", "on-click": "fetian-desktop workspaces"},
+    "custom/monitor": {"format": " Health ", "on-click": "fetian-desktop monitor"}
+  }
+]
