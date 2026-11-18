@@ -14,7 +14,7 @@ bash "$root/scripts/build-native.sh"
 work=$(mktemp -d "$root/work/build-${desktop}-XXXXXXXX")
 export SOURCE_DATE_EPOCH=${SOURCE_DATE_EPOCH:-$(date +%s)}
 profile="$work/profile"
-python3 "$root/scripts/stage-profile.py" --desktop "$desktop" "$profile"
+python3 "$root/scripts/stage-profile.py" --desktop "$desktop" --compression "${FETIAN_ISO_COMPRESSION:-xz}" "$profile"
 pacman_configuration="$profile/pacman.conf"
 if [[ $desktop == hyprland ]]; then
   mkdir -p "$work/pacman/local" "$work/packages"

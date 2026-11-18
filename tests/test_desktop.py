@@ -26,6 +26,15 @@ pins = load("hyprland_pins", "scripts/check-hyprland-packages.py")
 
 
 class DesktopTests(unittest.TestCase):
+    def test_ci_compression_is_explicit_and_rejects_unknown_values(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); binary = root / "health"; binary.write_bytes(b"fixture")
+            destination = root / "profile"
+            stager.stage(ROOT, destination, "sway", binary, compression="zstd")
+            definition = (destination / "profiledef.sh").read_text()
+            self.assertIn("'-comp' 'zstd'", definition)
+            self.assertTrue((destination / "airootfs/root/customize_airootfs.sh").is_file())
+            with self.assertRaises(ValueError): stager.stage(ROOT, root / "invalid", "sway", binary, compression="unsafe")
     def test_unavailable_metrics_are_not_zeroed(self):
         with patch.object(desktop, "health", side_effect=OSError("missing")):
             self.assertEqual(desktop.widget()["text"], "METRICS —")

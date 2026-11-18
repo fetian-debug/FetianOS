@@ -79,6 +79,7 @@ def verify_rootfs(root, complete=False):
         path = root / name
         if path.exists() or path.is_symlink():
             raise ValueError(f"Image has unfinished build or prematurely provisioned live state: {name}")
+    if (root / 'root/customize_airootfs.sh').exists(): raise ValueError('Image customization gate was not removed')
     for name in ("usr/bin/fetian-health-rs", "usr/bin/fetian-control-center",
                  "usr/bin/fetian-sway-session", "usr/lib/fetian/display-manager"):
         path = root / name

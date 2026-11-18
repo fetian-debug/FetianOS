@@ -53,7 +53,7 @@ def disk_path(run):
 def command(run, firmware, variables, iso, display, acceleration):
     for value in (run, firmware, variables, iso):
         if value and "," in str(value): raise ValueError("QEMU drive paths must not contain commas")
-    arguments = ["qemu-system-x86_64", "-machine", "q35", "-accel", acceleration, "-m", "4096", "-smp", "2",
+    arguments = ["qemu-system-x86_64", "-machine", "q35", "-accel", acceleration, "-cpu", "host" if acceleration == "kvm" else "max", "-m", "4096", "-smp", "2",
                  "-drive", f"if=pflash,format=raw,readonly=on,file={firmware}",
                  "-drive", f"if=pflash,format=raw,file={variables}",
                  "-drive", f"file={run / 'disk.qcow2'},format=qcow2,if=virtio",

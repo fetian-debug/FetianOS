@@ -168,7 +168,9 @@ class BootArtifactTests(unittest.TestCase):
                 return subprocess.CompletedProcess(arguments, 0)
             self.assertTrue(boot.build(root, run))
             self.assertEqual((root / "boot/vmlinuz-fetian").read_bytes(), b"fixture")
-            self.assertIn("7.2.9-test", commands[1])
+            self.assertEqual(len(commands), 1)
+            self.assertIn("7.2.9-test", commands[0])
+            self.assertNotIn("/usr/bin/pacman", commands[0])
             for path in ("etc/fetian/image-build", "etc/pacman.d/hooks/99-zz-fetian-live-boot.hook", "etc/mkinitcpio.conf.d/fetian-live.conf"):
                 self.assertFalse((root / path).exists())
 
@@ -192,6 +194,23 @@ class BootArtifactTests(unittest.TestCase):
             artifacts.validate({"02-recovery.conf": entry}, files)
         with self.assertRaises(ValueError):
             artifacts.validate({}, files)
+
+    def test_image_discovery_ignores_stale_alias_and_never_queries_alpm(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = self.image_fixture(directory)
+            (root / "boot/vmlinuz-fetian").write_bytes(b"stale")
+            def run(arguments, **kwargs):
+                self.assertEqual(arguments[0], "/usr/bin/mkinitcpio")
+                (root / "boot/initramfs-fetian.img").write_bytes(b"fixture")
+            boot.build(root, run)
+            self.assertEqual((root / "boot/vmlinuz-fetian").read_bytes(), b"fixture")
+
+    def test_uefi_image_does_not_require_bios_memdisk_tool(self):
+        config = (ROOT / "system/boot/airootfs/etc/mkinitcpio.conf.d/fetian-live.conf").read_text()
+        self.assertNotIn("memdisk", config)
+        gate = (ROOT / "system/boot/airootfs/root/customize_airootfs.sh").read_text()
+        self.assertIn("set -euo pipefail", gate)
+        self.assertIn("/boot/initramfs-fetian.img", gate)
 
     def test_uefi_rejects_unexpanded_placeholders_and_traversal(self):
         for path in ("/%INSTALL_DIR%/vmlinuz", "/../boot/vmlinuz"):

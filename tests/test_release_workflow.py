@@ -111,6 +111,7 @@ class ReleaseTests(unittest.TestCase):
             self.assertIn("if=pflash,format=raw,readonly=on,file=" + str(root / "code.fd"), args)
             self.assertIn("file=" + str(root / "disk.qcow2") + ",format=qcow2,if=virtio", args)
             self.assertIn("-monitor", args); self.assertNotIn("-hda", args)
+            self.assertEqual(args[args.index("-cpu") + 1], "max")
             self.assertNotIn("-cdrom", vm.command(root, root / "code.fd", root / "vars.fd", None, "none", "tcg"))
             iso.write_text("tampered")
             with self.assertRaises(ValueError): vm.checked_iso(iso)

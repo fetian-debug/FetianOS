@@ -22,6 +22,11 @@ privileged build container, deployment permissions or release write token.
 
 ## ISO builder
 
+CI stages Zstandard-compressed SquashFS for faster image construction and
+decompression. Native builds default to XZ; `FETIAN_ISO_COMPRESSION=zstd` selects
+the explicit CI option locally. The staged profile records the actual choice.
+Documentation-only pushes deploy the site without rebuilding an unchanged OS.
+
 The disposable Ubuntu hosted runner provides Docker; the ISO is built inside
 the official Manjaro base image described by
 [Manjaro's container project](https://github.com/manjaro/manjaro-docker).

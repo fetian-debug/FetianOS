@@ -29,6 +29,7 @@ class SourceSyntaxTests(unittest.TestCase):
         paths.append(ROOT / "apps/fetian-dev-bin/fetian-desktop")
         paths += list((ROOT / "system/boot/airootfs/usr/bin").glob("*"))
         paths.append(ROOT / "system/boot/airootfs/usr/lib/fetian/display-manager")
+        paths.append(ROOT / "system/boot/airootfs/root/customize_airootfs.sh")
         for path in paths:
             if path.is_file():
                 with self.subTest(path=path.name):

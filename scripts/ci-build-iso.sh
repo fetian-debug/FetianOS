@@ -26,6 +26,7 @@ export FETIAN_DESKTOP="$desktop"
 docker run --rm --privileged --platform linux/amd64 \
   --mount "type=bind,source=$root,target=/workspace" --workdir /workspace \
   --env FETIAN_DESKTOP --env SOURCE_DATE_EPOCH \
+  --env FETIAN_ISO_COMPRESSION=zstd \
   --env GITHUB_ACTIONS --env GITHUB_SHA --env GITHUB_REPOSITORY \
   --env GITHUB_RUN_ID --env GITHUB_RUN_ATTEMPT --env GITHUB_SERVER_URL \
   --env FETIAN_BUILD_CONTAINER="$resolved" \

@@ -27,8 +27,15 @@ def build(root=Path("/"), run=subprocess.run):
     marker = root / "etc/fetian/image-build"
     if not marker.is_file():
         return False
-    result = run(["/usr/bin/pacman", "-Qql", "linux72"], text=True, capture_output=True, check=True)
-    version, kernel = select_kernel([PurePosixPath(p) for p in result.stdout.splitlines() if p.startswith("/")])
+    # ALPM's post-transaction chroot cannot reliably query the active package
+    # database. Inspect only this image's installed files, never the host kernel.
+    paths = []
+    for modules in (root / "usr/lib/modules").iterdir():
+        if modules.is_dir() and re.fullmatch(r"[0-9][A-Za-z0-9._+-]*", modules.name):
+            paths.append(PurePosixPath("/usr/lib/modules") / modules.name / "kernel")
+            if (modules / "vmlinuz").is_file(): paths.append(PurePosixPath("/usr/lib/modules") / modules.name / "vmlinuz")
+    paths.extend(PurePosixPath("/boot") / path.name for path in (root / "boot").glob("vmlinuz-*") if path.name != "vmlinuz-fetian")
+    version, kernel = select_kernel(paths)
     source = root / kernel.relative_to("/")
     if not source.is_file() or not (root / "usr/lib/modules" / version).is_dir():
         raise ValueError("Kernel image/modules are missing from the image root")

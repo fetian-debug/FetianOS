@@ -12,11 +12,12 @@ def install(source, destination, mode=0o755):
     destination.chmod(mode)
 
 
-def stage(root, destination, desktop, native_binary):
+def stage(root, destination, desktop, native_binary, compression="xz"):
     if destination.exists():
         raise ValueError("Staging destination already exists; choose a fresh directory")
     if desktop not in ("sway", "hyprland"):
         raise ValueError("Unknown desktop")
+    if compression not in ("xz", "zstd"): raise ValueError("Unsupported image compression")
     if not native_binary.is_file():
         raise ValueError("Rust release binary missing; run make native")
     shutil.copytree(root / "profile/sway", destination, symlinks=True)
@@ -103,6 +104,9 @@ def stage(root, destination, desktop, native_binary):
     # first-party executable, including the native Rust collector.
     executables = list((tree / "usr/bin").iterdir()) + [tree / "usr/lib/fetian/display-manager"]
     with (destination / "profiledef.sh").open("a") as definition:
+        if compression == "zstd":
+            definition.write("\n# Fast CI compression, supported by the distribution kernel.\n")
+            definition.write("airootfs_image_tool_options=('-comp' 'zstd' '-Xcompression-level' '15' '-b' '1M')\n")
         definition.write("\n# Executable payload permissions required by mkarchiso.\n")
         for executable in sorted(executables):
             if executable.is_file():
@@ -116,9 +120,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("destination", type=Path)
     parser.add_argument("--desktop", choices=("sway", "hyprland"), default="sway")
+    parser.add_argument("--compression", choices=("xz", "zstd"), default="xz")
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     try:
-        stage(root, args.destination.resolve(), args.desktop, root / "target/release/fetian-health-rs")
+        stage(root, args.destination.resolve(), args.desktop, root / "target/release/fetian-health-rs", args.compression)
     except (OSError, ValueError) as error:
         parser.exit(1, f"Profile staging failed: {error}\n")
