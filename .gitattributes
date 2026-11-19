@@ -6,6 +6,7 @@
 *.timer text eol=lf
 *.socket text eol=lf
 *.hook text eol=lf
+docs/stability/evidence/**/*.ppm binary
 apps/fetian-dev-bin/* text eol=lf
 desktop/hyprland/bin/* text eol=lf
 system/boot/airootfs/usr/bin/* text eol=lf
