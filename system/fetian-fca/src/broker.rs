@@ -33,6 +33,7 @@ struct Active {
     lease: RuntimeLease,
     last_request: u64,
     barrier: bool,
+    research_probe: bool,
 }
 struct Message {
     id: String,
@@ -48,6 +49,9 @@ pub struct Broker {
     stopping: bool,
     crash_at: BTreeMap<String, String>,
     commit_times: Vec<u64>,
+    commit_count: u64,
+    lease_times: Vec<u64>,
+    lease_count: u64,
     recovery_us: u64,
 }
 fn ticks(pid: u32) -> Result<(char, u64)> {
@@ -196,7 +200,14 @@ impl Broker {
                     .arg(bin.join("fetian-executor-python.py"));
             }
         }
+        let lease_began = Instant::now();
         let lease = self.store.issue_lease(id, executor)?;
+        if self.lease_times.len() == 256 {
+            self.lease_times.remove(0);
+        }
+        self.lease_times
+            .push(lease_began.elapsed().as_micros() as u64);
+        self.lease_count += 1;
         let (mut stream, worker) = UnixStream::pair()?;
         stream.set_read_timeout(Some(Duration::from_secs(3)))?;
         stream.set_write_timeout(Some(Duration::from_secs(3)))?;
@@ -237,7 +248,7 @@ impl Broker {
             )?;
             wire::write(
                 &mut stream,
-                &json!({"version":1,"workload":"fetian.sum-i64/v1","credential":Credential{executor_id:executor,lease_id:lease.lease_id.clone(),epoch:lease.epoch},"checkpoint":authority.continuation,"barrier_after":barrier}),
+                &json!({"version":1,"workload":"fetian.sum-i64/v1","credential":Credential{executor_id:executor,lease_id:lease.lease_id.clone(),epoch:lease.epoch},"checkpoint":authority.continuation,"barrier_after":barrier,"test_faults":self.test_faults}),
             )?;
             Ok(())
         })();
@@ -278,6 +289,7 @@ impl Broker {
                 lease: RuntimeLease::new(lease),
                 last_request: 0,
                 barrier: false,
+                research_probe: false,
             },
         );
         Ok(
@@ -338,21 +350,47 @@ impl Broker {
                 wire::fields(args, &["credential", "progress"])?;
                 let progress: Progress = serde_json::from_value(args["progress"].clone())?;
                 let fault = self.crash_at.remove(id);
+                if fault.as_deref() == Some("executor-before-commit") {
+                    self.store.audit(
+                        id,
+                        "FaultInjection",
+                        json!({"phase":"executor-before-commit","sequence":progress.sequence}),
+                    )?;
+                    self.revoke(id, Lifecycle::Ready, "fault-executor-before-commit")?;
+                    return Err(Error::new(
+                        "EXECUTOR_TERMINATED",
+                        "Test executor killed before checkpoint commit",
+                    ));
+                }
                 let began = Instant::now();
-                let outcome =
-                    self.store
-                        .commit_with_hook(id, &credential, &progress, false, || {
-                            if fault.as_deref() == Some("before-commit") {
-                                std::process::exit(86);
-                            }
-                        })?;
+                let outcome = self.store.commit_with_stage_hooks(
+                    id,
+                    &credential,
+                    &progress,
+                    false,
+                    || {
+                        if fault.as_deref() == Some("after-effect-insert") {
+                            std::process::exit(88);
+                        }
+                    },
+                    || {
+                        if fault.as_deref() == Some("before-commit") {
+                            std::process::exit(86);
+                        }
+                    },
+                )?;
                 if fault.as_deref() == Some("after-commit") {
                     std::process::exit(87);
+                }
+                if fault.as_deref() == Some("executor-after-commit") {
+                    self.store.audit(id,"FaultInjection",json!({"phase":"executor-after-commit","sequence":progress.sequence,"acknowledged":false}))?;
+                    self.revoke(id, Lifecycle::Ready, "fault-executor-after-commit")?;
                 }
                 if self.commit_times.len() == 256 {
                     self.commit_times.remove(0);
                 }
                 self.commit_times.push(began.elapsed().as_micros() as u64);
+                self.commit_count += 1;
                 Ok(serde_json::to_value(outcome)?)
             }
             "inspect" => {
@@ -397,6 +435,7 @@ impl Broker {
             "events" => &["id", "after"],
             "stale-probe" => &["id", "credential", "progress"],
             "fault-arm" => &["id", "phase"],
+            "fault-release" => &["id", "probe"],
             "inspect" | "checkpoint" | "suspend" | "resume" | "cancel" | "verify"
             | "fault-kill" => &["id"],
             _ => {
@@ -409,7 +448,7 @@ impl Broker {
         wire::fields(args, allowed)?;
         match request.operation.as_str() {
             "status" => Ok(
-                json!({"running":true,"pid":std::process::id(),"protocol_version":1,"active_executors":self.active.len(),"test_faults":self.test_faults,"measurements":{"recent_effect_commit_us":self.commit_times,"startup_verification_recovery_us":self.recovery_us}}),
+                json!({"running":true,"pid":std::process::id(),"protocol_version":1,"active_executors":self.active.len(),"test_faults":self.test_faults,"measurements":{"recent_effect_commit_us":self.commit_times,"effect_commits_seen":self.commit_count,"recent_lease_acquisition_us":self.lease_times,"lease_acquisitions_seen":self.lease_count,"startup_verification_recovery_us":self.recovery_us}}),
             ),
             "stop" => {
                 self.stopping = true;
@@ -430,7 +469,9 @@ impl Broker {
                     "inspect" => {
                         let a = self.store.get(id)?;
                         let barrier = self.active.get(id).is_some_and(|a| a.barrier);
-                        Ok(json!({"authority":a,"test_barrier_reached":barrier}))
+                        let mut result=json!({"authority":a,"test_barrier_reached":barrier});
+                        if self.test_faults { result["test_barrier_request_id"]=json!(self.active.get(id).filter(|a|a.barrier).map(|a|a.last_request)); }
+                        Ok(result)
                     }
                     "verify" => self.store.verify(id),
                     "events" => Ok(serde_json::to_value(self.store.events(
@@ -446,6 +487,14 @@ impl Broker {
                     ),
                     "handoff" => {
                         let executor = ExecutorId::parse(wire::string(args, "executor")?)?;
+                        // Admission must finish before revoking a healthy executor.
+                        // A rejected replacement must not change epoch or progress.
+                        if !self.store.get(id)?.contract.permitted_executors.contains(&executor) {
+                            return Err(Error::new("EXECUTOR_NOT_ALLOWED", "Executor is incompatible or not permitted"));
+                        }
+                        if args["barrier_after"].as_u64().unwrap_or(0)>0 && !self.test_faults {
+                            return Err(Error::new("FAULTS_DISABLED", "Test barriers require --allow-test-faults"));
+                        }
                         self.revoke(id, Lifecycle::Ready, "operator-handoff")?;
                         self.start(id, executor, args["barrier_after"].as_u64().unwrap_or(0))
                     }
@@ -483,12 +532,22 @@ impl Broker {
                     }
                     "fault-arm" if self.test_faults => {
                         let phase = wire::string(args, "phase")?;
-                        if !["before-commit", "after-commit"].contains(&phase) {
+                        if !["before-commit", "after-commit", "after-effect-insert", "executor-before-commit", "executor-after-commit"].contains(&phase) {
                             return Err(Error::new("INVALID_FAULT", "Unknown transaction fault"));
                         }
                         self.store.get(id)?;
                         self.crash_at.insert(id.into(), phase.into());
                         Ok(json!({"armed":phase}))
+                    }
+                    "fault-release" if self.test_faults => {
+                        let active=self.active.get_mut(id).ok_or_else(||Error::new("INVALID_STATE","No paused executor"))?;
+                        if !active.barrier { return Err(Error::new("INVALID_STATE","Executor has not reached its test barrier")); }
+                        if !args["probe"].is_null() && !args["probe"].is_object() { return Err(Error::new("INVALID_ARGUMENTS","Probe must be an object")); }
+                        self.store.audit(id,"TestBarrierReleased",json!({"probe":!args["probe"].is_null()}))?;
+                        active.research_probe = !args["probe"].is_null();
+                        wire::write(&mut active.stream,&Response::new(active.last_request,Ok(json!({"barrier":true,"research_probe":args["probe"]}))))?;
+                        active.barrier=false;
+                        Ok(json!({"released":true,"next_worker_request_id":active.last_request+1}))
                     }
                     "stale-probe" if self.test_faults => {
                         let credential: Credential =
@@ -598,6 +657,9 @@ pub fn serve(test_faults: bool) -> Result<()> {
         stopping: false,
         crash_at: BTreeMap::new(),
         commit_times: Vec::new(),
+        commit_count: 0,
+        lease_times: Vec::new(),
+        lease_count: 0,
         recovery_us: recovery_start.elapsed().as_micros() as u64,
     };
     while !broker.stopping {
@@ -623,7 +685,14 @@ pub fn serve(test_faults: bool) -> Result<()> {
                 {
                     match message.request {
                         Ok(request) => {
+                            let probing = broker
+                                .active
+                                .get(&message.id)
+                                .is_some_and(|a| a.research_probe);
                             let result = broker.worker_request(&message.id, &request);
+                            if probing {
+                                broker.store.audit(&message.id,"ResearchProbeResult",json!({"operation":request.operation,"request_id":request.request_id,"code":result.as_ref().err().map_or("ACCEPTED",|error|error.code.as_str())}))?;
+                            }
                             let barrier = request.operation == "barrier" && result.is_ok();
                             if !barrier {
                                 if let Some(active) = broker.active.get_mut(&message.id) {
@@ -634,7 +703,16 @@ pub fn serve(test_faults: bool) -> Result<()> {
                                 }
                             }
                         }
-                        Err(_) => {
+                        Err(error) => {
+                            if let Some(active) = broker.active.get(&message.id) {
+                                if active.research_probe {
+                                    broker.store.audit(
+                                        &message.id,
+                                        "ResearchProbeTransportRejected",
+                                        json!({"epoch":message.epoch,"code":error.code}),
+                                    )?;
+                                }
+                            }
                             let authority = broker.store.get(&message.id)?;
                             if !authority.lifecycle.terminal() {
                                 let next = if authority.contract.recovery.failure_behavior == "fail"

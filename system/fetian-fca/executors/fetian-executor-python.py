@@ -7,6 +7,29 @@ import sys
 MAX_FRAME = 65536
 
 
+def research_probe(probe):
+    """Deliberately malformed private IPC, only after an explicit test barrier."""
+    mode = probe.get("mode")
+    if mode == "request":
+        write(probe["request"])
+    elif mode == "oversize":
+        sys.stdout.buffer.write(struct.pack(">I", 65537))
+        sys.stdout.buffer.flush()
+    elif mode == "truncated":
+        sys.stdout.buffer.write(struct.pack(">I", 100) + b"{")
+        sys.stdout.buffer.flush()
+        return
+    elif mode == "invalid-json":
+        sys.stdout.buffer.write(struct.pack(">I", 1) + b"{")
+        sys.stdout.buffer.flush()
+    else:
+        raise ValueError("unknown research probe")
+    try:
+        read()
+    except (ValueError, OSError):
+        pass
+
+
 def exact(size):
     result = bytearray()
     while len(result) < size:
@@ -74,7 +97,10 @@ def main():
                         idempotency_key=f"chunk-{next_chunk}")
         checkpoint = request("commit", progress=progress)["checkpoint"]
         if start.get("barrier_after") == checkpoint["last_committed_chunk"]:
-            request("barrier")
+            response = request("barrier")
+            if start.get("test_faults") is True and isinstance(response.get("research_probe"), dict):
+                research_probe(response["research_probe"])
+                return
 
 
 if __name__ == "__main__":

@@ -8,6 +8,7 @@ pub mod client;
 pub mod error;
 pub mod model;
 pub mod paths;
+pub mod research;
 pub mod resources;
 pub mod store;
 pub mod wire;

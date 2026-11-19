@@ -444,6 +444,25 @@ impl Store {
         fail_before_commit: bool,
         before_commit: impl FnOnce(),
     ) -> Result<CommitOutcome> {
+        self.commit_with_stage_hooks(
+            id,
+            credential,
+            progress,
+            fail_before_commit,
+            || {},
+            before_commit,
+        )
+    }
+    /// Research fault boundaries; normal admission supplies no-op callbacks.
+    pub fn commit_with_stage_hooks(
+        &mut self,
+        id: &str,
+        credential: &Credential,
+        progress: &Progress,
+        fail_before_commit: bool,
+        after_effect_insert: impl FnOnce(),
+        before_commit: impl FnOnce(),
+    ) -> Result<CommitOutcome> {
         let transaction = self
             .connection
             .transaction_with_behavior(TransactionBehavior::Immediate)?;
@@ -517,6 +536,7 @@ impl Store {
                 timestamp() as i64
             ],
         )?;
+        after_effect_insert();
         event(
             &transaction,
             &authority,
