@@ -1,0 +1,5 @@
+{
+  "source_sha256": "4da58aac0e9d5ef43f725bc239587ca9201aef579f63e678fa25c13a42e4b3c5",
+  "protocol_canonical_sha256": "e5612ad8076ff00ad71bbee8a27cecb2f33ed8b8d95377b7ba7bce0d61d204dc",
+  "scope": "finite classical controls; no quantum/thermal hardware"
+}

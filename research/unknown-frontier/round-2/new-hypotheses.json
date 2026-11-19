@@ -1,0 +1,110 @@
+[
+  {
+    "id": "H101",
+    "field": "catalytic complexity",
+    "original_statement": "Full arbitrary borrowed memory can improve specified time-space bounds while being exactly restored, with an equal output interface.",
+    "challenge": "Known catalytic algorithms must be compared under the same output model.",
+    "primary_anchor": "https://arxiv.org/abs/2610.24377",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H102",
+    "field": "robust catalytic complexity",
+    "original_statement": "Allowing expected rather than worst-case reset errors always adds a previously unavailable catalytic capability.",
+    "challenge": "Quantifiers over initial tapes and random coins change the class; check 2026 characterizations.",
+    "primary_anchor": "https://arxiv.org/abs/2605.09648",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H103",
+    "field": "reversible circuits and coding",
+    "original_statement": "A standard end-only single-bit checksum corrects every one-bit transient fault at every point of an arbitrary reversible use/uncompute circuit.",
+    "challenge": "Single physical faults can become multi-bit output differences.",
+    "primary_anchor": "https://preskill.caltech.edu/pubs/preskill-2006-threshold.pdf",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H104",
+    "field": "zero-error side-information coding",
+    "original_statement": "For every two-window CNOT-star channel E_n, ceil(log2 |E_n|) trusted metadata bits suffice to restore every arbitrary n-bit initial word.",
+    "challenge": "Cardinality is a lower bound; pairwise confusability can require more.",
+    "primary_anchor": "https://ieeexplore.ieee.org/document/1228155/",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H105",
+    "field": "zero-error coding and reversible memory",
+    "original_statement": "For E_n={0,unit vectors,all ones}, exact restoration needs four trusted metadata bits at n=5 but only three at n=6; this might provide a capability absent from a generic same-model decoder.",
+    "challenge": "The functional threshold and the novelty/separation obligation are distinct.",
+    "primary_anchor": "https://ieeexplore.ieee.org/document/1228155/",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H106",
+    "field": "population protocols",
+    "original_statement": "A fixed finite-state anonymous population protocol stably decides primality of the population size for every size under standard fair pairwise interactions.",
+    "challenge": "Stable computability is constrained by semilinearity; a changed interaction model is not a counterexample.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H107",
+    "field": "nonlocal games",
+    "original_statement": "A classical no-communication strategy can win every input pair of the magic-square game using only pre-shared randomness.",
+    "challenge": "Entanglement and communication are extra resources; do not attribute simulated quantum power to Linux.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H108",
+    "field": "causal inference",
+    "original_statement": "Observational and single-variable interventional distributions always identify the individual response event Y(0)!=Y(1), with no cross-world assumptions.",
+    "challenge": "Equal interventional marginals can have different couplings of potential outcomes.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H109",
+    "field": "thermodynamic resource theory",
+    "original_statement": "A reversible device can reset an arbitrary unknown bit while exactly restoring an arbitrary catalyst, without exporting entropy or any other state change.",
+    "challenge": "Injectivity excludes universal erasure without an information sink.",
+    "primary_anchor": "https://www.cs.princeton.edu/courses/archive/fall04/cos576/papers/bennett73.html",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H110",
+    "field": "hyperproperty monitoring",
+    "original_statement": "A finite black-box trace monitor can soundly and completely certify noninterference of every program without observing alternative secret inputs or inspecting the program.",
+    "challenge": "Observed finite behavior does not determine an unobserved counterfactual branch.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H111",
+    "field": "probabilistic computing",
+    "original_statement": "Parallel synchronous updates of all p-bits using their local Gibbs conditionals always preserve the joint target Gibbs distribution.",
+    "challenge": "Conditional distributions alone do not license arbitrary simultaneous updates.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  },
+  {
+    "id": "H112",
+    "field": "algebraic query packing",
+    "original_statement": "A bounded-integer matrix row can be identified with one exact unbounded-width packed probe, and this reduces information cost as well as oracle-call count.",
+    "challenge": "Kronecker-style substitution shifts cost into precision/bit length; charge both.",
+    "primary_anchor": "SOURCE_TO_VERIFY",
+    "classification": "HYPOTHESIS",
+    "novelty": "UNVERIFIED"
+  }
+]

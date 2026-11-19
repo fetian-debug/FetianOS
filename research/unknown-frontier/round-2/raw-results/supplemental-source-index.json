@@ -1,0 +1,22 @@
+[
+  {
+    "entry": "original-failed.py",
+    "sha256": "f0f0ed957785b46988c66a1aea41cbb3818a3e71553a2d6cf574a4fd3126fa4e",
+    "trial": "original-80-seed-2090"
+  },
+  {
+    "entry": "original-fixed.py",
+    "sha256": "d98df5401b6a0621c7a239f2a3e9f4ba42c0214d9f52e7c2754fc1aeadbda6da",
+    "trial": "original-80-fixed-seed-2090"
+  },
+  {
+    "entry": "other-fields.py",
+    "sha256": "4da58aac0e9d5ef43f725bc239587ca9201aef579f63e678fa25c13a42e4b3c5",
+    "trial": "other-fields-planned"
+  },
+  {
+    "entry": "family.py",
+    "sha256": "3a6d4b1d41ef978b920d5f86422d3d06c2fbdbfcdc1614be533454d30b94420b",
+    "trial": "family-2090"
+  }
+]

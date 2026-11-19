@@ -1,0 +1,12 @@
+{
+  "command": [
+    "/usr/bin/python3",
+    "research/unknown-frontier/round-2/reproduce.py",
+    "--output",
+    ".build-tools/frontier-round2-final-validation"
+  ],
+  "exit_code": 0,
+  "scope": "local end-to-end reproduction; not independent external replication",
+  "new_unique_conditions": false,
+  "source_format_change": "removed trailing blank lines in three current sources; historical sources remain archived"
+}

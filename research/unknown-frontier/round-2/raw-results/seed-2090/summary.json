@@ -1,0 +1,35 @@
+{
+  "seed": 2090,
+  "channel": {
+    "exhaustive_physical_cases": 1184,
+    "random_propagation_cases": 1000,
+    "mutants_exposed": 10,
+    "invalid_cases": 8,
+    "H104": "FALSIFIED at n=5",
+    "H105_functional": "exact bounds 4 and 3 verified",
+    "generic_baseline_minimum_bits": [
+      4,
+      3
+    ],
+    "prototype_minimum_bits": [
+      4,
+      3
+    ],
+    "new_capability_separation": false
+  },
+  "causal": {
+    "assignments": 8,
+    "response_A": "0",
+    "response_B": "1",
+    "observables_equal": true,
+    "interventions_equal": true
+  },
+  "sampling": {
+    "states": 4,
+    "primitive_trajectories": 128,
+    "synchronous_stationary": false,
+    "sequential_stationary": true
+  },
+  "classification": "EXPERIMENTALLY DEMONSTRATED within explicit finite models",
+  "novel_capability_established": false
+}

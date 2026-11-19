@@ -1,0 +1,74 @@
+{
+  "assets": [
+    {
+      "digest": "sha256:e9c1e61471eccc35c37042ea7a0ecc53cc080f3ecbc44eb4a06532b81316f3c3",
+      "name": "fetianOS-0.1.0-x86_64.iso.part001",
+      "size": 1992294400,
+      "updated_at": "2026-11-18T15:06:15Z"
+    },
+    {
+      "digest": "sha256:41d222868563d15be4f3382b13ee7529b2b828eed5f32807d4df166a958b1a22",
+      "name": "fetianOS-0.1.0-x86_64.iso.part002",
+      "size": 453871616,
+      "updated_at": "2026-11-18T15:05:30Z"
+    },
+    {
+      "digest": "sha256:42c94530b52278e714c88055934641ac943b82e9443ead912d20eb8053ba3291",
+      "name": "fetianOS-0.1.0-x86_64.iso.sha256",
+      "size": 92,
+      "updated_at": "2026-11-18T15:05:11Z"
+    },
+    {
+      "digest": "sha256:de36857fd16fb69ae9e817b1e53869abfeddd023f153538c7a0714d6d70ccbbc",
+      "name": "SHA256SUMS-sway",
+      "size": 896,
+      "updated_at": "2026-11-18T15:05:12Z"
+    },
+    {
+      "digest": "sha256:e38b4241bdf6f4e2aee8d6f366df8477045cf344c81f1aad19af85a4780f0e17",
+      "name": "sway-assemble-iso.py",
+      "size": 3025,
+      "updated_at": "2026-11-18T15:05:11Z"
+    },
+    {
+      "digest": "sha256:1094a836d75ecf9b23e498dcdaa301bbef909ca3c7aa8beddf9ce10b4935fd7f",
+      "name": "sway-build.json",
+      "size": 153544,
+      "updated_at": "2026-11-18T15:05:12Z"
+    },
+    {
+      "digest": "sha256:4705f54d64f6b8fa05acf22f5b9373ca766b9635a4a15335fe3b7fefd204897b",
+      "name": "sway-DOWNLOAD.txt",
+      "size": 525,
+      "updated_at": "2026-11-18T15:05:11Z"
+    },
+    {
+      "digest": "sha256:da2a4ba68a4bc5ecb3f5bfa7bf297bb643e911d80c1de32c70e0796ce942288c",
+      "name": "sway-downloads.json",
+      "size": 1238,
+      "updated_at": "2026-11-18T15:05:12Z"
+    },
+    {
+      "digest": "sha256:abaef0d3b4635fa7b5330843783e16636420bfb03c3b94852cfa54546879d053",
+      "name": "sway-packages.json",
+      "size": 77587,
+      "updated_at": "2026-11-18T15:05:12Z"
+    },
+    {
+      "digest": "sha256:bcca0f68ba0597a5629fdad1748c0f055df1ee7bfdf92dea2da4556ead157bbb",
+      "name": "sway-vm-evidence.json",
+      "size": 2534,
+      "updated_at": "2026-11-18T15:05:12Z"
+    },
+    {
+      "digest": "sha256:420bbc362c4c2095f2ce751feca3813bf4e8c34f03031f409b5d0a80c1a23267",
+      "name": "sway-vm-serial.log",
+      "size": 26778,
+      "updated_at": "2026-11-18T15:05:12Z"
+    }
+  ],
+  "id": 450149449,
+  "published_at": "2026-11-18T15:06:16Z",
+  "tag_name": "preview-7-1",
+  "verification_scope": "Read-only release metadata matches prior part sizes/digests; no ISO bytes downloaded or rebuilt."
+}

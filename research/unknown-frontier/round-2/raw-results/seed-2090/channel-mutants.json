@@ -1,0 +1,124 @@
+[
+  {
+    "name": "omit-full-error",
+    "n": 5,
+    "witness": {
+      "n": 5,
+      "word": 0,
+      "window": 4,
+      "bit": 0,
+      "observed": 31,
+      "effective_error": 31,
+      "saved": 0,
+      "generic_saved": 0,
+      "generic_result": 0,
+      "rust_result": 0
+    },
+    "mutant_result": null
+  },
+  {
+    "name": "one-less-metadata-bit",
+    "n": 5,
+    "witness": {
+      "n": 5,
+      "word": 0,
+      "window": null,
+      "bit": null,
+      "observed": 0,
+      "effective_error": 0,
+      "saved": 0,
+      "generic_saved": 0,
+      "generic_result": 0,
+      "rust_result": 0
+    },
+    "mutant_result": null
+  },
+  {
+    "name": "corrupt-metadata",
+    "n": 5,
+    "observed": 0,
+    "saved": 1,
+    "expected_original": 0,
+    "output": "1",
+    "scope": "outside declared trusted/fault assumptions"
+  },
+  {
+    "name": "two-bit-errors",
+    "n": 5,
+    "observed": 3,
+    "saved": 0,
+    "expected_original": 0,
+    "output": "7",
+    "scope": "outside declared trusted/fault assumptions"
+  },
+  {
+    "name": "inside-protected-region",
+    "n": 5,
+    "observed": 3,
+    "saved": 0,
+    "expected_original": 0,
+    "output": "7",
+    "scope": "outside declared trusted/fault assumptions"
+  },
+  {
+    "name": "omit-full-error",
+    "n": 6,
+    "witness": {
+      "n": 6,
+      "word": 0,
+      "window": 5,
+      "bit": 0,
+      "observed": 63,
+      "effective_error": 63,
+      "saved": 0,
+      "generic_saved": 0,
+      "generic_result": 0,
+      "rust_result": 0
+    },
+    "mutant_result": null
+  },
+  {
+    "name": "one-less-metadata-bit",
+    "n": 6,
+    "witness": {
+      "n": 6,
+      "word": 0,
+      "window": null,
+      "bit": null,
+      "observed": 0,
+      "effective_error": 0,
+      "saved": 0,
+      "generic_saved": 0,
+      "generic_result": 0,
+      "rust_result": 0
+    },
+    "mutant_result": null
+  },
+  {
+    "name": "corrupt-metadata",
+    "n": 6,
+    "observed": 0,
+    "saved": 1,
+    "expected_original": 0,
+    "output": "1",
+    "scope": "outside declared trusted/fault assumptions"
+  },
+  {
+    "name": "two-bit-errors",
+    "n": 6,
+    "observed": 3,
+    "saved": 0,
+    "expected_original": 0,
+    "output": "7",
+    "scope": "outside declared trusted/fault assumptions"
+  },
+  {
+    "name": "inside-protected-region",
+    "n": 6,
+    "observed": 3,
+    "saved": 0,
+    "expected_original": 0,
+    "output": "7",
+    "scope": "outside declared trusted/fault assumptions"
+  }
+]

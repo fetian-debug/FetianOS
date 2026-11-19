@@ -1,0 +1,304 @@
+{
+  "research_date": "2026-11-19",
+  "query_or_open_count": 40,
+  "scope": "Bounded adversarial web-index queries and primary pages; no exhaustive search or legal-priority conclusion. Irrelevant near-hits are not proof of equivalence.",
+  "batches": [
+    {
+      "queries": [
+        "catalytic computing open problems lossy catalytic computation 2025 2026",
+        "\"counterfactual\" \"query complexity\" \"quantum switch\"",
+        "\"dynamic\" \"Farkas\" \"certificate\" \"matrix\" reuse",
+        "\"proof\" \"active sensing\" \"open problems\" 2025"
+      ],
+      "urls": [
+        "https://ir.cwi.nl/pub/36450/36450.pdf",
+        "https://arxiv.org/abs/2610.24377"
+      ]
+    },
+    {
+      "queries": [
+        "\"catalytic\" \"fault\" \"computation\" reversible memory",
+        "\"Understanding Robust Catalytic Computing\"",
+        "\"Computing faster with a full memory\" catalytic",
+        "\"zero-error\" \"confusability graph\" \"side information\" coloring"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2610.24377",
+        "https://borowiecki.dev/pdf/2610.24377",
+        "https://arxiv.org/abs/2605.09648",
+        "https://ieeexplore.ieee.org/document/1228155/",
+        "https://www.nzdr.ru/data/media/biblio/kolxoz/Cs/CsQc/Assche%20G.V.%20Quantum%20cryptography%20and%20secret-key%20distillation%20%28CUP%2C%202006%29%28ISBN%200521864852%29%28O%29%28276s%29_CsQc_.pdf",
+        "https://iuuk.mff.cuni.cz/~iwmertz/files/mertz_cv.pdf",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=202602220755071491",
+        "https://citeseerx.ist.psu.edu/document?doi=cb4f7f0dbdb7ce7a4311a4d7fa4a4e7b8056e245&repid=rep1&type=pdf",
+        "https://bytez.com/docs/arxiv/2610.24377/paper",
+        "https://doi.org/10.1145/3779622",
+        "https://papers.cool/arxiv/2605.09648",
+        "https://mathcommunity.github.io/oai-math-revised/papers/An-explicit-power-saving-for-the-exact-discrete-Fourier-transform-September-25-2026/",
+        "https://studylib.net/doc/27705709/assche-g.v.---quantum-cryptography-and-secret-key-distill...",
+        "https://www.deepdyve.com/lp/arxiv/understanding-robust-catalytic-computing-phTu43FIis",
+        "https://zenodo.org/records/20298578",
+        "https://theknowledgefrontier.com/en/2026-10-21/",
+        "https://www.pith.science/citations/64497801-abfd-4444-aba2-761df9f21a8e",
+        "https://www.researchgate.net/publication/401418115_Zero-Incoherence_Capacity_of_Interactive_Encoding_Systems_Achievability_Converse_and_Side_Information_Bounds"
+      ]
+    },
+    {
+      "queries": [
+        "\"reversible computation\" \"single\" \"fault\" \"error propagation\"",
+        "\"catalytic\" \"checksum\" \"fault\"",
+        "\"CNOT\" \"fault\" \"syndrome\" \"classical\"",
+        "\"confusability\" \"circuit\" \"checksum\""
+      ],
+      "urls": [
+        "https://preskill.caltech.edu/pubs/preskill-2006-threshold.pdf",
+        "https://citeseerx.ist.psu.edu/document?doi=8b7d2aeedcc78cbc2ee62f1e2f1ba65f073a2813&repid=rep1&type=pdf",
+        "https://www.cs.umd.edu/users/dgottesm/QECC2007/Sols7.pdf",
+        "https://people.phys.ethz.ch/~renes/docs/QEC_20240521.pdf",
+        "https://personal.perimeterinstitute.ca/personal/dgottesman/QECC2007/Sols7.pdf",
+        "https://ocw.mit.edu/courses/18-435j-quantum-computation-fall-2003/01e4b2ffc6380061eb0e47822d7813de_qc_lec23.pdf",
+        "https://doi.org/10.1016/j.scico.2021.102726",
+        "https://www.mdpi.com/1099-4300/24/8/1107",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7345310/",
+        "https://quantumresearch.center/education/error-correction/06-syndromes-and-decoding.html",
+        "https://cpb.iphy.ac.cn/fileCPB/journal/article/cpb/html/2022/1674-1056/cpb_31_4_040305.shtml",
+        "https://www.researchgate.net/publication/2204215_Fault-Tolerant_Quantum_Computation_with_Constant_Error_Rate",
+        "https://homel.vsb.cz/~bil0127/subjects/koch/exercise-8/",
+        "https://www.sciencedirect.com/topics/engineering/target-qubit",
+        "https://doi.org/10.1103/PRXQuantum.5.010333",
+        "https://wiki.chenzhaoyun.com/quantum-wiki/references/paper-2023",
+        "https://www.academia.edu/180873229/Online_Testable_Approaches_in_Reversible_Logic",
+        "https://www.qccd.academy/gadgets/algorithms/cond_cx/",
+        "https://arxiv.org/abs/2209.05391"
+      ]
+    },
+    {
+      "queries": [
+        "\"folded hypercube\" \"square\" \"chromatic\"",
+        "\"folded\" \"hypercube\" \"2-distance\" coloring",
+        "\"error\" \"complement\" \"Hamming\" \"code\" single bit",
+        "\"catalytic\" \"transient\" \"error\""
+      ],
+      "urls": [
+        "https://mathworld.wolfram.com/FoldedCubeGraph.html",
+        "https://combinatorialpress.com/article/ars/Volume%20111/volume-111-paper-22.pdf",
+        "https://ntrs.nasa.gov/api/citations/19720023578/downloads/19720023578.pdf",
+        "https://lumetta.web.engr.illinois.edu/120-S19/slide-copies/142-error-correction-and-hamming-codes.pdf",
+        "https://cse.buffalo.edu/~bina/cse241/binary-arithmetic.pdf",
+        "https://assets-eu.researchsquare.com/files/rs-287722/v1/80e4684a-9764-48ac-bc29-53972c3f56d9.pdf?c=1631879019",
+        "https://mpa.vntu.edu.ua/fdb/1166/Jiang_practical_code_Matlab.pdf",
+        "https://www.researchgate.net/publication/350144823_Performance_Evaluation_Comparison_and_Identification_of_Efficient_Hypercube_Interconnection_Networks",
+        "https://store.tutorialspoint.com/digital-electronics/error-detection-and-correction-codes.htm",
+        "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/pages/c1/c1s1/",
+        "https://www.scribd.com/doc/56261886/ecc",
+        "https://nikcleju.github.io/IT_LectureNotes/errorcontrolcoding-myst/",
+        "https://www.magiran.com/volume/225400",
+        "https://www.scribd.com/document/605113690/MIT6-004s09-Tutor01-Sol",
+        "https://www.freepatentsonline.com/3648239.html",
+        "https://dokumen.pub/error-correction-coding-mathametical-methods-and-algorithms-9788126507603-9789390466764.html",
+        "https://arxiv.symmetricfunctions.com/keyword/coxeter",
+        "https://bsubercaseaux.github.io/publications/",
+        "https://en.wikipedia.org/wiki/Error_detection_and_correction",
+        "https://en.wikipedia.org/wiki/Checksum",
+        "https://en.wikipedia.org/wiki/Distributed_source_coding",
+        "https://fr.wikipedia.org/wiki/Code_de_Hadamard",
+        "https://en.wikipedia.org/wiki/Gray_code",
+        "https://en.wikipedia.org/wiki/Bit_array"
+      ]
+    },
+    {
+      "queries": [
+        "\"FarkasDual\" site.docs.gurobi.com",
+        "\"The Case for Learned Index Structures\" \"Bloom\"",
+        "\"Schrage\" \"shortest remaining\" 1968",
+        "\"Hazard pointers\" \"2004\" Michael"
+      ],
+      "urls": [
+        "https://pubsonline.informs.org/doi/pdf/10.1287/opre.16.3.687",
+        "http://pubsonline.informs.org",
+        "https://doi.org/10.1287/opre.16.3.687",
+        "https://pubsonline.informs.org/Publications/Librarians-Portal/PubsOnLine-Terms-and-Conditions",
+        "https://dblp.org/rec/journals/tpds/Michael04.html",
+        "https://dblp.org/rec/journals/tpds/Michael04",
+        "https://repositum.tuwien.at/retrieve/8679",
+        "https://docs.gurobi.com/projects/optimizer/en/current/reference/attributes/constraintlinear.html",
+        "https://www.researchgate.net/publication/3300862_Hazard_pointers_safe_memory_reclamation_for_lock-free_objects",
+        "https://www.cl.cam.ac.uk/~ey204/teaching/ACS/R244_2018_2019/papers/Kraska_SIGMOD_2018.pdf",
+        "https://doi.org/10.1145/3183713.3196909",
+        "https://sands.kaust.edu.sa/classes/CS290E/F19/papers/learned-index.pdf",
+        "https://docs.gurobi.com/projects/optimizer/en/current/reference/fileformats/solutionformats.html",
+        "https://portal.mardi4nfdi.de/wiki/Letter_to_the_Editor%E2%80%94A_Proof_of_the_Optimality_of_the_Shortest_Remaining_Processing_Time_Discipline",
+        "https://docs.gurobi.com/_/downloads/optimizer/en/12.0/pdf/",
+        "https://www.minicod.com/papers/letter-to-the-editor-a-proof-of-the-optimality-of-the-shortest-remaining-processing-time-discipline-64efbd77",
+        "https://doi.org/10.1287/opre.16.3.687--------------------------------------------------------------------------------",
+        "https://dcl.epfl.ch/site/_media/education/ca17-ex4_sol.pdf",
+        "https://www.research.ibm.com/people/m/michael/ieeetpds-2004.pdf",
+        "https://sources.debian.org/src/ck/0.5.2-2.1/src/ck_hp.c",
+        "http://www.research.ibm.com/people/m/michael/ieeetpds-2004.pdf",
+        "http://www.apache.org/licenses/LICENSE-2.0",
+        "https://en.wikipedia.org/wiki/Hazard_pointer",
+        "https://docs.gurobi.com/projects/optimizer/en/current/reference/r/solving.html",
+        "https://iq.opengenus.org/case-for-learned-index-structures/",
+        "https://docs.gurobi.com/projects/optimizer/en/current/concepts/parameters/guidelines.html",
+        "https://stackoverflow.com/questions/20362335/traversing-a-list-with-hazard-pointers/20670962",
+        "https://algorithm.tamnd.com/hazard-pointers/",
+        "https://www.youtube.com/watch?v=f73okLm5j28",
+        "https://zh.wikipedia.org/wiki/%E5%86%92%E9%99%A9%E6%8C%87%E9%92%88"
+      ]
+    },
+    {
+      "queries": [
+        "population protocols stably computable predicates semilinear Angluin Aspnes Eisenstat 2007",
+        "magic square game classical 8/9 quantum perfect strategy paper",
+        "Tian Pearl probability necessity sufficiency bounds counterfactual nonidentification",
+        "synchronous p bits Gibbs sampling parallel updates stationary distribution"
+      ],
+      "urls": [
+        "https://www.cs.yale.edu/homes/aspnes/papers/semilinear-abstract.html",
+        "https://doi.acm.org/10.1145/1146381.1146425",
+        "https://ir.cwi.nl/pub/29271/1907.09415.pdf",
+        "https://www.cs.yale.edu/homes/aspnes/papers/podc2006-proceedings.pdf",
+        "https://cleve.iqc.uwaterloo.ca/resources/QIC-710-F23/Qic710QuantumInformationTheory2023V2.pdf",
+        "https://www.epfl.ch/labs/qcc/wp-content/uploads/2026/01/fsmp.pdf",
+        "https://crypto.cs.mcgill.ca/~crepeau/COMP647/2007/TOPIC08/BBT04.pdf",
+        "https://www.cs.yale.edu/homes/aspnes/papers/minema-survey.pdf",
+        "https://arxiv.org/abs/cs/0608084",
+        "https://www.gregegan.net/SCIENCE/MPMS/MPMS.html",
+        "https://github.com/mblakemore/quantum/blob/main/demo/magic-square/spec.md",
+        "https://hdsr.mitpress.mit.edu/pub/kpn45eyx/release/2",
+        "https://github.com/damionrashford/htsa/blob/main/docs/math/09_causation_theory.md",
+        "https://www.researchgate.net/publication/391910881_A_Game-Theoretic_Quantum_Algorithm_for_Solving_Magic_Squares",
+        "https://link.springer.com/article/10.1007/s11023-022-09598-7",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC13219510/",
+        "https://arxiv.org/abs/1811.01235",
+        "https://arxiv.org/abs/2505.13366",
+        "https://www.scribd.com/document/1063193761/CoursFSMP-Fall20",
+        "https://arxiv.org/abs/2412.02008",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC5803839/",
+        "https://algorithm.tamnd.com/gibbs-sampling/",
+        "https://www.researchgate.net/figure/Classical-and-quantum-strategies-for-the-magic-square-game-a-An-optimal-classical_fig2_340060948",
+        "https://www.youtube.com/watch?v=_adwJOhb0Oc",
+        "https://www.youtube.com/watch?v=YbEhKzubbQg",
+        "https://en.wikipedia.org/wiki/Population_protocol",
+        "https://en.wikipedia.org/wiki/Quantum_pseudo-telepathy",
+        "https://en.wikipedia.org/wiki/Gibbs_sampling",
+        "https://en.wikipedia.org/wiki/Magic_square",
+        "https://en.wikipedia.org/wiki/Parallel_tempering",
+        "https://en.wikipedia.org/wiki/Most-perfect_magic_square"
+      ]
+    },
+    {
+      "queries": [
+        "Mitzenmacher model learned bloom filters false positive analysis 2018",
+        "Tian Pearl probabilities of causation bounds 2000 pdf",
+        "Clarkson Schneider hyperproperties 2010 monitoring noninterference pdf",
+        "Kronecker substitution integer polynomial packing matrix multiplication bit complexity"
+      ],
+      "urls": [
+        "https://ftp.cs.ucla.edu/pub/stat_ser/r271-A.pdf",
+        "https://journals.sagepub.com/doi/pdf/10.3233/JCS-2009-0393",
+        "https://doi.org/10.3233/JCS-2009-0393",
+        "https://flintlib.org/doc/algorithms/polynomials/kronecker.html",
+        "https://papers.neurips.cc/paper_files/paper/2018/file/0f49c89d1e7298bb9930789c8ed59d48-Paper.pdf",
+        "https://fredrikj.net/fdoc/html/algorithms/polynomials/kronecker.html",
+        "https://papers.neurips.cc/paper_files/paper/2018/hash/0f49c89d1e7298bb9930789c8ed59d48-Abstract.html",
+        "https://flintlib.org/doc/algorithms/linear-algebra/polynomial-matrices.html",
+        "https://doi.org/10.1016%2Fj.jco.2016.03.001",
+        "https://arxiv.org/abs/1802.00884",
+        "https://dblp.org/rec/journals/jcs/ClarksonS10.html",
+        "https://www.eecs.harvard.edu/~michaelm/TALKS/2019NIPSposter-mitz.pdf",
+        "https://www.csc.liv.ac.uk/~mfortin/talks/hyperltl.pdf",
+        "https://www.texmacs.org/joris/fontart/mul-schola.pdf",
+        "https://www.texmacs.org/joris/fontart/mul-cuprum.pdf",
+        "https://www.scilit.com/publications/e1771703038e7cb2802a27c75a0d52ab",
+        "https://algorithm.tamnd.com/kronecker-substitution/",
+        "https://lacuna.tiptreesystems.com/work/a-model-for-learned-bloom-filters-and-optimizing-by-sandwiching/wrk_b9c85e6f546171b879cc7f9c538cb50d",
+        "https://arxiv.org/abs/1301.3898",
+        "https://arxiv.org/abs/1901.00902",
+        "https://doi.org/10.1145%2F3505584",
+        "https://www.texmacs.org/joris/zmatmult/zmatmult.html",
+        "https://arxiv.org/abs/1803.01474",
+        "https://en.wikipedia.org/wiki/Kronecker_substitution",
+        "https://en.wikipedia.org/wiki/Computational_complexity_of_matrix_multiplication",
+        "https://www.youtube.com/watch?v=_5xbSoEPKLs",
+        "https://en.wikipedia.org/wiki/Bloom_filter",
+        "https://en.wikipedia.org/wiki/Computational_complexity_of_mathematical_operations",
+        "https://en.wikipedia.org/wiki/Multiplication_algorithm",
+        "https://www.youtube.com/watch?v=9J8pRQ_EInA",
+        "https://en.wikipedia.org/wiki/Polynomial_evaluation"
+      ]
+    },
+    {
+      "queries": [
+        "\"error\" \"all-one\" \"single\" \"code\" Hamming",
+        "\"single bit\" \"complement\" \"syndrome\" code",
+        "\"linear code\" \"inversion\" \"Hamming\"",
+        "\"folded hypercube\" \"coloring\" \"square\" code"
+      ],
+      "urls": [
+        "https://wcc2024.sites.dmi.unipg.it/WCC_proceedings.pdf",
+        "https://iifrf.ru/wp-content/uploads/2023/01/izvestiyaiif-67.pdf",
+        "https://www.vkit.ru/index.php/archive-rus/1437-034-040",
+        "https://www.cs.umd.edu/~gasarch/COURSES/752/S25/slides/rainbowsaturation.pdf",
+        "https://eprint.iacr.org/2019/515.pdf",
+        "https://citeseerx.ist.psu.edu/document?doi=80d06fbac4451154a03c60e3d85ba9ebd5ed9027&repid=rep1&type=pdf",
+        "https://ntrs.nasa.gov/api/citations/19820026446/downloads/19820026446.pdf",
+        "https://androma.org/page/Combinatorial%20Design%20Theory/code?path=content%2F6-steiner-triple-systems-and-small-designs%2Ffrom-balanced-designs-to-steiner-systems%2Fsection.md&section=content",
+        "https://www.scribd.com/document/289194192/Hamming-Codes",
+        "https://dokumen.pub/error-correction-coding-mathametical-methods-and-algorithms-9788126507603-9789390466764.html",
+        "https://joe-ferrara.github.io/2020/04/19/coding-theory-2.html",
+        "https://patents.google.com/patent/DE2742881C2/en",
+        "https://www.datagenetics.com/blog/january42016/",
+        "https://www.matpic.com/essays/finding-the-error-without-reading-the-message/",
+        "https://patents.google.com/patent/US9582354B2/en",
+        "https://errorcorrectionzoo.org/all",
+        "https://mysmartcopilot.com/learn/computer-networks/error-detection-parity-checksum-and-hamming/",
+        "https://www.scribd.com/document/266501074/Error-Detection-by-ZMTG",
+        "https://en.wikipedia.org/wiki/Reed%E2%80%93Solomon_error_correction",
+        "https://en.wikipedia.org/wiki/Glossary_of_graph_theory"
+      ]
+    },
+    {
+      "queries": [
+        "\"folded hypercubes\" \"distance-two\"",
+        "\"folded hypercube\" \"square coloring\"",
+        "\"folded cube\" \"chromatic\" \"square\"",
+        "\"folded hypercubes\" \"coloring\" \"13\""
+      ],
+      "urls": [
+        "https://api.newton.ac.uk/website/v0/events/preprints/NI19024",
+        "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/24569/diaggraph_rev.pdf%3Bjsessionid%3D6574DD3049C8DA2277854320E89A33A8?sequence=1",
+        "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/24569/diaggraph_rev.pdf?sequence=1",
+        "https://research-repository.st-andrews.ac.uk/bitstream/handle/10023/23555/Bailey_2021_Geometry_of_diagonal_groups_TAMS_AAM.pdf?sequence=1",
+        "https://combinatorialpress.com/article/ars/Volume%20111/volume-111-paper-22.pdf",
+        "https://www.researchgate.net/publication/267061612_T-coloring_on_folded_hypercubes",
+        "https://www.sciencedirect.com/science/article/abs/pii/S0012365X26001676",
+        "https://www.combinatorics.org/ojs/plugins/generic/pdfJsViewer/pdf.js/web/viewer.html?file=https%3A%2F%2Fwww.combinatorics.org%2Fojs%2Findex.php%2Feljc%2Farticle%2Fdownload%2FDS22%2Fpdf%2F",
+        "https://www.academia.edu/77648073/The_geometry_of_diagonal_groups",
+        "https://www.researchgate.net/publication/220513016_Hamiltonian-connectivity_and_strongly_Hamiltonian-laceability_of_folded_hypercubes",
+        "https://www.researchgate.net/publication/265700684_On_Perfect_Dominating_Sets_in_Hypercubes_and_Their_Complements",
+        "https://en.wikipedia.org/wiki/Incidence_coloring",
+        "https://www.researchgate.net/publication/267061612_T-COLORING_ON_FOLDED_HYPERCUBES",
+        "https://www.researchgate.net/publication/348321180_The_diagonal_graph",
+        "https://www.academia.edu/172660385/Embedding_grids_into_hypercubes",
+        "https://handwiki.org/wiki/Incidence_coloring",
+        "https://ieeexplore.ieee.org/document/6978120",
+        "https://www.researchgate.net/publication/362972539_Symmetry_parameters_of_various_hypercube_families?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19",
+        "https://www.researchgate.net/publication/362972539_Symmetry_parameters_of_various_hypercube_families",
+        "https://en.wikipedia.org/wiki/Clebsch_graph"
+      ]
+    },
+    {
+      "queries": [
+        "\"synchronous Gibbs\" \"stationary\" sampling",
+        "\"catalytic\" \"error\" \"syndrome\" site:patents.google.com",
+        "\"side information\" \"graph coloring\" \"error\" site:patents.google.com",
+        "open primary paper: https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf"
+      ],
+      "urls": [
+        "https://proceedings.mlr.press/v15/gonzalez11a.html",
+        "https://www.cs.virginia.edu/~robins/Turing_Paper_1936.pdf"
+      ]
+    }
+  ]
+}

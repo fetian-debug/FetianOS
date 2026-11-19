@@ -1,0 +1,12 @@
+{
+  "id": "H113",
+  "seed": 2090,
+  "protocol_sha256": "898d0d116a3862e96a147e4849a6096378313462e951857ce1cc2eb78eaf7054",
+  "source_sha256": "3a6d4b1d41ef978b920d5f86422d3d06c2fbdbfcdc1614be533454d30b94420b",
+  "m_range": [
+    3,
+    10
+  ],
+  "words_per_condition": 100,
+  "hypothesis": "linear redundancy m+1 at n=2^m-3, m at n=2^m-2; nonlinear larger-n optimum UNVERIFIED"
+}

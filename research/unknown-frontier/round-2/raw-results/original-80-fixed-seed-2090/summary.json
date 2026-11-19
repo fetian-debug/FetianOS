@@ -1,0 +1,18 @@
+{
+  "seed": 2090,
+  "reviewed_ids": 80,
+  "evidence_groups": 30,
+  "finite_fixture_counts": {
+    "dual": 729,
+    "beliefs": 7,
+    "context_schedules": 6,
+    "independent_schedules": 6,
+    "additive_updates": 500,
+    "partial_parity_transcripts": 502,
+    "xor_fragments": 256,
+    "polynomials": 25,
+    "hamming_cases": 128
+  },
+  "no_unexpected_failures": true,
+  "scope": "a group may cover several known/qualified claims; counts are not 80 independent new algorithms"
+}

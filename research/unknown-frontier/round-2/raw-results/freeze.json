@@ -1,0 +1,6 @@
+{
+  "parent_canonical_sha256": "925bca1cdbd9e42c60c6b348572ce4cf01a2f738301d73fddb3df82aa452ebac",
+  "new_hypotheses_sha256": "e79a31eebc45125df5cb916bb1c2b0f7e4d401198080e086ba229f6dbebe1c4c",
+  "protocol_canonical_sha256": "e5612ad8076ff00ad71bbee8a27cecb2f33ed8b8d95377b7ba7bce0d61d204dc",
+  "note": "New source URLs are discovery anchors; SOURCE_TO_VERIFY is resolved in a separate review, never by editing frozen statements."
+}

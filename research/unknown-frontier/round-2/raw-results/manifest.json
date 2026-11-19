@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "files": {
+    "README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "3aecd5556cc0cc7161ea4d8aaf949200e766cc05ba519db32f41670e49305a30"
+    },
+    "channel.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "571152d1428b130167ad1c175b115caf077c5a61d8bc02c2f924e2343fa5db3d"
+    },
+    "checks_original.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "33315cbc1e08d1f472dafdddadca3a6ccff727df6b8a55d7531c42106d6424d2"
+    },
+    "experiments.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "4008218153d0c0223be347081ee969a55a7aebd57c320300e939c601f9538d83"
+    },
+    "family-protocol.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "238ce5b4900989d21417c78f795b1483e6a0024c1411f602e609b902ccf5deae"
+    },
+    "family.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "cd6c33986b6f37d62f622d97ab703ba9c1ae43bd2acbadcd327703d52a21072d"
+    },
+    "final-report.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "76db2c8b01111fe26c64c53b6c4af723260230f19aa5d11d906d8049f185f855"
+    },
+    "freeze_plan.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "ce345af8436ab41e472e0a3437ee0d94264e52d421c82c870bdedd4fafc68681"
+    },
+    "mathematical-findings.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "976bfcb49a86e90d25c2cdde83d7e124cac628770d76814bd705846cfbfdb184"
+    },
+    "new-hypotheses.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "e79a31eebc45125df5cb916bb1c2b0f7e4d401198080e086ba229f6dbebe1c4c"
+    },
+    "other-fields-review.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "0cc6a56cfdd3b3c612f6639e7441c0739c976955bf86349e282b669f8a3d6177"
+    },
+    "other_fields.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "4e6443059c74feaf2da49349b9fa4de16fcebabd03a7cebe60394f2e6758955e"
+    },
+    "protocol.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "e5612ad8076ff00ad71bbee8a27cecb2f33ed8b8d95377b7ba7bce0d61d204dc"
+    },
+    "prototype/metadata.rs": {
+      "mode": "crlf-to-lf",
+      "sha256": "11be5daa7918e3528e721d3e3f6660277ad6205fca2acbc6b0bb4a98407a9950"
+    },
+    "raw-results/README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "2940c331d3725fc6f035d3a1e1fdd8c2f03e9eafe1fc98a44ee507a0f72bd158"
+    },
+    "raw-results/compiler.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+    },
+    "raw-results/environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6117955072f6c4932e74ec26b6b898355ac5c2d8c644fe2c865ff7c90fbfd0ce"
+    },
+    "raw-results/family-2090/cases.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "3bbe601e5da932a14a21a1a8a00c4463a8c9c76a896cdac9d73452ac3d16f943"
+    },
+    "raw-results/family-2090/conditions.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "bcb8591e7f05975de2ef00708619d3c0e7040e4fe7e9b1c08bd28b988ed2b01f"
+    },
+    "raw-results/family-2090/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "e052b06463a1e0f2ea55b9e678e6ad5250773fa0b3214433458f4156ab6c99df"
+    },
+    "raw-results/family-2090/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "742b59e5b969892a865ad020a540a3d2fb3e89af19b06e14a666c7e244917d9e"
+    },
+    "raw-results/freeze.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "88ad7c5279d9e9bc5fc5b839bd5e00b57c2c547579372baeb541ca7e44c76481"
+    },
+    "raw-results/local-reproduction.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ca1a89098b5cd0c506115385f17caf5149e4c5829bfd5cb785dc2ef3863c2549"
+    },
+    "raw-results/original-80-fixed-seed-2090/checks.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "552127b67dd398032c3ae2761e1a005dbb7b51bc8bfb48910fb82a1c2d62b9fa"
+    },
+    "raw-results/original-80-fixed-seed-2090/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "e61d1c2194df458cf1bfd5de218bdac5364d513939b2080ddca0373f53a3d32c"
+    },
+    "raw-results/original-80-fixed-seed-2090/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4b3aaa444286179a9ec053aff0fafe10a74f46cccad8cbfbbca9f27de2f4cb95"
+    },
+    "raw-results/original-80-seed-2090/checks.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "552127b67dd398032c3ae2761e1a005dbb7b51bc8bfb48910fb82a1c2d62b9fa"
+    },
+    "raw-results/original-80-seed-2090/failed-source.py.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "212be285f5faacf81ac7f729c703a918c8baafb6e6712a5f0f1b2f37f2b6e3af"
+    },
+    "raw-results/original-80-seed-2090/failure.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "2eab21b054d6feafe364104b850ad3de5b97d8d93dc2a4fe2ad66387b0392248"
+    },
+    "raw-results/original-80-seed-2090/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a11de8db440c618e82935ea23765b94dcaa4e3b576e6b25442c7fc07fb18ace3"
+    },
+    "raw-results/other-fields/classical-magic-square.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "7f705ec2a7fa36489411a7faa4a94b5960b40460a49e473b0e8e9dae4513afbe"
+    },
+    "raw-results/other-fields/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d5cec7146eec90437535f8497163f1a91fece366e5113f2f7f9528b4c79b8360"
+    },
+    "raw-results/other-fields-planned/classical-magic-square.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "7f705ec2a7fa36489411a7faa4a94b5960b40460a49e473b0e8e9dae4513afbe"
+    },
+    "raw-results/other-fields-planned/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4ed5693594a429bf206ddc7de903537f92f6e08f5f756a2e971fc96609bb8980"
+    },
+    "raw-results/other-fields-planned/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d5cec7146eec90437535f8497163f1a91fece366e5113f2f7f9528b4c79b8360"
+    },
+    "raw-results/release-observation.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b7a466c91be9ad19568147401d59ffafa873f801bfb9477817c85861d808cecf"
+    },
+    "raw-results/remaining-80-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "9d639e6c1e062e1facb4d9d3ac15498f62bb2c2decfa8a300e7ece5834f0cb07"
+    },
+    "raw-results/review-first-pass.csv": {
+      "mode": "crlf-to-lf",
+      "sha256": "7eb13feacae6808106341333c42aaa522e59eba02bbbc2a8b9e2180e4783f168"
+    },
+    "raw-results/search-ledger.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "2bec600661ca5a6ab1a1b9fd4cbfcf8dee6199765b1958dd51a5efef381f525f"
+    },
+    "raw-results/seed-2090/causal.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6da88ace66009eeb5ff6c3f218d340f821a0ad9c0448d18db83497f1aa8244c5"
+    },
+    "raw-results/seed-2090/channel-cases.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "4dd6820b901a81b641d08c960b6076889c069fec4609999605fa52dee3eae5e0"
+    },
+    "raw-results/seed-2090/channel-mutants.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6e33d848224e89cd186c2a3a9701985c43fa270a1f50e7c33cf49c594861cc63"
+    },
+    "raw-results/seed-2090/channel-proofs.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "68400d9400892b6e310e48b486ae736137ebb39033be747031eff5e869ff4b76"
+    },
+    "raw-results/seed-2090/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "28ffd225e655d5d45acc49aa5cb992cbdbc75fbe07d3fde4b30348511bff94ab"
+    },
+    "raw-results/seed-2090/propagation-random.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "064b70c79eb7f056f591e06c4bba84ec12684b6ecb3f79066574ce4e0843f263"
+    },
+    "raw-results/seed-2090/sampling.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "75c995c2b3e886cf1af7d85ee394ba2233533c4f9895e0336e559801e50d3df6"
+    },
+    "raw-results/seed-2090/source-snapshot.tar.gz": {
+      "mode": "raw",
+      "sha256": "6890e2d0c838b51bbb5b6cc641719a2bd8280f79c0038616fb6a597674cf5187"
+    },
+    "raw-results/seed-2090/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "f0f4c8ab201d85bee7e2fac21035bbb35ce68cffe2739c907e54f6b1ca2cd6bb"
+    },
+    "raw-results/seed-2091/causal.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6da88ace66009eeb5ff6c3f218d340f821a0ad9c0448d18db83497f1aa8244c5"
+    },
+    "raw-results/seed-2091/channel-cases.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "4dd6820b901a81b641d08c960b6076889c069fec4609999605fa52dee3eae5e0"
+    },
+    "raw-results/seed-2091/channel-mutants.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6e33d848224e89cd186c2a3a9701985c43fa270a1f50e7c33cf49c594861cc63"
+    },
+    "raw-results/seed-2091/channel-proofs.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "68400d9400892b6e310e48b486ae736137ebb39033be747031eff5e869ff4b76"
+    },
+    "raw-results/seed-2091/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6f402a87aec40262e0a6c1ad22cef027b3ee53bf08bb6146771f6062a2051606"
+    },
+    "raw-results/seed-2091/propagation-random.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "1579c0032b93c77f002980d4f32f5b5bf7434b190fc2e6740340e32af4c9749b"
+    },
+    "raw-results/seed-2091/sampling.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "75c995c2b3e886cf1af7d85ee394ba2233533c4f9895e0336e559801e50d3df6"
+    },
+    "raw-results/seed-2091/source-snapshot.tar.gz": {
+      "mode": "raw",
+      "sha256": "514cdae4671f4209fb4ee653eb67c08de57b951ef3591a52a02c70e784115462"
+    },
+    "raw-results/seed-2091/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "da520357f682fefee3f1b12b5c215c07e2d39c7b78c2d117f7cf0c24af640738"
+    },
+    "raw-results/supplemental-source-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d48982410f0340ef039915f805bfb1908cc4006e343e389218ebb7e92765e8f3"
+    },
+    "raw-results/supplemental-sources.tar.gz": {
+      "mode": "raw",
+      "sha256": "ff5c9d66b2746731f87a691180a60fab673bec9237e260f7c37f0a2af5ce3a6e"
+    },
+    "remaining-80-review.csv": {
+      "mode": "crlf-to-lf",
+      "sha256": "d5ad9fe3943205b82a717fa1c7ca9f4f970e4c56621b479589d250fea98aa63e"
+    },
+    "reproduce.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "d6c1aa25b353e979cd8c9dc8cf81cc2a285b6afeecaeecb1533992d701129a42"
+    },
+    "reproducibility.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "c26dc4df429b560da19e451fe35ecbd61173dc78efa45476913b34c1696bc5cf"
+    },
+    "retain.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "9d907c651bae29bc8fd2d94761972037a6b803c2734b9ad124ec8c0e25cc7352"
+    },
+    "review-corrections.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "278ca5220dd403a8d5e896de715e632394988ae9c2cb3775b6c65e33f6d152e3"
+    },
+    "review_remaining.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "886b5160d60487cc579eb3c3c96cf7d0001af46c1d95f5590cb448df44eaa81b"
+    },
+    "verify.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "a09b10b6e40d762d63eed8ce10892e7df6f96d921de70a6052c369d55d13c18b"
+    }
+  },
+  "attestation": "local unsigned checksums only"
+}

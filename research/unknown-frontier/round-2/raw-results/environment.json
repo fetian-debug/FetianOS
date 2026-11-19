@@ -1,0 +1,8 @@
+{
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "python": "3.10.12",
+  "recorded_utc": "2026-11-19T09:24:25Z",
+  "base_revision": "4c8541d658e31068856bfc46ee88917b5c9beddb",
+  "integration": "none; only the isolated round-2 research tree changes"
+}

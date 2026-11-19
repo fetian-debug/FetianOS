@@ -1,0 +1,24 @@
+{
+  "seed": 2090,
+  "protocol": {
+    "parent_canonical_sha256": "925bca1cdbd9e42c60c6b348572ce4cf01a2f738301d73fddb3df82aa452ebac",
+    "new_hypotheses_sha256": "e79a31eebc45125df5cb916bb1c2b0f7e4d401198080e086ba229f6dbebe1c4c",
+    "protocol_canonical_sha256": "e5612ad8076ff00ad71bbee8a27cecb2f33ed8b8d95377b7ba7bce0d61d204dc",
+    "note": "New source URLs are discovery anchors; SOURCE_TO_VERIFY is resolved in a separate review, never by editing frozen statements."
+  },
+  "sources": {
+    "channel.py": "f4c8a4a2f801c40e8498c6927c3489332cbe87a086105adef4abe3d133efd7f6",
+    "experiments.py": "e495c821122d1aaa4201f29e321450895d3b0c41ceace3b3fc7c7c3949dfcf65",
+    "freeze_plan.py": "9102f091d587d2cf14e4e1e1729b9eb12f8f84d79202955608a73c339854d25b",
+    "protocol.md": "e5857efddb91ad99565ca92a2916ec3488121d13611f72253932a0db24dbb180",
+    "prototype/metadata.rs": "6647beec319f2a3433d80105e7875cf8fe9341cd242c6825cc8567d09492a251",
+    "review_remaining.py": "4e3aa40eb8758e8a88a9158547cbe5a894e2a54bf4459eb8ec73c08e9314bc69"
+  },
+  "binary_sha256": "db09aa3a11277c437f9767a57615942a117d70c97605314b50babf59d63160e5",
+  "environment": {
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "python": "3.10.12",
+    "architecture": "x86_64"
+  },
+  "scope": "finite exact models, simulated faults; no physical hardware or catalytic complexity claim"
+}

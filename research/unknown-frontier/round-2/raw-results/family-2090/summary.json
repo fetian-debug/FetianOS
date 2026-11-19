@@ -1,0 +1,11 @@
+{
+  "id": "H113",
+  "seed": 2090,
+  "conditions": 16,
+  "random_cases": 1600,
+  "errors_checked": 4072,
+  "observed_mismatches": 0,
+  "classification": "EXPERIMENTALLY DEMONSTRATED construction; universal linear bound needs written proof",
+  "new_capability_established": false,
+  "larger_n_nonlinear_optimality": "UNVERIFIED"
+}
