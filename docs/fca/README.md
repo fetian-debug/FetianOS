@@ -85,3 +85,17 @@ the same foreground daemon; the core has no systemd API dependency.
 - [Prior art](prior-art.md)
 - [Limitations](limitations.md)
 - [Validation and measurements](validation-report.md)
+
+## Phase 2 research
+
+- [Research validation, all 1,000 randomized cases and retained evidence](research-validation.md)
+- [Fault windows and outcome definitions](fault-model.md)
+- [Measured performance distributions](performance.md)
+- [Security review and demonstrated boundaries](security-review.md)
+- [Evidence-based prior-art comparison](prior-art-comparison.md)
+- [Inspected Phase 1 baseline](phase-2-baseline.md)
+
+The dedicated FCA workflow runs fast/fault/security checks on changes. All
+1,000 randomized experiments and the performance matrix run on explicit manual
+or scheduled validation. This workflow creates research artifacts; it never
+builds or publishes an ISO. Choose fresh report directories for each run.
