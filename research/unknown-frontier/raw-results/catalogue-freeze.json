@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "hypotheses": 100,
+  "shortlisted": [
+    "H005",
+    "H007",
+    "H014",
+    "H019",
+    "H025",
+    "H029",
+    "H032",
+    "H039",
+    "H045",
+    "H049",
+    "H054",
+    "H059",
+    "H064",
+    "H069",
+    "H072",
+    "H077",
+    "H084",
+    "H089",
+    "H094",
+    "H099"
+  ],
+  "sha256": "a3fac73ffcfbee7b046ba709efe79702ca42ef897e70a54af69c0bedbc4cd078",
+  "protocol": "Statements frozen before experiments. Later statuses belong in review/result files, never rewrite this CSV."
+}
