@@ -1,0 +1,308 @@
+{
+  "classification": "EXPERIMENTALLY DEMONSTRATED: exact finite model",
+  "fair_coin_paths": 65536,
+  "horizon": 16,
+  "naive_optional_rejections": 5368,
+  "naive_optional_probability": "671/8192",
+  "anytime_rejections": 16,
+  "anytime_probability": "1/4096",
+  "final_time_rejections": 1394,
+  "final_time_probability": "697/32768",
+  "fixed_time_sizes": [
+    {
+      "t": 1,
+      "exact_rejection_probability": "0"
+    },
+    {
+      "t": 2,
+      "exact_rejection_probability": "0"
+    },
+    {
+      "t": 3,
+      "exact_rejection_probability": "0"
+    },
+    {
+      "t": 4,
+      "exact_rejection_probability": "0"
+    },
+    {
+      "t": 5,
+      "exact_rejection_probability": "0"
+    },
+    {
+      "t": 6,
+      "exact_rejection_probability": "1/32"
+    },
+    {
+      "t": 7,
+      "exact_rejection_probability": "1/64"
+    },
+    {
+      "t": 8,
+      "exact_rejection_probability": "1/128"
+    },
+    {
+      "t": 9,
+      "exact_rejection_probability": "5/128"
+    },
+    {
+      "t": 10,
+      "exact_rejection_probability": "11/512"
+    },
+    {
+      "t": 11,
+      "exact_rejection_probability": "3/256"
+    },
+    {
+      "t": 12,
+      "exact_rejection_probability": "79/2048"
+    },
+    {
+      "t": 13,
+      "exact_rejection_probability": "23/1024"
+    },
+    {
+      "t": 14,
+      "exact_rejection_probability": "53/4096"
+    },
+    {
+      "t": 15,
+      "exact_rejection_probability": "9/256"
+    },
+    {
+      "t": 16,
+      "exact_rejection_probability": "697/32768"
+    }
+  ],
+  "anytime_all_ones_detection_time": 13,
+  "actuator_counterexample": [
+    {
+      "t": 0,
+      "previous": 0,
+      "integral": 0,
+      "action": 0,
+      "x": 2
+    },
+    {
+      "t": 1,
+      "previous": 2,
+      "integral": 2,
+      "action": 1,
+      "x": 3
+    },
+    {
+      "t": 2,
+      "previous": 3,
+      "integral": 4,
+      "action": 1,
+      "x": 4
+    },
+    {
+      "t": 3,
+      "previous": 4,
+      "integral": 4,
+      "action": 1,
+      "x": 5
+    },
+    {
+      "t": 4,
+      "previous": 5,
+      "integral": 4,
+      "action": 1,
+      "x": 6
+    },
+    {
+      "t": 5,
+      "previous": 6,
+      "integral": 4,
+      "action": 1,
+      "x": 7
+    },
+    {
+      "t": 6,
+      "previous": 7,
+      "integral": 4,
+      "action": 1,
+      "x": 8
+    },
+    {
+      "t": 7,
+      "previous": 8,
+      "integral": 4,
+      "action": 1,
+      "x": 9
+    },
+    {
+      "t": 8,
+      "previous": 9,
+      "integral": 4,
+      "action": 1,
+      "x": 10
+    },
+    {
+      "t": 9,
+      "previous": 10,
+      "integral": 4,
+      "action": 1,
+      "x": 11
+    },
+    {
+      "t": 10,
+      "previous": 11,
+      "integral": 4,
+      "action": 1,
+      "x": 12
+    },
+    {
+      "t": 11,
+      "previous": 12,
+      "integral": 4,
+      "action": 1,
+      "x": 13
+    },
+    {
+      "t": 12,
+      "previous": 13,
+      "integral": 4,
+      "action": 1,
+      "x": 14
+    },
+    {
+      "t": 13,
+      "previous": 14,
+      "integral": 4,
+      "action": 1,
+      "x": 15
+    },
+    {
+      "t": 14,
+      "previous": 15,
+      "integral": 4,
+      "action": 1,
+      "x": 16
+    },
+    {
+      "t": 15,
+      "previous": 16,
+      "integral": 4,
+      "action": 1,
+      "x": 17
+    },
+    {
+      "t": 16,
+      "previous": 17,
+      "integral": 4,
+      "action": 1,
+      "x": 18
+    },
+    {
+      "t": 17,
+      "previous": 18,
+      "integral": 4,
+      "action": 1,
+      "x": 19
+    },
+    {
+      "t": 18,
+      "previous": 19,
+      "integral": 4,
+      "action": 1,
+      "x": 20
+    },
+    {
+      "t": 19,
+      "previous": 20,
+      "integral": 4,
+      "action": 1,
+      "x": 21
+    },
+    {
+      "t": 20,
+      "previous": 21,
+      "integral": 4,
+      "action": 1,
+      "x": 22
+    },
+    {
+      "t": 21,
+      "previous": 22,
+      "integral": 4,
+      "action": 1,
+      "x": 23
+    },
+    {
+      "t": 22,
+      "previous": 23,
+      "integral": 4,
+      "action": 1,
+      "x": 24
+    },
+    {
+      "t": 23,
+      "previous": 24,
+      "integral": 4,
+      "action": 1,
+      "x": 25
+    },
+    {
+      "t": 24,
+      "previous": 25,
+      "integral": 4,
+      "action": 1,
+      "x": 26
+    },
+    {
+      "t": 25,
+      "previous": 26,
+      "integral": 4,
+      "action": 1,
+      "x": 27
+    },
+    {
+      "t": 26,
+      "previous": 27,
+      "integral": 4,
+      "action": 1,
+      "x": 28
+    },
+    {
+      "t": 27,
+      "previous": 28,
+      "integral": 4,
+      "action": 1,
+      "x": 29
+    },
+    {
+      "t": 28,
+      "previous": 29,
+      "integral": 4,
+      "action": 1,
+      "x": 30
+    },
+    {
+      "t": 29,
+      "previous": 30,
+      "integral": 4,
+      "action": 1,
+      "x": 31
+    },
+    {
+      "t": 30,
+      "previous": 31,
+      "integral": 4,
+      "action": 1,
+      "x": 32
+    },
+    {
+      "t": 31,
+      "previous": 32,
+      "integral": 4,
+      "action": 1,
+      "x": 33
+    }
+  ],
+  "H087": "known optional-stopping failure reproduced",
+  "H085": "FALSIFIED under bounded-actuator disturbance fixture",
+  "new_capability_established": false,
+  "assumptions": "independent fair coins for size guarantee; alpha-spending baseline; deterministic bounded-control simulation"
+}

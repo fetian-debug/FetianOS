@@ -1,0 +1,6 @@
+{
+  "horizon": 16,
+  "paths": 65536,
+  "alpha": "1/20",
+  "protocol_sha256": "617c75844de86d1110dcca33047160a3a5749c6d93ae6c2c78399740d25bb61f"
+}

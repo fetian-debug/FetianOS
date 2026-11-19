@@ -1,0 +1,79 @@
+{
+  "id": "H003",
+  "classification": "FALSIFIED",
+  "b": [
+    0,
+    2,
+    0,
+    2,
+    2,
+    -1
+  ],
+  "old_matrix": [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      -1,
+      -1
+    ]
+  ],
+  "new_matrix": [
+    [
+      1,
+      0
+    ],
+    [
+      -1,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      -1
+    ],
+    [
+      1,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "old_rejection": true,
+  "new_geometry_feasible": true,
+  "certificate": [
+    1,
+    0,
+    1,
+    0,
+    0,
+    1
+  ],
+  "new_nullspace_residual": [
+    2,
+    2
+  ],
+  "note": "P0 matrix mutant showed false acceptance; this distinct witness shows false rejection and directly addresses cached-rejection soundness."
+}

@@ -24,5 +24,6 @@
     "H099"
   ],
   "sha256": "a3fac73ffcfbee7b046ba709efe79702ca42ef897e70a54af69c0bedbc4cd078",
-  "protocol": "Statements frozen before experiments. Later statuses belong in review/result files, never rewrite this CSV."
+  "protocol": "Statements frozen before experiments. Later statuses belong in review/result files, never rewrite this CSV.",
+  "canonical_sha256": "925bca1cdbd9e42c60c6b348572ce4cf01a2f738301d73fddb3df82aa452ebac"
 }

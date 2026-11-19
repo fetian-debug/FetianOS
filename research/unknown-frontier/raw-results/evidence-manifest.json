@@ -1,0 +1,208 @@
+{
+  "schema_version": 2,
+  "classification": "OBSERVED",
+  "claim": "No new capability established; retained negative research artifact",
+  "signatures": "none; local checksums are not external attestations",
+  "files": {
+    "README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "1b2681381842f0c010a03b95de68fe77d237d226992fa3b709e58e4b06a2a008"
+    },
+    "baseline-implementation/README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "ea9dc5f0494f3da7ec104709c288ec50cbfad8ab809eb93593500934e7e2239f"
+    },
+    "baseline-implementation/geometry.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "98786a6d9ffa18d7f3a46375d6cde7f84ab04fc303325e4eaff1cf5117533375"
+    },
+    "baseline-implementation/projection.rs": {
+      "mode": "crlf-to-lf",
+      "sha256": "76a2042081c2fc21afb5aba5267b135385168bb113444ae1e6c59f3d2f55e953"
+    },
+    "build_review.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "0d0e17a175c6979d9b00151906e1990d5db0f874e31a94788ef8e7efcb8f4c3d"
+    },
+    "candidate-destruction-reports.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "c8847688cc593b495055b2df3cffac4e49d119074aa8d638e9d425b732b847f4"
+    },
+    "create_catalogue.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "8466bad817f52763ed65bdd5a6e26768913f8c4d03a55801b5dcc2041bf54359"
+    },
+    "discovery-method.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "f71af2d567a1d44e971828be788b5ebddc92380b1b5a89e718da841c05ea433a"
+    },
+    "experiment-protocol.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "148b955fdade6566a6e6858e58a3f3c86bb713a4828c2b19b969d0a1513f38e6"
+    },
+    "final-research-report.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "c01cd0fd74311dc185503b116a5caa494bd96e8a6fe55e89ef968f312d2c8e36"
+    },
+    "follow-on-protocol.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "ae690cf156ece48e5142525cfff0d9836a27d75574c24afcd160bcb74d3ad8ea"
+    },
+    "follow_on.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "fc4657b6648de5c940cfc8ee9bf0fca203fbc6d6827946039fb6d5f9f5a31438"
+    },
+    "hypotheses.csv": {
+      "mode": "crlf-to-lf",
+      "sha256": "925bca1cdbd9e42c60c6b348572ce4cf01a2f738301d73fddb3df82aa452ebac"
+    },
+    "independent-review-checklist.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "d0044ce4a9be6a70d42428daaf9f54b367cbf73c64543b4cc91840983cd2c87b"
+    },
+    "mathematical-model.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "5c3190d0807ec8f5d676c56d05403539b625505883bb54bb59756b6fd1ce22c3"
+    },
+    "prior-art-review.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "637bfb5766af3e0aa600110792107dd856fc0e16d86f90b29d198fde07dc986b"
+    },
+    "proof-or-falsification.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "5e7423fc1461e6ac768bdec22bda7d0e48bea19491d8f2f2314a518f8407706d"
+    },
+    "protocol-revisions.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "c4c45ec9fc22bbf3188cdb43a92b5d740a51ff798e2139736f3f17729d454c01"
+    },
+    "prototype/certificates.rs": {
+      "mode": "crlf-to-lf",
+      "sha256": "154a6b1b7a0db14e9e6d215aa2305308a9f1a554b50f5fc7bc7f92e758b4a96f"
+    },
+    "raw-results/README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "224628468dd59898820aeb1eb99fc698179f9a74c71709be6be95ff0d40e948f"
+    },
+    "raw-results/catalogue-freeze.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d338dec7dc5b27e5a8280d0d89f69778975efd58f3215b45991839d6e482ec44"
+    },
+    "raw-results/certificate-change-supplement.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6bd241d9b218920fd7fd9eb0ecd873f59d1b250fadbb87ac575844806b5a6c4c"
+    },
+    "raw-results/compiler.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+    },
+    "raw-results/experiment-source-snapshot.tar.gz": {
+      "mode": "raw",
+      "sha256": "de31868f0aee004eb5f4f71c39a36a2d79bf00d594cc1d3666fea634c30dcdfb"
+    },
+    "raw-results/follow-on/coin-paths.jsonl.gz": {
+      "mode": "raw",
+      "sha256": "fb7039137c8d5519628adcb79f37e87f7700f5ea221fbe1ca0d51ce6351c7804"
+    },
+    "raw-results/follow-on/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "8ddedd1c47ccd56bd030aa1d0d419eb8b7b586813c0d8c7596225fd5996a5054"
+    },
+    "raw-results/follow-on/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "f1f6a60af6c924e903d66e54fc559a228ca2aa9e43c290a08586d8e6f8baa5f0"
+    },
+    "raw-results/prior-art-screen.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "69eedaeebb392a84d72cac51800726c340632cb8484960b61eea35ba20d14925"
+    },
+    "raw-results/search-ledger.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4774a371dfd0608dafc2ad2b9ead32231cd0f76343773c431a8532f6e068f98d"
+    },
+    "raw-results/seed-2090/admission.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "2b41ba6d774f9cc275d82cc020374958dd0d60572ae07f45558513332964f255"
+    },
+    "raw-results/seed-2090/concurrency.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a463616088bcabcf5c5c4b206a3933ac4b162a5b5e8852a57376e7c29507dd37"
+    },
+    "raw-results/seed-2090/control.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ae2c24e761659240a6c5ab28987fb2b7c9935e6c4e3db29e0f61348fbb03034b"
+    },
+    "raw-results/seed-2090/metamorphic.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "1a9dcb40381aeae2f3f240f3b3c5cce13f2251e71b025510c26f15c5665a3be7"
+    },
+    "raw-results/seed-2090/mutations.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "3e3e9d6ac7dea22aa4bf71bfa7b042f29d6016072b88931765a2aabeddf6d818"
+    },
+    "raw-results/seed-2090/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "0f2617d079981852cdc9ab00ca6937f3b96bb699d0a21befe0066493d5131147"
+    },
+    "raw-results/seed-2090/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "357b6e44ac4728e5a685720d92245011a3736b01d39d570a5312275b8b47d7d6"
+    },
+    "raw-results/seed-2091/admission.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "147b48fde6106b3a133df26ef39f91b4ab1b88bc492e2c4366ab39adbe608e80"
+    },
+    "raw-results/seed-2091/concurrency.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a463616088bcabcf5c5c4b206a3933ac4b162a5b5e8852a57376e7c29507dd37"
+    },
+    "raw-results/seed-2091/control.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ae2c24e761659240a6c5ab28987fb2b7c9935e6c4e3db29e0f61348fbb03034b"
+    },
+    "raw-results/seed-2091/metamorphic.jsonl": {
+      "mode": "crlf-to-lf",
+      "sha256": "ceca1d90d2e02b4920241778fa0f4e539ac141346049dcfcd93284285de1a76e"
+    },
+    "raw-results/seed-2091/mutations.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "3e3e9d6ac7dea22aa4bf71bfa7b042f29d6016072b88931765a2aabeddf6d818"
+    },
+    "raw-results/seed-2091/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "27c97a197d36af6fa05dd40a8081f345e4b7a4887d2a073cb274bd511004cca1"
+    },
+    "raw-results/seed-2091/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "adb247bd91e5e72a6d76ab57a1f3d9cca49510acd84dec0ab1bcd54d9d0d6bbb"
+    },
+    "reproduce.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "c05d64e84cbebbe215b819de3c0faf65ccb71fe44420a490195261e5899b37f5"
+    },
+    "reproducibility.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "ddf5631be7b3340ee4b45f823ddf15cb2c31e76bb8951f1da31831a82cc28c68"
+    },
+    "retain_evidence.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "937f3decba486417564282b3203d1baddbf0f7a1de08a666ad425d88d708cdb1"
+    },
+    "run_experiments.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "166c236173e9949c8e3a1765fc8e7a831555deb9f7c1db50b4a298ba96527e9a"
+    },
+    "selected-hypothesis.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "d9a27b2782aedd82a32f2563fb0bc5bc4dffff1dbf325df31794b3aac01f6902"
+    },
+    "supplement.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "f76d2e5a97418506021c66bd5ea042cf0ce72bfc8882e81eb9ef7202f80648a4"
+    },
+    "verify_evidence.py": {
+      "mode": "crlf-to-lf",
+      "sha256": "55f621e8fcd25009fab1a772b5631cd24aa9549e34bd63cbec9291dfcec5d4da"
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "records": [
+    {
+      "schedule": "abc",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "acb",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "bac",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "bca",
+      "state": [
+        1,
+        1
+      ]
+    },
+    {
+      "schedule": "cab",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "cba",
+      "state": [
+        1,
+        1
+      ]
+    }
+  ],
+  "initial_ab_commutes": true,
+  "reachable_states": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "all_state_ab_commutes": false,
+  "reduced_records": [
+    {
+      "schedule": "abc",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "acb",
+      "state": [
+        0,
+        1
+      ]
+    },
+    {
+      "schedule": "cab",
+      "state": [
+        0,
+        1
+      ]
+    }
+  ],
+  "lost_outcomes": [
+    [
+      1,
+      1
+    ]
+  ],
+  "independent_positive_control": {
+    "schedules": 6,
+    "outcomes": [
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "H014": "universal finite-state check rejects unsafe swap; standard POR obligation",
+  "H015": "FALSIFIED"
+}

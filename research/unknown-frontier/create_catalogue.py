@@ -146,6 +146,6 @@ with (ROOT/'hypotheses.csv').open('w',newline='',encoding='utf-8') as f:
  writer=csv.DictWriter(f,fieldnames=rows[0].keys());writer.writeheader();writer.writerows(rows)
 (ROOT/'raw-results/catalogue-freeze.json').write_text(json.dumps(dict(schema_version=1,hypotheses=100,shortlisted=[r['id'] for r in rows if r['shortlist']],
  sha256=hashlib.sha256((ROOT/'hypotheses.csv').read_bytes()).hexdigest(),
+ canonical_sha256=hashlib.sha256((ROOT/'hypotheses.csv').read_bytes().replace(b'\r\n',b'\n')).hexdigest(),
  protocol='Statements frozen before experiments. Later statuses belong in review/result files, never rewrite this CSV.'),indent=2)+'\n')
 print('Frozen 100 hypotheses with all required fields; 20 shortlisted.')
-

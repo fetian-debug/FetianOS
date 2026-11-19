@@ -1,0 +1,129 @@
+[
+  {
+    "mutation": "drop-cut",
+    "cut": 0,
+    "b": [
+      -1,
+      -1,
+      0,
+      0,
+      1,
+      1
+    ],
+    "mutant": true,
+    "oracle": false
+  },
+  {
+    "mutation": "drop-cut",
+    "cut": 1,
+    "b": [
+      -1,
+      1,
+      0,
+      -1,
+      0,
+      1
+    ],
+    "mutant": true,
+    "oracle": false
+  },
+  {
+    "mutation": "drop-cut",
+    "cut": 2,
+    "b": [
+      -1,
+      1,
+      1,
+      0,
+      -1,
+      0
+    ],
+    "mutant": true,
+    "oracle": false
+  },
+  {
+    "mutation": "drop-cut",
+    "cut": 3,
+    "b": [
+      -1,
+      1,
+      -1,
+      1,
+      -1,
+      1
+    ],
+    "mutant": true,
+    "oracle": false
+  },
+  {
+    "mutation": "drop-cut",
+    "cut": 4,
+    "b": [
+      -1,
+      1,
+      1,
+      -1,
+      -1,
+      1
+    ],
+    "mutant": true,
+    "oracle": false
+  },
+  {
+    "mutation": "reject-equality",
+    "b": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mutant": false,
+    "oracle": true
+  },
+  {
+    "mutation": "negative-weight-certificate",
+    "rejected": true,
+    "exit_code": 2
+  },
+  {
+    "mutation": "reuse-after-matrix-change",
+    "b": [
+      2,
+      2,
+      2,
+      2,
+      -1,
+      2
+    ],
+    "changed_matrix": [
+      [
+        1,
+        0
+      ],
+      [
+        -1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        -1
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        -1,
+        -1
+      ]
+    ],
+    "old_cache": true,
+    "oracle": false
+  }
+]

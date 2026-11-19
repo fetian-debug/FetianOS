@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "seed": 2091,
+  "base_cases": 10733,
+  "exhaustive": 729,
+  "randomized": 10000,
+  "domain_edges": [
+    [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    [
+      1000000,
+      1000000,
+      1000000,
+      1000000,
+      1000000,
+      1000000
+    ],
+    [
+      -1000000,
+      -1000000,
+      -1000000,
+      -1000000,
+      -1000000,
+      -1000000
+    ],
+    [
+      1000000,
+      -1000000,
+      1000000,
+      -1000000,
+      1000000,
+      -1000000
+    ]
+  ],
+  "hypotheses_canonical_sha256": "925bca1cdbd9e42c60c6b348572ce4cf01a2f738301d73fddb3df82aa452ebac",
+  "protocol_sha256": "82bfd6b76d2cfa81218ce219eda5537cef5945910792eda7b72a730e9c3de07e",
+  "source_revision": "c0ffe1c128af0e6728216a80c040afd430d3a893",
+  "sources": {
+    "baseline-implementation/README.md": "357a5c446652dff0379ad655d920ba691b97a1349cf621f2ec3ea54473a2da5f",
+    "baseline-implementation/geometry.py": "e3293c4a69b90020a09c44d9fe732109001abd63dcf54b3a58f19e842b221fb8",
+    "baseline-implementation/projection.rs": "41946c952019812ca5875f7beb248c8484da59121a988757fd10bb9f183032d2",
+    "create_catalogue.py": "61dccc6d35f15e57785cfdbf361219d2844265a535a317f1360a38d9bf139b3f",
+    "discovery-method.md": "2262c3aa67c788308c5a7b852e336d0cad095500f0346e54f995b2a830458492",
+    "experiment-protocol.md": "82bfd6b76d2cfa81218ce219eda5537cef5945910792eda7b72a730e9c3de07e",
+    "mathematical-model.md": "e43e89bbd6d53f57de537a67c58c162bd9f9f41faceab1ce02eda04ccd1eec1d",
+    "protocol-revisions.md": "4b8c9334e665fe1159864b325925167db4249d7353559d172c7401298d29b877",
+    "prototype/certificates.rs": "b551b5f0cdf715eda70be8edc46d4a9fccab3a88792b0eaf65b0c71c750b8ef1",
+    "run_experiments.py": "8a0b0edf94cbab563ab8900d1ac9e79e587f2256e1cab71f0909495c8d467b87",
+    "selected-hypothesis.md": "6fb21f79a09f761ee68f09661def6b0c5f60f3a33c0181a6aaf5803cc18a5eb1"
+  },
+  "binaries": {
+    "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/frontier/certificates": "866565544c75cec04471111c8f371c61b778cacd404a4b2eb3804c7adec49323",
+    "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/frontier/projection": "c058be587b67c1efe63899834b96155adbc7cf2553bcff3fcfe82b2f52efa254"
+  },
+  "environment": {
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "python": "3.10.12",
+    "os": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.35"
+  },
+  "note": "Uncommitted source hashes identify artifact contents; git HEAD alone is not a build attestation."
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "seed": 2090,
+  "classification": "EXPERIMENTALLY DEMONSTRATED",
+  "base_cases": 10733,
+  "functional_mismatches": 0,
+  "metamorphic_cases": 2000,
+  "grid_oracle_cases": 729,
+  "mutants_exposed": 8,
+  "invalid_input_cases_per_binary": 7,
+  "belief_cases": 7,
+  "schedules": 6,
+  "prototype_online_LP_solves": 0,
+  "strong_baseline_online_LP_solves": 0,
+  "new_capability_established": false,
+  "novelty_gate": "FAILED: equal-assumption conventional baseline already has the capability",
+  "H010": "FALSIFIED",
+  "H015": "FALSIFIED",
+  "elapsed_seconds": 4.223575916999835,
+  "proof_scope": "written restricted derivations; finite oracle checks, no proof-assistant artifact"
+}

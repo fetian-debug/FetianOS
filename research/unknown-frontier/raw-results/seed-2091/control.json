@@ -1,0 +1,132 @@
+{
+  "trials": [
+    {
+      "belief": [
+        -1
+      ],
+      "shared_safe_actions": [
+        0,
+        1
+      ],
+      "baseline": [
+        0,
+        1
+      ]
+    },
+    {
+      "belief": [
+        0
+      ],
+      "shared_safe_actions": [
+        -1,
+        0,
+        1
+      ],
+      "baseline": [
+        -1,
+        0,
+        1
+      ]
+    },
+    {
+      "belief": [
+        -1,
+        0
+      ],
+      "shared_safe_actions": [
+        0,
+        1
+      ],
+      "baseline": [
+        0,
+        1
+      ]
+    },
+    {
+      "belief": [
+        1
+      ],
+      "shared_safe_actions": [
+        -1,
+        0
+      ],
+      "baseline": [
+        -1,
+        0
+      ]
+    },
+    {
+      "belief": [
+        -1,
+        1
+      ],
+      "shared_safe_actions": [
+        0
+      ],
+      "baseline": [
+        0
+      ]
+    },
+    {
+      "belief": [
+        0,
+        1
+      ],
+      "shared_safe_actions": [
+        -1,
+        0
+      ],
+      "baseline": [
+        -1,
+        0
+      ]
+    },
+    {
+      "belief": [
+        -1,
+        0,
+        1
+      ],
+      "shared_safe_actions": [
+        0
+      ],
+      "baseline": [
+        0
+      ]
+    }
+  ],
+  "H007": "known one-step safety reproduced; no new baseline capability",
+  "H010_counterexample": {
+    "belief": [
+      -1,
+      1
+    ],
+    "costs": {
+      "-1": {
+        "-1": 2,
+        "1": 0
+      },
+      "0": {
+        "-1": 1,
+        "1": 1
+      },
+      "1": {
+        "-1": 0,
+        "1": 2
+      }
+    },
+    "fully_observed_costs": [
+      0,
+      0
+    ]
+  },
+  "incomplete_belief_counterexample": {
+    "reported_belief": [
+      -1
+    ],
+    "true_state": 1,
+    "chosen_action": 1,
+    "next_state": 2,
+    "safe": false
+  }
+}

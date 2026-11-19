@@ -1,0 +1,532 @@
+{
+  "research_date": "2026-11-19",
+  "scope": "Web-index queries and primary-page opens, not an exhaustive database search. Queries mentioning Scholar/Semantic Scholar did not establish direct authenticated portal access. No absence-of-results novelty inference.",
+  "queries_issued": 65,
+  "batches": [
+    {
+      "queries": [
+        "site.usenix.org computation reuse negative results query optimization intermediate results recycling",
+        "site.acm.org counterfactual execution symbolic execution dynamic partial order reduction optimal",
+        "site.arxiv.org control barrier functions active sensing set membership safe control information",
+        "site.patents.google.com reuse unsatisfiable core solver cache",
+        "Farkas lemma Benders feasibility cuts parametric linear programming implementation github patents",
+        "site.pomdp.org value of information belief state active sensing control",
+        "site.mpi-sws.org dynamic partial order reduction independence context dependent commutativity",
+        "site.patents.google.com Benders feasibility"
+      ],
+      "urls": [
+        "https://benders.dev/latest/api/cuts.html",
+        "https://people.csail.mit.edu/lpk/papers/aij98-pomdp.pdf",
+        "https://plv.mpi-sws.org/wmc/popl2022-trust.pdf",
+        "https://patents.google.com/patent/US20260093625A1/en"
+      ]
+    },
+    {
+      "queries": [
+        "site.dbsp.org DBSP incremental view maintenance differential dataflow",
+        "site.netlib.org mixed precision iterative refinement backward error",
+        "site.usenix.org learned index bloom filter negative lookup"
+      ],
+      "urls": [
+        "https://www.netlib.org/lapack/lawnspdf/lawn104.pdf",
+        "https://www.netlib.org/utk/people/JackDongarra/PAPERS/mixed-rs-2020.pdf",
+        "https://www.netlib.org/lapack/lawnspdf/lawn180.pdf",
+        "https://doi.org/10.1007/s00778-025-00922-y",
+        "https://www.netlib.org/utk/people/JackDongarra/PAPERS/survey-mixed-ijsa-2021.pdf",
+        "https://doi.org/10.1098/rspa.2020.0110",
+        "https://www.cs.cornell.edu/~bindel/class/cs6210-f09/lec13.pdf",
+        "https://github.com/AhmedFaizanDev/ivm/",
+        "https://github.com/tsotchke/eshkol/blob/master/docs/design/adr/0009-incremental-dataflow-dbsp.md",
+        "https://link.springer.com/article/10.1007/s00366-025-02187-z",
+        "https://onlinelibrary.wiley.com/doi/10.1002/nla.2434",
+        "https://doi.org/10.1093/imanum/draf049",
+        "https://epubs.siam.org/doi/10.1137/0610013",
+        "https://dthink.ai/blog/dbsp-death-of-polling/",
+        "https://static.usenix.org/events/usenix06/tech/full_papers/irmak/irmak_html/index.html",
+        "https://arxiv.org/abs/2203.16684",
+        "https://doi.org/10.1145/3665252.3665271",
+        "https://arxiv.org/abs/2107.06200",
+        "https://www.academia.edu/69635457/Mixed_precision_iterative_refinement_techniques_for_the_solution_of_dense_linear_systems",
+        "https://arxiv.org/abs/2405.18363",
+        "https://arxiv.org/abs/2410.06319",
+        "https://en.wikipedia.org/wiki/Iterative_refinement",
+        "https://www.youtube.com/watch?v=NgVVmu39u7g",
+        "https://www.youtube.com/watch?v=wJGGyVQnrRY"
+      ]
+    },
+    {
+      "queries": [
+        "site.sosp.org OR site.usenix.org algorithms predictions scheduling robustness consistency Lykouris Vassilvitskii",
+        "site.mit.edu decision tree parity n queries lower bound",
+        "site.arxiv.org polynomial codes coded matrix multiplication gradient coding"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2304.13685",
+        "https://pubsonline.informs.org/doi/10.1287/stsy.2025.0106",
+        "https://doi.org/10.1287/stsy.2025.0106",
+        "https://proceedings.neurips.cc/paper_files/paper/2017/hash/e6c2dc3dee4a51dcec3a876aa2339a78-Abstract.html",
+        "https://opera24.di.unito.it/wp-content/uploads/2024/12/Scheduling-with-Predictions.pdf",
+        "https://arxiv.org/abs/2601.08708",
+        "https://arxiv.org/abs/1705.10464",
+        "https://arxiv.org/abs/2109.10484",
+        "https://ijcai.org/proceedings/2022/636",
+        "https://doi.org/10.24963/ijcai.2022/636",
+        "https://scholarship.claremont.edu/hmc_fac_pub/110/",
+        "https://openreview.net/pdf/66e90ea062b7e31c1ad63004e726eb39d697585e.pdf",
+        "https://ijcai.org/proceedings/2022/0636.pdf",
+        "https://eccc.weizmann.ac.il/report/2018/174/download/",
+        "https://www.sciencedirect.com/science/article/pii/S0022000024000400",
+        "https://proceedings.mlr.press/v162/anand22a/anand22a.pdf",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC9955190/",
+        "https://doi.org/10.1145/3548774",
+        "https://lacuna.tiptreesystems.com/work/coded-matrix-computation-with-gradient-coding",
+        "https://cs.uwaterloo.ca/~eblais/cs860/w25/hierarchy",
+        "https://algorithm.tamnd.com/parity-problem/",
+        "https://epubs.siam.org/doi/abs/10.1137/1.9781611975994.114?mobileUi=0&session_id=session-cbvtz0ygv",
+        "https://doi.org/10.1137/1.9781611975994.114",
+        "https://www.youtube.com/watch?v=PeZVs6WUf-4",
+        "https://www.youtube.com/watch?v=FQzm-of38Ao"
+      ]
+    },
+    {
+      "queries": [
+        "Freivalds algorithm reusable public randomness adaptive adversary matrix verification paper",
+        "site.kernel.org RCU grace period memory reclamation hazard pointers",
+        "site.arxiv.org privacy filters odometers adaptive composition differential privacy"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2611.03130",
+        "https://arxiv.org/abs/1605.08294",
+        "https://www.kernel.org/doc/html/v6.15/RCU/whatisRCU.html",
+        "https://arxiv.org/abs/2203.05481",
+        "https://arxiv.org/abs/2602.06756",
+        "https://papers.neurips.cc/paper_files/paper/2016/hash/58c54802a9fb9526cd0923353a34a7ae-Abstract.html",
+        "https://papers.neurips.cc/paper/6170-privacy-odometers-and-filters-pay-as-you-go-composition.pdf",
+        "https://docs.kernel.org/6.11/RCU/whatisRCU.html",
+        "https://www.kernel.org/doc/html/v6.6/core-api/kernel-api.html",
+        "https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook.2022.09.25a.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0167404825000276",
+        "https://www.kernel.org/pub/linux/kernel/people/paulmck/perfbook/perfbook-1c.2015.01.31a.pdf",
+        "https://salil.seas.harvard.edu/sites/g/files/omnuum4266/files/2025-06/ArXiv%202025.pdf",
+        "https://www2.math.upenn.edu/~ryrogers/Odom_Filter_poster.pdf",
+        "https://privacytools.seas.harvard.edu/sites/g/files/omnuum6656/files/2025-06/2023%20ACM%20version.pdf",
+        "https://www.sciencedirect.com/science/article/pii/002001909390183A",
+        "https://docs.kernel.org/6.18/RCU/whatisRCU.html",
+        "https://www.kernel.org/doc/html/v5.7/RCU/Design/Requirements/Requirements.html",
+        "https://www.paperpeel.com/paper/2611.03130",
+        "https://papers.neurips.cc/paper_files/paper/2016/file/58c54802a9fb9526cd0923353a34a7ae-Reviews.html",
+        "https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/linearalgebra/FreivaldsAlgorithm.java",
+        "https://differentialprivacy.org/open-problems-how-generic-can-composition-be/",
+        "https://www.youtube.com/watch?v=w0gB9iYd5_M",
+        "https://en.wikipedia.org/wiki/Read-copy-update",
+        "https://en.wikipedia.org/wiki/ABA_problem",
+        "https://www.youtube.com/watch?v=Rj8FkJZgFtk"
+      ]
+    },
+    {
+      "queries": [
+        "site.arxiv.org CALM theorem invariant confluence coordination avoidance escrow",
+        "site.cmu.edu Shannon source coding lossless incompressible strings theorem",
+        "site.egraphs-good.github.io egg equality saturation proof explanation"
+      ],
+      "urls": [
+        "https://github.com/egraphs-good/egg/blob/main/src/tutorials/_01_background.rs",
+        "https://deepwiki.com/egraphs-good/egg/4-equality-saturation-process",
+        "https://doi.org/10.1145/3815481",
+        "https://arxiv.org/abs/1901.01930",
+        "https://www.icyphy.org/publications/2025_LiLee_CALM_arXiv/",
+        "https://arxiv.org/abs/2504.01141",
+        "https://isa-afp.org/entries/Equality_Saturation_Checker.html",
+        "https://doi.org/10.1145/3808302",
+        "https://www.cs.cmu.edu/~aarti/Class/10704_Spring15/lecs/lec10.pdf",
+        "https://blog.sigplan.org/2021/04/06/equality-saturation-with-egg/",
+        "https://www-cs-students.stanford.edu/~blynn/pr/lossy.html",
+        "https://teorth.github.io/equational_theories/blueprint.pdf",
+        "https://github.com/marcusrossel/lean-egg",
+        "https://github.com/nomeata/lean-calcify",
+        "https://www.alphaxiv.org/abs/2602.09435",
+        "https://www.gatsby.ucl.ac.uk/teaching/courses/ml1/slides_COMP0086.4.pdf",
+        "https://www.sciencedirect.com/science/article/pii/S0306437926000050",
+        "https://www.cl.cam.ac.uk/teaching/2021/InfoTheory/InfoTheoryNotes2020.pdf",
+        "https://knowledge.uchicago.edu/record/16564/files/Dissertation.pdf",
+        "https://web.stanford.edu/class/engr76/lectures/lecture2-4_notes.pdf",
+        "https://algorithm.tamnd.com/equality-saturation/",
+        "https://github.com/konn/presburger-euf-solver-tutorial/blob/main/TUTORIAL/survey/02-euf-egraphs-and-explanations.md",
+        "https://www.youtube.com/watch?v=6cJMI9z2TeU",
+        "https://arxiv.org/abs/2004.03082",
+        "https://en.wikipedia.org/wiki/Shannon%27s_source_coding_theorem",
+        "https://en.wikipedia.org/wiki/E-graph",
+        "https://en.wikipedia.org/wiki/Shannon_coding",
+        "https://www.youtube.com/watch?v=cJ_rhZ9DP9k",
+        "https://en.wikipedia.org/wiki/Noisy-channel_coding_theorem",
+        "https://en.wikipedia.org/wiki/Incompressible_string",
+        "https://en.wikipedia.org/wiki/Entropy_%28information_theory%29",
+        "https://arxiv.org/abs/math/0103007"
+      ]
+    },
+    {
+      "queries": [
+        "site.ibm.com Bennett logical reversibility computation 1973",
+        "site.nature.com antithetic integral feedback robust perfect adaptation Briat Gupta Khammash",
+        "site.arxiv.org time uniform confidence sequences Howard Ramdas McAuliffe Sekhon"
+      ],
+      "urls": [
+        "https://arxiv.org/abs/1810.08240",
+        "https://www.w2agz.com/Library/Limits%20of%20Computation/Bennett_IBMJResDev_v17_1973%20%283%29.pdf",
+        "https://www.cs.princeton.edu/courses/archive/fall04/cos576/papers/bennett73.html",
+        "https://doi.org/10.1016/j.cels.2016.01.004",
+        "https://storage.googleapis.com/lacuna-pdfs-lunar-airport-385023/dev/complete-corpus-v1/shadow/stage06-bulk/openreview-arxiv-member-scale-v8r9-v1-20260811/accepted-pdfs/eb/3e/eb3efd547349adfbff25514ae0854c142cd29b96b398be38c9000d69a2f64ca8.pdf",
+        "https://www.scienceopen.com/document?vid=dd4e311c-1f18-4aa2-9d3c-d272df5dd75d",
+        "https://arxiv.org/abs/1410.6064",
+        "https://github.com/tobiasosborne/Sturm.jl/blob/main/docs/physics/bennett_1973_logical_reversibility.md",
+        "https://www.nature.com/articles/s41586-019-1321-1",
+        "https://www.sciencedirect.com/science/article/pii/S2405471216300400",
+        "https://pubmed.ncbi.nlm.nih.gov/32217822/",
+        "https://books.google.com/books/about/Logical_Reversibility_of_Computation.html?id=6kfItgAACAAJ",
+        "https://www.cs.princeton.edu/courses/archive/fall06/cos576/papers/bennett73.html",
+        "https://users.cs.duke.edu/~reif/courses/complectures/AltModelsComp/Bennett/LogRevComp.pdf",
+        "https://jglobal.jst.go.jp/en/detail?JGLOBAL_ID=201602007998827690",
+        "https://www.dna.caltech.edu/courses/cs191/paperscs191/IBMJTheorPhys%2821%29905.pdf",
+        "https://netphysics.com/sources/information-info-bennett1973/",
+        "https://www.mindat.org/reference.php?id=13443952",
+        "https://arxiv.org/abs/1711.08291",
+        "https://arxiv.org/abs/2001.02116",
+        "https://en.wikipedia.org/wiki/Timeline_of_quantum_computing_and_communication",
+        "https://en.wikipedia.org/wiki/Charles_H._Bennett_%28physicist%29",
+        "https://en.wikipedia.org/wiki/Reversible_computing",
+        "https://en.wikipedia.org/wiki/Irreversible_circuit",
+        "https://ru.wikipedia.org/wiki/%D0%91%D0%B5%D0%BD%D0%BD%D0%B5%D1%82%D1%82%2C_%D0%A7%D0%B0%D1%80%D0%BB%D1%8C%D0%B7_%28%D1%84%D0%B8%D0%B7%D0%B8%D0%BA%29",
+        "https://fr.wikipedia.org/wiki/Ordinateur_quantique"
+      ]
+    },
+    {
+      "queries": [
+        "site.microsoft.com research undo effect systems compensation operational transformation",
+        "site.usenix.org DRAM errors wild study predictive failure ECC",
+        "site.github.com OR site.github.io learned bloom filter implementation"
+      ],
+      "urls": [
+        "https://research.google/pubs/dram-errors-in-the-wild-a-large-scale-field-study/",
+        "https://www.cs.utoronto.ca/~bianca/papers/sigmetrics09.pdf",
+        "https://download.microsoft.com/download/b/b/6/bb69622c-ab5d-4d5f-9a12-b81b952c1169/clouddesignpatternsbook-pdf.pdf",
+        "https://info.microsoft.com/rs/157-GQE-382/images/EN-CNTNT-Whitepaper-CloudApplicationArchitectureGuide.pdf",
+        "https://www.cs.rochester.edu/research/os/memerror/",
+        "https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+        "https://doczz.net/doc/7929083/dram-errors-in-the-wild--a-large-scale-field-study",
+        "https://github.com/s4um1l/bloom-filter",
+        "https://laro.lanl.gov/esploro/outputs/conferenceProceeding/Memory-Errors-in-Modern-Systems-The/9916369655603761",
+        "https://ieeexplore.ieee.org/document/6853210/",
+        "https://www.usenix.org/conference/atc24/presentation/wu-ronglong",
+        "https://www.microsoft.com/en-us/research/publication/cosmic-rays-dont-strike-twice-understanding-nature-dram-errors-implications-system-design/",
+        "https://www.youtube.com/watch?v=wRvcCTJ5jcU",
+        "https://github.com/krish-goradia/learned_bloom_filter",
+        "https://www.academia.edu/7685538/DRAM_errors_in_the_wild_a_large_scale_field_study",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC7959593/",
+        "https://www.youtube.com/watch?v=OZcfRCTUcEI",
+        "https://arxiv.org/abs/2204.10387",
+        "https://en.wikipedia.org/wiki/Bloom_filter",
+        "https://de.wikipedia.org/wiki/ECC-Speicher",
+        "https://www.techradar.com/pro/security/new-phoenix-rowhammer-attack-cracks-open-ddr5-memory-defenses-in-minutes",
+        "https://www.tomshardware.com/tech-industry/cyber-security/modern-memory-is-still-vulnerable-to-rowhammer-vulnerabilities-phoenix-root-privilege-escalation-attack-proves-that-rowhammer-still-smashes-ddr5-security-to-bits",
+        "https://www.techradar.com/pro/security/another-rowhammer-attack-has-been-detected-and-nvidia-workstation-gpus-are-firmly-in-the-firing-line",
+        "https://www.tomshardware.com/pc-components/gpus/new-rowhammer-attack-silently-corrupts-ai-models-on-gddr6-nvidia-cards-gpuhammer-attack-drops-ai-accuracy-from-80-percent-to-0-1-percent-on-rtx-a6000"
+      ]
+    },
+    {
+      "queries": [
+        "site.patents.google.com Benders feasibility cuts",
+        "site.patents.google.com active sensing belief state control",
+        "site.patents.google.com partial order reduction commutativity"
+      ],
+      "urls": [
+        "https://benders.dev/latest/api/cuts.html",
+        "https://www.benders.dev/latest/tutorials/classical.html",
+        "https://benders.dev/latest/tutorials/lshaped.html",
+        "https://www.benders.dev/latest/api/data.html",
+        "https://escholarship.org/content/qt6xc4h97c/qt6xc4h97c.pdf?t=omfw0a",
+        "https://www.fi.muni.cz/usr/cerna/Publications/fmics07.pdf",
+        "https://www.scielo.br/scielo.php?lang=es&pid=S0101-74382026000100613&script=sci_arttext",
+        "https://cris.iucc.ac.il/en/publications/partial-order-reduction/",
+        "https://ai.dmi.unibas.ch/research/reading_group/geldenhuys-et-al-atva2009.pdf",
+        "https://patents.justia.com/patent/20180046523",
+        "https://drops.dagstuhl.de/storage/01oasics/oasics-vol086-gabbriellis-festschrift/OASIcs.Gabbrielli.10/OASIcs.Gabbrielli.10.pdf",
+        "https://openscholarship.wustl.edu/etd/934/",
+        "https://scipopt.org/doc-9.2.4/html/benderscut__feas_8h_source.php",
+        "https://www.iit.comillas.edu/documentacion/workingpaper/IIT-02-017A/A_finite_Benders_decomposition_algorithm_for_mixed_integer_problems%2C_resolution_through_parametric_Branch_and_Bound.pdf",
+        "https://link.springer.com/article/10.1007/s12532-025-00291-1",
+        "https://patents.justia.com/patent/20030036937",
+        "https://patents.google.com/patent/US11921506B2/en",
+        "https://www3.informatik.tu-muenchen.de/research/publications/papers/dissertation_hagen.pdf?lang=de",
+        "https://en.wikipedia.org/wiki/Partial_order_reduction",
+        "https://en.wikipedia.org/wiki/Benders_decomposition"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: incremental view maintenance delta queries",
+        "patents.google.com: mixed precision iterative refinement residual",
+        "patents.google.com: negative lookup bloom filter cache"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/US20120197865A1/en",
+        "https://patents.google.com/patent/EP2008206A1/en",
+        "https://patents.google.com/patent/US9779061B2/en",
+        "https://patents.google.com/patent/US7680767B2",
+        "https://patents.google.com/patent/CN121661028B/en",
+        "https://patents.google.com/patent/US20230267118A2/en",
+        "https://patents.google.com/patent/WO2023068952A1",
+        "https://patents.google.com/patent/US20180302433A1/en",
+        "https://patents.google.com/patent/US20220335049A1/de",
+        "https://patents.google.com/patent/US20190065557A1/en",
+        "https://patents.google.com/patent/US6006216A/en",
+        "https://patents.google.com/patent/US20230409574A1"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: scheduling untrusted predictions resource allocation",
+        "patents.google.com: decision tree parity query computation",
+        "patents.google.com: coded matrix multiplication straggler"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/CN114614878A/en",
+        "https://patents.google.com/patent/KR102995679B1/en",
+        "https://patents.google.com/patent/CN115515181B/en",
+        "https://patents.google.com/patent/US20240256362A1/en",
+        "https://patents.google.com/patent/US20260111228A1/en",
+        "https://patents.google.com/patent/US10261837B2/en",
+        "https://patents.google.com/patent/US9195508B1/en",
+        "https://patents.google.com/patent/KR20230072962A/en",
+        "https://patents.google.com/patent/US20200264928A1/en",
+        "https://patents.google.com/patent/CN112955870B/en",
+        "https://patents.google.com/patent/US20180365099A1/en",
+        "https://patents.google.com/patent/WO2022240584A1/en"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: Freivalds matrix multiplication verification randomized",
+        "patents.google.com: hazard pointers memory reclamation quiescent",
+        "patents.google.com: differential privacy adaptive budget accounting"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/US9785548B2/en",
+        "https://patents.google.com/patent/EP4677467A1/en",
+        "https://arxiv.org/pdf/1603.01887.pdf.",
+        "https://patents.google.com/patent/US20250390595A1/en",
+        "https://patents.google.com/patent/WO2025222352A1/en",
+        "https://patents.google.com/patent/WO2024226627A1/en",
+        "https://patents.google.com/patent/US20260105178A1/en",
+        "https://patents.google.com/patent/US20220327227A1/en",
+        "https://patents.google.com/patent/CN114499885B/en",
+        "https://patents.google.com/patent/US12079260B2/en",
+        "https://patents.google.com/patent/CN121119057A/en",
+        "https://patents.google.com/patent/US20220187986A1/en",
+        "https://patents.google.com/patent/JP2014170430A/en"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: conflict free replicated data type escrow counter",
+        "patents.google.com: lossless prediction dictionary compression",
+        "patents.google.com: equality saturation egraph compiler"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/US11630838B1/en",
+        "https://patents.google.com/patent/US12689388B2/en",
+        "https://patents.google.com/patent/WO2019217481A1/en",
+        "https://patents.google.com/patent/US12591546B2/en",
+        "https://patents.google.com/patent/US20130018889A1/en",
+        "https://patents.google.com/patent/US20250217591A1/en",
+        "https://patents.google.com/patent/US10128868B1/en",
+        "https://patents.google.com/patent/US12493587B2/en",
+        "https://patents.google.com/patent/US20120159459A1/en",
+        "https://patents.google.com/patent/US20240135148A1/en",
+        "https://patents.google.com/patent/US20260095320A1/en",
+        "https://patents.google.com/patent/US9015429B2/en"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: reversible computation uncomputation energy",
+        "patents.google.com: antithetic integral feedback controller",
+        "patents.google.com: confidence sequence optional stopping"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/WO2024023166A1/en",
+        "https://patents.google.com/patent/US20240018540A1/fr",
+        "https://patents.google.com/patent/US10664233B2/en",
+        "https://patents.google.com/patent/US20240152175A1/en",
+        "https://patents.google.com/patent/US10942704B2/en",
+        "https://patents.google.com/patent/US20260111775A1/en",
+        "https://patents.google.com/patent/EP4133427B1/de",
+        "http://www.numdam.org/article/ITA_2004__38_2_137_0.pdf",
+        "https://patents.google.com/patent/EP3304363A1/en",
+        "https://patents.google.com/patent/US20240394580A1/en",
+        "https://patents.google.com/patent/US5357548A/en",
+        "https://patents.google.com/patent/US12705527B2/en",
+        "https://patents.google.com/patent/JP2025524919A/en"
+      ]
+    },
+    {
+      "queries": [
+        "patents.google.com: undo compensating transaction effect",
+        "patents.google.com: DRAM error failure prediction ECC",
+        "patents.google.com: confidence sequence sequential statistical stopping"
+      ],
+      "urls": [
+        "https://patents.google.com/patent/EP0465018B1/en",
+        "https://patents.google.com/patent/US8650169B1/en",
+        "https://patents.google.com/patent/US10558521B2/en",
+        "https://patents.google.com/patent/US20220253427A1",
+        "https://patents.google.com/patent/US20260003665A1/en",
+        "https://patents.google.com/patent/US12259777B2",
+        "https://patents.google.com/patent/US20090094291",
+        "https://patents.google.com/patent/US20190266036A1/en",
+        "https://patents.google.com/patent/RU2510977C2/en",
+        "https://patents.google.com/patent/US20240281836A1/en",
+        "https://patents.google.com/patent/US11681683B2/en",
+        "https://patents.google.com/patent/US9116700B2/en"
+      ]
+    },
+    {
+      "queries": [
+        "site.github.com h2r pomdp-py feldera incremental DBSP",
+        "site.github.com mpi-sws genmc partial order reduction",
+        "site.github.com gostevehoward confseq opacus privacy accounting"
+      ],
+      "urls": [
+        "https://plv.mpi-sws.org/genmc/",
+        "https://h2r.github.io/pomdp-py/",
+        "https://github.com/h2r/pomdp-py",
+        "https://icaps20subpages.icaps-conference.org/wp-content/uploads/2020/10/14-PlanRob_2020_paper_3.pdf",
+        "https://arxiv.org/pdf/2004.10099.pdf",
+        "https://github.com/MPI-SWS/genmc/blob/master/CHANGELOG.md",
+        "https://mpi-sws.github.io/genmc",
+        "https://www.feldera.com/blog/gpu-stream-dbsp",
+        "https://github.com/h2r/pomdp-py/releases",
+        "https://plv.mpi-sws.org/genmc/paper.pdf",
+        "http://github.com/mpi-sws/genmc.",
+        "https://plv.mpi-sws.org/genmc/cav2023-paper.pdf",
+        "https://plv.mpi-sws.org/genmc/popl2022-trust.pdf",
+        "https://github.com/mpi-sws/genmc",
+        "https://people.inf.ethz.ch/mkokologiann/papers/tacas2024-gater.pdf",
+        "https://ghe.derekchia.com/repo/h2r/pomdp-py",
+        "https://github.com/Finn-coder2026/feldera-docs/blob/main/sql/intro.mdx",
+        "https://www.youtube.com/watch?v=x-Ezy36HySA",
+        "https://github.com/MPI-SWS/genmc/issues",
+        "https://github.com/h2r/pomdp-py/issues",
+        "https://extweb-vip.mpi-sws.org/research-areas/programming-languages-and-verification/papers/",
+        "https://github.com/mpi-sws-rse/jmc",
+        "https://www.research-collection.ethz.ch/bitstreams/665e8d79-693a-4052-9b36-c5acc023be12/download",
+        "https://pure.mpg.de/rest/items/item_3214722_3/component/file_3332447/content",
+        "https://release.f1cdn.eu.org/MPI-SWS"
+      ]
+    },
+    {
+      "queries": [
+        "site.scholar.google.com \"Farkas\" \"feasibility\" \"cuts\"",
+        "site.semanticscholar.org \"Context-Sensitive Dynamic Partial Order Reduction\"",
+        "site.dl.acm.org \"self-adjusting computation\" \"certificate\""
+      ],
+      "urls": [
+        "https://researchmgt.monash.edu/ws/portalfiles/portal/257767040/71313718_oa.pdf",
+        "https://research.monash.edu/en/publications/context-sensitive-dynamic-partial-order-reduction/",
+        "https://costa.fdi.ucm.es/papers/costa/issta19-proofs.pdf",
+        "https://citeseerx.ist.psu.edu/document?doi=442cab330e45ab9252a563d120ca30227f0e93a6&repid=rep1&type=pdf",
+        "https://doi.org/10.1016/j.ejor.2024.02.033",
+        "https://benders.dev/latest/tutorials/gbd.html",
+        "https://www.researchgate.net/publication/381125806_Accelerate_Hybrid_Model_Predictive_Control_using_Generalized_Benders_Decomposition",
+        "https://sunboogermany.github.io/research-log/2026/10/18/benders-decomposition-column-constraint-generation/",
+        "https://link.springer.com/article/10.1007/s00186-021-00756-8",
+        "https://www.mdpi.com/1999-4893/19/3/223",
+        "https://www.scilit.com/scholars/019f26d39ac771d7abb19ddc20f07316",
+        "https://zoviai.com/how-benders-decomposition-works-part-ii-feasibility-cuts/",
+        "https://www.researchgate.net/publication/330984825_A_Status_Report_on_Conflict_Analysis_in_Mixed_Integer_Nonlinear_Programming",
+        "https://www.researchgate.net/publication/321758641_Exact_algorithms_for_the_multicommodity_uncapacitated_fixed-charge_network_design_problem",
+        "https://algorithm.tamnd.com/benders-decomposition/",
+        "https://www.youtube.com/watch?v=ilqj7AyUuBg"
+      ]
+    },
+    {
+      "queries": [
+        "site.arxiv.org partial observation safety games belief support safety strategies",
+        "site.usenix.org \"self-adjusting\" computation OR \"incremental\"",
+        "site.acm.org \"ASPLOS\" \"mixed precision\" \"EuroSys\""
+      ],
+      "urls": [
+        "https://arxiv.org/abs/2603.10572",
+        "https://www.sciencedirect.com/science/article/pii/S1571066106001290",
+        "https://doi.org/10.1016/j.entcs.2005.11.043",
+        "https://arxiv.org/abs/1107.2141",
+        "https://lsv.ens-paris-saclay.fr/~doyen/papers/Partial-Observation_Stochastic_Games_How_to_Win_when_Belief_Fails_J.pdf",
+        "https://www.cs.cmu.edu/~guyb/papers/ABBHT09.pdf",
+        "http://doi.acm.org/10.1145/1596527.1596530",
+        "https://www.philinelabs.net/~ktangwon/papers/pldi06.pdf",
+        "https://research-explorer-playground.test.ista.ac.at/record/2955",
+        "http://arxiv.org/abs/1107.2141",
+        "https://www.lsv.fr/~doyen/papers/Partial-Observation_Stochastic_Games_How_to_Win_when_Belief_Fails_J.pdf",
+        "https://newtraell.cs.uchicago.edu/files/tr_authentic/TR-2007-17.pdf",
+        "https://arxiv.org/abs/2204.00755",
+        "https://axi.lims.ac.uk/paper/2211.01508",
+        "https://newtraell.cs.uchicago.edu/research/publications/techreports/TR-2007-17",
+        "https://arxiv.org/abs/2101.04742",
+        "https://cmu-intentlab.github.io/multisafe/",
+        "https://arxiv.org/abs/2510.06492",
+        "https://arxiv.deeppaper.ai/papers/2603.10572v1?locale=en",
+        "https://www.researchgate.net/publication/319135324_Motion_Planning_under_Partial_Observability_using_Game-Based_Abstraction",
+        "https://www.sciencedirect.com/science/article/pii/S0921889022000410",
+        "https://www.youtube.com/watch?v=8Lbf338xEF8",
+        "https://www.youtube.com/watch?v=o58CNmUK4v0",
+        "https://www.livescience.com/technology/artificial-intelligence/ai-war-games-almost-always-escalate-to-nuclear-strikes-simulation-shows"
+      ]
+    },
+    {
+      "queries": [
+        "open primary implementation: https://github.com/feldera/feldera",
+        "open primary implementation: https://github.com/gostevehoward/confseq",
+        "open primary implementation: https://github.com/urcu/userspace-rcu",
+        "open primary implementation: https://icl.utk.edu/magma/",
+        "open primary implementation: https://github.com/egraphs-good/egg",
+        "open primary implementation: https://docs.kernel.org/driver-api/edac.html"
+      ],
+      "urls": [
+        "https://github.com/feldera/feldera",
+        "https://github.com/gostevehoward/confseq",
+        "https://github.com/urcu/userspace-rcu",
+        "https://icl.utk.edu/magma/",
+        "https://github.com/egraphs-good/egg",
+        "https://docs.kernel.org/driver-api/edac.html"
+      ]
+    },
+    {
+      "queries": [
+        "bounded counter CRDT escrow Balegas",
+        "SuRF practical range filter paper source GitHub",
+        "site.github.com antithetic integral feedback Briat Khammash"
+      ],
+      "urls": [
+        "https://github.com/efficient/SuRF",
+        "https://www.cs.cmu.edu/~huanche1/publications/surf_paper.pdf",
+        "https://arxiv.org/abs/1410.6064",
+        "https://elisadominguezhuttinger.wordpress.com/wp-content/uploads/2019/03/3_briat2016.pdf",
+        "https://people.iiis.tsinghua.edu.cn/~huanchen/slides/surf-sigmod18.pdf",
+        "https://docs.rs/escrow-machines/latest/escrow_machines/",
+        "https://dblp.dagstuhl.de/rec/conf/sigmod/ZhangLLAKKP18.html",
+        "https://github.com/prstrive/SuRF",
+        "https://www.briat.info/publications.html",
+        "https://people.iiis.tsinghua.edu.cn/~huanchen/publications/surf_paper.pdf",
+        "https://docs.rs/bcounter/latest/src/bcounter/lib.rs.html",
+        "https://arxiv.org/abs/1711.08291",
+        "https://github.com/THU-luvision/SurRF",
+        "https://github.com/marcschier/crdt/blob/main/docs/data-types.md",
+        "https://www.researchgate.net/publication/274403487_Extending_Eventually_Consistent_Cloud_Databases_for_Enforcing_Numeric_Invariants?_tp=eyJjb250ZXh0Ijp7InBhZ2UiOiJzY2llbnRpZmljQ29udHJpYnV0aW9ucyIsInByZXZpb3VzUGFnZSI6bnVsbCwic3ViUGFnZSI6bnVsbH19",
+        "https://www.cnblogs.com/helloworldcode/p/10877604.html",
+        "https://algorithm.tamnd.com/pn-counter/",
+        "https://arxiv.org/abs/1703.00319",
+        "https://arxiv.org/abs/1503.09052",
+        "https://docs.rs/crate/bcounter/latest"
+      ]
+    }
+  ]
+}

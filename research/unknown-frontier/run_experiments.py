@@ -76,14 +76,14 @@ def main():
     args=parser.parse_args();args.prototype=args.prototype.resolve();args.baseline=args.baseline.resolve()
     args.output.mkdir(parents=True,exist_ok=False)
     freeze=json.loads((ROOT/'raw-results/catalogue-freeze.json').read_text())
-    check(freeze['sha256']==digest(ROOT/'hypotheses.csv'),'frozen hypotheses changed')
+    check(freeze['canonical_sha256']==hashlib.sha256((ROOT/'hypotheses.csv').read_bytes().replace(b'\r\n',b'\n')).hexdigest(),'frozen hypotheses changed')
     rng=random.Random(args.seed)
     exhaustive=list(itertools.product((-1,0,1),repeat=6))
     random_cases=[tuple(rng.randint(-8,8) for _ in range(6)) for _ in range(10000)]
     edges=[(0,)*6,(1000000,)*6,(-1000000,)*6,(1000000,-1000000,1000000,-1000000,1000000,-1000000)]
     cases=exhaustive+random_cases+edges
     plan=dict(schema_version=1,seed=args.seed,base_cases=len(cases),exhaustive=729,randomized=10000,domain_edges=edges,
-              hypotheses_sha256=freeze['sha256'],protocol_sha256=digest(ROOT/'experiment-protocol.md'),
+              hypotheses_canonical_sha256=freeze['canonical_sha256'],protocol_sha256=digest(ROOT/'experiment-protocol.md'),
               source_revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
               sources={str(p.relative_to(ROOT)):digest(p) for p in sorted(ROOT.rglob('*')) if p.is_file() and p.suffix in ('.py','.rs','.md')},
               binaries={str(p):digest(p) for p in (args.prototype,args.baseline)},

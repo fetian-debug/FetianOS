@@ -1,0 +1,402 @@
+[
+  {
+    "id": "H005",
+    "aliases": "Farkas; Benders feasibility cut; dual ray; projection; parametric LP",
+    "theory": "https://benders.dev/latest/api/cuts.html",
+    "implementation": "https://scipopt.org/doc-9.2.4/html/benderscut__feas_8h_source.php",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20030036937A1/en",
+    "assessment": "Certificate reuse is explicit prior work. Exact interval projection has the same fixed-matrix capability with zero online LP solves. No capability gap survives.",
+    "scores": {
+      "significance": 4,
+      "novelty_evidence": 0,
+      "testability": 5,
+      "formalizability": 5,
+      "feasibility": 5,
+      "baseline_gap": 0,
+      "reproducibility": 5
+    },
+    "total": 24,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H007",
+    "aliases": "belief support; information state; robust safety; active sensing; shielding",
+    "theory": "https://arxiv.org/abs/2204.00755",
+    "implementation": "https://github.com/h2r/pomdp-py",
+    "patent_or_disclosure": "https://patents.google.com/patent/US11921506B2/en",
+    "assessment": "Partial-observation control already reasons from belief/support. The toy intersection is a one-step robust constraint, not a general POMDP solver or a new controller. Full-information optimality is a separate false extension.",
+    "scores": {
+      "significance": 4,
+      "novelty_evidence": 0,
+      "testability": 5,
+      "formalizability": 5,
+      "feasibility": 5,
+      "baseline_gap": 0,
+      "reproducibility": 5
+    },
+    "total": 24,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H014",
+    "aliases": "POR; DPOR; context-sensitive independence; commutativity; Mazurkiewicz trace",
+    "theory": "https://researchmgt.monash.edu/ws/portalfiles/portal/257767040/71313718_oa.pdf",
+    "implementation": "https://plv.mpi-sws.org/genmc/",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20180046523A1/en",
+    "assessment": "Checking independence to reduce schedules is existing POR. Sound context-sensitive algorithms already exist. A single observed commutation cannot justify arbitrary contexts; our finite checker is not a competing DPOR implementation.",
+    "scores": {
+      "significance": 4,
+      "novelty_evidence": 0,
+      "testability": 5,
+      "formalizability": 5,
+      "feasibility": 5,
+      "baseline_gap": 0,
+      "reproducibility": 5
+    },
+    "total": 24,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H019",
+    "aliases": "delta query; change propagation; differential dataflow; homomorphic update",
+    "theory": "https://arxiv.org/abs/2203.16684",
+    "implementation": "https://github.com/feldera/feldera",
+    "patent_or_disclosure": "https://patents.google.com/patent/US7680767B2",
+    "assessment": "Incrementalization and representation maps overlap existing algebraic view maintenance. A specific cheaper verified transport between new representations remains UNVERIFIED; no separation from DBSP is demonstrated.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H025",
+    "aliases": "iterative refinement; residual certification; adaptive mixed precision; backward error",
+    "theory": "https://www.netlib.org/utk/people/JackDongarra/PAPERS/mixed-rs-2020.pdf",
+    "implementation": "https://icl.utk.edu/magma/",
+    "patent_or_disclosure": "https://patents.google.com/patent/US9779061B2/en",
+    "assessment": "Low-precision work plus residual/refinement is established with conditioning assumptions. The exact lowest-precision selection and total verification-cost benefit remain UNVERIFIED; runtime placement alone is not novelty.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H029",
+    "aliases": "negative caching; range filter; absence certificate; interval invalidation",
+    "theory": "https://www.cs.cmu.edu/~huanche1/publications/surf_paper.pdf",
+    "implementation": "https://github.com/efficient/SuRF",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20180302433A1/en",
+    "assessment": "Prior work already filters negative range/point lookups and caches negative answers. SuRF is approximate, so it does not establish an exact mutable-certificate claim. Exact invalidation design and separation from ordinary ordered indexes remain UNVERIFIED.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H032",
+    "aliases": "learning augmented scheduling; consistency; robustness; untrusted advice",
+    "theory": "https://ijcai.org/proceedings/2022/636",
+    "implementation": "UNVERIFIED: closest implementation not identified in this bounded screen",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20200264928A1/en",
+    "assessment": "Consistency and robustness to bad scheduling predictions are explicit existing goals/results. A different objective or error model needs a new theorem, not a renamed scheduler. No such separation demonstrated.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H039",
+    "aliases": "query complexity; exact memoization; prefix reuse; input identity",
+    "theory": "https://cs.uwaterloo.ca/~eblais/cs860/w25/hierarchy",
+    "implementation": "UNVERIFIED: exact-prefix-reuse implementation not separately inspected",
+    "patent_or_disclosure": "UNVERIFIED: parity/query-complexity patent query found no close exact disclosure",
+    "assessment": "Known prefix information can eliminate repeated work; unread independent suffix bits still carry information. An implementation must charge identity validation. No new query-complexity result demonstrated.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H045",
+    "aliases": "coded computation; stragglers; polynomial code; rank-aware decoding",
+    "theory": "https://proceedings.neurips.cc/paper_files/paper/2017/hash/e6c2dc3dee4a51dcec3a876aa2339a78-Abstract.html",
+    "implementation": "UNVERIFIED: located paper, no closest author implementation validated",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20180365099A1/en",
+    "assessment": "Coding and decoding collected fragments already tolerate missing workers under redundancy assumptions. A new adaptive policy or bound is UNVERIFIED; linear-algebra reconstruction is not novel.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H049",
+    "aliases": "Freivalds; online verification; randomized projection; adaptive challenges",
+    "theory": "https://www.sciencedirect.com/science/article/pii/002001909390183A",
+    "implementation": "https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/linearalgebra/FreivaldsAlgorithm.java",
+    "patent_or_disclosure": "https://patents.google.com/patent/WO2024226627A1/en",
+    "assessment": "Randomized product verification is established. Interleaving checks is not a new soundness theorem; challenge exposure and adversary timing matter. No adaptive-public-reuse guarantee established.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H054",
+    "aliases": "RCU; hazard pointer; grace period; bounded reader lifetime",
+    "theory": "https://docs.kernel.org/6.18/RCU/whatisRCU.html",
+    "implementation": "https://github.com/urcu/userspace-rcu",
+    "patent_or_disclosure": "https://patents.google.com/patent/US9785548B2/en",
+    "assessment": "Known reclamation schemes wait for or establish reader safety information. An external hard reader-lifetime bound changes assumptions. Novel timing/reclamation tradeoffs remain UNVERIFIED; no stalled-reader impossibility evaded.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H059",
+    "aliases": "privacy filter; odometer; adaptive composition; privacy accountant",
+    "theory": "https://arxiv.org/abs/1605.08294",
+    "implementation": "UNVERIFIED: closest fully adaptive filter implementation not inspected",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20220327227A1/en",
+    "assessment": "Adaptive privacy budgeting is prior work, including stopping filters. A scheduler-specific accountant must prove observer/adjacency guarantees; that exact construction remains UNVERIFIED.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H064",
+    "aliases": "escrow; bounded counter; invariant confluence; coordination avoidance",
+    "theory": "https://arxiv.org/abs/1503.09052",
+    "implementation": "https://docs.rs/bcounter/latest/src/bcounter/lib.rs.html",
+    "patent_or_disclosure": "https://patents.google.com/patent/US11630838B1/en",
+    "assessment": "Escrow rights and bounded-counter replicated data types explicitly preserve numeric invariants with local operations. Bounds and rights-transfer assumptions cannot be omitted. No new capability gap identified.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H069",
+    "aliases": "source coding; universal coding; stationary source; adaptive entropy coding",
+    "theory": "https://www.cl.cam.ac.uk/teaching/2021/InfoTheory/InfoTheoryNotes2020.pdf",
+    "implementation": "UNVERIFIED: no closest implementation for the exact source model validated",
+    "patent_or_disclosure": "https://patents.google.com/patent/US10128868B1/en",
+    "assessment": "Source-model-dependent compression is established. An unrestricted every-input improvement is excluded by injectivity/counting. A new finite-size redundancy bound for a specific source remains UNVERIFIED.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H072",
+    "aliases": "egraph; equality saturation; rewrite certificate; translation validation",
+    "theory": "https://arxiv.org/abs/2004.03082",
+    "implementation": "https://isa-afp.org/entries/Equality_Saturation_Checker.html",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20120159459A1/en",
+    "assessment": "Existing equality saturation retains equivalent forms and proof-checking work checks rewrite/extraction certificates. Transport across a particular typed pair may be engineering; a new theorem or capability gap is UNVERIFIED.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H077",
+    "aliases": "reversible simulation; Bennett uncomputation; garbage; pebble game",
+    "theory": "https://www.cs.princeton.edu/courses/archive/fall04/cos576/papers/bennett73.html",
+    "implementation": "UNVERIFIED: no closest classical reversible implementation evaluated",
+    "patent_or_disclosure": "https://patents.google.com/patent/EP3304363A1/en",
+    "assessment": "Retaining history and uncomputing are longstanding constructions. Logical reversibility does not alone demonstrate physical energy savings. No hardware or energy measurement performed.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H084",
+    "aliases": "integral control; antithetic feedback; robust adaptation; finite-state approximation",
+    "theory": "https://arxiv.org/abs/1410.6064",
+    "implementation": "UNVERIFIED: no closest finite-state controller implementation inspected",
+    "patent_or_disclosure": "https://patents.google.com/patent/WO2024023166A1/en",
+    "assessment": "Biological feedback adaptation is established under explicit stochastic/stability conditions. A finite-state approximation needs its own error/stability bound; the catalogue does not establish one. Software transfer is not itself novelty.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H089",
+    "aliases": "confidence sequence; e-process; Ville inequality; anytime valid stopping",
+    "theory": "https://arxiv.org/abs/1810.08240",
+    "implementation": "https://github.com/gostevehoward/confseq",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20240281836A1/en",
+    "assessment": "Anytime-valid bounds and stopping decisions are established. Applying them to resource sampling requires justified stochastic assumptions. An arbitrary-dependence guarantee is not supplied by optional stopping alone.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H094",
+    "aliases": "compensation; effect types; inverse operation; semantic undo",
+    "theory": "https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction",
+    "implementation": "UNVERIFIED: no exact compensation effect-type implementation located",
+    "patent_or_disclosure": "https://patents.google.com/patent/US20090094291",
+    "assessment": "Compensation and declared undo operations have existing disclosures. An effect annotation cannot restore information or control external observers. A sound new typed calculus is UNVERIFIED.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  },
+  {
+    "id": "H099",
+    "aliases": "ECC telemetry; predictive failure; correctable error; calibration",
+    "theory": "https://research.google/pubs/dram-errors-in-the-wild-a-large-scale-field-study/",
+    "implementation": "https://docs.kernel.org/driver-api/edac.html",
+    "patent_or_disclosure": "https://patents.google.com/patent/US10558521B2/en",
+    "assessment": "Statistical failure prediction and error telemetry are established. No held-out device traces or physical fault experiment were collected here. Universal fault prediction without prior information remains unsupported.",
+    "scores": {
+      "significance": 3,
+      "novelty_evidence": 0,
+      "testability": 3,
+      "formalizability": 3,
+      "feasibility": 3,
+      "baseline_gap": 0,
+      "reproducibility": 3
+    },
+    "total": 15,
+    "novelty_status": "NOT ESTABLISHED",
+    "access": "bounded web-index/primary-page screen; no exhaustive database or legal claim analysis"
+  }
+]
