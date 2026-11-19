@@ -58,5 +58,16 @@
     "regression_test": "test_optional_restart_policy_has_an_effective_explicit_limit",
     "before": "four missing-bound subtests failed", "after": "configuration checks and staged unit syntax passed",
     "remaining_limitations": "Start-rate bound is not a lifetime retry cap; actual user-manager rate limiting and lock/idle runtime remain untested."
+  },
+  {
+    "id": "STAB-007", "severity": "P2", "classification": "reproduced candidate-image validation failure; fix awaiting real large-payload CI",
+    "reproduction": "Hosted ISO run 44505284369 built Hyprland successfully and verified installed pins, then isoinfo extraction produced unusable SquashFS input; unsquashfs rejected it. The embedded payload exceeded 2 GiB.",
+    "root_cause": "The embedded-payload extraction path relies on isoinfo stdout and accepts its successful exit without checking for a regular nonempty output. The precise upstream size-handling defect remains unproven.",
+    "files_changed": ["scripts/release-artifacts.py", "tests/test_iso_payload.py", ".github/workflows/source-checks.yml"],
+    "fix": "Use native xorriso extraction with no user rc, no overwrite and failure-abort semantics; reject missing/empty/symlink outputs. Preserve unsquashfs, rootfs validation and embedded/staged package comparison.",
+    "regression_test": ["test_tool_failure_is_not_downgraded", "test_success_with_missing_or_empty_output_is_rejected", "test_existing_destination_is_never_overwritten", "test_real_small_payload_roundtrip", "test_real_payload_above_two_gib_roundtrip"],
+    "before": "Hosted Hyprland candidate image validation failed before boot; no invalid release was published. The attempted new local pre-fix contract check was blocked by automatic-review credit failure and was not executed.",
+    "after": "Three mock/contract checks passed locally; two real ISO-tool checks were skipped locally because xorriso is absent. All 130 Python tests completed with those two explicit skips. Hosted verification pending.",
+    "remaining_limitations": "A size-threshold causal claim and a repaired actual Hyprland candidate require the real CI fixtures/rebuild; no validator gate is removed."
   }
 ]

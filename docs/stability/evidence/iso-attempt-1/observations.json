@@ -1,0 +1,13 @@
+{
+  "source_revision": "4b41effbc9451c05aac19ea52c346e52df414a1c",
+  "run_id": 44505284369,
+  "desktop": "both",
+  "publish": false,
+  "publication_job": "skipped",
+  "sway": "image verification and UEFI serial/live-account probe passed",
+  "hyprland": "ISO created; embedded-payload verification failed; no boot acceptance",
+  "graphical_login": false,
+  "installation": false,
+  "hardware": false,
+  "daily_use_acceptance": false
+}

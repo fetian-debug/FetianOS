@@ -59,6 +59,21 @@ def tool_versions():
     return result
 
 
+def extract_payload(iso, destination, run=subprocess.run):
+    """Extract the actual embedded file; never accept a tool's status alone."""
+    if destination.exists() or destination.is_symlink():
+        raise FileExistsError("Payload extraction must use a fresh destination")
+    # Native Rock Ridge extraction avoids the observed empty/invalid isoinfo
+    # output for the large Hyprland payload. Do not read user xorriso rc files,
+    # overwrite existing files, or downgrade extraction failures to a fallback.
+    run(["xorriso", "-no_rc", "-abort_on", "FAILURE", "-osirrox", "on",
+         "-overwrite", "off", "-indev", str(iso.resolve()), "-extract",
+         "/fetianos/x86_64/airootfs.sfs", str(destination.absolute())],
+        check=True, timeout=300)
+    if destination.is_symlink() or not destination.is_file() or destination.stat().st_size == 0:
+        raise ValueError("Embedded root filesystem extraction produced no regular payload")
+
+
 def validate_image(iso, rootfs):
     spec = importlib.util.spec_from_file_location("verify_image", Path(__file__).with_name("verify-boot-artifacts.py"))
     module = importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
@@ -67,8 +82,7 @@ def validate_image(iso, rootfs):
     # infer embedded-image correctness solely from the staging directory.
     with tempfile.TemporaryDirectory(prefix="fetian-verify-") as temporary:
         temporary = Path(temporary); squash = temporary / "airootfs.sfs"
-        with squash.open("wb") as stream:
-            subprocess.run(["isoinfo", "-R", "-i", str(iso), "-x", "/fetianos/x86_64/airootfs.sfs"], stdout=stream, check=True)
+        extract_payload(iso, squash)
         extracted = temporary / "rootfs"
         subprocess.run(["unsquashfs", "-no-progress", "-d", str(extracted), str(squash)], check=True)
         module.verify_rootfs(extracted, complete=True)

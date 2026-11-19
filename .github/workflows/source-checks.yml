@@ -16,9 +16,11 @@ jobs:
       - name: Native GUI test dependencies (ephemeral CI runner)
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3-gi python3-markdown python3-yaml gir1.2-gtk-4.0 xvfb dbus-x11 desktop-file-utils
+          sudo apt-get install -y python3-gi python3-markdown python3-yaml gir1.2-gtk-4.0 xvfb dbus-x11 desktop-file-utils xorriso
           rustup component add rustfmt clippy
       - name: Rust formatting, lint, tests and Python regressions
+        env:
+          FETIAN_LARGE_ISO_TEST: '1'
         run: PYTHON=/usr/bin/python3 bash scripts/check-native.sh
       - name: Release build, profiles and staged unit syntax
         run: |

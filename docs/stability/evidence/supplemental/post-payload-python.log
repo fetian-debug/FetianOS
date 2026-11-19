@@ -1,0 +1,140 @@
+test_ambiguous_or_missing_kernel_is_rejected (test_boot_login.BootArtifactTests) ... ok
+test_built_payload_rejects_leaked_live_state_and_missing_default_apps (test_boot_login.BootArtifactTests) ... ok
+test_failed_image_generation_retains_build_marker (test_boot_login.BootArtifactTests) ... ok
+test_hook_uses_image_kernel_and_removes_build_only_configuration (test_boot_login.BootArtifactTests) ... ok
+test_image_discovery_ignores_stale_alias_and_never_queries_alpm (test_boot_login.BootArtifactTests) ... ok
+test_image_hook_is_inert_without_build_marker (test_boot_login.BootArtifactTests) ... ok
+test_selects_package_kernel_and_module_version_not_host_kernel (test_boot_login.BootArtifactTests) ... ok
+test_uefi_entries_must_reference_both_real_artifacts (test_boot_login.BootArtifactTests) ... ok
+test_uefi_image_does_not_require_bios_memdisk_tool (test_boot_login.BootArtifactTests) ... ok
+test_uefi_rejects_unexpanded_placeholders_and_traversal (test_boot_login.BootArtifactTests) ... ok
+test_bad_sudoers_never_enables_autologin (test_boot_login.LiveLoginTests) ... ok
+test_changed_runtime_login_config_is_not_overwritten (test_boot_login.LiveLoginTests) ... ok
+test_existing_account_is_never_reset (test_boot_login.LiveLoginTests) ... ok
+test_existing_home_is_never_overwritten (test_boot_login.LiveLoginTests) ... ok
+test_failed_password_setup_never_enables_autologin (test_boot_login.LiveLoginTests) ... ok
+test_first_live_boot_and_idempotent_restart (test_boot_login.LiveLoginTests) ... ok
+test_installed_system_is_never_modified (test_boot_login.LiveLoginTests) ... ok
+test_malformed_provisioning_state_is_rejected (test_boot_login.LiveLoginTests) ... ok
+test_firmware_boot_text_is_not_success (test_boot_probe.BootProbeTests) ... ok
+test_live_account_gate_rejects_only_generic_boot_messages (test_boot_probe.BootProbeTests) ... ok
+test_live_account_gate_requires_real_service_marker (test_boot_probe.BootProbeTests) ... ok
+test_missing_explicit_firmware_fails (test_boot_probe.BootProbeTests) ... ok
+test_qemu_error_is_not_masked_by_output (test_boot_probe.BootProbeTests) ... ok
+test_userspace_evidence_is_required (test_boot_probe.BootProbeTests) ... ok
+test_only_public_bundles_are_returned_and_private_modes_remain (test_ci_artifact_handoff.ArtifactHandoffTests) ... ok
+test_symlink_escape_is_rejected_before_any_ownership_change (test_ci_artifact_handoff.ArtifactHandoffTests) ... ok
+test_full_site_build_preserves_docs_and_rewrites_project_links (test_ci_downloads.DocumentationTests) ... ok
+test_site_refuses_output_overwrite_and_invalid_repository (test_ci_downloads.DocumentationTests) ... ok
+test_assembler_rejects_traversal_and_duplicate_parts (test_ci_downloads.DownloadTests) ... ok
+test_mismatched_evidence_or_iso_cannot_be_packaged (test_ci_downloads.DownloadTests) ... ok
+test_publisher_checks_current_run_and_every_checksum (test_ci_downloads.DownloadTests) ... ok
+test_publisher_exposes_release_only_after_all_uploads (test_ci_downloads.DownloadTests) ... ok
+test_recorder_matches_image_and_retains_unverified_acceptance_flags (test_ci_downloads.DownloadTests) ... ok
+test_recorder_requires_actual_serial_readiness_marker (test_ci_downloads.DownloadTests) ... ok
+test_split_assembly_roundtrip_and_no_overwrite (test_ci_downloads.DownloadTests) ... ok
+test_tampered_part_does_not_leave_output_or_temporary_file (test_ci_downloads.DownloadTests) ... ok
+test_unbooted_or_promoted_bundle_cannot_be_packaged (test_ci_downloads.DownloadTests) ... ok
+test_unsplit_release_is_verified_and_does_not_claim_gui (test_ci_downloads.DownloadTests) ... ok
+test_upload_failure_leaves_draft_and_never_publishes (test_ci_downloads.DownloadTests) ... ok
+test_workflow_permission_and_trigger_boundaries (test_ci_downloads.WorkflowTests) ... ok
+test_check_button_only_dispatches_read_only_helper (test_control_center_actions.ControlCenterActionTests) ... ok
+test_update_install_keeps_terminal_attached_and_empty_terminal_is_valid (test_control_center_actions.ControlCenterActionTests) ... ok
+test_charging_and_recovery_reset_notifications (test_daily_usability.BatteryTests) ... ok
+test_corrupt_old_state_does_not_break_current_warning (test_daily_usability.BatteryTests) ... ok
+test_invalid_and_missing_sensors_never_become_zero (test_daily_usability.BatteryTests) ... ok
+test_thresholds_notify_once_then_escalate (test_daily_usability.BatteryTests) ... ok
+test_check_never_runs_a_privileged_package_transaction (test_daily_usability.UpdateTests) ... ok
+test_network_or_repository_failure_is_not_no_updates (test_daily_usability.UpdateTests) ... ok
+test_no_updates_is_a_successful_distinct_result (test_daily_usability.UpdateTests) ... ok
+test_ci_compression_is_explicit_and_rejects_unknown_values (test_desktop.DesktopTests) ... ok
+test_effects_profile_persists_only_valid_values (test_desktop.DesktopTests) ... ok
+test_metrics_widget_escapes_markup_and_labels_counters (test_desktop.DesktopTests) ... ok
+test_unavailable_metrics_are_not_zeroed (test_desktop.DesktopTests) ... ok
+test_unknown_health_schema_fails (test_desktop.DesktopTests) ... ok
+test_workspace_and_window_selectors_reject_injection (test_desktop.DesktopTests) ... ok
+test_bar_and_material_json (test_desktop.ProfileTests) ... ok
+test_default_profile_keeps_sway_with_graphical_login (test_desktop.ProfileTests) ... ok
+test_missing_installed_package_is_rejected (test_desktop.ProfileTests) ... ok
+test_package_db_reader_does_not_extract_paths (test_desktop.ProfileTests) ... ok
+test_packages_reject_version_and_checksum_drift (test_desktop.ProfileTests) ... ok
+test_staging_preserves_rust_services_and_sway (test_desktop.ProfileTests) ... ok
+test_compositor_failure_cleans_up_only_user_session (test_desktop.SessionTests) ... ok
+test_version_mismatch_never_launches_compositor (test_desktop.SessionTests) ... ok
+test_archive_creation_refuses_links_and_self_inclusion (test_fetian_files.ArchiveTests) ... ok
+test_duplicates_conflicts_and_malformed_archives_preserve_existing_files (test_fetian_files.ArchiveTests) ... /usr/lib/python3.10/zipfile.py:1541: UserWarning: Duplicate name: 'file'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_resource_limits_and_cancellation_leave_no_committed_output (test_fetian_files.ArchiveTests) ... ok
+test_selected_extraction (test_fetian_files.ArchiveTests) ... ok
+test_standalone_gzip_xz_and_actual_expansion_limits (test_fetian_files.ArchiveTests) ... ok
+test_tar_gzip_and_xz_are_supported (test_fetian_files.ArchiveTests) ... ok
+test_traversal_absolute_windows_and_null_paths_are_rejected (test_fetian_files.ArchiveTests) ... ok
+test_zip_compression_levels_and_cli_selected_names (test_fetian_files.ArchiveTests) ... ok
+test_zip_create_browse_and_extract_roundtrip (test_fetian_files.ArchiveTests) ... ok
+test_zip_symlink_and_tar_hardlink_are_rejected (test_fetian_files.ArchiveTests) ... ok
+test_batch_rename_conflicts_and_cancellation_roll_back (test_fetian_files.FilesTests) ... ok
+test_cancel_does_not_publish_partial_output (test_fetian_files.FilesTests) ... ok
+test_changed_source_does_not_publish_stale_copy (test_fetian_files.FilesTests) ... ok
+test_copy_and_conflict_preserve_both_files (test_fetian_files.FilesTests) ... ok
+test_create_and_explicit_delete_do_not_follow_links (test_fetian_files.FilesTests) ... ok
+test_cross_device_file_move_uses_copy_then_unlink (test_fetian_files.FilesTests) ... ok
+test_destination_symlink_ancestor_is_rejected (test_fetian_files.FilesTests) ... ok
+test_directory_move_and_cross_device_folder_refusal (test_fetian_files.FilesTests) ... ok
+test_move_rename_and_undo_never_overwrite (test_fetian_files.FilesTests) ... ok
+test_name_validation (test_fetian_files.FilesTests) ... ok
+test_permission_denied_is_reported (test_fetian_files.FilesTests) ... ok
+test_permission_editor_rejects_links_and_special_bits (test_fetian_files.FilesTests) ... ok
+test_preferences_are_private_bounded_and_omit_credentials (test_fetian_files.FilesTests) ... ok
+test_preview_is_bounded_plain_text_and_rejects_links_and_pipes (test_fetian_files.FilesTests) ... ok
+test_recursive_copy_preserves_links_without_following_them (test_fetian_files.FilesTests) ... ok
+test_search_filters_type_size_and_modification (test_fetian_files.FilesTests) ... ok
+test_search_is_bounded_and_does_not_recurse_into_links (test_fetian_files.FilesTests) ... ok
+test_self_copy_is_rejected (test_fetian_files.FilesTests) ... ok
+test_undo_refuses_a_replaced_target (test_fetian_files.FilesTests) ... ok
+test_all_profiles_evaluate_and_reduced_effects_stay_disabled (test_hyprland_lua.LuaConfigTests) ... ok
+test_existing_destination_is_never_overwritten (test_iso_payload.PayloadTests) ... ok
+test_real_payload_above_two_gib_roundtrip (test_iso_payload.PayloadTests) ... skipped 'Opt-in large ISO fixture with xorriso required'
+test_real_small_payload_roundtrip (test_iso_payload.PayloadTests) ... skipped 'xorriso required for real ISO extraction'
+test_success_with_missing_or_empty_output_is_rejected (test_iso_payload.PayloadTests) ... ok
+test_tool_failure_is_not_downgraded (test_iso_payload.PayloadTests) ... ok
+test_guest_facts_do_not_claim_manual_or_hardware_acceptance (test_release_workflow.GuestEvidenceTests) ... ok
+test_application_desktop_entries_have_unix_line_endings (test_release_workflow.ImagePolicyTests) ... ok
+test_complete_image_rejects_usable_credentials_and_build_machine_identity (test_release_workflow.ImagePolicyTests) ... ok
+test_installer_hidden_without_deleting_apps_or_backend_packages (test_release_workflow.ImagePolicyTests) ... ok
+test_iso_requires_real_x64_efi_and_squashfs (test_release_workflow.ImagePolicyTests) ... ok
+test_sddm_session_entries_preserve_desktop_names_and_absolute_wrappers (test_release_workflow.ImagePolicyTests) ... ok
+test_target_symlinks_are_resolved_inside_image (test_release_workflow.ImagePolicyTests) ... ok
+test_unverified_promotion_fails_and_retains_marker (test_release_workflow.ImagePolicyTests) ... ok
+test_clean_fixture_passes_static_checks_without_claiming_boot_or_auth (test_release_workflow.InstalledPolicyTests) ... ok
+test_live_state_credentials_autologin_and_initramfs_are_rejected (test_release_workflow.InstalledPolicyTests) ... ok
+test_missing_provenance_or_live_username_fails (test_release_workflow.InstalledPolicyTests) ... ok
+test_compare_checks_actual_bytes_and_requires_distinct_builds (test_release_workflow.ReleaseTests) ... ok
+test_missing_package_inventory_or_license_fails (test_release_workflow.ReleaseTests) ... ok
+test_publication_is_complete_and_fixture_never_claims_image_validation (test_release_workflow.ReleaseTests) ... ok
+test_qemu_checksum_and_command_never_attach_host_drives (test_release_workflow.ReleaseTests) ... ok
+test_qemu_qmp_uses_structured_commands (test_release_workflow.ReleaseTests) ... ok
+test_resume_rejects_external_disk (test_release_workflow.ReleaseTests) ... ok
+test_selector_ignores_incomplete_hidden_and_unsafe_records (test_release_workflow.ReleaseTests) ... ok
+test_source_fingerprint_tracks_symlinks_and_excludes_caches (test_release_workflow.ReleaseTests) ... ok
+test_validator_failure_publishes_nothing (test_release_workflow.ReleaseTests) ... ok
+test_version_queries_record_status_and_use_tool_specific_options (test_release_workflow.ReleaseTests) ... ok
+test_python_sources_parse (test_source_syntax.SourceSyntaxTests) ... ok
+test_session_and_build_scripts_parse (test_source_syntax.SourceSyntaxTests) ... ok
+test_live_state_fsync_failure_cleans_temporary_and_preserves_previous (test_stability.StabilityTests) ... ok
+test_malformed_fields_do_not_discard_valid_preferences (test_stability.StabilityTests) ... ok
+test_missing_optional_shell_child_does_not_stop_panel (test_stability.StabilityTests) ... fetian-shell: optional nm-applet unavailable: missing optional network applet; other components continue
+ok
+test_optional_restart_policy_has_an_effective_explicit_limit (test_stability.StabilityTests) ... ok
+test_optional_shell_child_exit_does_not_stop_panel (test_stability.StabilityTests) ... fetian-shell: optional child nm-applet exited (23); other components continue; restart fetian-shell.service after resolving the cause
+ok
+test_preferences_fifo_cannot_hang_startup (test_stability.StabilityTests) ... ok
+test_preferences_interrupted_replace_preserves_existing_data (test_stability.StabilityTests) ... ok
+test_required_panel_exit_remains_a_visible_failure (test_stability.StabilityTests) ... fetian-shell: missing panel
+ok
+test_session_lock_is_not_inherited_by_compositor (test_stability.StabilityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 130 tests in 29.819s
+
+OK (skipped=2)

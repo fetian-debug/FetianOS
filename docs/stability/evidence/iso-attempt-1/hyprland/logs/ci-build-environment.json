@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "system": {
+    "PRETTY_NAME": "Manjaro Linux",
+    "ID": "manjaro"
+  },
+  "architecture": "x86_64",
+  "tools": {
+    "mkarchiso": "/usr/sbin/mkarchiso",
+    "pacman": "/usr/sbin/pacman",
+    "pacman-key": "/usr/sbin/pacman-key",
+    "cargo": "/usr/sbin/cargo",
+    "rustc": "/usr/sbin/rustc",
+    "cc": "/usr/sbin/cc",
+    "python3": "/usr/sbin/python3",
+    "xorriso": "/usr/sbin/xorriso",
+    "isoinfo": "/usr/sbin/isoinfo",
+    "unsquashfs": "/usr/sbin/unsquashfs",
+    "qemu-system-x86_64": "/usr/sbin/qemu-system-x86_64",
+    "qemu-img": "/usr/sbin/qemu-img",
+    "mcopy": "/usr/sbin/mcopy"
+  },
+  "missing_tools": [],
+  "image_host_supported": true,
+  "kvm_usable": true,
+  "ovmf_code": "/usr/share/edk2/x64/OVMF_CODE.4m.fd",
+  "ovmf_variables": "/usr/share/edk2/x64/OVMF_VARS.4m.fd",
+  "uefi_vm_dependencies_available": true,
+  "graphical_display_configured": false,
+  "workspace_free_bytes": 107923382272,
+  "tests_executed": [],
+  "hardware_validated": false
+}
