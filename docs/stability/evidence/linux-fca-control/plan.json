@@ -1,0 +1,10 @@
+{
+  "binary_hashes": {
+    "fetian-authority": "bd2547e988d18500eadeaba08a8bce5c9e977808c77164b32536f9638992f0ef",
+    "fetian-authorityd": "45c50675e6440f5e665b41283f0f9d6e93300b0c53fe65f52c8e3a5aa28d14a2",
+    "fetian-executor-python.py": "293950232dfd92b4884259adcf1bd4f9eaa2dc1a53ba904a75005faafe7b2686",
+    "fetian-executor-rust": "5a319516a661e5d2f25e9b7e2de5b0177734c8f07539919f33a61e3153ee3985",
+    "fetian-fca-launcher": "1e9cce7d21a45bfd207514beb6e5d675d3919ee4df650f66426d2558700cf959"
+  },
+  "scope": "Same binaries, workload, seeds and deadlines; change only executable filesystem location. No FCA source changes."
+}

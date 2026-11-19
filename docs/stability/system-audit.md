@@ -31,3 +31,5 @@ format was removed. No service was installed or enabled on the development host.
 
 See [baseline](performance-baseline.md), [defects](defects.json),
 [acceptance matrix](stability-matrix.md) and [final report](final-stability-report.md).
+The user's confirmed HP target has a separate [live-USB plan](hp-15-bs-live-test.md);
+it does not enable the disabled installer or assign VM results to physical devices.

@@ -1,0 +1,44 @@
+{"completed": 1, "planned": 1000, "counts": {"expected_recovery": 1}}
+{"completed": 26, "planned": 1000, "counts": {"expected_recovery": 14, "expected_rejection": 12}}
+{"completed": 51, "planned": 1000, "counts": {"expected_recovery": 24, "expected_rejection": 25, "safely_detected_unrecoverable": 2}}
+{"completed": 76, "planned": 1000, "counts": {"expected_recovery": 34, "expected_rejection": 38, "safely_detected_unrecoverable": 4}}
+{"completed": 101, "planned": 1000, "counts": {"expected_recovery": 46, "expected_rejection": 48, "safely_detected_unrecoverable": 7}}
+{"completed": 126, "planned": 1000, "counts": {"expected_recovery": 55, "expected_rejection": 63, "safely_detected_unrecoverable": 8}}
+{"completed": 151, "planned": 1000, "counts": {"expected_recovery": 68, "expected_rejection": 75, "safely_detected_unrecoverable": 8}}
+{"completed": 176, "planned": 1000, "counts": {"expected_recovery": 78, "expected_rejection": 88, "safely_detected_unrecoverable": 10}}
+{"completed": 201, "planned": 1000, "counts": {"expected_recovery": 91, "expected_rejection": 100, "safely_detected_unrecoverable": 10}}
+{"completed": 226, "planned": 1000, "counts": {"expected_recovery": 103, "expected_rejection": 113, "safely_detected_unrecoverable": 10}}
+{"completed": 251, "planned": 1000, "counts": {"expected_recovery": 120, "expected_rejection": 121, "safely_detected_unrecoverable": 10}}
+{"completed": 276, "planned": 1000, "counts": {"expected_recovery": 129, "expected_rejection": 133, "safely_detected_unrecoverable": 14}}
+{"completed": 301, "planned": 1000, "counts": {"expected_recovery": 140, "expected_rejection": 142, "safely_detected_unrecoverable": 19}}
+{"completed": 326, "planned": 1000, "counts": {"expected_recovery": 151, "expected_rejection": 155, "safely_detected_unrecoverable": 20}}
+{"completed": 351, "planned": 1000, "counts": {"expected_recovery": 156, "expected_rejection": 171, "safely_detected_unrecoverable": 24}}
+{"completed": 376, "planned": 1000, "counts": {"expected_recovery": 168, "expected_rejection": 181, "safely_detected_unrecoverable": 27}}
+{"completed": 401, "planned": 1000, "counts": {"expected_recovery": 176, "expected_rejection": 195, "safely_detected_unrecoverable": 30}}
+{"completed": 418, "planned": 1000, "counts": {"expected_recovery": 182, "expected_rejection": 202, "safely_detected_unrecoverable": 33, "unexpected_correctness_failure": 1}}
+{"completed": 426, "planned": 1000, "counts": {"expected_recovery": 183, "expected_rejection": 208, "safely_detected_unrecoverable": 34, "unexpected_correctness_failure": 1}}
+{"completed": 451, "planned": 1000, "counts": {"expected_recovery": 193, "expected_rejection": 220, "safely_detected_unrecoverable": 37, "unexpected_correctness_failure": 1}}
+{"completed": 476, "planned": 1000, "counts": {"expected_recovery": 203, "expected_rejection": 234, "safely_detected_unrecoverable": 38, "unexpected_correctness_failure": 1}}
+{"completed": 501, "planned": 1000, "counts": {"expected_recovery": 212, "expected_rejection": 246, "safely_detected_unrecoverable": 42, "unexpected_correctness_failure": 1}}
+{"completed": 526, "planned": 1000, "counts": {"expected_recovery": 221, "expected_rejection": 258, "safely_detected_unrecoverable": 46, "unexpected_correctness_failure": 1}}
+{"completed": 551, "planned": 1000, "counts": {"expected_recovery": 233, "expected_rejection": 270, "safely_detected_unrecoverable": 47, "unexpected_correctness_failure": 1}}
+{"completed": 576, "planned": 1000, "counts": {"expected_recovery": 240, "expected_rejection": 286, "safely_detected_unrecoverable": 49, "unexpected_correctness_failure": 1}}
+{"completed": 601, "planned": 1000, "counts": {"expected_recovery": 246, "expected_rejection": 301, "safely_detected_unrecoverable": 53, "unexpected_correctness_failure": 1}}
+{"completed": 626, "planned": 1000, "counts": {"expected_recovery": 255, "expected_rejection": 314, "safely_detected_unrecoverable": 56, "unexpected_correctness_failure": 1}}
+{"completed": 635, "planned": 1000, "counts": {"expected_recovery": 258, "expected_rejection": 319, "safely_detected_unrecoverable": 56, "unexpected_correctness_failure": 2}}
+{"completed": 651, "planned": 1000, "counts": {"expected_recovery": 265, "expected_rejection": 328, "safely_detected_unrecoverable": 56, "unexpected_correctness_failure": 2}}
+{"completed": 676, "planned": 1000, "counts": {"expected_recovery": 275, "expected_rejection": 342, "safely_detected_unrecoverable": 57, "unexpected_correctness_failure": 2}}
+{"completed": 701, "planned": 1000, "counts": {"expected_recovery": 286, "expected_rejection": 355, "safely_detected_unrecoverable": 58, "unexpected_correctness_failure": 2}}
+{"completed": 726, "planned": 1000, "counts": {"expected_recovery": 292, "expected_rejection": 371, "safely_detected_unrecoverable": 61, "unexpected_correctness_failure": 2}}
+{"completed": 751, "planned": 1000, "counts": {"expected_recovery": 304, "expected_rejection": 382, "safely_detected_unrecoverable": 63, "unexpected_correctness_failure": 2}}
+{"completed": 776, "planned": 1000, "counts": {"expected_recovery": 311, "expected_rejection": 399, "safely_detected_unrecoverable": 64, "unexpected_correctness_failure": 2}}
+{"completed": 801, "planned": 1000, "counts": {"expected_recovery": 321, "expected_rejection": 411, "safely_detected_unrecoverable": 67, "unexpected_correctness_failure": 2}}
+{"completed": 826, "planned": 1000, "counts": {"expected_recovery": 331, "expected_rejection": 426, "safely_detected_unrecoverable": 67, "unexpected_correctness_failure": 2}}
+{"completed": 851, "planned": 1000, "counts": {"expected_recovery": 340, "expected_rejection": 441, "safely_detected_unrecoverable": 68, "unexpected_correctness_failure": 2}}
+{"completed": 876, "planned": 1000, "counts": {"expected_recovery": 351, "expected_rejection": 453, "safely_detected_unrecoverable": 70, "unexpected_correctness_failure": 2}}
+{"completed": 901, "planned": 1000, "counts": {"expected_recovery": 364, "expected_rejection": 464, "safely_detected_unrecoverable": 71, "unexpected_correctness_failure": 2}}
+{"completed": 926, "planned": 1000, "counts": {"expected_recovery": 378, "expected_rejection": 475, "safely_detected_unrecoverable": 71, "unexpected_correctness_failure": 2}}
+{"completed": 951, "planned": 1000, "counts": {"expected_recovery": 387, "expected_rejection": 489, "safely_detected_unrecoverable": 73, "unexpected_correctness_failure": 2}}
+{"completed": 974, "planned": 1000, "counts": {"expected_recovery": 395, "expected_rejection": 501, "safely_detected_unrecoverable": 75, "unexpected_correctness_failure": 3}}
+{"completed": 976, "planned": 1000, "counts": {"expected_recovery": 396, "expected_rejection": 502, "safely_detected_unrecoverable": 75, "unexpected_correctness_failure": 3}}
+{"schema_version": 1, "mode": "stress", "master_seed": 2090, "completed": 1000, "expectations_met": 997, "counts": {"expected_recovery": 406, "expected_rejection": 513, "safely_detected_unrecoverable": 78, "unexpected_correctness_failure": 3}, "failures": [{"index": 417, "seed": 16222025457264195268, "scenario": "sqlite-reopen", "report": "run-000417-seed-16222025457264195268.json", "explanation": "TimeoutError: timed out"}, {"index": 634, "seed": 6622925276880692738, "scenario": "capability", "report": "run-000634-seed-6622925276880692738.json", "explanation": "TimeoutError: timed out"}, {"index": 973, "seed": 16985103156031036425, "scenario": "executor-sigkill", "report": "run-000973-seed-16985103156031036425.json", "explanation": "TimeoutError: timed out"}], "recovered": 406, "rejected": 513, "safely_unrecoverable": 78, "unexpected_failures": 3, "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"}

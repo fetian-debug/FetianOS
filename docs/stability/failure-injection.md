@@ -7,6 +7,7 @@ linker and the locked FCA dependencies available. Commands do not install servic
 python3 -m unittest discover -s tests -p test_stability.py -v
 python3 scripts/stability-check.py --phase final --output NEW_EVIDENCE_DIRECTORY --stress-runs 1000
 python3 scripts/stability-check.py --phase final --output NEW_CLEAN_DIRECTORY --clean-only
+python3 scripts/verify-stability.py
 ```
 
 Choose fresh output directories. Add `--gtk-prefix /path/to/extracted/dependencies`
@@ -40,3 +41,9 @@ No host reboot, suspend, disk fill, actual user-data corruption, real desktop
 termination or destructive filesystem test was performed. VM, 24-hour soak,
 memory-leak monitoring, reboot loops, concurrent GUI workloads and installed
 update interruption remain untested rather than passing by omission.
+
+STAB-007 adds a real ISO payload roundtrip above 2 GiB. Hosted source checks
+install xorriso and set FETIAN_LARGE_ISO_TEST=1; all 130 Python tests completed
+with no skips in job 135615681941. The fixture has arbitrary bytes, not a claimed
+bootable OS or valid SquashFS. Actual filesystem validation remains a separate
+candidate-build gate. Local missing-tool skips remain recorded.

@@ -1,0 +1,223 @@
+{
+  "items": 64,
+  "authorities": 1,
+  "chunk_size": 32,
+  "execution_concurrency": 1,
+  "authority_population_measured": true,
+  "samples": {
+    "authority_creation_us": [
+      11240.677
+    ],
+    "lease_acquisition_us": [
+      569,
+      432
+    ],
+    "gated_launch_rpc_us": [
+      7670.093
+    ],
+    "effect_checkpoint_commit_us": [
+      612,
+      7312
+    ],
+    "checkpoint_barrier_rpc_us": [
+      21667.805
+    ],
+    "handoff_rpc_us": [
+      11348.954
+    ],
+    "restart_wall_us": [
+      13579.968,
+      9125.989,
+      10629.744,
+      8662.675,
+      8636.276,
+      11079.333,
+      12262.438,
+      11176.249,
+      8597.587,
+      9151.033
+    ],
+    "store_verification_recovery_us": [
+      7219,
+      2833,
+      4250,
+      2288,
+      2201,
+      4746,
+      5972,
+      4909,
+      2321,
+      2822
+    ],
+    "direct_python_parse_sum_us": [
+      8.383,
+      5.808,
+      4.887,
+      4.277,
+      4.366,
+      4.257,
+      4.977,
+      4.777,
+      4.316,
+      4.447,
+      4.156,
+      4.136,
+      4.136,
+      4.256,
+      4.197,
+      4.257,
+      4.216,
+      4.206,
+      4.246,
+      4.287,
+      4.147,
+      4.257,
+      4.246,
+      4.346,
+      4.267,
+      4.486,
+      4.417,
+      4.457,
+      4.467,
+      4.316
+    ]
+  },
+  "distributions": {
+    "authority_creation_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 11240.677,
+      "p95": 11240.677,
+      "p99": 11240.677,
+      "minimum": 11240.677,
+      "maximum": 11240.677
+    },
+    "lease_acquisition_us": {
+      "measured": true,
+      "samples": 2,
+      "method": "nearest rank",
+      "p50": 432,
+      "p95": 569,
+      "p99": 569,
+      "minimum": 432,
+      "maximum": 569
+    },
+    "gated_launch_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 7670.093,
+      "p95": 7670.093,
+      "p99": 7670.093,
+      "minimum": 7670.093,
+      "maximum": 7670.093
+    },
+    "effect_checkpoint_commit_us": {
+      "measured": true,
+      "samples": 2,
+      "method": "nearest rank",
+      "p50": 612,
+      "p95": 7312,
+      "p99": 7312,
+      "minimum": 612,
+      "maximum": 7312
+    },
+    "checkpoint_barrier_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 21667.805,
+      "p95": 21667.805,
+      "p99": 21667.805,
+      "minimum": 21667.805,
+      "maximum": 21667.805
+    },
+    "handoff_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 11348.954,
+      "p95": 11348.954,
+      "p99": 11348.954,
+      "minimum": 11348.954,
+      "maximum": 11348.954
+    },
+    "restart_wall_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 9151.033,
+      "p95": 13579.968,
+      "p99": 13579.968,
+      "minimum": 8597.587,
+      "maximum": 13579.968
+    },
+    "store_verification_recovery_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 2833,
+      "p95": 7219,
+      "p99": 7219,
+      "minimum": 2201,
+      "maximum": 7219
+    },
+    "direct_python_parse_sum_us": {
+      "measured": true,
+      "samples": 30,
+      "method": "nearest rank",
+      "p50": 4.277,
+      "p95": 5.808,
+      "p99": 8.383,
+      "minimum": 4.136,
+      "maximum": 8.383
+    }
+  },
+  "storage_bytes": {
+    "authorities.sqlite3": 81920,
+    "authorities.sqlite3-shm": 32768,
+    "authorities.sqlite3-wal": 276072
+  },
+  "sqlite_allocated_bytes": 81920,
+  "journal_events_by_authority": {
+    "ca_a2121adfa55a083e38d4df92f9173703": 89
+  },
+  "managed_effects": 2,
+  "broker_before": {
+    "rss_kib": 5224,
+    "cpu_seconds": 0.0
+  },
+  "broker_after": {
+    "rss_kib": 5604,
+    "cpu_seconds": 0.0
+  },
+  "broker_cpu_seconds_during_work": 0.0,
+  "rust_worker_rss_kib": {
+    "measured": true,
+    "samples": 1,
+    "method": "nearest rank",
+    "p50": 2144,
+    "p95": 2144,
+    "p99": 2144,
+    "minimum": 2144,
+    "maximum": 2144
+  },
+  "resources": {
+    "budget": {
+      "cpu_quota": 1,
+      "memory_bytes": 134217728,
+      "pids_max": 8,
+      "strict": false
+    },
+    "cpu": "unavailable",
+    "gpu": "unsupported",
+    "kernel_enforced": false,
+    "memory": "unavailable",
+    "mode": "advisory",
+    "pids": "unavailable",
+    "reason": "DELEGATION_UNAVAILABLE"
+  },
+  "resource_enforcement_overhead": "not isolated; unavailable when no delegated cgroup",
+  "pending_checkpoint_verified_each_restart": true
+}

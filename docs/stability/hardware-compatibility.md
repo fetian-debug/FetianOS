@@ -3,6 +3,11 @@
 No physical device support is newly certified by this branch. Package presence
 and Linux module availability are not device-test results.
 
+The user confirmed HP 15-bs0xx, i5-7200U, Intel HD Graphics 620 and AMD Radeon
+(exact model/PCI ID pending) as the target. RAM and storage remain unknown;
+UEFI support is user-reported. Follow the [physical live-USB plan](hp-15-bs-live-test.md)
+before certifying any device. No GPU driver is forced from the AMD vendor alone.
+
 | Area | Source integration | This branch's physical verification |
 |---|---|---|
 | Intel/AMD GPU | Mesa, Vulkan packages and distribution kernel drivers | Untested |

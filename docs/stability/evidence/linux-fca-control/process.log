@@ -1,0 +1,24 @@
+test_bad_protocol_isolated_from_broker (__main__.ProcessTests) ... ok
+test_both_executors_agree_on_signed_boundaries (__main__.ProcessTests) ... ok
+test_broker_sigkill_fences_and_recovers_without_pid_kill (__main__.ProcessTests) ... ok
+test_cancel_terminal_authority_cannot_resume_or_run (__main__.ProcessTests) ... ok
+test_cli_export_and_paginated_event_chain (__main__.ProcessTests) ... ok
+test_duplicate_run_race_grants_only_one_executor (__main__.ProcessTests) ... ok
+test_faults_are_rejected_in_normal_daemon (__main__.ProcessTests) ... ok
+test_handoff_suspend_resume_and_checkpoint (__main__.ProcessTests) ... ok
+test_journal_corruption_blocks_restart (__main__.ProcessTests) ... ok
+test_launcher_gate_does_not_prefetch_worker_descriptor (__main__.ProcessTests) ... ok
+test_list_remains_bounded_at_authority_limit (__main__.ProcessTests) ... ok
+test_opt_in_profile_payload_is_copied_without_enabling_unit (__main__.ProcessTests) ... skipped 'Packaging uses explicitly built release binaries'
+test_overflow_failure_policy_does_not_commit_effect (__main__.ProcessTests) ... ok
+test_private_files_and_single_writer_across_runtime_dirs (__main__.ProcessTests) ... ok
+test_process_crash_after_commit_before_ack_does_not_duplicate (__main__.ProcessTests) ... ok
+test_process_crash_before_commit_rolls_back (__main__.ProcessTests) ... ok
+test_real_rust_kill_python_resume_demo (__main__.ProcessTests) ... ok
+test_strict_resources_fail_before_lease_when_unavailable (__main__.ProcessTests) ... ok
+test_unknown_executor_and_invalid_contract_fail_without_lease (__main__.ProcessTests) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 4.028s
+
+OK (skipped=1)

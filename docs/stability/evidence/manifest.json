@@ -1,0 +1,874 @@
+{
+  "schema_version": 1,
+  "files": {
+    "docs/stability/boot-reliability.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "d87f81e4c92eeb06605974e0574af6837754aa2566f27d88561d0125ed52253d"
+    },
+    "docs/stability/data-integrity.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "f27f9bf3c292a0a7b247414f7f565c7f7c7c18c3a3fa8a8919eff108cc8f9e66"
+    },
+    "docs/stability/defects.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "fbc6efeedfc8ca756d49128b17ef589d3ed399950f6077795310b27ef10b8778"
+    },
+    "docs/stability/desktop-reliability.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "d87794504935bfc8f3b8b8eb0c34d590584dec177e0d5949e52243aca7d50331"
+    },
+    "docs/stability/evidence/README.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "01e259616f19d6e0f2d168fc23c6676b13f4be913815506f027826dbd1257c3a"
+    },
+    "docs/stability/evidence/baseline/acceptance.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "91ca4cfd3dcc363172b93deb2cc4445ce7274c6bd397b343c7d4d7083db7c201"
+    },
+    "docs/stability/evidence/baseline/dependency-audit.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "cc66102068fe5a405328602ccf03ed7e0134a42ee26544fb0d4e1d399bc52c13"
+    },
+    "docs/stability/evidence/baseline/environment-capabilities.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "547bdca83e2189dd3ade180213df2ae608f7ccec1d4bbea8b4cf6c45180a794e"
+    },
+    "docs/stability/evidence/baseline/environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b5d52b673f5c8c896d28abba273469dd38c88b1af88c7db94831f19c54c8188d"
+    },
+    "docs/stability/evidence/baseline/fca-clippy.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "041c80b1ec2eb3bb8a3f248bc8a5efd454d5da125b9a7235a5c98573b0590197"
+    },
+    "docs/stability/evidence/baseline/fca-debug-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "5021bbccb443543558073cbfdd57c6e7b5e57c57ee1f7357a9b9fc61bf030fc6"
+    },
+    "docs/stability/evidence/baseline/fca-dependency-lock.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "176f9af84a671a1929559d898a56d401fee5cb359785bcca1795f391849c2df8"
+    },
+    "docs/stability/evidence/baseline/fca-deterministic/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "8a5123bd20b4df725f856ea7091c6181f5f99eb3bd45ea623f3e30e6ea8ace6e"
+    },
+    "docs/stability/evidence/baseline/fca-deterministic/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "1ebcbdc6a6f253ec11165e5c44db54692c7ea94f230964519a3fd6fd2b7abcf3"
+    },
+    "docs/stability/evidence/baseline/fca-deterministic/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "05ac324d946ad3d86b62d3a5167c59a387aee9b240de8920f61ebc9d584661e7"
+    },
+    "docs/stability/evidence/baseline/fca-deterministic/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21a62195ca0a7dc0d430df09391cfc4b81c3c56880ca08ea4373b60379707d05"
+    },
+    "docs/stability/evidence/baseline/fca-deterministic.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "b5711fa42620af822c873e6c23e68916cbdee0b3f7e241eef2893635b9d47fda"
+    },
+    "docs/stability/evidence/baseline/fca-fmt.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/baseline/fca-harness-oracles.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "00ebb221cf176b2554b655979e622a7d14e3cac6d6d0ffcb4fce2c515eb03411"
+    },
+    "docs/stability/evidence/baseline/fca-process.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "0b513c32607132c1dc6e23abfd1c6486aeee5af25b42c8311bd71eeb82a92703"
+    },
+    "docs/stability/evidence/baseline/fca-release-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "fc8531b620bb39d25608f7f2d2d48a40798d51abddab5aa1c073609dc8f23836"
+    },
+    "docs/stability/evidence/baseline/fca-security/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d7ebaa00c87b976dc73c224f8d15e37a77691d6cac6c27549dd8f6ffaa3be7f9"
+    },
+    "docs/stability/evidence/baseline/fca-security/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "f705c74d63f24ccf1981f84d54610f4a8208c2899bcbb1f3259aa134e2eeda3a"
+    },
+    "docs/stability/evidence/baseline/fca-security/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "688c4d400a088b2d3720ce99e9c86f5740faec43b452712228ce77bcfd837f8b"
+    },
+    "docs/stability/evidence/baseline/fca-security/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21c0b0d988a36b17e833d967d89eb8618b93264afa24c9bcebcf253bf4884035"
+    },
+    "docs/stability/evidence/baseline/fca-security.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "95b96aba5ff5b33bd475ba1a0e53ddaa6a1b56dcc72cce0a45b12e9c738cc1b8"
+    },
+    "docs/stability/evidence/baseline/fca-stage-executor.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "799f0be03e7ccb762ea1a1d03b665f7f49a903b1f4131829ec0b454f0d86f5d9"
+    },
+    "docs/stability/evidence/baseline/fca-tests.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f6cd7188f4c0679a695f6f86ed61a7a738932e1ff6a7c153ab0ffc9cc089dc19"
+    },
+    "docs/stability/evidence/baseline/gtk-files.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "bb1fe370a73d6db08760c94c64745a5f54ddf6d6789d9e3ae91553d8626aaaca"
+    },
+    "docs/stability/evidence/baseline/native-clippy.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "7fd39e8f56d48d58937642a67819987719b88225415b17530f597c46dcdf7106"
+    },
+    "docs/stability/evidence/baseline/native-debug-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "8a2933ae25e59188be988ea6218274cb341f13d8bc4b533f57b12ececd4be8b3"
+    },
+    "docs/stability/evidence/baseline/native-dependency-lock.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "ff6271b80ac0d78830f480765728108886ad901f88c8d5e39fc333b12a598189"
+    },
+    "docs/stability/evidence/baseline/native-fmt.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/baseline/native-release-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "82dd8ae3aa306e230948eaebb185d76874980cf98746723ceaba5b2cd8af7595"
+    },
+    "docs/stability/evidence/baseline/native-tests.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "cfab408d637fa2a6c62e63b5ca62ccd01fdf0e4057c340a000c353f66300f552"
+    },
+    "docs/stability/evidence/baseline/profile.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f3f01f847a65b37039a45526cebbfcd8c8f83a8b566ff06191b2637f785ccd55"
+    },
+    "docs/stability/evidence/baseline/python-regressions.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "74d15bd4deb93a228dab10d4414e1db6fd342c428a1741240c48b8a9d837fe85"
+    },
+    "docs/stability/evidence/baseline/repository-files.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a473ba314ee643d58773866c927828d99acbc7935feb46bb4d2cfa233b6cc43b"
+    },
+    "docs/stability/evidence/baseline/results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "89df963a571df22aa43f1523384fac47ca40e2ef96cc661ac9814478fdf16baf"
+    },
+    "docs/stability/evidence/baseline/rust-version.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+    },
+    "docs/stability/evidence/baseline/staged-units.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "5377ff80c6a4f4071f0ceac439aefcc3c7a1761a35d898032f60452a1ff3ba3f"
+    },
+    "docs/stability/evidence/baseline-clean/environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4bfaa2989b875bead5b09970316e7be78fd988636c0a7a2c1116295b11e7609e"
+    },
+    "docs/stability/evidence/baseline-clean/fca-clean-debug.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "b81ee0b70bf126a37542c421402b2cd8b76456a45c99f54dacde852b296d8127"
+    },
+    "docs/stability/evidence/baseline-clean/fca-clean-release.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "a2d616ca31a75d583edf08d9fe0420dee137ee7bae6a0c0ee6d0901b03d78431"
+    },
+    "docs/stability/evidence/baseline-clean/native-clean-debug.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "056890617765ddcc44da4944609f3796a5bbc6b24f2ea4e57159c8c8f177af22"
+    },
+    "docs/stability/evidence/baseline-clean/native-clean-release.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "01c3b2d33f9d1e5aa7aef82571e59efb6117a37140257a023662353e8919ef00"
+    },
+    "docs/stability/evidence/baseline-clean/repository-files.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a473ba314ee643d58773866c927828d99acbc7935feb46bb4d2cfa233b6cc43b"
+    },
+    "docs/stability/evidence/baseline-clean/results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "309286e236881c556b085e5138ae6136894e449e35c984f5ceb8c6cf20e64ff8"
+    },
+    "docs/stability/evidence/baseline-clean/rust-version.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+    },
+    "docs/stability/evidence/dependency-audit/fca.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ba2ff1fbc4d2ad981223a451b34c1aeafa2085ec53913bd50c09ba5e97cb47f8"
+    },
+    "docs/stability/evidence/dependency-audit/fca.stderr.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/dependency-audit/native.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "db873d2a64b49d3565f2505577e0b0a08449a53dd8585bbb0a24a7bc2901dca8"
+    },
+    "docs/stability/evidence/dependency-audit/native.stderr.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/dependency-audit/tool-and-results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "7d646f75d391275710b9c25049f6c331fe123ae9ade0403e1c49a718522229c6"
+    },
+    "docs/stability/evidence/final/acceptance.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "91ca4cfd3dcc363172b93deb2cc4445ce7274c6bd397b343c7d4d7083db7c201"
+    },
+    "docs/stability/evidence/final/environment-capabilities.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "1da107bc089777bd39be484964bcbab018960373af79b3640946725a068bfc5c"
+    },
+    "docs/stability/evidence/final/environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "09618a53d81cd6c4117a698f8df0f1cfd148f4136cecd03b58df38641d9b5097"
+    },
+    "docs/stability/evidence/final/fca-clippy.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "76b275ef77e90a36db371a350044442d0b2f9ea9735f996b9448b6ac78862d8c"
+    },
+    "docs/stability/evidence/final/fca-debug-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "528874e6fae48183682a2f1d28bda70f4604e951643a6dfc5dc753f5c3e945fd"
+    },
+    "docs/stability/evidence/final/fca-dependency-lock.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "176f9af84a671a1929559d898a56d401fee5cb359785bcca1795f391849c2df8"
+    },
+    "docs/stability/evidence/final/fca-deterministic/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "de9517b28ac52fcb8f8a0f1c7611197f72063b425cb79f99e32dce41c334afdd"
+    },
+    "docs/stability/evidence/final/fca-deterministic/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "61616e9b82157ba98040842955c12f0ee8340663ec23bcfd0aa1cc497795187f"
+    },
+    "docs/stability/evidence/final/fca-deterministic/run-000010-seed-2100.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "c0b9d214c5790f6cd176d95ab7d3c4977f9dbbf7a1c47f394d1f2f30ada468cc"
+    },
+    "docs/stability/evidence/final/fca-deterministic/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "9511c99abf408e01e9aaa5f38c07f2c87bd62618151530b1c9b39d4bec7c97db"
+    },
+    "docs/stability/evidence/final/fca-deterministic/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "d7361c4616c687db021b3054f0622eb35143eb4d6502e24329c5b8b139a8249e"
+    },
+    "docs/stability/evidence/final/fca-deterministic.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "a5439650d7182064a94318d7dd9e6c1f33649fb23f48b26322a8be7172aae2e7"
+    },
+    "docs/stability/evidence/final/fca-fmt.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/final/fca-harness-oracles.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f7163b941a1c823078c299041e3eca43b1de9da7f66c974a37573c1e3cb5657a"
+    },
+    "docs/stability/evidence/final/fca-process.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d5cd92e5129aee6bb3a6ffa443d1709b188ac2b4aaff371a48a078e023b7b1d6"
+    },
+    "docs/stability/evidence/final/fca-release-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "30d0897f6cad5f0a98953670ff0c0ac4622959c83ea6492925990bf789406499"
+    },
+    "docs/stability/evidence/final/fca-security/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "1e188494e65970da54ec2e683a9a5a26f906999f9823b617e9a50ef5a9ce6fa7"
+    },
+    "docs/stability/evidence/final/fca-security/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b29853f5b87cfdb61627371de7c83e0dee7fa2d9f8e1dad285e51e7a540f0538"
+    },
+    "docs/stability/evidence/final/fca-security/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "a0ba8bd38533157c8b793286ed243a403ddd102315fa6bad2019833906b947d7"
+    },
+    "docs/stability/evidence/final/fca-security/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21c0b0d988a36b17e833d967d89eb8618b93264afa24c9bcebcf253bf4884035"
+    },
+    "docs/stability/evidence/final/fca-security.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "95b96aba5ff5b33bd475ba1a0e53ddaa6a1b56dcc72cce0a45b12e9c738cc1b8"
+    },
+    "docs/stability/evidence/final/fca-stage-executor.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d0307d7be747d6015f6d5ad9569fafc833482fdf00a45bd7a8c0f1bdcc06b7bf"
+    },
+    "docs/stability/evidence/final/fca-stress/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b464a39b26d656f7381c87a93844b75cc4764d022864bbb13d1baceca4ed3ba1"
+    },
+    "docs/stability/evidence/final/fca-stress/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "070107466b2e01168d2068f1882cd70331be7234104c7cb1f6b8eeaf020729f9"
+    },
+    "docs/stability/evidence/final/fca-stress/run-000186-seed-6527194823182779136.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b071125d57542c5d9b10e1046a63d1a0fe4ffc77534bd6be341ba2a241b527ad"
+    },
+    "docs/stability/evidence/final/fca-stress/run-000187-seed-2714685373729247199.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "94c51878bc740a2c0154a0e3ea8ba10e9748556dab69f9840c3161a583eeacba"
+    },
+    "docs/stability/evidence/final/fca-stress/run-000409-seed-14880905909346546009.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "37e94f1cf0ae2ebb8005ae979f9d0450d7b217a0f9705834f1a409a4b4912bfe"
+    },
+    "docs/stability/evidence/final/fca-stress/run-000689-seed-18085918250417703917.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4c4251d22ef210b38a2d082920454babaca14063aa60108e829298b166121acb"
+    },
+    "docs/stability/evidence/final/fca-stress/run-000907-seed-6081882618845452580.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "e438274fd838d1aa5d5584e265c0a4f32dbfe254cd92dc1823ecbc97138019a0"
+    },
+    "docs/stability/evidence/final/fca-stress/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "6181c157d75a996a44da46d6fec307ae7168c61b91188534074450d97f68ba4e"
+    },
+    "docs/stability/evidence/final/fca-stress/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "1bf76b378069fe6276f93612f90200d72df3479eaec1844381ddcf8f59715321"
+    },
+    "docs/stability/evidence/final/fca-stress.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d4cc77316389dfbea0c1e1d0f1d08faea64e5b1a261dc1d9963ac2613c049bd6"
+    },
+    "docs/stability/evidence/final/fca-tests.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "30ffb66733d0838350ea33fa36e5556337bf2a76ca0ea49dc5384a1e5dfe97e0"
+    },
+    "docs/stability/evidence/final/fca-vulnerability-audit.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "cc66102068fe5a405328602ccf03ed7e0134a42ee26544fb0d4e1d399bc52c13"
+    },
+    "docs/stability/evidence/final/gtk-files.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "6eb5ce6998dee12de370bab0153bc39f234d7ecce14efaf5ea523a128c64be9b"
+    },
+    "docs/stability/evidence/final/native-clippy.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d45006197a58d3591511e8220a2f4a8bd039e9a092cd6a66dbadf79d6dc77af2"
+    },
+    "docs/stability/evidence/final/native-debug-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "9d892c5778d0c975f64a671e66ea5a753502353da3addd1dfdf3825225e406a2"
+    },
+    "docs/stability/evidence/final/native-dependency-lock.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "ff6271b80ac0d78830f480765728108886ad901f88c8d5e39fc333b12a598189"
+    },
+    "docs/stability/evidence/final/native-fmt.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/final/native-release-build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "403998d7813def59ff54ef8942a37a928b6a42f3aea6f4660bbd1cdb0d4ebac8"
+    },
+    "docs/stability/evidence/final/native-tests.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "91c7e4e61c75739abfe025de0abd623d8be55de554d8b43f6c05324de6af3bb7"
+    },
+    "docs/stability/evidence/final/native-vulnerability-audit.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "cc66102068fe5a405328602ccf03ed7e0134a42ee26544fb0d4e1d399bc52c13"
+    },
+    "docs/stability/evidence/final/profile.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f3f01f847a65b37039a45526cebbfcd8c8f83a8b566ff06191b2637f785ccd55"
+    },
+    "docs/stability/evidence/final/python-regressions.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "cc733aceb9c8d79c522546e77551e39f3c7ac774f4b8099555a0534eb348b955"
+    },
+    "docs/stability/evidence/final/repository-files.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a473ba314ee643d58773866c927828d99acbc7935feb46bb4d2cfa233b6cc43b"
+    },
+    "docs/stability/evidence/final/results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "1f1a9e23ddcf5909516e37fbf26dfe84025bcbbd2031ddb29e847ac41dbf4598"
+    },
+    "docs/stability/evidence/final/rust-version.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+    },
+    "docs/stability/evidence/final/staged-units.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "5377ff80c6a4f4071f0ceac439aefcc3c7a1761a35d898032f60452a1ff3ba3f"
+    },
+    "docs/stability/evidence/hosted-fca/fault/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ecb1ec205d9a65ed3aca431342c437953e7e6ef20d3452dd1bf5af401976a227"
+    },
+    "docs/stability/evidence/hosted-fca/fault/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ee1a6f499e1e447cf4cd93157f0c7fa34c171d0696aafea04b2358e68c1c662a"
+    },
+    "docs/stability/evidence/hosted-fca/fault/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "e59499c5ab753615fa3045ba7c1054fdf224d3d0d0b6a2d6d567e7c20936daec"
+    },
+    "docs/stability/evidence/hosted-fca/fault/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21a62195ca0a7dc0d430df09391cfc4b81c3c56880ca08ea4373b60379707d05"
+    },
+    "docs/stability/evidence/hosted-fca/jobs.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "97f70fad37200bcacbd21c7c1fb5ab5053b6e9a553aa9b09bc952462c429b729"
+    },
+    "docs/stability/evidence/hosted-fca/performance/performance.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "90a28d4eccf92630a548553a2562561b45361613c580840311ef41877286d554"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-4096-authorities-1.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "8a9e9ab14826126790405f6a42b868b96ab6c065d189fb6b851d294503b708a2"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-4096-authorities-32.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "cb11e4138bf08393e7bb3b796199f708d2dd9c0b7404503bea5f453921767fa3"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-4096-authorities-64.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b0b92e130fb5e71e25cd670353e441046dcf981093d8c996a10c4de5c7841dca"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-4096-authorities-8.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "08834be3cd14aa934627436e356c9bd2c47ef08f61456faa48bbd951efeb377b"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-512-authorities-1.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "99a7159c81aed87ab67206a7e04a9a0912a95b4622d88ef45304ec84ed45a303"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-512-authorities-32.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "7ebdda20392ddbb4d3669d14603377e151dfeb7a03541bfd98214680ca741d10"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-512-authorities-64.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "2a9a87d3746d2a91732e47aa31e79d3c45204db28f6a5f60845f33f1fce18918"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-512-authorities-8.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "c7c32f35fbc8e091ff3a114aadc7131dd0ef8a3cdb5758d0c8ae910d253fdcf1"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-64-authorities-1.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "89a5c0d32134658426b1ee444ca485f3f900a13f863d11f73431da2744e38575"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-64-authorities-32.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "0c2fef5d17c3eff8311a46ec425abb86c5c3ffd4b9908909c2c4c4ffc7cd7676"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-64-authorities-64.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "116c0910879abec9c7b8be43e077d3963c33a4d702d884159da72fc002d287e1"
+    },
+    "docs/stability/evidence/hosted-fca/performance/size-64-authorities-8.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "23298da4051c86237b595df245d96625b19a39fe9f60791769fec1667cf3b607"
+    },
+    "docs/stability/evidence/hosted-fca/probes/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "c5f54a971b29ed41dd08b749f082fe17db3e0a903891329b4aa7a497ab92b5fb"
+    },
+    "docs/stability/evidence/hosted-fca/probes/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a886bc6889041a43f1f3aa7bef11a65551d3a383332c7a3e28ed663597d3bb77"
+    },
+    "docs/stability/evidence/hosted-fca/probes/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "286669d11cfb6306b567b7fc3c37a667d91e579baef97ca7c16cc79c6b33bc9b"
+    },
+    "docs/stability/evidence/hosted-fca/probes/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21c0b0d988a36b17e833d967d89eb8618b93264afa24c9bcebcf253bf4884035"
+    },
+    "docs/stability/evidence/hosted-fca/run.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "2df98647315055aa20b6aa431b9b53ae54ba1587c9e8e930afd1b94dd40dd8d5"
+    },
+    "docs/stability/evidence/hosted-fca/security/security.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "25be5a1a6febfeb78579aa2c0a61517d42f39b8cbb2320912ac66b831d21c6a3"
+    },
+    "docs/stability/evidence/hosted-fca/stress/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "0b476e45ad7ccc1d986f3c1c4a553cefac52a5b34fb17b40cea460653d52419b"
+    },
+    "docs/stability/evidence/hosted-fca/stress/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "926ffe36e070258229c809a2b049b34b25c78d1318c22cc81b12e62583021e5b"
+    },
+    "docs/stability/evidence/hosted-fca/stress/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "5906a9cad6e6956a54fb2bcc8fbae629a4f0179ae40cccc2749b7782a3a8d318"
+    },
+    "docs/stability/evidence/hosted-fca/stress/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a266a2e4732b570c53d3080f9e2ab25b27d58b6c14edadb3c5f3e0845de084d4"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "8777da58a2bb7ae5527d1e8aa3f552b0d5e71498542b4cb9c3b22b54ea9cc388"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/ci-build-environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "2c5730fe5088c64a19bcc4ea9d74c66605da2cc98150fce78fb2c40cd8c315f1"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/ci-builder-packages.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "8830488a1db9cbbfd4872b415c7e94a0732e7a89fbc495091883e7dee6aba038"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/ci-container-digest.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "3f31be3af1be3d212e1dc160084d25f045fc9915b25fba3ae68fb2c1be902b36"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/ci-container.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "127f448551a300a721f1b496bde302203c70dac79de6f56716f9bec9d56e8ece"
+    },
+    "docs/stability/evidence/iso-attempt-1/hyprland/logs/host-inspection.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "b8483ea4a29a5be69051dd67cb666018f4fdfe516d8585830f6b41938387efe2"
+    },
+    "docs/stability/evidence/iso-attempt-1/jobs.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "0ae50db4c9b8be5d26287e9da8e5cc0de65e0b78605484d1747e133b12def2a3"
+    },
+    "docs/stability/evidence/iso-attempt-1/observations.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "9b74b22f1bd40384a6e3ffaf58187e3e503893c7d1702cc6e22b74160e4646ce"
+    },
+    "docs/stability/evidence/iso-attempt-1/run.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6b42674e375bcfd014a17ee08f0cf36ca0d37a5dd3a5283a6d234f46e5c3250b"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d018c0652956eaf479b3857d2834e4f6e0a18dbc8ff1b060fc1139849e2993a2"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/ci-build-environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "c090467cab76dd5c560b0aba77ac1ff8c4bb12701b0f49d3f4a6a4a4baa058ed"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/ci-builder-packages.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "8830488a1db9cbbfd4872b415c7e94a0732e7a89fbc495091883e7dee6aba038"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/ci-container-digest.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "3f31be3af1be3d212e1dc160084d25f045fc9915b25fba3ae68fb2c1be902b36"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/ci-container.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "8e2c3689bb9d36edada8ae0133244522d8b89fdc34f9dfee36351152f5709ebf"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/logs/host-inspection.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "39292ab8dddedf1fed47523d8a37c0410c136180a8be7453211c36b96b471c79"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/work/vm/uefi-e6n73a6e/evidence.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ccee018e704a05649447eea3bcdebd8651383e9115fa8911ba48ff3d38b24338"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/work/vm/uefi-e6n73a6e/qemu.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/work/vm/uefi-e6n73a6e/screen.ppm": {
+      "mode": "raw",
+      "sha256": "88a7eb1273a95b19151aff99eaaa261ee1d00f9751006b9dd47849a8aabaf140"
+    },
+    "docs/stability/evidence/iso-attempt-1/sway/work/vm/uefi-e6n73a6e/serial.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "a96540f55fd65d0204cba55f19f45d07b1b5c2952ecadd963c60460d0411b94d"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/build.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "45d60707e8e6e57ea4d10a32968f80b13f18ed7f7fa7adba7379bc5ef4bb57da"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/ci-build-environment.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "5a6c5cf69ba5858b0312c2b6a7d9fdbfe62261e334f424f4f8f60e9deefecbed"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/ci-builder-packages.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "8830488a1db9cbbfd4872b415c7e94a0732e7a89fbc495091883e7dee6aba038"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/ci-container-digest.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "3f31be3af1be3d212e1dc160084d25f045fc9915b25fba3ae68fb2c1be902b36"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/ci-container.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "bb5ac230c91bcccea8ebb66443719d830e63592d8a8e651568ab357058fe42cc"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/logs/host-inspection.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "fb04b8ee7b57eab786272205d0ef33313e0f0904d81abb932ac21ee8bfff2bd8"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/work/vm/uefi-4hk9_ajv/evidence.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "55a93864f00dd5fcaf846af326e3f1e6f57e497779532b4ad72609c050df19cd"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/work/vm/uefi-4hk9_ajv/qemu.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/work/vm/uefi-4hk9_ajv/screen.ppm": {
+      "mode": "raw",
+      "sha256": "e7c74e91f1d62f59b794b80f3a54de064f584856b7197fef7642a30ecffdc331"
+    },
+    "docs/stability/evidence/iso-attempt-2/hyprland/work/vm/uefi-4hk9_ajv/serial.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "163f43e36a228feab045363743c2cbbbc37b2277b72b4c46dde9ac472b135c1f"
+    },
+    "docs/stability/evidence/iso-attempt-2/jobs.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "59fa71930aaadad13e1560de3f2df32e298100c7f8919a57ce063a2342ac5654"
+    },
+    "docs/stability/evidence/iso-attempt-2/run.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "b23aeee4bf86d6a3f823fe649d1d2d1f82b39b4d2c57387804bd78ed3f988f4e"
+    },
+    "docs/stability/evidence/iso-attempt-2/source-job.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "fba8c502d74d6160d9a99fbcf04b1db1636dac5dc82c9feddad6a45f579b0a20"
+    },
+    "docs/stability/evidence/iso-payload-after.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "c2a590ffb369810651cecf9f1b30594356969f0b14f2f1afc922be3693cd8423"
+    },
+    "docs/stability/evidence/linux-fca-control/boundaries/security.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ecdd6638593e381d2d6a0499116bcf6bdf39bc444232aa6382495d2ca6dec4e0"
+    },
+    "docs/stability/evidence/linux-fca-control/boundaries.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "45367d1777b98d3d6cd11657219f3dfae3bdf59e93a80d2c89b88106261ef2e8"
+    },
+    "docs/stability/evidence/linux-fca-control/deterministic/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ea338a04b31b3c4995804b842377bc620bb36d9e04e49bd53f102a697ee9dd06"
+    },
+    "docs/stability/evidence/linux-fca-control/deterministic/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "40f4a8133d3494b4eb4c2743893148cf3f15e4ef1e3f2bc40b9ae3a3fad2e105"
+    },
+    "docs/stability/evidence/linux-fca-control/deterministic/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "0d56a331a28de4521c81afe5625d4598375703b548da7a230e95752a28d4bacd"
+    },
+    "docs/stability/evidence/linux-fca-control/deterministic/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21a62195ca0a7dc0d430df09391cfc4b81c3c56880ca08ea4373b60379707d05"
+    },
+    "docs/stability/evidence/linux-fca-control/deterministic.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "b5711fa42620af822c873e6c23e68916cbdee0b3f7e241eef2893635b9d47fda"
+    },
+    "docs/stability/evidence/linux-fca-control/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ed8204a814d44a648445f4f5d144a2935e95142646cc0a2e4b8a439cccdae93b"
+    },
+    "docs/stability/evidence/linux-fca-control/process.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "2be2e52a57f64e54e7526a4ff6648ea1b205af05b504ccc608505bfdc8a367d8"
+    },
+    "docs/stability/evidence/linux-fca-control/results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "26261e1811ced5fed24af0126c3af554e69bf9e82d220997f5ef4983bd1b2af0"
+    },
+    "docs/stability/evidence/linux-fca-control/security/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4582f68db097aa77acc0d64ec274f5bf92577df45e7cf078fd639f43a2042f94"
+    },
+    "docs/stability/evidence/linux-fca-control/security/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "83a6b15b4115e9deb51209ac8ec247612af763a9b1d68ea648a0eb780ba34b58"
+    },
+    "docs/stability/evidence/linux-fca-control/security/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "592943c09517a2cca6f0cd0ffef722cfa0bebd7541c65860adbfe0bdf461d100"
+    },
+    "docs/stability/evidence/linux-fca-control/security/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "21c0b0d988a36b17e833d967d89eb8618b93264afa24c9bcebcf253bf4884035"
+    },
+    "docs/stability/evidence/linux-fca-control/security.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "95b96aba5ff5b33bd475ba1a0e53ddaa6a1b56dcc72cce0a45b12e9c738cc1b8"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/archive-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "4da9dd39c9d610bede220f6f045b57c11c1d7c72d892008e8994231a6060f3dc"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/plan.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "875d051ab572a87c2c8505a7aa7243de56208d25aca653d1892765b2defdea21"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/run-000417-seed-16222025457264195268.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a2d11ff2adbc51c84472b240e0cb9e5fe7dbfb919ccb29f7bade367ea3bd1145"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/run-000634-seed-6622925276880692738.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "9a82e78159b42a1debf97a6fc1a3ef00da1eeeac4a1ef55521ab9ee118d8713c"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/run-000973-seed-16985103156031036425.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "3593c66d740a0c9f86726b9f43828961f783b117f689af7dcf5772d71a6236a6"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/runs.tar.gz": {
+      "mode": "raw",
+      "sha256": "40f287934203aca2b8b0fe64f730b3a96c22712ae0077307092f300ff8deb08e"
+    },
+    "docs/stability/evidence/linux-fca-control/stress/summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "74e96af1f439076544cde34dcebb87e58018180b1f87fbbd6ca26b59706c89bc"
+    },
+    "docs/stability/evidence/linux-fca-control/stress.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "c5f4cbfd5550799a1159bac755c6ffdbc26dfc866f9115ef52841665be419db8"
+    },
+    "docs/stability/evidence/regressions-after.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "ef671e24fb0e57e088408093688d853cfeac48fedac8067fb55769c1911d73ff"
+    },
+    "docs/stability/evidence/regressions-before-tests.py.txt": {
+      "mode": "crlf-to-lf",
+      "sha256": "2e488c0fe634cb5f5458d2ae3eaea112c8107133821ceae0e9a2950341981381"
+    },
+    "docs/stability/evidence/regressions-before.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "311e7a4bc8f17e4a3eedb3c6146fb698db6c1c3ddbdea855eb89ed58964b7380"
+    },
+    "docs/stability/evidence/regressions-before.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "a1ae42f0d3e435d55ef83be99012ba09fb71dbb90a39491ae8787a74a6d150cf"
+    },
+    "docs/stability/evidence/regressions-final.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "d68b8e8b7bce41379c09f9fb5034f47f67f80a7789ed290f664c6e74be6f4ec2"
+    },
+    "docs/stability/evidence/release-preservation.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "64eb139fbc599ef654a8662ac65bfa429e9485c404a1df118d1fa05bbb39738f"
+    },
+    "docs/stability/evidence/source-index.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "1dacd7650bf2b94c298e5d0f078ce2b226f21bf7905a254a76bce3847c0e4ad2"
+    },
+    "docs/stability/evidence/source-snapshot.tar.gz": {
+      "mode": "raw",
+      "sha256": "31386a0ed4211865b1045681cd21cdca0d13fdb9d49baa4380b1aab0584f60bd"
+    },
+    "docs/stability/evidence/stability-summary.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "ac724af268d240c24a5195d4aea3414288cdb2a8434bcad74fddc051aa9b6887"
+    },
+    "docs/stability/evidence/supplemental/closure-docs.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "69bc92b5de8a3109e57b0663c56d5c73db27754dbfb781202d1e917a44716b24"
+    },
+    "docs/stability/evidence/supplemental/closure-syntax.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f217af7d3a6ef3c511f0c243a8c04f2618e9ca4e470663db5669747400682f49"
+    },
+    "docs/stability/evidence/supplemental/closure-verifier.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "e9b66de399650111d86b8619574433a16bdf77336e98c1c80784e44dbf47cba1"
+    },
+    "docs/stability/evidence/supplemental/evidence-verification-final.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "077e2f31a4d2c28fe5561e1ba6a6b886905e1c6af87b6566612f82b7840f6c89"
+    },
+    "docs/stability/evidence/supplemental/evidence-verification.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "f1550e43f0dcb3440587674622dec0874cfecabe2fd6f67fa525ab243841901e"
+    },
+    "docs/stability/evidence/supplemental/fca-boundaries/security.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "6cde443bed3efde3d370794629f7e90407de5a74e69afebf29872a8cedef7122"
+    },
+    "docs/stability/evidence/supplemental/fca-boundaries.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "45367d1777b98d3d6cd11657219f3dfae3bdf59e93a80d2c89b88106261ef2e8"
+    },
+    "docs/stability/evidence/supplemental/final-source-syntax.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "ad6a375342eecffd86ec6fae2a1d2ed3919e5dfdb71c0f17fac507687d88016e"
+    },
+    "docs/stability/evidence/supplemental/live-telemetry.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "055c27a3f31221af524acdcf6cadec901523afd25069c54b5672125943914baa"
+    },
+    "docs/stability/evidence/supplemental/post-payload-python.log": {
+      "mode": "crlf-to-lf",
+      "sha256": "63bb58f2bb375046abfe96ef19a85a270c10b302eb52fa27912f88b45774068a"
+    },
+    "docs/stability/evidence/supplemental/results.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "a69d0fa2cca38cc3b7c5fa69b5255d3cafda7818483ea11efb354a5d46b16692"
+    },
+    "docs/stability/failure-injection.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "d5dbeda2ef2b1d9a62fe40c97243e5aefc1d99606c13c3a8ac672f70966b8d50"
+    },
+    "docs/stability/fca-stability.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "a2e2d09fd2d66b3f498a855661941b1ce5712817d4f3e0c373befa33613d51f8"
+    },
+    "docs/stability/final-stability-report.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "5136d80003b2ab1664a4e2c8fd760a7454c0b184e9e9a4aa46546d73ba9b4eb0"
+    },
+    "docs/stability/hardware-compatibility.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "b58ce98c4bfb8de6d8c9626bf5a5c038e0686ff3e4f206162a24739638f121af"
+    },
+    "docs/stability/hardware-target.json": {
+      "mode": "crlf-to-lf",
+      "sha256": "7753a13c72ec7792ac78b2404200ff6cef46933852d7ff55a4358ced29a74a7f"
+    },
+    "docs/stability/hp-15-bs-live-test.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "a626e5ea795567df4a4d4451225dec0450e0ce6357add61792e6c4effbe570b3"
+    },
+    "docs/stability/performance-baseline.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "008d6a0eda3adeb44752f085e35514cdd04b700b21d8cc1618c2b57c0bcec8ae"
+    },
+    "docs/stability/security-review.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "fc65f48e00d43a274b093624e428a5d374ba7f35b7bf98ebdbe04f1dea4c4fb3"
+    },
+    "docs/stability/service-reliability.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "7051ae053baf7110f03cb09d3ee248607c58b7e31ca6f33dc46438ad986c289a"
+    },
+    "docs/stability/stability-matrix.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "9d8b58ccfc81049f6ecc50a4ef488163a2d035f326f67c51d903aead360be3ac"
+    },
+    "docs/stability/system-audit.md": {
+      "mode": "crlf-to-lf",
+      "sha256": "45503db09f65480578a5fa35d15c4534f9b40b79cfb994d5b0212bba8054d922"
+    }
+  },
+  "attestation": "Local unsigned checksums; no independent peer-review claim."
+}

@@ -1,0 +1,63 @@
+[
+  {
+    "name": "process",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/tests/process_tests.py"
+    ],
+    "exit_code": 0,
+    "seconds": 4.232799359000637
+  },
+  {
+    "name": "deterministic",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/lab.py",
+      "deterministic",
+      "--include-expiry",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/deterministic"
+    ],
+    "exit_code": 0,
+    "seconds": 36.22292015100538
+  },
+  {
+    "name": "security",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/lab.py",
+      "security",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/security"
+    ],
+    "exit_code": 0,
+    "seconds": 4.339191286999267
+  },
+  {
+    "name": "boundaries",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/security.py",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/boundaries"
+    ],
+    "exit_code": 0,
+    "seconds": 2.176075249008136
+  },
+  {
+    "name": "stress",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/lab.py",
+      "stress",
+      "--runs",
+      "1000",
+      "--seed",
+      "2090",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/stress"
+    ],
+    "exit_code": 1,
+    "seconds": 430.3909104330087
+  }
+]

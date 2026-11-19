@@ -1,0 +1,7 @@
+test_python_sources_parse (test_source_syntax.SourceSyntaxTests) ... ok
+test_session_and_build_scripts_parse (test_source_syntax.SourceSyntaxTests) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.661s
+
+OK

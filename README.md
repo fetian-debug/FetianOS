@@ -151,7 +151,13 @@ Click **APPS** for icon-based application search; right-click it for Fetian Apps
 
 ## Hardware support
 
-FetianOS uses Linux kernel drivers, trusted firmware, and standard services instead of random driver installers. The validation laptop is an HP Laptop 15-bs0xx with Intel i5-7200U, Intel HD 620 (`i915`), AMD Radeon R5 M330/Radeon 520 (`radeon`), Intel AC 3168 Wi-Fi (`iwlwifi`), Realtek Ethernet (`r8169`), Intel/Realtek audio, Synaptics touchpad, UVC webcam support, ACPI battery, and HP WMI controls.
+FetianOS uses distribution kernel drivers, firmware and standard services. The
+user's current test target is HP 15-bs0xx with Intel i5-7200U, Intel HD Graphics
+620 and AMD Radeon; AMD's exact PCI model/driver, RAM and storage remain to be
+verified. Device options vary within this family. These are target specifications,
+not a physical hardware certification. Follow the
+[HP live-USB test plan](docs/stability/hp-15-bs-live-test.md) before relying on it
+for daily work or changing graphics configuration.
 
 The profile includes `linux-firmware`, `hwdata`, `pciutils`, `usbutils`, `fwupd`, `lm_sensors`, `power-profiles-daemon`, and `udisks2`.
 

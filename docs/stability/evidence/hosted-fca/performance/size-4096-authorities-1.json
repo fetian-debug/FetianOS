@@ -1,0 +1,223 @@
+{
+  "items": 4096,
+  "authorities": 1,
+  "chunk_size": 32,
+  "execution_concurrency": 1,
+  "authority_population_measured": true,
+  "samples": {
+    "authority_creation_us": [
+      7885.552
+    ],
+    "lease_acquisition_us": [
+      416,
+      320
+    ],
+    "gated_launch_rpc_us": [
+      26824.523
+    ],
+    "effect_checkpoint_commit_us": [
+      1042,
+      1051
+    ],
+    "checkpoint_barrier_rpc_us": [
+      9786.331
+    ],
+    "handoff_rpc_us": [
+      11133.365
+    ],
+    "restart_wall_us": [
+      7504.878,
+      7303.353,
+      7391.146,
+      7521.843,
+      7334.851,
+      7350.023,
+      7432.488,
+      24366.408,
+      7724.99,
+      7596.385
+    ],
+    "store_verification_recovery_us": [
+      1602,
+      1493,
+      1541,
+      1708,
+      1519,
+      1530,
+      1641,
+      18549,
+      1694,
+      1718
+    ],
+    "direct_python_parse_sum_us": [
+      251.009,
+      261.284,
+      244.83,
+      244.569,
+      245.16,
+      245.401,
+      244.88,
+      244.008,
+      258.16,
+      243.969,
+      243.628,
+      244.178,
+      259.482,
+      243.628,
+      244.97,
+      243.608,
+      267.394,
+      243.878,
+      244.909,
+      261.155,
+      245.24,
+      243.969,
+      244.028,
+      258.26,
+      244.089,
+      243.317,
+      243.087,
+      258.1,
+      244.299,
+      244.068
+    ]
+  },
+  "distributions": {
+    "authority_creation_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 7885.552,
+      "p95": 7885.552,
+      "p99": 7885.552,
+      "minimum": 7885.552,
+      "maximum": 7885.552
+    },
+    "lease_acquisition_us": {
+      "measured": true,
+      "samples": 2,
+      "method": "nearest rank",
+      "p50": 320,
+      "p95": 416,
+      "p99": 416,
+      "minimum": 320,
+      "maximum": 416
+    },
+    "gated_launch_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 26824.523,
+      "p95": 26824.523,
+      "p99": 26824.523,
+      "minimum": 26824.523,
+      "maximum": 26824.523
+    },
+    "effect_checkpoint_commit_us": {
+      "measured": true,
+      "samples": 2,
+      "method": "nearest rank",
+      "p50": 1042,
+      "p95": 1051,
+      "p99": 1051,
+      "minimum": 1042,
+      "maximum": 1051
+    },
+    "checkpoint_barrier_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 9786.331,
+      "p95": 9786.331,
+      "p99": 9786.331,
+      "minimum": 9786.331,
+      "maximum": 9786.331
+    },
+    "handoff_rpc_us": {
+      "measured": true,
+      "samples": 1,
+      "method": "nearest rank",
+      "p50": 11133.365,
+      "p95": 11133.365,
+      "p99": 11133.365,
+      "minimum": 11133.365,
+      "maximum": 11133.365
+    },
+    "restart_wall_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 7432.488,
+      "p95": 24366.408,
+      "p99": 24366.408,
+      "minimum": 7303.353,
+      "maximum": 24366.408
+    },
+    "store_verification_recovery_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 1602,
+      "p95": 18549,
+      "p99": 18549,
+      "minimum": 1493,
+      "maximum": 18549
+    },
+    "direct_python_parse_sum_us": {
+      "measured": true,
+      "samples": 30,
+      "method": "nearest rank",
+      "p50": 244.569,
+      "p95": 261.284,
+      "p99": 267.394,
+      "minimum": 243.087,
+      "maximum": 267.394
+    }
+  },
+  "storage_bytes": {
+    "authorities.sqlite3": 77824,
+    "authorities.sqlite3-shm": 32768,
+    "authorities.sqlite3-wal": 296672
+  },
+  "sqlite_allocated_bytes": 98304,
+  "journal_events_by_authority": {
+    "ca_fd7a1596d7a10781ed5dbd2c6a484c8f": 89
+  },
+  "managed_effects": 2,
+  "broker_before": {
+    "rss_kib": 5120,
+    "cpu_seconds": 0.0
+  },
+  "broker_after": {
+    "rss_kib": 5644,
+    "cpu_seconds": 0.0
+  },
+  "broker_cpu_seconds_during_work": 0.0,
+  "rust_worker_rss_kib": {
+    "measured": true,
+    "samples": 1,
+    "method": "nearest rank",
+    "p50": 2136,
+    "p95": 2136,
+    "p99": 2136,
+    "minimum": 2136,
+    "maximum": 2136
+  },
+  "resources": {
+    "budget": {
+      "cpu_quota": 1,
+      "memory_bytes": 134217728,
+      "pids_max": 8,
+      "strict": false
+    },
+    "cpu": "unavailable",
+    "gpu": "unsupported",
+    "kernel_enforced": false,
+    "memory": "unavailable",
+    "mode": "advisory",
+    "pids": "unavailable",
+    "reason": "DELEGATION_UNAVAILABLE"
+  },
+  "resource_enforcement_overhead": "not isolated; unavailable when no delegated cgroup",
+  "pending_checkpoint_verified_each_restart": true
+}

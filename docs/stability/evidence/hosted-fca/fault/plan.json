@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "master_seed": 2090,
+  "environment": {
+    "recorded_utc": "2026-11-19T10:25:57Z",
+    "kernel": "7.0.0-1017-azure",
+    "architecture": "x86_64",
+    "python": "3.12.3",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "logical_cpus": 4,
+    "memory": "MemTotal:       16367524 kB",
+    "sqlite_python": "3.45.1",
+    "source_revision": "4b41effbc9451c05aac19ea52c346e52df414a1c",
+    "rust_source_sha256": "812e9839d58f6b9860e5499d3600950c231d6d076310c12a6077f72924f3d2e9",
+    "cargo_lock_sha256": "9a48c394d796e0566a8c82d8eacb71c746cd344c74edf9dded68b9d227afcfd0",
+    "harness_sha256": {
+      "__init__.py": "bacea04ce47bf7b6ae5e25c52b210c9a00ec8c68ca82f07cb2b96692289d0758",
+      "common.py": "b14d11653b4756a9e7dabd5c994c415bdb5d26e3e5dad095dec397acde19980a",
+      "lab.py": "e8c19d24afc84db5e6eae467abf74cc664beaf909941193b1443ba89dbc5ae3a",
+      "performance.py": "1fcd0a14197d21001974bb6d209c083c7fc913362f90a5e745edd9b29605a0b9",
+      "pressure.py": "2a58791e44b5f3c053f0a92e164b3f4538cd5825b70ea9b4cfa53342ba39899c",
+      "security.py": "8d3cf664e2a9ccd0d625d59e37359b078d7b9995ad5a4fd86b92dc99a9e3cc3b",
+      "test_evidence.py": "f58fcb194b489600dee66bf3412eab55d83707dfbefeb5fd3f70d3b23396d64d"
+    },
+    "binaries": {
+      "fetian-authorityd": "195ed8aab7eca683be5e56bc97a3b0630eeffa6f23a1358cae6e9cbf30619f31",
+      "fetian-authority": "41ce5ebb6b04747b9aa4fb37b489d36191da55969db849178b35d0cefdc9e37b",
+      "fetian-executor-rust": "fd619f2d9a2fef62d9c4debe235b96301887f1a79a3f71b9e27efa9014605501",
+      "fetian-fca-launcher": "ad854e0be18798287398791ad857125a30ae79fdc044ab831743dbd5812e0c87"
+    },
+    "runtime_state": "private temporary Linux directories; never the user's real FCA store"
+  },
+  "subreaper_enabled": true,
+  "cases": [
+    {
+      "scenario": "executor-sigkill",
+      "seed": 2090,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 3,
+      "executor": "python",
+      "jitter_us": 1119
+    },
+    {
+      "scenario": "executor-before-commit",
+      "seed": 2091,
+      "items": 128,
+      "chunk": 32,
+      "barrier": 1,
+      "executor": "rust",
+      "jitter_us": 179
+    },
+    {
+      "scenario": "executor-after-commit",
+      "seed": 2092,
+      "items": 512,
+      "chunk": 64,
+      "barrier": 6,
+      "executor": "python",
+      "jitter_us": 793
+    },
+    {
+      "scenario": "broker-active",
+      "seed": 2093,
+      "items": 256,
+      "chunk": 32,
+      "barrier": 3,
+      "executor": "rust",
+      "jitter_us": 1753
+    },
+    {
+      "scenario": "broker-before-commit",
+      "seed": 2094,
+      "items": 64,
+      "chunk": 16,
+      "barrier": 1,
+      "executor": "python",
+      "jitter_us": 1821
+    },
+    {
+      "scenario": "broker-after-commit",
+      "seed": 2095,
+      "items": 256,
+      "chunk": 64,
+      "barrier": 2,
+      "executor": "rust",
+      "jitter_us": 438
+    },
+    {
+      "scenario": "journal-interrupt",
+      "seed": 2096,
+      "items": 32,
+      "chunk": 16,
+      "barrier": 1,
+      "executor": "python",
+      "jitter_us": 1672
+    },
+    {
+      "scenario": "pending-restart",
+      "seed": 2097,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 7,
+      "executor": "python",
+      "jitter_us": 190
+    },
+    {
+      "scenario": "sqlite-reopen",
+      "seed": 2098,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 5,
+      "executor": "rust",
+      "jitter_us": 238
+    },
+    {
+      "scenario": "stale-commit",
+      "seed": 2099,
+      "items": 256,
+      "chunk": 32,
+      "barrier": 7,
+      "executor": "rust",
+      "jitter_us": 831
+    },
+    {
+      "scenario": "competing-executors",
+      "seed": 2100,
+      "items": 128,
+      "chunk": 32,
+      "barrier": 1,
+      "executor": "python",
+      "jitter_us": 183
+    },
+    {
+      "scenario": "duplicate-start",
+      "seed": 2101,
+      "items": 512,
+      "chunk": 64,
+      "barrier": 3,
+      "executor": "rust",
+      "jitter_us": 104
+    },
+    {
+      "scenario": "duplicate-effect",
+      "seed": 2102,
+      "items": 256,
+      "chunk": 32,
+      "barrier": 5,
+      "executor": "rust",
+      "jitter_us": 958
+    },
+    {
+      "scenario": "conflicting-effect",
+      "seed": 2103,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 3,
+      "executor": "rust",
+      "jitter_us": 1532
+    },
+    {
+      "scenario": "checkpoint-corrupt",
+      "seed": 2104,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 2,
+      "executor": "python",
+      "jitter_us": 1532
+    },
+    {
+      "scenario": "checkpoint-incomplete",
+      "seed": 2105,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 4,
+      "executor": "rust",
+      "jitter_us": 885
+    },
+    {
+      "scenario": "journal-corrupt",
+      "seed": 2106,
+      "items": 256,
+      "chunk": 32,
+      "barrier": 5,
+      "executor": "rust",
+      "jitter_us": 687
+    },
+    {
+      "scenario": "python-to-rust",
+      "seed": 2107,
+      "items": 128,
+      "chunk": 16,
+      "barrier": 2,
+      "executor": "python",
+      "jitter_us": 782
+    },
+    {
+      "scenario": "rust-to-python",
+      "seed": 2108,
+      "items": 64,
+      "chunk": 32,
+      "barrier": 1,
+      "executor": "rust",
+      "jitter_us": 474
+    },
+    {
+      "scenario": "suspend-resume",
+      "seed": 2109,
+      "items": 256,
+      "chunk": 32,
+      "barrier": 4,
+      "executor": "python",
+      "jitter_us": 1382
+    },
+    {
+      "scenario": "terminal-cancel",
+      "seed": 2110,
+      "items": 32,
+      "chunk": 16,
+      "barrier": 1,
+      "executor": "python",
+      "jitter_us": 340
+    },
+    {
+      "scenario": "handoff-forbidden",
+      "seed": 2111,
+      "items": 128,
+      "chunk": 32,
+      "barrier": 2,
+      "executor": "python",
+      "jitter_us": 1918
+    },
+    {
+      "scenario": "lease-expiry",
+      "seed": 2112,
+      "items": 64,
+      "chunk": 16,
+      "barrier": 2,
+      "executor": "python",
+      "jitter_us": 1586
+    }
+  ]
+}

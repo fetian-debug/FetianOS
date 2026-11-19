@@ -28,4 +28,10 @@ Credentials, account guards, SDDM ordering and timeouts are unchanged.
 
 The old preview's [UEFI evidence](../verification-2026-11-18-uefi.md) remains valid
 only for its identified image. This branch has not been built into or booted as an
-ISO locally: mkarchiso, Docker and QEMU are absent. No new boot acceptance claimed.
+ISO locally: mkarchiso, Docker and QEMU are absent. Hosted run 44505284369 did
+build and boot the Sway candidate from source 4b41eff into Linux userspace and
+reported the live account ready. Its recorded checksum/evidence are in the final
+report. The first Hyprland extraction failed before boot. After STAB-007,
+hosted run 44540057276 at e155b75 also passed the Hyprland image checks and
+actual UEFI/live-account probe. Its checksum is in the final report. Graphical,
+physical-device, installed-system and Secure Boot acceptance remain open.

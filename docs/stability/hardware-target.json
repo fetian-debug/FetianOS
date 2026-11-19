@@ -1,0 +1,20 @@
+{
+  "evidence_kind": "user-reported target, not physical verification",
+  "manufacturer": "HP",
+  "product_family": "15-bs0xx",
+  "cpu": "Intel Core i5-7200U",
+  "architecture": "x86-64",
+  "cores": 2,
+  "threads": 4,
+  "integrated_gpu": "Intel HD Graphics 620",
+  "discrete_gpu_vendor": "AMD",
+  "discrete_gpu_model": null,
+  "discrete_gpu_pci_id": null,
+  "ram_bytes": null,
+  "storage": null,
+  "uefi_support_reported": true,
+  "hardware_verified": false,
+  "physical_boot_verified": false,
+  "installation_verified": false,
+  "initial_session": "FETIANOS — Sway recovery"
+}

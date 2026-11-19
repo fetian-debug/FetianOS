@@ -1,0 +1,22 @@
+[
+  {
+    "name": "fca-boundaries",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/security.py",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/supplemental/fca-boundaries"
+    ],
+    "exit_code": 0,
+    "seconds": 2.375291673000902
+  },
+  {
+    "name": "live-telemetry",
+    "command": [
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/target/release/fetian-health-rs",
+      "--json"
+    ],
+    "exit_code": 0,
+    "seconds": 0.2744705530058127
+  }
+]

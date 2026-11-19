@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "mode": "security",
+  "master_seed": 2090,
+  "completed": 15,
+  "expectations_met": 15,
+  "counts": {
+    "expected_rejection": 15
+  },
+  "failures": [],
+  "recovered": 0,
+  "rejected": 15,
+  "safely_unrecoverable": 0,
+  "unexpected_failures": 0,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

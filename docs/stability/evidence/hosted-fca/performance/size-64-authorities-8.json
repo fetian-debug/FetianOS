@@ -1,0 +1,286 @@
+{
+  "items": 64,
+  "authorities": 8,
+  "chunk_size": 32,
+  "execution_concurrency": 1,
+  "authority_population_measured": true,
+  "samples": {
+    "authority_creation_us": [
+      11582.693,
+      11226.745,
+      11149.739,
+      10931.349,
+      10859.23,
+      12036.397,
+      10798.98,
+      10812.831
+    ],
+    "lease_acquisition_us": [
+      564,
+      174,
+      494,
+      161,
+      550,
+      156,
+      552,
+      141,
+      556,
+      423,
+      3924,
+      144,
+      565,
+      166,
+      526,
+      182
+    ],
+    "gated_launch_rpc_us": [
+      8552.704,
+      7449.965,
+      7754.405,
+      7438.107,
+      7557.938,
+      10894.765,
+      7419.749,
+      7386.248
+    ],
+    "effect_checkpoint_commit_us": [
+      496,
+      4438,
+      1106,
+      642,
+      465,
+      5060,
+      425,
+      3083,
+      475,
+      629,
+      463,
+      579,
+      399,
+      2348,
+      470,
+      544
+    ],
+    "checkpoint_barrier_rpc_us": [
+      5300.58,
+      5396.776,
+      9721.554,
+      5217.135,
+      3916.281,
+      5235.322,
+      5320.13,
+      17256.737
+    ],
+    "handoff_rpc_us": [
+      11308.799,
+      11971.069,
+      11873.571,
+      10838.339,
+      11089.839,
+      11015.968,
+      11178.783,
+      11390.553
+    ],
+    "restart_wall_us": [
+      9596.224,
+      9550.616,
+      9587.882,
+      9631.838,
+      10252.766,
+      10257.062,
+      9495.643,
+      24020.366,
+      9774.353,
+      9610.556
+    ],
+    "store_verification_recovery_us": [
+      3316,
+      3281,
+      3333,
+      3357,
+      3955,
+      3948,
+      3225,
+      17786,
+      3512,
+      3356
+    ],
+    "direct_python_parse_sum_us": [
+      7.712,
+      5.358,
+      4.547,
+      4.356,
+      4.296,
+      4.257,
+      4.296,
+      4.287,
+      4.296,
+      4.377,
+      4.226,
+      4.327,
+      4.277,
+      4.327,
+      4.336,
+      4.277,
+      4.306,
+      4.377,
+      4.316,
+      4.287,
+      4.256,
+      4.277,
+      4.307,
+      4.236,
+      4.277,
+      4.386,
+      4.206,
+      4.387,
+      4.267,
+      4.236
+    ]
+  },
+  "distributions": {
+    "authority_creation_us": {
+      "measured": true,
+      "samples": 8,
+      "method": "nearest rank",
+      "p50": 10931.349,
+      "p95": 12036.397,
+      "p99": 12036.397,
+      "minimum": 10798.98,
+      "maximum": 12036.397
+    },
+    "lease_acquisition_us": {
+      "measured": true,
+      "samples": 16,
+      "method": "nearest rank",
+      "p50": 423,
+      "p95": 3924,
+      "p99": 3924,
+      "minimum": 141,
+      "maximum": 3924
+    },
+    "gated_launch_rpc_us": {
+      "measured": true,
+      "samples": 8,
+      "method": "nearest rank",
+      "p50": 7449.965,
+      "p95": 10894.765,
+      "p99": 10894.765,
+      "minimum": 7386.248,
+      "maximum": 10894.765
+    },
+    "effect_checkpoint_commit_us": {
+      "measured": true,
+      "samples": 16,
+      "method": "nearest rank",
+      "p50": 544,
+      "p95": 5060,
+      "p99": 5060,
+      "minimum": 399,
+      "maximum": 5060
+    },
+    "checkpoint_barrier_rpc_us": {
+      "measured": true,
+      "samples": 8,
+      "method": "nearest rank",
+      "p50": 5300.58,
+      "p95": 17256.737,
+      "p99": 17256.737,
+      "minimum": 3916.281,
+      "maximum": 17256.737
+    },
+    "handoff_rpc_us": {
+      "measured": true,
+      "samples": 8,
+      "method": "nearest rank",
+      "p50": 11178.783,
+      "p95": 11971.069,
+      "p99": 11971.069,
+      "minimum": 10838.339,
+      "maximum": 11971.069
+    },
+    "restart_wall_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 9610.556,
+      "p95": 24020.366,
+      "p99": 24020.366,
+      "minimum": 9495.643,
+      "maximum": 24020.366
+    },
+    "store_verification_recovery_us": {
+      "measured": true,
+      "samples": 10,
+      "method": "nearest rank",
+      "p50": 3356,
+      "p95": 17786,
+      "p99": 17786,
+      "minimum": 3225,
+      "maximum": 17786
+    },
+    "direct_python_parse_sum_us": {
+      "measured": true,
+      "samples": 30,
+      "method": "nearest rank",
+      "p50": 4.296,
+      "p95": 5.358,
+      "p99": 7.712,
+      "minimum": 4.206,
+      "maximum": 7.712
+    }
+  },
+  "storage_bytes": {
+    "authorities.sqlite3": 221184,
+    "authorities.sqlite3-shm": 32768,
+    "authorities.sqlite3-wal": 284312
+  },
+  "sqlite_allocated_bytes": 229376,
+  "journal_events_by_authority": {
+    "ca_0a0f668fcbda40109d4ccff9260a909f": 36,
+    "ca_282044cec6bb136670b049a90aa3f2f0": 36,
+    "ca_4ba03bb77c25035eb65c438491f3c579": 36,
+    "ca_58c7167acb7f10b75824268ca42369ea": 36,
+    "ca_657081cda98d1d924c328b7c300d229f": 36,
+    "ca_8aa46ac489b4e00392ee82e983842124": 36,
+    "ca_bb1160667bf7752d7c780ded5b47a154": 36,
+    "ca_e186a59b1d1a537a1b5624970493e28f": 89
+  },
+  "managed_effects": 16,
+  "broker_before": {
+    "rss_kib": 5184,
+    "cpu_seconds": 0.0
+  },
+  "broker_after": {
+    "rss_kib": 5788,
+    "cpu_seconds": 0.07
+  },
+  "broker_cpu_seconds_during_work": 0.07,
+  "rust_worker_rss_kib": {
+    "measured": true,
+    "samples": 8,
+    "method": "nearest rank",
+    "p50": 2136,
+    "p95": 2156,
+    "p99": 2156,
+    "minimum": 2080,
+    "maximum": 2156
+  },
+  "resources": {
+    "budget": {
+      "cpu_quota": 1,
+      "memory_bytes": 134217728,
+      "pids_max": 8,
+      "strict": false
+    },
+    "cpu": "unavailable",
+    "gpu": "unsupported",
+    "kernel_enforced": false,
+    "memory": "unavailable",
+    "mode": "advisory",
+    "pids": "unavailable",
+    "reason": "DELEGATION_UNAVAILABLE"
+  },
+  "resource_enforcement_overhead": "not isolated; unavailable when no delegated cgroup",
+  "pending_checkpoint_verified_each_restart": true
+}

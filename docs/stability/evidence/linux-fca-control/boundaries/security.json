@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "environment": {
+    "recorded_utc": "2026-11-19T10:17:51Z",
+    "kernel": "6.18.33.2-microsoft-standard-WSL2",
+    "architecture": "x86_64",
+    "python": "3.10.12",
+    "cpu": "Intel(R) Core(TM) i5-9500 CPU @ 3.00GHz",
+    "logical_cpus": 6,
+    "memory": "MemTotal:        8020092 kB",
+    "sqlite_python": "3.37.2",
+    "source_revision": "06aa67fc4a1ee25d37211c288d0fa0630c9b44dc",
+    "rust_source_sha256": "812e9839d58f6b9860e5499d3600950c231d6d076310c12a6077f72924f3d2e9",
+    "cargo_lock_sha256": "9a48c394d796e0566a8c82d8eacb71c746cd344c74edf9dded68b9d227afcfd0",
+    "harness_sha256": {
+      "__init__.py": "bacea04ce47bf7b6ae5e25c52b210c9a00ec8c68ca82f07cb2b96692289d0758",
+      "common.py": "b14d11653b4756a9e7dabd5c994c415bdb5d26e3e5dad095dec397acde19980a",
+      "lab.py": "e8c19d24afc84db5e6eae467abf74cc664beaf909941193b1443ba89dbc5ae3a",
+      "performance.py": "1fcd0a14197d21001974bb6d209c083c7fc913362f90a5e745edd9b29605a0b9",
+      "pressure.py": "2a58791e44b5f3c053f0a92e164b3f4538cd5825b70ea9b4cfa53342ba39899c",
+      "security.py": "8d3cf664e2a9ccd0d625d59e37359b078d7b9995ad5a4fd86b92dc99a9e3cc3b",
+      "test_evidence.py": "beb06ebd8a3736e604428dc0ef05b3256f6cd374ac2130ad56f8084f764b71c0"
+    },
+    "binaries": {
+      "fetian-authorityd": "45c50675e6440f5e665b41283f0f9d6e93300b0c53fe65f52c8e3a5aa28d14a2",
+      "fetian-authority": "bd2547e988d18500eadeaba08a8bce5c9e977808c77164b32536f9638992f0ef",
+      "fetian-executor-rust": "5a319516a661e5d2f25e9b7e2de5b0177734c8f07539919f33a61e3153ee3985",
+      "fetian-fca-launcher": "1e9cce7d21a45bfd207514beb6e5d675d3919ee4df650f66426d2558700cf959"
+    },
+    "runtime_state": "private temporary Linux directories; never the user's real FCA store"
+  },
+  "boundaries": {
+    "normal_mode_fault_rejections_verified": true,
+    "same_uid_store_access": {
+      "observed": true,
+      "isolated": false,
+      "severity": "high",
+      "scope": "known trusted-executor boundary; no hostile same-UID sandbox"
+    },
+    "external_effect_retry": {
+      "producer_exit_codes": [
+        -9,
+        -9
+      ],
+      "observed_effects": 2,
+      "managed_effects": 0,
+      "exactly_once": false,
+      "scope": "standalone counterexample, not an FCA provider adapter"
+    }
+  },
+  "limits": {
+    "active_executors": 8,
+    "ninth_rejected": true,
+    "authority_limit": 64,
+    "sixty_fifth_rejected": true
+  },
+  "resource_enforcement": {
+    "cpu": {
+      "status": "unavailable",
+      "enforced": false,
+      "strict_rejection_verified": true,
+      "reason": "STRICT_RESOURCE_UNAVAILABLE"
+    },
+    "memory": {
+      "status": "unavailable",
+      "enforced": false,
+      "strict_rejection_verified": true,
+      "reason": "STRICT_RESOURCE_UNAVAILABLE"
+    },
+    "pids": {
+      "status": "unavailable",
+      "enforced": false,
+      "strict_rejection_verified": true,
+      "reason": "STRICT_RESOURCE_UNAVAILABLE"
+    }
+  },
+  "kernel_enforcement_verified": false,
+  "limitations_are_not_recoveries": true
+}

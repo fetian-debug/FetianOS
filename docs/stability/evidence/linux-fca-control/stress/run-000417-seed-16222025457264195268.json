@@ -1,0 +1,1044 @@
+{
+  "schema_version": 1,
+  "config": {
+    "scenario": "sqlite-reopen",
+    "seed": 16222025457264195268,
+    "items": 32,
+    "chunk": 16,
+    "barrier": 1,
+    "executor": "rust",
+    "jitter_us": 442
+  },
+  "classification": "unexpected_correctness_failure",
+  "expectations_met": false,
+  "explanation": "TimeoutError: timed out",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 322, in run_case\n    result.update(experiment(session, config))\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 269, in experiment\n    session.call(\"resume\", id=identity)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 139, in call\n    result = super().call(operation, **arguments)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 69, in call\n    size = struct.unpack(\">I\", exact(stream, 4))[0]\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 36, in exact\n    piece = stream.recv(size - len(data))\nTimeoutError: timed out\n",
+  "evidence": {
+    "events": {
+      "ca_67e98977ba166c8a8a81a3a3c884f09d": [
+        {
+          "sequence": 1,
+          "payload": {
+            "at": 1795083615767,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "contract_digest": "35cf1b604096f88c215697ec234f7eea440e65282cd85aea06203e5173eae4f1"
+            },
+            "epoch": 0,
+            "kind": "AuthorityCreated",
+            "schema_version": 1,
+            "sequence": 1
+          },
+          "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "c76e589c1a1c72db784868b59fd3b2e93060e72571ead7b32953f7c023e687e1"
+        },
+        {
+          "sequence": 2,
+          "payload": {
+            "at": 1795083615767,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Created",
+              "to": "Validated"
+            },
+            "epoch": 0,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 2
+          },
+          "previous_hash": "c76e589c1a1c72db784868b59fd3b2e93060e72571ead7b32953f7c023e687e1",
+          "hash": "b9ee26fd86ca0807fa1d0722442159b5329d520304f42898dfda5b5c810664bc"
+        },
+        {
+          "sequence": 3,
+          "payload": {
+            "at": 1795083615767,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {},
+            "epoch": 0,
+            "kind": "ContractValidated",
+            "schema_version": 1,
+            "sequence": 3
+          },
+          "previous_hash": "b9ee26fd86ca0807fa1d0722442159b5329d520304f42898dfda5b5c810664bc",
+          "hash": "f86fba162dec00555bec41ecd98c578eb65bdd71b42f4980902c46eb474187d6"
+        },
+        {
+          "sequence": 4,
+          "payload": {
+            "at": 1795083615767,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Validated",
+              "to": "Ready"
+            },
+            "epoch": 0,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 4
+          },
+          "previous_hash": "f86fba162dec00555bec41ecd98c578eb65bdd71b42f4980902c46eb474187d6",
+          "hash": "70a1f237322211832cb3ab08e7f4d95a4bc0f8e64b9a876bae6e0905f8107fe3"
+        },
+        {
+          "sequence": 5,
+          "payload": {
+            "at": 1795083615780,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Ready",
+              "to": "Leased"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 5
+          },
+          "previous_hash": "70a1f237322211832cb3ab08e7f4d95a4bc0f8e64b9a876bae6e0905f8107fe3",
+          "hash": "f068dc3799e5c6183a2d3597884a45cdcd5c89299dfbeaee93c4c5950e8e3ff7"
+        },
+        {
+          "sequence": 6,
+          "payload": {
+            "at": 1795083615780,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "executor_id": "rust-reference-v1",
+              "issued_at": 1795083615780,
+              "lease_digest": "455c82b67eeef892b069adbb216d6ce951a77e074a106ba0c6dee04bb48a9167"
+            },
+            "epoch": 1,
+            "kind": "LeaseGranted",
+            "schema_version": 1,
+            "sequence": 6
+          },
+          "previous_hash": "f068dc3799e5c6183a2d3597884a45cdcd5c89299dfbeaee93c4c5950e8e3ff7",
+          "hash": "a565ff50e067c9e50e9819bd6a352705977d53ce8c857b72d048ba5d3e693a5f"
+        },
+        {
+          "sequence": 7,
+          "payload": {
+            "at": 1795083615783,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Leased",
+              "to": "Running"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 7
+          },
+          "previous_hash": "a565ff50e067c9e50e9819bd6a352705977d53ce8c857b72d048ba5d3e693a5f",
+          "hash": "2389c8d6c467b55cfc1bf2e7bf35975c8d24dac63c1d035b3f7543e5fd1478f4"
+        },
+        {
+          "sequence": 8,
+          "payload": {
+            "at": 1795083615783,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "pid": 294018,
+              "process_start_ticks": 10602026
+            },
+            "epoch": 1,
+            "kind": "ExecutorStarted",
+            "schema_version": 1,
+            "sequence": 8
+          },
+          "previous_hash": "2389c8d6c467b55cfc1bf2e7bf35975c8d24dac63c1d035b3f7543e5fd1478f4",
+          "hash": "885a0b24c2e992ad36ef4493f57e6110d3787131842b98195b8216b3cbbfe9ae"
+        },
+        {
+          "sequence": 9,
+          "payload": {
+            "at": 1795083615786,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "budget": {
+                "cpu_quota": 1,
+                "memory_bytes": 134217728,
+                "pids_max": 8,
+                "strict": false
+              },
+              "cpu": "unavailable",
+              "gpu": "unsupported",
+              "kernel_enforced": false,
+              "memory": "unavailable",
+              "mode": "advisory",
+              "pids": "unavailable",
+              "reason": "DELEGATION_UNAVAILABLE"
+            },
+            "epoch": 1,
+            "kind": "ResourceEnforcement",
+            "schema_version": 1,
+            "sequence": 9
+          },
+          "previous_hash": "885a0b24c2e992ad36ef4493f57e6110d3787131842b98195b8216b3cbbfe9ae",
+          "hash": "60c22c28b4859a5321f45ba2b9168fbb4ed2b22f18db429ae82f44de6191a926"
+        },
+        {
+          "sequence": 10,
+          "payload": {
+            "at": 1795083615791,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Running",
+              "to": "Checkpointing"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 10
+          },
+          "previous_hash": "60c22c28b4859a5321f45ba2b9168fbb4ed2b22f18db429ae82f44de6191a926",
+          "hash": "9df935878dfc67e112edf24ecb134be32945f8fbf2856c3b294db66327e08d61"
+        },
+        {
+          "sequence": 11,
+          "payload": {
+            "at": 1795083615791,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "effect_id": "effect_8e2b377bbb7e87091450840304d13689",
+              "request_digest": "615ec7c898940975f33f205cc3bd1ccdadf8b66c4ad299469dcb46c5e0fd608a",
+              "sequence": 1
+            },
+            "epoch": 1,
+            "kind": "EffectCommitted",
+            "schema_version": 1,
+            "sequence": 11
+          },
+          "previous_hash": "9df935878dfc67e112edf24ecb134be32945f8fbf2856c3b294db66327e08d61",
+          "hash": "c1e9702583d9de742eb22aafe5b63fb9971fcf12ea5c45c387ca0ccedd808e77"
+        },
+        {
+          "sequence": 12,
+          "payload": {
+            "at": 1795083615791,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "accumulated_result": -1889,
+              "last_committed_chunk": 1,
+              "next_input_position": 16,
+              "schema_version": 1
+            },
+            "epoch": 1,
+            "kind": "CheckpointCommitted",
+            "schema_version": 1,
+            "sequence": 12
+          },
+          "previous_hash": "c1e9702583d9de742eb22aafe5b63fb9971fcf12ea5c45c387ca0ccedd808e77",
+          "hash": "f5700b4cbbcbdd7cedbe40cddadadae957d56af104d987667e4f4241d83f1b81"
+        },
+        {
+          "sequence": 13,
+          "payload": {
+            "at": 1795083615791,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Checkpointing",
+              "to": "Running"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 13
+          },
+          "previous_hash": "f5700b4cbbcbdd7cedbe40cddadadae957d56af104d987667e4f4241d83f1b81",
+          "hash": "d9cac6b4d08189bc4cbf55a8bd3f1127b3dda8300e9a3d7c8d844ff02395f557"
+        },
+        {
+          "sequence": 14,
+          "payload": {
+            "at": 1795083615795,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "chunk": 1
+            },
+            "epoch": 1,
+            "kind": "TestBarrierReached",
+            "schema_version": 1,
+            "sequence": 14
+          },
+          "previous_hash": "d9cac6b4d08189bc4cbf55a8bd3f1127b3dda8300e9a3d7c8d844ff02395f557",
+          "hash": "d82bea7a6ad69c3a0075255bfaf389c30e38bbe4023a512c914763d62b6ee8fd"
+        },
+        {
+          "sequence": 15,
+          "payload": {
+            "at": 1795083615813,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "reason": "operator-lifecycle"
+            },
+            "epoch": 1,
+            "kind": "HandoffStarted",
+            "schema_version": 1,
+            "sequence": 15
+          },
+          "previous_hash": "d82bea7a6ad69c3a0075255bfaf389c30e38bbe4023a512c914763d62b6ee8fd",
+          "hash": "d66b549c7e168f000fa40dbd3bd2373f3207c5650604202e4b943b9e0ae0567c"
+        },
+        {
+          "sequence": 16,
+          "payload": {
+            "at": 1795083615813,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Running",
+              "to": "Revoking"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 16
+          },
+          "previous_hash": "d66b549c7e168f000fa40dbd3bd2373f3207c5650604202e4b943b9e0ae0567c",
+          "hash": "fc3a154816a40ff047e0edf8fd68c333f6f3be6ccbd38e409f336b453e476e97"
+        },
+        {
+          "sequence": 17,
+          "payload": {
+            "at": 1795083615813,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "executor_id": "rust-reference-v1",
+              "revoked_epoch": 1
+            },
+            "epoch": 1,
+            "kind": "LeaseRevoked",
+            "schema_version": 1,
+            "sequence": 17
+          },
+          "previous_hash": "fc3a154816a40ff047e0edf8fd68c333f6f3be6ccbd38e409f336b453e476e97",
+          "hash": "03756e2f76808e6d3f8ef16360124323a0bf9e3e88eac8dcb7116c9ba8ab84dd"
+        },
+        {
+          "sequence": 18,
+          "payload": {
+            "at": 1795083615813,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "epoch": 2
+            },
+            "epoch": 2,
+            "kind": "EpochAdvanced",
+            "schema_version": 1,
+            "sequence": 18
+          },
+          "previous_hash": "03756e2f76808e6d3f8ef16360124323a0bf9e3e88eac8dcb7116c9ba8ab84dd",
+          "hash": "4a7ab14124c6f39e392b19e5e61b5ad6720fda44cac17919811a201f561f47f9"
+        },
+        {
+          "sequence": 19,
+          "payload": {
+            "at": 1795083616307,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "pid": 294018,
+              "signal": 9,
+              "termination_confirmed": true
+            },
+            "epoch": 2,
+            "kind": "ExecutorTermination",
+            "schema_version": 1,
+            "sequence": 19
+          },
+          "previous_hash": "4a7ab14124c6f39e392b19e5e61b5ad6720fda44cac17919811a201f561f47f9",
+          "hash": "1c477a09774b708afe2610308b407d44d66c82a55ce3d4a733ba447d7a20f633"
+        },
+        {
+          "sequence": 20,
+          "payload": {
+            "at": 1795083616328,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Revoking",
+              "to": "Suspended"
+            },
+            "epoch": 2,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 20
+          },
+          "previous_hash": "1c477a09774b708afe2610308b407d44d66c82a55ce3d4a733ba447d7a20f633",
+          "hash": "a9eb4abaad284a5c818190a38f60ec1bad11946700fa771be9e7ead709857134"
+        },
+        {
+          "sequence": 21,
+          "payload": {
+            "at": 1795083616328,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "continuation": {
+                "accumulated_result": -1889,
+                "last_committed_chunk": 1,
+                "next_input_position": 16,
+                "schema_version": 1
+              }
+            },
+            "epoch": 2,
+            "kind": "ExecutorExited",
+            "schema_version": 1,
+            "sequence": 21
+          },
+          "previous_hash": "a9eb4abaad284a5c818190a38f60ec1bad11946700fa771be9e7ead709857134",
+          "hash": "b4367eb692bbab771ba920a285675f52fa8a5afede443d116fbf3e3d24a4ae5d"
+        },
+        {
+          "sequence": 22,
+          "payload": {
+            "at": 1795083617860,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {},
+            "epoch": 2,
+            "kind": "RecoveryStarted",
+            "schema_version": 1,
+            "sequence": 22
+          },
+          "previous_hash": "b4367eb692bbab771ba920a285675f52fa8a5afede443d116fbf3e3d24a4ae5d",
+          "hash": "437d3e8957b0a52576d26a208e05da973dee53f81891c05657919b8c638a5482"
+        },
+        {
+          "sequence": 23,
+          "payload": {
+            "at": 1795083617860,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Suspended",
+              "to": "Recovering"
+            },
+            "epoch": 3,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 23
+          },
+          "previous_hash": "437d3e8957b0a52576d26a208e05da973dee53f81891c05657919b8c638a5482",
+          "hash": "929de6ca1ea394e7f8eba059c2768ca9dd23e1bdaa5c399219d54bb9cbd3d433"
+        },
+        {
+          "sequence": 24,
+          "payload": {
+            "at": 1795083617860,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "epoch": 3
+            },
+            "epoch": 3,
+            "kind": "EpochAdvanced",
+            "schema_version": 1,
+            "sequence": 24
+          },
+          "previous_hash": "929de6ca1ea394e7f8eba059c2768ca9dd23e1bdaa5c399219d54bb9cbd3d433",
+          "hash": "028cc73cd9e29d46360a2e4c0e23f42793e4603268c6fa85a950fd34e75918cd"
+        },
+        {
+          "sequence": 25,
+          "payload": {
+            "at": 1795083617860,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Recovering",
+              "to": "Suspended"
+            },
+            "epoch": 3,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 25
+          },
+          "previous_hash": "028cc73cd9e29d46360a2e4c0e23f42793e4603268c6fa85a950fd34e75918cd",
+          "hash": "8515417c47ffb0097847b6aa1b3f1019a5f19ff4656704e2e27275d0bc7f10f4"
+        },
+        {
+          "sequence": 26,
+          "payload": {
+            "at": 1795083617860,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {},
+            "epoch": 3,
+            "kind": "RecoveryCompleted",
+            "schema_version": 1,
+            "sequence": 26
+          },
+          "previous_hash": "8515417c47ffb0097847b6aa1b3f1019a5f19ff4656704e2e27275d0bc7f10f4",
+          "hash": "466e8d0bc31557cf7c40a5628e38249c9ce7e8be98f0fed4c3eca047b4a91c44"
+        },
+        {
+          "sequence": 27,
+          "payload": {
+            "at": 1795083620325,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {
+              "from": "Suspended",
+              "to": "Ready"
+            },
+            "epoch": 3,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 27
+          },
+          "previous_hash": "466e8d0bc31557cf7c40a5628e38249c9ce7e8be98f0fed4c3eca047b4a91c44",
+          "hash": "e7a490f16faf3e00aeb70d2d2bca380bc7982afaa3ec0166069e00178b5ed818"
+        },
+        {
+          "sequence": 28,
+          "payload": {
+            "at": 1795083620325,
+            "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+            "details": {},
+            "epoch": 3,
+            "kind": "AuthorityReady",
+            "schema_version": 1,
+            "sequence": 28
+          },
+          "previous_hash": "e7a490f16faf3e00aeb70d2d2bca380bc7982afaa3ec0166069e00178b5ed818",
+          "hash": "85f468c56ef67319d70d96f4cca83d13b32a52533bd0d03b594197663f097112"
+        }
+      ]
+    },
+    "snapshots": {
+      "ca_67e98977ba166c8a8a81a3a3c884f09d": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+        "contract": {
+          "schema_version": 1,
+          "workload": {
+            "id": "fetian.sum-i64",
+            "semantic_version": 1,
+            "protocol_version": 1,
+            "checkpoint_schema": "sum-i64-state-v1"
+          },
+          "input": {
+            "kind": "managed_immutable_file",
+            "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+            "digest_algorithm": "sha256"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "permitted_executors": [
+            "rust-reference-v1",
+            "python-reference-v1"
+          ],
+          "chunk_size": 16,
+          "completion_condition": "all_input_committed"
+        },
+        "lifecycle": "Ready",
+        "epoch": 3,
+        "continuation": {
+          "schema_version": 1,
+          "next_input_position": 16,
+          "accumulated_result": -1889,
+          "last_committed_chunk": 1
+        },
+        "current_executor": null,
+        "previous_executors": [
+          {
+            "executor_id": "rust-reference-v1",
+            "lease_id": "sha256:ac4ca457f8d7a663fef111281a187d0ff2479ce8243fc5b198e1df17f5dfa98e",
+            "epoch": 1,
+            "issued_at": 1795083615780,
+            "pid": 294018,
+            "process_start_ticks": 10602026
+          }
+        ]
+      }
+    },
+    "database": {
+      "effects": [
+        {
+          "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+          "sequence": 1,
+          "effect_id": "effect_8e2b377bbb7e87091450840304d13689",
+          "epoch": 1
+        }
+      ],
+      "integrity_check": "ok"
+    },
+    "log": "",
+    "sizes": {
+      "authorities.sqlite3": 57344,
+      "authorities.sqlite3-shm": 32768,
+      "authorities.sqlite3-wal": 0
+    }
+  },
+  "operations": [
+    {
+      "operation": "import",
+      "arguments": {
+        "content": "-990\n955\n694\n-951\n532\n929\n-739\n-549\n-869\n-558\n257\n-285\n120\n755\n-911\n-279\n-28\n994\n-220\n-489\n-114\n-558\n950\n782\n662\n-894\n537\n-171\n-523\n41\n611\n-797\n"
+      },
+      "result": {
+        "input_id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12"
+      },
+      "elapsed_us": 7950.816
+    },
+    {
+      "operation": "create",
+      "arguments": {
+        "contract": {
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "chunk_size": 16,
+          "completion_condition": "all_input_committed",
+          "input": {
+            "digest_algorithm": "sha256",
+            "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+            "kind": "managed_immutable_file"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "permitted_executors": [
+            "rust-reference-v1",
+            "python-reference-v1"
+          ],
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "schema_version": 1,
+          "workload": {
+            "checkpoint_schema": "sum-i64-state-v1",
+            "id": "fetian.sum-i64",
+            "protocol_version": 1,
+            "semantic_version": 1
+          }
+        }
+      },
+      "result": {
+        "continuation": {
+          "accumulated_result": 0,
+          "last_committed_chunk": 0,
+          "next_input_position": 0,
+          "schema_version": 1
+        },
+        "contract": {
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "chunk_size": 16,
+          "completion_condition": "all_input_committed",
+          "input": {
+            "digest_algorithm": "sha256",
+            "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+            "kind": "managed_immutable_file"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "permitted_executors": [
+            "rust-reference-v1",
+            "python-reference-v1"
+          ],
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "schema_version": 1,
+          "workload": {
+            "checkpoint_schema": "sum-i64-state-v1",
+            "id": "fetian.sum-i64",
+            "protocol_version": 1,
+            "semantic_version": 1
+          }
+        },
+        "current_executor": null,
+        "epoch": 0,
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+        "lifecycle": "Ready",
+        "previous_executors": []
+      },
+      "elapsed_us": 6936.514
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 0,
+            "last_committed_chunk": 0,
+            "next_input_position": 0,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 16,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "rust-reference-v1",
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": null,
+          "epoch": 0,
+          "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+          "lifecycle": "Ready",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 5463.911
+    },
+    {
+      "operation": "run",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+        "executor": "rust",
+        "barrier_after": 1
+      },
+      "result": {
+        "authority_id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+        "epoch": 1,
+        "executor": "rust-reference-v1",
+        "pid": 294018,
+        "resources": {
+          "budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "cpu": "unavailable",
+          "gpu": "unsupported",
+          "kernel_enforced": false,
+          "memory": "unavailable",
+          "mode": "advisory",
+          "pids": "unavailable",
+          "reason": "DELEGATION_UNAVAILABLE"
+        }
+      },
+      "elapsed_us": 14312.83
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 0,
+            "last_committed_chunk": 0,
+            "next_input_position": 0,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 16,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "rust-reference-v1",
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "rust-reference-v1",
+            "issued_at": 1795083615780,
+            "lease_id": "sha256:ac4ca457f8d7a663fef111281a187d0ff2479ce8243fc5b198e1df17f5dfa98e",
+            "pid": 294018,
+            "process_start_ticks": 10602026
+          },
+          "epoch": 1,
+          "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 1304.902
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": -1889,
+            "last_committed_chunk": 1,
+            "next_input_position": 16,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 16,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "rust-reference-v1",
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "rust-reference-v1",
+            "issued_at": 1795083615780,
+            "lease_id": "sha256:ac4ca457f8d7a663fef111281a187d0ff2479ce8243fc5b198e1df17f5dfa98e",
+            "pid": 294018,
+            "process_start_ticks": 10602026
+          },
+          "epoch": 1,
+          "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": true,
+        "test_barrier_request_id": 4
+      },
+      "elapsed_us": 1712.504
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": -1889,
+            "last_committed_chunk": 1,
+            "next_input_position": 16,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 16,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:f9db2a9c6f36f350ef879785f5d9f7d19cb04b74f14b0dfadc4700d9103b2c12",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "rust-reference-v1",
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "rust-reference-v1",
+            "issued_at": 1795083615780,
+            "lease_id": "sha256:ac4ca457f8d7a663fef111281a187d0ff2479ce8243fc5b198e1df17f5dfa98e",
+            "pid": 294018,
+            "process_start_ticks": 10602026
+          },
+          "epoch": 1,
+          "id": "ca_67e98977ba166c8a8a81a3a3c884f09d",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": true,
+        "test_barrier_request_id": 4
+      },
+      "elapsed_us": 5471.411
+    },
+    {
+      "operation": "suspend",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "result": {
+        "state": "Suspended"
+      },
+      "elapsed_us": 1019742.701
+    },
+    {
+      "operation": "stop",
+      "arguments": {},
+      "result": {
+        "stopping": true
+      },
+      "elapsed_us": 5146.41
+    },
+    {
+      "operation": "resume",
+      "arguments": {
+        "id": "ca_67e98977ba166c8a8a81a3a3c884f09d"
+      },
+      "error": "TimeoutError",
+      "timeout_diagnostics": {
+        "loadavg": "0.94 1.41 1.81 1/279 294021",
+        "294020": {
+          "comm": "fetian-authorit",
+          "wchan": "jbd2_log_wait_commit",
+          "stat": "294020 (fetian-authorit) D 291564 291124 291124 34816 291124 4194304 210 0 0 0 0 0 0 0 20 0 1 0 10602233 7254016 1263 18446744073709551615 95066076291072 95066078751725 140734334657392 0 0 0 0 4096 1088 1 0 0 17 0 0 0 0 0 0 95066079170240 95066079225272 95066358603776 140734334665362 140734334665440 140734334665440 140734334668734 0"
+        }
+      },
+      "elapsed_us": 10012707.69
+    },
+    {
+      "operation": "stop",
+      "arguments": {},
+      "result": {
+        "stopping": true
+      },
+      "elapsed_us": 4224.499
+    }
+  ],
+  "duration_us": 43719275.964,
+  "replay": "python3 system/fetian-fca/validation/lab.py replay --case /mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/stress/run-000417-seed-16222025457264195268.json --output NEW_DIRECTORY"
+}

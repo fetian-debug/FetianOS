@@ -31,3 +31,8 @@ Existing effects and battery state writers were inspected but not represented
 as universally power-loss durable. Preference/daily-helper directory fsync,
 backup/version recovery policy and installed-upgrade rollback still need a
 separate, tested design before a daily-use data-integrity acceptance claim.
+
+The candidate builder logs unsupported POSIX-ACL xattr warnings. Ordinary
+mode/account/image checks pass in the Sway run, but ACL retention has not been
+validated. No blanket claim about preserving arbitrary installed filesystem
+metadata is made, and no ACL/security check was disabled to hide the warnings.

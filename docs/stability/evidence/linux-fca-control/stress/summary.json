@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "mode": "stress",
+  "master_seed": 2090,
+  "completed": 1000,
+  "expectations_met": 997,
+  "counts": {
+    "expected_recovery": 406,
+    "expected_rejection": 513,
+    "safely_detected_unrecoverable": 78,
+    "unexpected_correctness_failure": 3
+  },
+  "failures": [
+    {
+      "index": 417,
+      "seed": 16222025457264195268,
+      "scenario": "sqlite-reopen",
+      "report": "run-000417-seed-16222025457264195268.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 634,
+      "seed": 6622925276880692738,
+      "scenario": "capability",
+      "report": "run-000634-seed-6622925276880692738.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 973,
+      "seed": 16985103156031036425,
+      "scenario": "executor-sigkill",
+      "report": "run-000973-seed-16985103156031036425.json",
+      "explanation": "TimeoutError: timed out"
+    }
+  ],
+  "recovered": 406,
+  "rejected": 513,
+  "safely_unrecoverable": 78,
+  "unexpected_failures": 3,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

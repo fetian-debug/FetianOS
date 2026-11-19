@@ -1,0 +1,623 @@
+﻿2026-11-19T14:05:52.0447961Z Current runner version: '2.338.2'
+2026-11-19T14:05:52.0465488Z ##[group]Runner Image Provisioner
+2026-11-19T14:05:52.0466189Z Hosted Compute Agent
+2026-11-19T14:05:52.0466637Z Version: 20261103.629
+2026-11-19T14:05:52.0467118Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+2026-11-19T14:05:52.0467639Z Build Date: 2026-11-03T17:26:59Z
+2026-11-19T14:05:52.0468108Z Worker ID: {30715855-dbd7-4e7a-bbdb-9c424c6f1713}
+2026-11-19T14:05:52.0468649Z Region: us-west-2
+2026-11-19T14:05:52.0469127Z Cloud: AWS
+2026-11-19T14:05:52.0469517Z ##[endgroup]
+2026-11-19T14:05:52.0470435Z ##[group]Operating System
+2026-11-19T14:05:52.0470852Z Ubuntu
+2026-11-19T14:05:52.0471241Z 24.04.5
+2026-11-19T14:05:52.0471910Z LTS
+2026-11-19T14:05:52.0472294Z ##[endgroup]
+2026-11-19T14:05:52.0472696Z ##[group]Runner Image
+2026-11-19T14:05:52.0473123Z Image: ubuntu-24.04
+2026-11-19T14:05:52.0473538Z Version: 20261111.127.1
+2026-11-19T14:05:52.0474488Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261111.127/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-19T14:05:52.0475605Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261111.127
+2026-11-19T14:05:52.0476292Z ##[endgroup]
+2026-11-19T14:05:52.0477155Z ##[group]GITHUB_TOKEN Permissions
+2026-11-19T14:05:52.0478724Z Contents: read
+2026-11-19T14:05:52.0479182Z Metadata: read
+2026-11-19T14:05:52.0479576Z ##[endgroup]
+2026-11-19T14:05:52.0481044Z Secret source: Actions
+2026-11-19T14:05:52.0481967Z Cache mode: write
+2026-11-19T14:05:52.0482514Z Prepare workflow directory
+2026-11-19T14:05:52.0711024Z Prepare all required actions
+2026-11-19T14:05:52.0748409Z Getting action download info
+2026-11-19T14:05:52.4463729Z Download action repository 'actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-19T14:05:55.4175725Z Uses: fetian-debug/FetianOS/.github/workflows/source-checks.yml@refs/heads/stabilization/system-reliability (e155b7574c9b082ca0edcafec5cc302bc9a259fa)
+2026-11-19T14:05:55.4180706Z ##[group] Inputs
+2026-11-19T14:05:55.4181879Z   desktop: hyprland
+2026-11-19T14:05:55.4183092Z   publish: false
+2026-11-19T14:05:55.4183943Z ##[endgroup]
+2026-11-19T14:05:55.4184846Z Complete job name: checks / source
+2026-11-19T14:05:55.4928902Z ##[group]Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+2026-11-19T14:05:55.4930370Z with:
+2026-11-19T14:05:55.4931133Z   persist-credentials: false
+2026-11-19T14:05:55.4932338Z   repository: fetian-debug/FetianOS
+2026-11-19T14:05:55.4939137Z   token: ***
+2026-11-19T14:05:55.4939937Z   ssh-strict: true
+2026-11-19T14:05:55.4940745Z   ssh-user: git
+2026-11-19T14:05:55.4941717Z   clean: true
+2026-11-19T14:05:55.4942568Z   sparse-checkout-cone-mode: true
+2026-11-19T14:05:55.4943512Z   fetch-depth: 1
+2026-11-19T14:05:55.4944285Z   fetch-tags: false
+2026-11-19T14:05:55.4945099Z   show-progress: true
+2026-11-19T14:05:55.4945895Z   lfs: false
+2026-11-19T14:05:55.4946651Z   submodules: false
+2026-11-19T14:05:55.4947488Z   set-safe-directory: true
+2026-11-19T14:05:55.4948408Z   allow-unsafe-pr-checkout: false
+2026-11-19T14:05:55.4949593Z ##[endgroup]
+2026-11-19T14:06:00.3760474Z Syncing repository: fetian-debug/FetianOS
+2026-11-19T14:06:00.3762675Z ##[group]Getting Git version info
+2026-11-19T14:06:00.3763172Z Working directory is '/home/runner/work/FetianOS/FetianOS'
+2026-11-19T14:06:00.3763836Z [command]/usr/bin/git version
+2026-11-19T14:06:00.6825617Z git version 2.56.1
+2026-11-19T14:06:00.6841704Z ##[endgroup]
+2026-11-19T14:06:00.6848134Z Temporarily overriding HOME='/home/runner/work/_temp/32226a64-1b6d-4db2-834a-3507f63f59f1' before making global git config changes
+2026-11-19T14:06:00.6849075Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T14:06:00.6852006Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/FetianOS/FetianOS
+2026-11-19T14:06:00.7255658Z Deleting the contents of '/home/runner/work/FetianOS/FetianOS'
+2026-11-19T14:06:00.7257749Z ##[group]Determining repository object format
+2026-11-19T14:06:00.7258644Z ##[endgroup]
+2026-11-19T14:06:00.7259097Z ##[group]Initializing the repository
+2026-11-19T14:06:00.7262030Z [command]/usr/bin/git init /home/runner/work/FetianOS/FetianOS
+2026-11-19T14:06:00.8406236Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-19T14:06:00.8407134Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-19T14:06:00.8407809Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-19T14:06:00.8408233Z hint: call:
+2026-11-19T14:06:00.8408685Z hint:
+2026-11-19T14:06:00.8409096Z hint: 	git config --global init.defaultBranch <name>
+2026-11-19T14:06:00.8409433Z hint:
+2026-11-19T14:06:00.8409765Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-19T14:06:00.8410218Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-19T14:06:00.8410620Z hint:
+2026-11-19T14:06:00.8410949Z hint: 	git branch -m <name>
+2026-11-19T14:06:00.8411255Z hint:
+2026-11-19T14:06:00.8411823Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-19T14:06:00.8420082Z Initialized empty Git repository in /home/runner/work/FetianOS/FetianOS/.git/
+2026-11-19T14:06:00.8427995Z [command]/usr/bin/git remote add origin https://github.com/fetian-debug/FetianOS
+2026-11-19T14:06:00.8485440Z ##[endgroup]
+2026-11-19T14:06:00.8485937Z ##[group]Disabling automatic garbage collection
+2026-11-19T14:06:00.8487437Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-19T14:06:00.8514600Z ##[endgroup]
+2026-11-19T14:06:00.8515856Z ##[group]Setting up auth
+2026-11-19T14:06:00.8516327Z Removing SSH command configuration
+2026-11-19T14:06:00.8519230Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T14:06:00.8549697Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T14:06:01.4359408Z Removing HTTP extra header
+2026-11-19T14:06:01.4364123Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T14:06:01.4398066Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T14:06:01.4545136Z Removing includeIf entries pointing to credentials config files
+2026-11-19T14:06:01.4549338Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T14:06:01.4576603Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T14:06:01.4728300Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-19T14:06:01.4754918Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/FetianOS/FetianOS/.git.path /home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:01.4777541Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/FetianOS/FetianOS/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:01.4801542Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:01.4824550Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:01.4844258Z ##[endgroup]
+2026-11-19T14:06:01.4844875Z ##[group]Fetching the repository
+2026-11-19T14:06:01.4849765Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e155b7574c9b082ca0edcafec5cc302bc9a259fa:refs/remotes/origin/stabilization/system-reliability
+2026-11-19T14:06:02.4609510Z From https://github.com/fetian-debug/FetianOS
+2026-11-19T14:06:02.4610401Z  * [new ref]         e155b7574c9b082ca0edcafec5cc302bc9a259fa -> origin/stabilization/system-reliability
+2026-11-19T14:06:02.4618797Z [command]/usr/bin/git branch --list --remote origin/stabilization/system-reliability
+2026-11-19T14:06:02.4660797Z   origin/stabilization/system-reliability
+2026-11-19T14:06:02.4666974Z [command]/usr/bin/git rev-parse refs/remotes/origin/stabilization/system-reliability
+2026-11-19T14:06:02.4687004Z e155b7574c9b082ca0edcafec5cc302bc9a259fa
+2026-11-19T14:06:02.4691276Z ##[endgroup]
+2026-11-19T14:06:02.4692197Z ##[group]Determining the checkout info
+2026-11-19T14:06:02.4692835Z ##[endgroup]
+2026-11-19T14:06:02.4707744Z [command]/usr/bin/git sparse-checkout disable
+2026-11-19T14:06:02.4773215Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-19T14:06:02.4795714Z ##[group]Checking out the ref
+2026-11-19T14:06:02.4798709Z [command]/usr/bin/git checkout --progress --force -B stabilization/system-reliability refs/remotes/origin/stabilization/system-reliability
+2026-11-19T14:06:02.5685873Z Switched to a new branch 'stabilization/system-reliability'
+2026-11-19T14:06:02.5707278Z branch 'stabilization/system-reliability' set up to track 'origin/stabilization/system-reliability'.
+2026-11-19T14:06:02.5714066Z ##[endgroup]
+2026-11-19T14:06:02.5753141Z [command]/usr/bin/git log -1 --format=%H
+2026-11-19T14:06:02.5774023Z e155b7574c9b082ca0edcafec5cc302bc9a259fa
+2026-11-19T14:06:02.5780003Z ##[group]Removing auth
+2026-11-19T14:06:02.5780329Z Removing SSH command configuration
+2026-11-19T14:06:02.5782940Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T14:06:02.5805194Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T14:06:02.5952698Z Removing HTTP extra header
+2026-11-19T14:06:02.5956282Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T14:06:02.5980837Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T14:06:02.6129117Z Removing includeIf entries pointing to credentials config files
+2026-11-19T14:06:02.6134607Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T14:06:02.6155144Z includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git.path
+2026-11-19T14:06:02.6155753Z includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git/worktrees/*.path
+2026-11-19T14:06:02.6156345Z includeif.gitdir:/github/workspace/.git.path
+2026-11-19T14:06:02.6156769Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T14:06:02.6161125Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git.path
+2026-11-19T14:06:02.6178933Z /home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:02.6186103Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-130f3bf5\-c9a9\-4bb3\-99ba\-849ebdf7edd6\.config
+2026-11-19T14:06:02.6210335Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git/worktrees/*.path
+2026-11-19T14:06:02.6232479Z /home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:02.6238969Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/FetianOS/FetianOS/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-130f3bf5\-c9a9\-4bb3\-99ba\-849ebdf7edd6\.config
+2026-11-19T14:06:02.6261341Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-19T14:06:02.6279059Z /github/runner_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:02.6284093Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-130f3bf5\-c9a9\-4bb3\-99ba\-849ebdf7edd6\.config
+2026-11-19T14:06:02.6306933Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-19T14:06:02.6323432Z /github/runner_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config
+2026-11-19T14:06:02.6328888Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-130f3bf5\-c9a9\-4bb3\-99ba\-849ebdf7edd6\.config
+2026-11-19T14:06:02.6351357Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T14:06:02.6492072Z Removing credentials config '/home/runner/work/_temp/git-credentials-130f3bf5-c9a9-4bb3-99ba-849ebdf7edd6.config'
+2026-11-19T14:06:02.6497984Z ##[endgroup]
+2026-11-19T14:06:02.6648999Z ##[group]Run sudo apt-get update
+2026-11-19T14:06:02.6649327Z [36;1msudo apt-get update[0m
+2026-11-19T14:06:02.6649828Z [36;1msudo apt-get install -y python3-gi python3-markdown python3-yaml gir1.2-gtk-4.0 xvfb dbus-x11 desktop-file-utils xorriso[0m
+2026-11-19T14:06:02.6650367Z [36;1mrustup component add rustfmt clippy[0m
+2026-11-19T14:06:02.9251770Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:06:02.9252135Z ##[endgroup]
+2026-11-19T14:06:03.1965730Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-19T14:06:03.2607740Z Get:5 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+2026-11-19T14:06:03.2759414Z Get:6 https://packages.microsoft.com/ubuntu/24.04/prod noble InRelease [3600 B]
+2026-11-19T14:06:03.3297235Z Hit:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+2026-11-19T14:06:03.3819599Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+2026-11-19T14:06:03.4062621Z Get:7 https://packages.microsoft.com/ubuntu/24.04/prod noble/main amd64 Packages [794 kB]
+2026-11-19T14:06:03.4590361Z Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1198 kB]
+2026-11-19T14:06:03.4989476Z Get:9 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [239 kB]
+2026-11-19T14:06:03.5032071Z Get:10 https://packages.microsoft.com/ubuntu/24.04/prod noble/main arm64 Packages [723 kB]
+2026-11-19T14:06:03.5098750Z Get:11 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1230 kB]
+2026-11-19T14:06:03.5270359Z Get:12 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [248 kB]
+2026-11-19T14:06:03.5426472Z Get:13 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1792 kB]
+2026-11-19T14:06:03.5743520Z Get:21 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [414 kB]
+2026-11-19T14:06:03.5869331Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+2026-11-19T14:06:03.5895641Z Get:22 http://security.ubuntu.com/ubuntu noble-security/multiverse Translation-en [12.7 kB]
+2026-11-19T14:06:03.7384581Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1456 kB]
+2026-11-19T14:06:03.9443012Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [317 kB]
+2026-11-19T14:06:03.9995311Z Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1716 kB]
+2026-11-19T14:06:04.1047766Z Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [346 kB]
+2026-11-19T14:06:07.9102136Z Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1887 kB]
+2026-11-19T14:06:08.3196878Z Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [433 kB]
+2026-11-19T14:06:08.3777179Z Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse Translation-en [14.6 kB]
+2026-11-19T14:06:21.1060093Z Fetched 13.2 MB in 5s (2489 kB/s)
+2026-11-19T14:06:22.0043133Z Reading package lists...
+2026-11-19T14:06:22.0336048Z Reading package lists...
+2026-11-19T14:06:22.2158014Z Building dependency tree...
+2026-11-19T14:06:22.2163982Z Reading state information...
+2026-11-19T14:06:22.3611255Z python3-gi is already the newest version (3.48.2-1).
+2026-11-19T14:06:22.3612272Z python3-gi set to manually installed.
+2026-11-19T14:06:22.3612720Z python3-yaml is already the newest version (6.0.1-2build2).
+2026-11-19T14:06:22.3613307Z python3-yaml set to manually installed.
+2026-11-19T14:06:22.3613743Z xvfb is already the newest version (2:21.1.12-1ubuntu1.9).
+2026-11-19T14:06:22.3614520Z The following additional packages will be installed:
+2026-11-19T14:06:22.3615088Z   gir1.2-freedesktop gir1.2-gdkpixbuf-2.0 gir1.2-graphene-1.0
+2026-11-19T14:06:22.3615576Z   gir1.2-harfbuzz-0.0 gir1.2-pango-1.0 gstreamer1.0-gl
+2026-11-19T14:06:22.3616757Z   gstreamer1.0-plugins-base libburn4t64 libcairo-script-interpreter2
+2026-11-19T14:06:22.3617562Z   libcdparanoia0 libegl-mesa0 libegl1 libgbm1 libgl1-mesa-dri libgles2
+2026-11-19T14:06:22.3618302Z   libglx-mesa0 libgraphene-1.0-0 libgstreamer-gl1.0-0
+2026-11-19T14:06:22.3618883Z   libgstreamer-plugins-base1.0-0 libgtk-4-1 libgtk-4-bin libgtk-4-common
+2026-11-19T14:06:22.3619541Z   libgtk-4-media-gstreamer libharfbuzz-gobject0 libisoburn1t64 libisofs6t64
+2026-11-19T14:06:22.3620283Z   libopus0 liborc-0.4-0t64 libpangoxft-1.0-0 librsvg2-2 librsvg2-common
+2026-11-19T14:06:22.3620905Z   libtheora0 libvisual-0.4-0 libvorbisenc2 mesa-libgallium
+2026-11-19T14:06:22.3625500Z Suggested packages:
+2026-11-19T14:06:22.3625959Z   gvfs libvisual-0.4-plugins opus-tools librsvg2-bin python-markdown-doc
+2026-11-19T14:06:22.3626340Z   xorriso-tcltk jigit cdck
+2026-11-19T14:06:22.6180835Z The following NEW packages will be installed:
+2026-11-19T14:06:22.6181615Z   dbus-x11 desktop-file-utils gir1.2-freedesktop gir1.2-gdkpixbuf-2.0
+2026-11-19T14:06:22.6182498Z   gir1.2-graphene-1.0 gir1.2-gtk-4.0 gir1.2-harfbuzz-0.0 gir1.2-pango-1.0
+2026-11-19T14:06:22.6183000Z   gstreamer1.0-gl gstreamer1.0-plugins-base libburn4t64
+2026-11-19T14:06:22.6183892Z   libcairo-script-interpreter2 libcdparanoia0 libegl-mesa0 libegl1 libgles2
+2026-11-19T14:06:22.6184431Z   libgraphene-1.0-0 libgstreamer-gl1.0-0 libgstreamer-plugins-base1.0-0
+2026-11-19T14:06:22.6185022Z   libgtk-4-1 libgtk-4-bin libgtk-4-common libgtk-4-media-gstreamer
+2026-11-19T14:06:22.6185551Z   libharfbuzz-gobject0 libisoburn1t64 libisofs6t64 libopus0 liborc-0.4-0t64
+2026-11-19T14:06:22.6189708Z   libpangoxft-1.0-0 librsvg2-2 librsvg2-common libtheora0 libvisual-0.4-0
+2026-11-19T14:06:22.6194032Z   libvorbisenc2 python3-markdown xorriso
+2026-11-19T14:06:22.6199092Z The following packages will be upgraded:
+2026-11-19T14:06:22.6205148Z   libgbm1 libgl1-mesa-dri libglx-mesa0 mesa-libgallium
+2026-11-19T14:06:22.6360913Z 4 upgraded, 36 newly installed, 0 to remove and 29 not upgraded.
+2026-11-19T14:06:22.6361352Z Need to get 26.0 MB of archives.
+2026-11-19T14:06:22.6361891Z After this operation, 54.0 MB of additional disk space will be used.
+2026-11-19T14:06:22.6362286Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [152 B]
+2026-11-19T14:06:22.7756082Z Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 dbus-x11 amd64 1.14.10-4ubuntu4.1 [23.3 kB]
+2026-11-19T14:06:22.9046167Z Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 desktop-file-utils amd64 0.27-2build1 [53.8 kB]
+2026-11-19T14:06:23.0315560Z Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-freedesktop amd64 1.80.1-1 [49.7 kB]
+2026-11-19T14:06:23.1089913Z Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gdkpixbuf-2.0 amd64 2.42.10+dfsg-3ubuntu3.3 [9482 B]
+2026-11-19T14:06:23.1883182Z Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libgraphene-1.0-0 amd64 1.10.8-3build2 [46.2 kB]
+2026-11-19T14:06:23.2678942Z Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-graphene-1.0 amd64 1.10.8-3build2 [11.1 kB]
+2026-11-19T14:06:23.3452702Z Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libharfbuzz-gobject0 amd64 8.3.0-2build2 [34.3 kB]
+2026-11-19T14:06:23.4227407Z Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-harfbuzz-0.0 amd64 8.3.0-2build2 [44.5 kB]
+2026-11-19T14:06:23.5030796Z Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libpangoxft-1.0-0 amd64 1.52.1+ds-1build1 [20.3 kB]
+2026-11-19T14:06:23.5815247Z Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 gir1.2-pango-1.0 amd64 1.52.1+ds-1build1 [34.8 kB]
+2026-11-19T14:06:23.6600518Z Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libcairo-script-interpreter2 amd64 1.18.0-3build1 [60.3 kB]
+2026-11-19T14:06:23.7395018Z Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libgles2 amd64 1.7.0-1build1 [17.1 kB]
+2026-11-19T14:06:23.8174327Z Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-common all 4.14.5+ds-0ubuntu0.10 [1497 kB]
+2026-11-19T14:06:24.1044147Z Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-1 amd64 4.14.5+ds-0ubuntu0.10 [3295 kB]
+2026-11-19T14:06:25.6655071Z Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gir1.2-gtk-4.0 amd64 4.14.5+ds-0ubuntu0.10 [223 kB]
+2026-11-19T14:06:29.8912372Z Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgl1-mesa-dri amd64 25.2.8-0ubuntu0.24.04.5 [38.0 kB]
+2026-11-19T14:06:29.9780142Z Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libglx-mesa0 amd64 25.2.8-0ubuntu0.24.04.5 [110 kB]
+2026-11-19T14:06:30.1592787Z Get:19 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgbm1 amd64 25.2.8-0ubuntu0.24.04.5 [34.2 kB]
+2026-11-19T14:06:30.2373135Z Get:20 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 mesa-libgallium amd64 25.2.8-0ubuntu0.24.04.5 [10.8 MB]
+2026-11-19T14:06:31.9517197Z Get:21 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libegl-mesa0 amd64 25.2.8-0ubuntu0.24.04.5 [117 kB]
+2026-11-19T14:06:32.0836168Z Get:22 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libegl1 amd64 1.7.0-1build1 [28.7 kB]
+2026-11-19T14:06:32.1878887Z Get:23 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 liborc-0.4-0t64 amd64 1:0.4.38-1ubuntu0.1 [207 kB]
+2026-11-19T14:06:32.3304260Z Get:24 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer-plugins-base1.0-0 amd64 1.24.2-1ubuntu0.7 [863 kB]
+2026-11-19T14:06:32.6739118Z Get:25 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgstreamer-gl1.0-0 amd64 1.24.2-1ubuntu0.7 [214 kB]
+2026-11-19T14:06:32.8467403Z Get:26 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gstreamer1.0-gl amd64 1.24.2-1ubuntu0.7 [116 kB]
+2026-11-19T14:06:32.9843511Z Get:27 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libcdparanoia0 amd64 3.10.2+debian-14build3 [48.5 kB]
+2026-11-19T14:06:33.1005659Z Get:28 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libopus0 amd64 1.4-1build1 [208 kB]
+2026-11-19T14:06:33.2785155Z Get:29 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libtheora0 amd64 1.1.1+dfsg.1-16.1build3 [211 kB]
+2026-11-19T14:06:33.4587462Z Get:30 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libvisual-0.4-0 amd64 0.4.2-2build1 [115 kB]
+2026-11-19T14:06:33.6109715Z Get:31 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libvorbisenc2 amd64 1.3.7-1build3 [80.8 kB]
+2026-11-19T14:06:33.7374522Z Get:32 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 gstreamer1.0-plugins-base amd64 1.24.2-1ubuntu0.7 [721 kB]
+2026-11-19T14:06:34.1675192Z Get:33 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libburn4t64 amd64 1.5.6-1.1build1 [158 kB]
+2026-11-19T14:06:34.3357857Z Get:34 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-bin amd64 4.14.5+ds-0ubuntu0.10 [3354 kB]
+2026-11-19T14:06:36.1799011Z Get:35 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libgtk-4-media-gstreamer amd64 4.14.5+ds-0ubuntu0.10 [67.8 kB]
+2026-11-19T14:06:36.3307424Z Get:36 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libisofs6t64 amd64 1.5.6.pl01-1.1ubuntu2 [220 kB]
+2026-11-19T14:06:36.6230211Z Get:37 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libisoburn1t64 amd64 1:1.5.6-1.1ubuntu3 [405 kB]
+2026-11-19T14:06:36.9695647Z Get:38 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-2 amd64 2.58.0+dfsg-1ubuntu0.1 [2141 kB]
+2026-11-19T14:06:37.8783013Z Get:39 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 librsvg2-common amd64 2.58.0+dfsg-1ubuntu0.1 [11.8 kB]
+2026-11-19T14:06:37.9860001Z Get:40 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 python3-markdown all 3.5.2-1 [72.0 kB]
+2026-11-19T14:06:38.1027296Z Get:41 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/main amd64 xorriso amd64 1:1.5.6-1.1ubuntu3 [297 kB]
+2026-11-19T14:06:40.0371702Z Fetched 26.0 MB in 16s (1674 kB/s)
+2026-11-19T14:06:40.1232879Z Selecting previously unselected package dbus-x11.
+2026-11-19T14:06:40.5785120Z (Reading database ... 
+2026-11-19T14:06:40.5785701Z (Reading database ... 5%
+2026-11-19T14:06:40.5785967Z (Reading database ... 10%
+2026-11-19T14:06:40.5786226Z (Reading database ... 15%
+2026-11-19T14:06:40.5786496Z (Reading database ... 20%
+2026-11-19T14:06:40.5786731Z (Reading database ... 25%
+2026-11-19T14:06:40.5786984Z (Reading database ... 30%
+2026-11-19T14:06:40.5787246Z (Reading database ... 35%
+2026-11-19T14:06:40.5787517Z (Reading database ... 40%
+2026-11-19T14:06:40.5787780Z (Reading database ... 45%
+2026-11-19T14:06:40.5788017Z (Reading database ... 50%
+2026-11-19T14:06:41.0042767Z (Reading database ... 55%
+2026-11-19T14:06:42.4787155Z (Reading database ... 60%
+2026-11-19T14:06:42.8807822Z (Reading database ... 65%
+2026-11-19T14:06:43.2345451Z (Reading database ... 70%
+2026-11-19T14:06:43.4185773Z (Reading database ... 75%
+2026-11-19T14:06:43.7782015Z (Reading database ... 80%
+2026-11-19T14:06:46.3634534Z (Reading database ... 85%
+2026-11-19T14:06:48.4791631Z (Reading database ... 90%
+2026-11-19T14:06:50.3486418Z (Reading database ... 95%
+2026-11-19T14:06:50.3487034Z (Reading database ... 100%
+2026-11-19T14:06:50.3487381Z (Reading database ... 216380 files and directories currently installed.)
+2026-11-19T14:06:50.3529180Z Preparing to unpack .../00-dbus-x11_1.14.10-4ubuntu4.1_amd64.deb ...
+2026-11-19T14:06:50.3549709Z Unpacking dbus-x11 (1.14.10-4ubuntu4.1) ...
+2026-11-19T14:06:50.4909782Z Selecting previously unselected package desktop-file-utils.
+2026-11-19T14:06:50.5010628Z Preparing to unpack .../01-desktop-file-utils_0.27-2build1_amd64.deb ...
+2026-11-19T14:06:50.5014850Z Unpacking desktop-file-utils (0.27-2build1) ...
+2026-11-19T14:06:50.5563607Z Selecting previously unselected package gir1.2-freedesktop:amd64.
+2026-11-19T14:06:50.5662125Z Preparing to unpack .../02-gir1.2-freedesktop_1.80.1-1_amd64.deb ...
+2026-11-19T14:06:50.5665638Z Unpacking gir1.2-freedesktop:amd64 (1.80.1-1) ...
+2026-11-19T14:06:50.6117953Z Selecting previously unselected package gir1.2-gdkpixbuf-2.0:amd64.
+2026-11-19T14:06:50.6215632Z Preparing to unpack .../03-gir1.2-gdkpixbuf-2.0_2.42.10+dfsg-3ubuntu3.3_amd64.deb ...
+2026-11-19T14:06:50.6219901Z Unpacking gir1.2-gdkpixbuf-2.0:amd64 (2.42.10+dfsg-3ubuntu3.3) ...
+2026-11-19T14:06:50.6366049Z Selecting previously unselected package libgraphene-1.0-0:amd64.
+2026-11-19T14:06:50.6461992Z Preparing to unpack .../04-libgraphene-1.0-0_1.10.8-3build2_amd64.deb ...
+2026-11-19T14:06:50.6784269Z Unpacking libgraphene-1.0-0:amd64 (1.10.8-3build2) ...
+2026-11-19T14:06:50.6911864Z Selecting previously unselected package gir1.2-graphene-1.0:amd64.
+2026-11-19T14:06:50.7003875Z Preparing to unpack .../05-gir1.2-graphene-1.0_1.10.8-3build2_amd64.deb ...
+2026-11-19T14:06:50.7007855Z Unpacking gir1.2-graphene-1.0:amd64 (1.10.8-3build2) ...
+2026-11-19T14:06:50.7139608Z Selecting previously unselected package libharfbuzz-gobject0:amd64.
+2026-11-19T14:06:50.7231265Z Preparing to unpack .../06-libharfbuzz-gobject0_8.3.0-2build2_amd64.deb ...
+2026-11-19T14:06:50.7236030Z Unpacking libharfbuzz-gobject0:amd64 (8.3.0-2build2) ...
+2026-11-19T14:06:50.7364970Z Selecting previously unselected package gir1.2-harfbuzz-0.0:amd64.
+2026-11-19T14:06:50.7454112Z Preparing to unpack .../07-gir1.2-harfbuzz-0.0_8.3.0-2build2_amd64.deb ...
+2026-11-19T14:06:50.7458076Z Unpacking gir1.2-harfbuzz-0.0:amd64 (8.3.0-2build2) ...
+2026-11-19T14:06:50.7594595Z Selecting previously unselected package libpangoxft-1.0-0:amd64.
+2026-11-19T14:06:50.7683357Z Preparing to unpack .../08-libpangoxft-1.0-0_1.52.1+ds-1build1_amd64.deb ...
+2026-11-19T14:06:50.7689902Z Unpacking libpangoxft-1.0-0:amd64 (1.52.1+ds-1build1) ...
+2026-11-19T14:06:50.7820884Z Selecting previously unselected package gir1.2-pango-1.0:amd64.
+2026-11-19T14:06:50.7909325Z Preparing to unpack .../09-gir1.2-pango-1.0_1.52.1+ds-1build1_amd64.deb ...
+2026-11-19T14:06:50.7912899Z Unpacking gir1.2-pango-1.0:amd64 (1.52.1+ds-1build1) ...
+2026-11-19T14:06:50.8048762Z Selecting previously unselected package libcairo-script-interpreter2:amd64.
+2026-11-19T14:06:50.8138234Z Preparing to unpack .../10-libcairo-script-interpreter2_1.18.0-3build1_amd64.deb ...
+2026-11-19T14:06:50.8142011Z Unpacking libcairo-script-interpreter2:amd64 (1.18.0-3build1) ...
+2026-11-19T14:06:50.8279321Z Selecting previously unselected package libgles2:amd64.
+2026-11-19T14:06:50.8368131Z Preparing to unpack .../11-libgles2_1.7.0-1build1_amd64.deb ...
+2026-11-19T14:06:50.8371744Z Unpacking libgles2:amd64 (1.7.0-1build1) ...
+2026-11-19T14:06:50.8513406Z Selecting previously unselected package libgtk-4-common.
+2026-11-19T14:06:50.8601117Z Preparing to unpack .../12-libgtk-4-common_4.14.5+ds-0ubuntu0.10_all.deb ...
+2026-11-19T14:06:50.8604730Z Unpacking libgtk-4-common (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:50.8966874Z Selecting previously unselected package libgtk-4-1:amd64.
+2026-11-19T14:06:50.9055800Z Preparing to unpack .../13-libgtk-4-1_4.14.5+ds-0ubuntu0.10_amd64.deb ...
+2026-11-19T14:06:50.9059380Z Unpacking libgtk-4-1:amd64 (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:50.9585621Z Selecting previously unselected package gir1.2-gtk-4.0:amd64.
+2026-11-19T14:06:50.9677923Z Preparing to unpack .../14-gir1.2-gtk-4.0_4.14.5+ds-0ubuntu0.10_amd64.deb ...
+2026-11-19T14:06:50.9681657Z Unpacking gir1.2-gtk-4.0:amd64 (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:50.9934015Z Preparing to unpack .../15-libgl1-mesa-dri_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T14:06:51.0056521Z Unpacking libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T14:06:51.1152877Z Preparing to unpack .../16-libglx-mesa0_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T14:06:51.1171093Z Unpacking libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T14:06:51.1826041Z Preparing to unpack .../17-libgbm1_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T14:06:51.1843673Z Unpacking libgbm1:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T14:06:51.2102533Z Preparing to unpack .../18-mesa-libgallium_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T14:06:51.2118202Z Unpacking mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.5) over (25.2.8-0ubuntu0.24.04.4) ...
+2026-11-19T14:06:51.3524709Z Selecting previously unselected package libegl-mesa0:amd64.
+2026-11-19T14:06:51.3631312Z Preparing to unpack .../19-libegl-mesa0_25.2.8-0ubuntu0.24.04.5_amd64.deb ...
+2026-11-19T14:06:51.3636535Z Unpacking libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:51.3788253Z Selecting previously unselected package libegl1:amd64.
+2026-11-19T14:06:51.3885500Z Preparing to unpack .../20-libegl1_1.7.0-1build1_amd64.deb ...
+2026-11-19T14:06:51.3890095Z Unpacking libegl1:amd64 (1.7.0-1build1) ...
+2026-11-19T14:06:51.4025932Z Selecting previously unselected package liborc-0.4-0t64:amd64.
+2026-11-19T14:06:51.4117920Z Preparing to unpack .../21-liborc-0.4-0t64_1%3a0.4.38-1ubuntu0.1_amd64.deb ...
+2026-11-19T14:06:51.4122674Z Unpacking liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...
+2026-11-19T14:06:51.4276442Z Selecting previously unselected package libgstreamer-plugins-base1.0-0:amd64.
+2026-11-19T14:06:51.4367731Z Preparing to unpack .../22-libgstreamer-plugins-base1.0-0_1.24.2-1ubuntu0.7_amd64.deb ...
+2026-11-19T14:06:51.4372179Z Unpacking libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:51.4602632Z Selecting previously unselected package libgstreamer-gl1.0-0:amd64.
+2026-11-19T14:06:51.4694618Z Preparing to unpack .../23-libgstreamer-gl1.0-0_1.24.2-1ubuntu0.7_amd64.deb ...
+2026-11-19T14:06:51.4699182Z Unpacking libgstreamer-gl1.0-0:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:51.4845994Z Selecting previously unselected package gstreamer1.0-gl:amd64.
+2026-11-19T14:06:51.4936988Z Preparing to unpack .../24-gstreamer1.0-gl_1.24.2-1ubuntu0.7_amd64.deb ...
+2026-11-19T14:06:51.4940753Z Unpacking gstreamer1.0-gl:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:51.5084547Z Selecting previously unselected package libcdparanoia0:amd64.
+2026-11-19T14:06:51.5173472Z Preparing to unpack .../25-libcdparanoia0_3.10.2+debian-14build3_amd64.deb ...
+2026-11-19T14:06:51.5178003Z Unpacking libcdparanoia0:amd64 (3.10.2+debian-14build3) ...
+2026-11-19T14:06:51.5315096Z Selecting previously unselected package libopus0:amd64.
+2026-11-19T14:06:51.5404346Z Preparing to unpack .../26-libopus0_1.4-1build1_amd64.deb ...
+2026-11-19T14:06:51.5408282Z Unpacking libopus0:amd64 (1.4-1build1) ...
+2026-11-19T14:06:51.5555647Z Selecting previously unselected package libtheora0:amd64.
+2026-11-19T14:06:51.5645255Z Preparing to unpack .../27-libtheora0_1.1.1+dfsg.1-16.1build3_amd64.deb ...
+2026-11-19T14:06:51.5649385Z Unpacking libtheora0:amd64 (1.1.1+dfsg.1-16.1build3) ...
+2026-11-19T14:06:51.5800688Z Selecting previously unselected package libvisual-0.4-0:amd64.
+2026-11-19T14:06:51.5889558Z Preparing to unpack .../28-libvisual-0.4-0_0.4.2-2build1_amd64.deb ...
+2026-11-19T14:06:51.5894219Z Unpacking libvisual-0.4-0:amd64 (0.4.2-2build1) ...
+2026-11-19T14:06:51.6036126Z Selecting previously unselected package libvorbisenc2:amd64.
+2026-11-19T14:06:51.6124251Z Preparing to unpack .../29-libvorbisenc2_1.3.7-1build3_amd64.deb ...
+2026-11-19T14:06:51.6128217Z Unpacking libvorbisenc2:amd64 (1.3.7-1build3) ...
+2026-11-19T14:06:51.6273397Z Selecting previously unselected package gstreamer1.0-plugins-base:amd64.
+2026-11-19T14:06:51.6362537Z Preparing to unpack .../30-gstreamer1.0-plugins-base_1.24.2-1ubuntu0.7_amd64.deb ...
+2026-11-19T14:06:51.6365959Z Unpacking gstreamer1.0-plugins-base:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:51.6585199Z Selecting previously unselected package libburn4t64:amd64.
+2026-11-19T14:06:51.6672966Z Preparing to unpack .../31-libburn4t64_1.5.6-1.1build1_amd64.deb ...
+2026-11-19T14:06:51.6677456Z Unpacking libburn4t64:amd64 (1.5.6-1.1build1) ...
+2026-11-19T14:06:51.6817468Z Selecting previously unselected package libgtk-4-bin.
+2026-11-19T14:06:51.6909409Z Preparing to unpack .../32-libgtk-4-bin_4.14.5+ds-0ubuntu0.10_amd64.deb ...
+2026-11-19T14:06:51.6913454Z Unpacking libgtk-4-bin (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:51.7475492Z Selecting previously unselected package libgtk-4-media-gstreamer.
+2026-11-19T14:06:51.7570567Z Preparing to unpack .../33-libgtk-4-media-gstreamer_4.14.5+ds-0ubuntu0.10_amd64.deb ...
+2026-11-19T14:06:51.7573785Z Unpacking libgtk-4-media-gstreamer (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:51.7713976Z Selecting previously unselected package libisofs6t64:amd64.
+2026-11-19T14:06:51.7808761Z Preparing to unpack .../34-libisofs6t64_1.5.6.pl01-1.1ubuntu2_amd64.deb ...
+2026-11-19T14:06:51.7814040Z Unpacking libisofs6t64:amd64 (1.5.6.pl01-1.1ubuntu2) ...
+2026-11-19T14:06:51.7967124Z Selecting previously unselected package libisoburn1t64:amd64.
+2026-11-19T14:06:51.8060600Z Preparing to unpack .../35-libisoburn1t64_1%3a1.5.6-1.1ubuntu3_amd64.deb ...
+2026-11-19T14:06:51.8065456Z Unpacking libisoburn1t64:amd64 (1:1.5.6-1.1ubuntu3) ...
+2026-11-19T14:06:51.8234248Z Selecting previously unselected package librsvg2-2:amd64.
+2026-11-19T14:06:51.8326856Z Preparing to unpack .../36-librsvg2-2_2.58.0+dfsg-1ubuntu0.1_amd64.deb ...
+2026-11-19T14:06:51.8330865Z Unpacking librsvg2-2:amd64 (2.58.0+dfsg-1ubuntu0.1) ...
+2026-11-19T14:06:51.8681052Z Selecting previously unselected package librsvg2-common:amd64.
+2026-11-19T14:06:51.8773411Z Preparing to unpack .../37-librsvg2-common_2.58.0+dfsg-1ubuntu0.1_amd64.deb ...
+2026-11-19T14:06:51.8777568Z Unpacking librsvg2-common:amd64 (2.58.0+dfsg-1ubuntu0.1) ...
+2026-11-19T14:06:51.9373378Z Selecting previously unselected package python3-markdown.
+2026-11-19T14:06:51.9465816Z Preparing to unpack .../38-python3-markdown_3.5.2-1_all.deb ...
+2026-11-19T14:06:51.9470753Z Unpacking python3-markdown (3.5.2-1) ...
+2026-11-19T14:06:51.9616477Z Selecting previously unselected package xorriso.
+2026-11-19T14:06:51.9710437Z Preparing to unpack .../39-xorriso_1%3a1.5.6-1.1ubuntu3_amd64.deb ...
+2026-11-19T14:06:51.9714214Z Unpacking xorriso (1:1.5.6-1.1ubuntu3) ...
+2026-11-19T14:06:52.0015730Z Setting up libcairo-script-interpreter2:amd64 (1.18.0-3build1) ...
+2026-11-19T14:06:52.0030789Z Setting up libcdparanoia0:amd64 (3.10.2+debian-14build3) ...
+2026-11-19T14:06:52.0042101Z Setting up mesa-libgallium:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:52.0052558Z Setting up gir1.2-freedesktop:amd64 (1.80.1-1) ...
+2026-11-19T14:06:52.0063686Z Setting up desktop-file-utils (0.27-2build1) ...
+2026-11-19T14:06:52.2330229Z Setting up libpangoxft-1.0-0:amd64 (1.52.1+ds-1build1) ...
+2026-11-19T14:06:52.2342426Z Setting up gir1.2-gdkpixbuf-2.0:amd64 (2.42.10+dfsg-3ubuntu3.3) ...
+2026-11-19T14:06:52.2354367Z Setting up libgbm1:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:52.2365305Z Setting up libvisual-0.4-0:amd64 (0.4.2-2build1) ...
+2026-11-19T14:06:52.2376508Z Setting up libgl1-mesa-dri:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:52.2430721Z Setting up libharfbuzz-gobject0:amd64 (8.3.0-2build2) ...
+2026-11-19T14:06:52.2441135Z Setting up gir1.2-harfbuzz-0.0:amd64 (8.3.0-2build2) ...
+2026-11-19T14:06:52.2452141Z Setting up liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...
+2026-11-19T14:06:52.2463049Z Setting up librsvg2-2:amd64 (2.58.0+dfsg-1ubuntu0.1) ...
+2026-11-19T14:06:52.2474192Z Setting up gir1.2-pango-1.0:amd64 (1.52.1+ds-1build1) ...
+2026-11-19T14:06:52.2485660Z Setting up libegl-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:52.2496344Z Setting up libgles2:amd64 (1.7.0-1build1) ...
+2026-11-19T14:06:52.2507144Z Setting up libopus0:amd64 (1.4-1build1) ...
+2026-11-19T14:06:52.2518085Z Setting up python3-markdown (3.5.2-1) ...
+2026-11-19T14:06:52.4178175Z Setting up librsvg2-common:amd64 (2.58.0+dfsg-1ubuntu0.1) ...
+2026-11-19T14:06:52.4222465Z Setting up libisofs6t64:amd64 (1.5.6.pl01-1.1ubuntu2) ...
+2026-11-19T14:06:52.4231133Z Setting up dbus-x11 (1.14.10-4ubuntu4.1) ...
+2026-11-19T14:06:52.4249540Z Setting up libtheora0:amd64 (1.1.1+dfsg.1-16.1build3) ...
+2026-11-19T14:06:52.4259982Z Setting up libegl1:amd64 (1.7.0-1build1) ...
+2026-11-19T14:06:52.4270366Z Setting up libburn4t64:amd64 (1.5.6-1.1build1) ...
+2026-11-19T14:06:52.4280613Z Setting up libgtk-4-common (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:06:52.4290286Z Setting up libisoburn1t64:amd64 (1:1.5.6-1.1ubuntu3) ...
+2026-11-19T14:06:52.4300875Z Setting up xorriso (1:1.5.6-1.1ubuntu3) ...
+2026-11-19T14:06:52.4313361Z Setting up libgraphene-1.0-0:amd64 (1.10.8-3build2) ...
+2026-11-19T14:06:52.4325451Z Setting up libvorbisenc2:amd64 (1.3.7-1build3) ...
+2026-11-19T14:06:52.4335937Z Setting up gir1.2-graphene-1.0:amd64 (1.10.8-3build2) ...
+2026-11-19T14:06:52.4344990Z Setting up libglx-mesa0:amd64 (25.2.8-0ubuntu0.24.04.5) ...
+2026-11-19T14:06:52.4355834Z Setting up libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:52.4365465Z Setting up libgstreamer-gl1.0-0:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:52.4375485Z Setting up gstreamer1.0-plugins-base:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:52.4386264Z Setting up gstreamer1.0-gl:amd64 (1.24.2-1ubuntu0.7) ...
+2026-11-19T14:06:52.5108273Z Processing triggers for libgdk-pixbuf-2.0-0:amd64 (2.42.10+dfsg-3ubuntu3.3) ...
+2026-11-19T14:06:53.0106347Z Processing triggers for install-info (7.1-3build2) ...
+2026-11-19T14:06:53.3023968Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-11-19T14:07:01.7953554Z Processing triggers for man-db (2.12.0-4build2) ...
+2026-11-19T14:07:01.7979031Z Not building database; man-db/auto-update is not 'true'.
+2026-11-19T14:07:01.7994357Z Processing triggers for libglib2.0-0t64:amd64 (2.80.0-6ubuntu3.10) ...
+2026-11-19T14:07:01.8461195Z Setting up libgtk-4-1:amd64 (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:07:01.9047431Z Setting up libgtk-4-bin (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:07:01.9067061Z Setting up gir1.2-gtk-4.0:amd64 (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:07:01.9090483Z Setting up libgtk-4-media-gstreamer (4.14.5+ds-0ubuntu0.10) ...
+2026-11-19T14:07:01.9103810Z Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+2026-11-19T14:07:03.3385151Z 
+2026-11-19T14:07:03.3386011Z Running kernel seems to be up-to-date.
+2026-11-19T14:07:03.3386378Z 
+2026-11-19T14:07:03.3386535Z No services need to be restarted.
+2026-11-19T14:07:03.3386711Z 
+2026-11-19T14:07:03.3387043Z No containers need to be restarted.
+2026-11-19T14:07:03.3387251Z 
+2026-11-19T14:07:03.3387523Z No user sessions are running outdated binaries.
+2026-11-19T14:07:03.3387753Z 
+2026-11-19T14:07:03.3388011Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+2026-11-19T14:07:05.4540576Z info: component rustfmt is up to date
+2026-11-19T14:07:05.4541095Z info: component clippy is up to date
+2026-11-19T14:07:05.4958580Z ##[group]Run PYTHON=/usr/bin/python3 bash scripts/check-native.sh
+2026-11-19T14:07:05.4958999Z [36;1mPYTHON=/usr/bin/python3 bash scripts/check-native.sh[0m
+2026-11-19T14:07:05.4986051Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:07:05.4986408Z env:
+2026-11-19T14:07:05.4986639Z   FETIAN_LARGE_ISO_TEST: 1
+2026-11-19T14:07:05.4986884Z ##[endgroup]
+2026-11-19T14:07:15.4958587Z     Checking fetian-system v0.1.0 (/home/runner/work/FetianOS/FetianOS/system/fetian-system)
+2026-11-19T14:07:25.3009744Z     Finished `dev` profile [unoptimized + debuginfo] target(s) in 10.95s
+2026-11-19T14:07:25.3715445Z    Compiling fetian-system v0.1.0 (/home/runner/work/FetianOS/FetianOS/system/fetian-system)
+2026-11-19T14:07:30.0586122Z     Finished `test` profile [unoptimized + debuginfo] target(s) in 4.74s
+2026-11-19T14:07:30.0606417Z      Running unittests src/lib.rs (target/debug/deps/fetian_system-a4166de1b95d4f7b)
+2026-11-19T14:07:30.0614692Z 
+2026-11-19T14:07:30.0614834Z running 4 tests
+2026-11-19T14:07:30.0624037Z test tests::cpu_excludes_guest_and_handles_counter_reset ... ok
+2026-11-19T14:07:30.0624461Z test tests::json_escapes_firmware_strings ... ok
+2026-11-19T14:07:30.0624863Z      Running unittests src/main.rs (target/debug/deps/fetian_health_rs-56cdc129cd3889c8)
+2026-11-19T14:07:30.0625358Z test tests::memory_rejects_missing_inconsistent_and_overflowing_data ... ok
+2026-11-19T14:07:30.0625752Z test tests::network_uses_receive_and_transmit_columns ... ok
+2026-11-19T14:07:30.0625961Z 
+2026-11-19T14:07:30.0626183Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-11-19T14:07:30.0626468Z 
+2026-11-19T14:07:30.0626751Z 
+2026-11-19T14:07:30.0626884Z running 1 test
+2026-11-19T14:07:30.0640633Z test tests::output_replaces_complete_snapshot_and_preserves_previous_on_failure ... ok
+2026-11-19T14:07:30.0641023Z 
+2026-11-19T14:07:30.0641538Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-11-19T14:07:30.0642139Z 
+2026-11-19T14:07:30.0642350Z      Running tests/fixtures.rs (target/debug/deps/fixtures-2a8cf36758add940)
+2026-11-19T14:07:30.0647896Z 
+2026-11-19T14:07:30.0648010Z running 1 test
+2026-11-19T14:07:30.0656822Z test linux_metrics_and_missing_sensors_are_reported_honestly ... ok
+2026-11-19T14:07:30.0657117Z 
+2026-11-19T14:07:30.0657376Z test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-11-19T14:07:30.0657714Z 
+2026-11-19T14:07:30.0657864Z    Doc-tests fetian_system
+2026-11-19T14:07:30.8588226Z 
+2026-11-19T14:07:30.8588814Z running 0 tests
+2026-11-19T14:07:30.8589042Z 
+2026-11-19T14:07:30.8589290Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-11-19T14:07:30.8589581Z 
+2026-11-19T14:07:32.6565094Z ................................................................/usr/lib/python3.12/zipfile/__init__.py:1620: UserWarning: Duplicate name: 'file'
+2026-11-19T14:07:32.6565651Z   return self._open_to_write(zinfo, force_zip64=force_zip64)
+2026-11-19T14:07:34.3376680Z ..............................xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+2026-11-19T14:07:34.3377120Z 
+2026-11-19T14:07:34.3377392Z Copying of file objects from ISO image to disk filesystem is: Enabled
+2026-11-19T14:07:34.3379456Z xorriso : NOTE : Loading ISO image tree from LBA 0
+2026-11-19T14:07:34.3385754Z xorriso : UPDATE :       3 nodes read in 1 seconds
+2026-11-19T14:07:34.3386352Z Drive current: -indev '/tmp/fetian-iso-payload-y3pud533/fixture.iso'
+2026-11-19T14:07:34.3386981Z Media current: stdio file, overwriteable
+2026-11-19T14:07:34.3387462Z Media status : is written , is appendable
+2026-11-19T14:07:34.3388003Z Media summary: 1 session, 1048791 data blocks, 2048m data, 86.3g free
+2026-11-19T14:07:34.3388605Z Volume id    : 'ISOIMAGE'
+2026-11-19T14:07:35.3393661Z xorriso : UPDATE :       0 files restored ( 863.9m) in 1 seconds , 653.6xD
+2026-11-19T14:07:36.3485684Z xorriso : UPDATE :       0 files restored (1097.9m) in 2 seconds , 175.6xD
+2026-11-19T14:07:37.3517293Z xorriso : UPDATE :       0 files restored (1310.9m) in 3 seconds , 160.8xD
+2026-11-19T14:07:38.3595934Z xorriso : UPDATE :       0 files restored (1528.9m) in 4 seconds , 163.7xD
+2026-11-19T14:07:39.3775726Z xorriso : UPDATE :       0 files restored (1760.4m) in 5 seconds , 172.2xD
+2026-11-19T14:07:40.3775643Z xorriso : UPDATE :       0 files restored (1987.8m) in 6 seconds , 172.1xD
+2026-11-19T14:07:40.6398535Z xorriso : UPDATE :       1 files restored (2048.1m) in 6 seconds = 246.1xD
+2026-11-19T14:07:40.6399429Z Extracted from ISO image: file '/fetianos/x86_64/airootfs.sfs'='/tmp/fetian-iso-payload-y3pud533/extracted'
+2026-11-19T14:07:44.1842387Z .xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+2026-11-19T14:07:44.1842730Z 
+2026-11-19T14:07:44.1842898Z Copying of file objects from ISO image to disk filesystem is: Enabled
+2026-11-19T14:07:44.1844773Z xorriso : NOTE : Loading ISO image tree from LBA 0
+2026-11-19T14:07:44.1850369Z xorriso : UPDATE :       3 nodes read in 1 seconds
+2026-11-19T14:07:44.1850800Z Drive current: -indev '/tmp/fetian-iso-payload-7o1nyd7u/fixture.iso'
+2026-11-19T14:07:44.1851187Z Media current: stdio file, overwriteable
+2026-11-19T14:07:44.1851616Z Media status : is written , is appendable
+2026-11-19T14:07:44.1851963Z Media summary: 1 session, 215 data blocks,  430k data, 88.3g free
+2026-11-19T14:07:44.1852279Z Volume id    : 'ISOIMAGE'
+2026-11-19T14:07:44.1853466Z xorriso : UPDATE :       1 files restored ( 65536b) in 1 seconds = 0.0xD
+2026-11-19T14:07:44.1854455Z Extracted from ISO image: file '/fetianos/x86_64/airootfs.sfs'='/tmp/fetian-iso-payload-7o1nyd7u/extracted'
+2026-11-19T14:07:44.2817544Z ............................fetian-shell: optional nm-applet unavailable: missing optional network applet; other components continue
+2026-11-19T14:07:44.2838334Z ..fetian-shell: optional child nm-applet exited (23); other components continue; restart fetian-shell.service after resolving the cause
+2026-11-19T14:07:44.3094984Z ...fetian-shell: missing panel
+2026-11-19T14:07:44.3970302Z ..
+2026-11-19T14:07:44.3970792Z ----------------------------------------------------------------------
+2026-11-19T14:07:44.3971267Z Ran 130 tests in 13.180s
+2026-11-19T14:07:44.3971578Z 
+2026-11-19T14:07:44.3971652Z OK
+2026-11-19T14:07:44.6345469Z Live Linux telemetry JSON verified.
+2026-11-19T14:07:44.6407196Z ##[group]Run bash scripts/build-native.sh
+2026-11-19T14:07:44.6407550Z [36;1mbash scripts/build-native.sh[0m
+2026-11-19T14:07:44.6407838Z [36;1mbash scripts/validate-profile.sh[0m
+2026-11-19T14:07:44.6408173Z [36;1mpython3 scripts/verify-staged.py[0m
+2026-11-19T14:07:44.6434517Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:07:44.6434891Z ##[endgroup]
+2026-11-19T14:07:44.6640516Z    Compiling fetian-system v0.1.0 (/home/runner/work/FetianOS/FetianOS/system/fetian-system)
+2026-11-19T14:07:49.4311038Z     Finished `release` profile [optimized] target(s) in 4.77s
+2026-11-19T14:07:49.5708086Z FetianOS profile validation passed.
+2026-11-19T14:07:49.7247865Z sway: staged; 8 user-unit syntax checks (temporary ExecStart=/usr/bin/true)
+2026-11-19T14:07:49.7248485Z hyprland: staged; 12 user-unit syntax checks (temporary ExecStart=/usr/bin/true)
+2026-11-19T14:07:49.7249319Z Metrics and live-user unit syntax passed. No services installed or started; runtime sandbox/session behavior remains unverified.
+2026-11-19T14:07:49.7316608Z ##[group]Run make gtk-check PYTHON=/usr/bin/python3
+2026-11-19T14:07:49.7316988Z [36;1mmake gtk-check PYTHON=/usr/bin/python3[0m
+2026-11-19T14:07:49.7343448Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:07:49.7343725Z ##[endgroup]
+2026-11-19T14:07:49.7796187Z FETIAN_GTK_TEST=1 GDK_BACKEND=x11 GSK_RENDERER=cairo GTK_A11Y=none dbus-run-session -- xvfb-run -a /usr/bin/python3 "/home/runner/work/FetianOS/FetianOS/tests/gtk_files_smoke.py"
+2026-11-19T14:07:57.4768059Z libEGL warning: DRI3 error: Could not get DRI3 device
+2026-11-19T14:07:57.4768831Z libEGL warning: Ensure your X server supports DRI3 to get accelerated rendering
+2026-11-19T14:07:59.1851851Z GTK smoke passed: listing, hidden files, text/Arabic preview, bounded raster thumbnail, native URI clipboard, Trash/restore, views, split, tabs, search, themes, reduced motion, bookmarks, RTL, editable-key and URI guards. Device/disconnect errors: fake providers only.
+2026-11-19T14:07:59.2652841Z ##[group]Run find apps desktop system profile -name '*.desktop' ! -path '*/wayland-sessions/*' -print0 | xargs -0 desktop-file-validate
+2026-11-19T14:07:59.2653870Z [36;1mfind apps desktop system profile -name '*.desktop' ! -path '*/wayland-sessions/*' -print0 | xargs -0 desktop-file-validate[0m
+2026-11-19T14:07:59.2685497Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:07:59.2685887Z ##[endgroup]
+2026-11-19T14:07:59.2798009Z ##[group]Run python3 scripts/build-environment.py --json
+2026-11-19T14:07:59.2798489Z [36;1mpython3 scripts/build-environment.py --json[0m
+2026-11-19T14:07:59.2820755Z shell: /usr/bin/bash -e {0}
+2026-11-19T14:07:59.2821010Z ##[endgroup]
+2026-11-19T14:07:59.3069379Z {
+2026-11-19T14:07:59.3070039Z   "schema_version": 1,
+2026-11-19T14:07:59.3070406Z   "system": {
+2026-11-19T14:07:59.3070704Z     "PRETTY_NAME": "Ubuntu 24.04.5 LTS",
+2026-11-19T14:07:59.3071150Z     "VERSION_ID": "24.04",
+2026-11-19T14:07:59.3071675Z     "ID": "ubuntu"
+2026-11-19T14:07:59.3071986Z   },
+2026-11-19T14:07:59.3072279Z   "architecture": "x86_64",
+2026-11-19T14:07:59.3072601Z   "tools": {
+2026-11-19T14:07:59.3072933Z     "mkarchiso": null,
+2026-11-19T14:07:59.3073207Z     "pacman": null,
+2026-11-19T14:07:59.3073466Z     "pacman-key": null,
+2026-11-19T14:07:59.3073814Z     "cargo": "/home/runner/.cargo/bin/cargo",
+2026-11-19T14:07:59.3074269Z     "rustc": "/home/runner/.cargo/bin/rustc",
+2026-11-19T14:07:59.3074727Z     "cc": "/usr/bin/cc",
+2026-11-19T14:07:59.3075090Z     "python3": "/usr/bin/python3",
+2026-11-19T14:07:59.3075464Z     "xorriso": "/usr/bin/xorriso",
+2026-11-19T14:07:59.3075794Z     "isoinfo": null,
+2026-11-19T14:07:59.3076121Z     "unsquashfs": "/usr/bin/unsquashfs",
+2026-11-19T14:07:59.3076763Z     "qemu-system-x86_64": null,
+2026-11-19T14:07:59.3077077Z     "qemu-img": null,
+2026-11-19T14:07:59.3077368Z     "mcopy": null
+2026-11-19T14:07:59.3077698Z   },
+2026-11-19T14:07:59.3078081Z   "missing_tools": [
+2026-11-19T14:07:59.3078461Z     "mkarchiso",
+2026-11-19T14:07:59.3078929Z     "pacman",
+2026-11-19T14:07:59.3079298Z     "pacman-key",
+2026-11-19T14:07:59.3079718Z     "isoinfo",
+2026-11-19T14:07:59.3080039Z     "qemu-system-x86_64",
+2026-11-19T14:07:59.3080420Z     "qemu-img",
+2026-11-19T14:07:59.3080764Z     "mcopy"
+2026-11-19T14:07:59.3081019Z   ],
+2026-11-19T14:07:59.3081351Z   "image_host_supported": false,
+2026-11-19T14:07:59.3081922Z   "kvm_usable": false,
+2026-11-19T14:07:59.3082319Z   "ovmf_code": null,
+2026-11-19T14:07:59.3082624Z   "ovmf_variables": null,
+2026-11-19T14:07:59.3082953Z   "uefi_vm_dependencies_available": false,
+2026-11-19T14:07:59.3083372Z   "graphical_display_configured": false,
+2026-11-19T14:07:59.3083766Z   "workspace_free_bytes": 94835019776,
+2026-11-19T14:07:59.3084150Z   "tests_executed": [],
+2026-11-19T14:07:59.3084518Z   "hardware_validated": false
+2026-11-19T14:07:59.3084854Z }
+2026-11-19T14:07:59.3195096Z Post job cleanup.
+2026-11-19T14:07:59.3800395Z [command]/usr/bin/git version
+2026-11-19T14:07:59.3835025Z git version 2.56.1
+2026-11-19T14:07:59.3858302Z Temporarily overriding HOME='/home/runner/work/_temp/5f7c8153-3fcd-4ce2-857b-6535ff9c9fbc' before making global git config changes
+2026-11-19T14:07:59.3859177Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-19T14:07:59.3862223Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/FetianOS/FetianOS
+2026-11-19T14:07:59.3892430Z Removing SSH command configuration
+2026-11-19T14:07:59.3896723Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-19T14:07:59.3919175Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-19T14:07:59.4072530Z Removing HTTP extra header
+2026-11-19T14:07:59.4073544Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-19T14:07:59.4093702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-19T14:07:59.4250272Z Removing includeIf entries pointing to credentials config files
+2026-11-19T14:07:59.4263932Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-19T14:07:59.4291055Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-19T14:07:59.4593631Z Cleaning up orphan processes

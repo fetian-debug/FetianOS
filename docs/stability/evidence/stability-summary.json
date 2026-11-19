@@ -1,0 +1,179 @@
+{
+  "status": "NOT_ACCEPTED_FOR_DAILY_USE",
+  "stable": false,
+  "base_revision": "06aa67fc4a1ee25d37211c288d0fa0630c9b44dc",
+  "defects": 7,
+  "recorded_utc": "2026-11-19T14:32:07Z",
+  "fca_implementation_unchanged": true,
+  "published_release_unchanged": true,
+  "release_check_scope": "GitHub metadata/digests only; no new download or rebuilding of published ISO bytes",
+  "physical_target": {
+    "evidence_kind": "user-reported target, not physical verification",
+    "manufacturer": "HP",
+    "product_family": "15-bs0xx",
+    "cpu": "Intel Core i5-7200U",
+    "architecture": "x86-64",
+    "cores": 2,
+    "threads": 4,
+    "integrated_gpu": "Intel HD Graphics 620",
+    "discrete_gpu_vendor": "AMD",
+    "discrete_gpu_model": null,
+    "discrete_gpu_pci_id": null,
+    "ram_bytes": null,
+    "storage": null,
+    "uefi_support_reported": true,
+    "hardware_verified": false,
+    "physical_boot_verified": false,
+    "installation_verified": false,
+    "initial_session": "FETIANOS \u2014 Sway recovery"
+  },
+  "stress": {
+    "wsl_original": {
+      "schema_version": 1,
+      "mode": "stress",
+      "master_seed": 2090,
+      "completed": 1000,
+      "expectations_met": 995,
+      "counts": {
+        "expected_recovery": 408,
+        "expected_rejection": 509,
+        "safely_detected_unrecoverable": 78,
+        "unexpected_correctness_failure": 5
+      },
+      "failures": [
+        {
+          "index": 186,
+          "seed": 6527194823182779136,
+          "scenario": "duplicate-start",
+          "report": "run-000186-seed-6527194823182779136.json",
+          "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+        },
+        {
+          "index": 187,
+          "seed": 2714685373729247199,
+          "scenario": "cross-authority",
+          "report": "run-000187-seed-2714685373729247199.json",
+          "explanation": "TimeoutError: broker startup did not reach a verified status"
+        },
+        {
+          "index": 409,
+          "seed": 14880905909346546009,
+          "scenario": "wrong-lease",
+          "report": "run-000409-seed-14880905909346546009.json",
+          "explanation": "TimeoutError: timed out"
+        },
+        {
+          "index": 689,
+          "seed": 18085918250417703917,
+          "scenario": "duplicate-start",
+          "report": "run-000689-seed-18085918250417703917.json",
+          "explanation": "TimeoutError: timed out"
+        },
+        {
+          "index": 907,
+          "seed": 6081882618845452580,
+          "scenario": "terminal-cancel",
+          "report": "run-000907-seed-6081882618845452580.json",
+          "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+        }
+      ],
+      "recovered": 408,
+      "rejected": 509,
+      "safely_unrecoverable": 78,
+      "unexpected_failures": 5,
+      "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+    },
+    "wsl_linux_executables": {
+      "schema_version": 1,
+      "mode": "stress",
+      "master_seed": 2090,
+      "completed": 1000,
+      "expectations_met": 997,
+      "counts": {
+        "expected_recovery": 406,
+        "expected_rejection": 513,
+        "safely_detected_unrecoverable": 78,
+        "unexpected_correctness_failure": 3
+      },
+      "failures": [
+        {
+          "index": 417,
+          "seed": 16222025457264195268,
+          "scenario": "sqlite-reopen",
+          "report": "run-000417-seed-16222025457264195268.json",
+          "explanation": "TimeoutError: timed out"
+        },
+        {
+          "index": 634,
+          "seed": 6622925276880692738,
+          "scenario": "capability",
+          "report": "run-000634-seed-6622925276880692738.json",
+          "explanation": "TimeoutError: timed out"
+        },
+        {
+          "index": 973,
+          "seed": 16985103156031036425,
+          "scenario": "executor-sigkill",
+          "report": "run-000973-seed-16985103156031036425.json",
+          "explanation": "TimeoutError: timed out"
+        }
+      ],
+      "recovered": 406,
+      "rejected": 513,
+      "safely_unrecoverable": 78,
+      "unexpected_failures": 3,
+      "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+    },
+    "hosted": {
+      "schema_version": 1,
+      "mode": "stress",
+      "master_seed": 2090,
+      "completed": 1000,
+      "expectations_met": 1000,
+      "counts": {
+        "expected_recovery": 408,
+        "expected_rejection": 514,
+        "safely_detected_unrecoverable": 78
+      },
+      "failures": [],
+      "recovered": 408,
+      "rejected": 514,
+      "safely_unrecoverable": 78,
+      "unexpected_failures": 0,
+      "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+    }
+  },
+  "critical_open_gates": [
+    "physical HP boot/device acceptance",
+    "graphical sign-in/lock/logout and crash recovery",
+    "installed-system upgrade/cleanup/reboot",
+    "24-hour soak and idle/memory-growth measurements",
+    "Secure Boot and physical suspend/resume"
+  ],
+  "unresolved": [
+    "WSL timing failures retained; executable relocation did not eliminate them",
+    "Initial GTK preview timeout has no proven root cause"
+  ],
+  "candidate_runs": [
+    {
+      "id": 44505284369,
+      "source": "4b41effbc9451c05aac19ea52c346e52df414a1c",
+      "status": "completed",
+      "conclusion": "failure"
+    },
+    {
+      "id": 44540057276,
+      "source": "e155b7574c9b082ca0edcafec5cc302bc9a259fa",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "payload_regressions": {
+    "hosted_tests": 130,
+    "hosted_skips": 0,
+    "local_tests": 130,
+    "local_skips": 2,
+    "large_fixture_bytes": 2147549184,
+    "source_job": 135615681941
+  }
+}

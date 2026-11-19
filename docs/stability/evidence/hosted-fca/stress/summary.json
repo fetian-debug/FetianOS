@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "mode": "stress",
+  "master_seed": 2090,
+  "completed": 1000,
+  "expectations_met": 1000,
+  "counts": {
+    "expected_recovery": 408,
+    "expected_rejection": 514,
+    "safely_detected_unrecoverable": 78
+  },
+  "failures": [],
+  "recovered": 408,
+  "rejected": 514,
+  "safely_unrecoverable": 78,
+  "unexpected_failures": 0,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "config": {
+    "scenario": "capability",
+    "seed": 6622925276880692738,
+    "items": 64,
+    "chunk": 16,
+    "barrier": 1,
+    "executor": "python",
+    "jitter_us": 932
+  },
+  "classification": "unexpected_correctness_failure",
+  "expectations_met": false,
+  "explanation": "TimeoutError: timed out",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 322, in run_case\n    result.update(experiment(session, config))\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 229, in experiment\n    session.call(\"run\", id=identity, executor=first, barrier_after=config.barrier)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 139, in call\n    result = super().call(operation, **arguments)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 69, in call\n    size = struct.unpack(\">I\", exact(stream, 4))[0]\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 36, in exact\n    piece = stream.recv(size - len(data))\nTimeoutError: timed out\n",
+  "cleanup_error": "Command '['/tmp/fetian-stability-binaries-14j8ykaa/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds",
+  "duration_us": 29781867.151,
+  "replay": "python3 system/fetian-fca/validation/lab.py replay --case /mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/linux-fca-control/stress/run-000634-seed-6622925276880692738.json --output NEW_DIRECTORY"
+}

@@ -1,0 +1,125 @@
+{
+  "scope": "Final source snapshot collected after validation; original baseline product is reconstructible at the base commit. This is not an exact historical snapshot of every intermediate runner version.",
+  "files": [
+    {
+      "path": "apps/fetian-files/preferences.py",
+      "sha256": "391d3324e8030e1f5e6adb65b83b09b095386f9c320ebc15080b2334bd96d9b2",
+      "canonical_sha256": "391d3324e8030e1f5e6adb65b83b09b095386f9c320ebc15080b2334bd96d9b2"
+    },
+    {
+      "path": "desktop/hyprland/fetian_shell.py",
+      "sha256": "99c7d4ff658bba342bd3e7a553a72e7bc5d4ed1fed961d61f78fa39bcdecccde",
+      "canonical_sha256": "99c7d4ff658bba342bd3e7a553a72e7bc5d4ed1fed961d61f78fa39bcdecccde"
+    },
+    {
+      "path": "desktop/hyprland/bin/fetian-hyprland-session",
+      "sha256": "db9a0a10439863b9066f940b3c5d2fccf300178829b4e5d23ccc1c5a6f9264a0",
+      "canonical_sha256": "db9a0a10439863b9066f940b3c5d2fccf300178829b4e5d23ccc1c5a6f9264a0"
+    },
+    {
+      "path": "system/boot/airootfs/usr/bin/fetian-sway-session",
+      "sha256": "c05e328d7d762ab98e50b2fe46e0ae804099cb03561bb263c053bec50f7e8540",
+      "canonical_sha256": "c05e328d7d762ab98e50b2fe46e0ae804099cb03561bb263c053bec50f7e8540"
+    },
+    {
+      "path": "system/boot/live_setup.py",
+      "sha256": "43235aa43e722d9f5f19003a0ec4f036323a492a0081e6786480e88022f95ea1",
+      "canonical_sha256": "43235aa43e722d9f5f19003a0ec4f036323a492a0081e6786480e88022f95ea1"
+    },
+    {
+      "path": "system/boot/airootfs/usr/lib/systemd/user/fetian-bluetooth-agent.service",
+      "sha256": "f6798ff7710d43b4a2ea519fe36260ac1e6b487efec8b39257958d0551f39657",
+      "canonical_sha256": "f6798ff7710d43b4a2ea519fe36260ac1e6b487efec8b39257958d0551f39657"
+    },
+    {
+      "path": "system/boot/airootfs/usr/lib/systemd/user/fetian-sway-idle.service",
+      "sha256": "503a9a795d18c710868ed57b5a7ca73a0628a892deac40bf96941118fb7c652d",
+      "canonical_sha256": "503a9a795d18c710868ed57b5a7ca73a0628a892deac40bf96941118fb7c652d"
+    },
+    {
+      "path": "desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-idle.service",
+      "sha256": "f1bfc59a1e07e186fbaea4e3d5b0824fe1f5965e0e930ad88b4020c9f89ec875",
+      "canonical_sha256": "f1bfc59a1e07e186fbaea4e3d5b0824fe1f5965e0e930ad88b4020c9f89ec875"
+    },
+    {
+      "path": "desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-shell.service",
+      "sha256": "5ed238293997e463a7f5c823652cbadcc61dc92ebfd62f7ccbe5a511e6db52f4",
+      "canonical_sha256": "5ed238293997e463a7f5c823652cbadcc61dc92ebfd62f7ccbe5a511e6db52f4"
+    },
+    {
+      "path": "scripts/release-artifacts.py",
+      "sha256": "f08f3af68a59f7122bd43e53d5773771121ecaf429acb3618113ab6af379da0d",
+      "canonical_sha256": "f08f3af68a59f7122bd43e53d5773771121ecaf429acb3618113ab6af379da0d"
+    },
+    {
+      "path": "scripts/stability-check.py",
+      "sha256": "4a59861fd57d4692d0050bb4dfe9c9f4d5608f25478465e90d595e9d9276b0e9",
+      "canonical_sha256": "4a59861fd57d4692d0050bb4dfe9c9f4d5608f25478465e90d595e9d9276b0e9"
+    },
+    {
+      "path": "scripts/verify-stability.py",
+      "sha256": "e2081927fd2622cfc6c30fdecc4933e6c0ddd3868734b52ff8636f70d25eee1d",
+      "canonical_sha256": "e2081927fd2622cfc6c30fdecc4933e6c0ddd3868734b52ff8636f70d25eee1d"
+    },
+    {
+      "path": "tests/test_stability.py",
+      "sha256": "e3506615a2f6fef8357d3e529e4d8262d44e0debc260300e75e240566bac50b1",
+      "canonical_sha256": "e3506615a2f6fef8357d3e529e4d8262d44e0debc260300e75e240566bac50b1"
+    },
+    {
+      "path": "tests/test_iso_payload.py",
+      "sha256": "b64b1e81410b5c5bd88a0f8183723731a62fde27f2423d04f5c08e06e751fb81",
+      "canonical_sha256": "b64b1e81410b5c5bd88a0f8183723731a62fde27f2423d04f5c08e06e751fb81"
+    },
+    {
+      "path": ".github/workflows/source-checks.yml",
+      "sha256": "8ed3fceba445b2f9babe98d00b641179c0f6271732e65582d466bdd4bf7120f4",
+      "canonical_sha256": "8ed3fceba445b2f9babe98d00b641179c0f6271732e65582d466bdd4bf7120f4"
+    },
+    {
+      "path": ".gitattributes",
+      "sha256": "b3be80f1c256064a80f02b1032021d42169f6f0ce174621a2c95ea8141383d79",
+      "canonical_sha256": "b3be80f1c256064a80f02b1032021d42169f6f0ce174621a2c95ea8141383d79"
+    },
+    {
+      "path": ".build-tools/run-stabilization.py",
+      "sha256": "835d1b371d49a9ce3120c3b422e0103dc75f5f8e7d5bc8c76400bb211c765431",
+      "canonical_sha256": "835d1b371d49a9ce3120c3b422e0103dc75f5f8e7d5bc8c76400bb211c765431"
+    },
+    {
+      "path": ".build-tools/run-fca-native-control.py",
+      "sha256": "6beb3bcebef57ef502c89a4f43f7bece99ef47df0e23985aeca22ad2e7fce450",
+      "canonical_sha256": "6beb3bcebef57ef502c89a4f43f7bece99ef47df0e23985aeca22ad2e7fce450"
+    },
+    {
+      "path": ".build-tools/stability-audit.py",
+      "sha256": "34b64bd59bd8a9050422be1a3c5035399f98b6ff6c63622099097e559ee74dc0",
+      "canonical_sha256": "34b64bd59bd8a9050422be1a3c5035399f98b6ff6c63622099097e559ee74dc0"
+    },
+    {
+      "path": ".build-tools/stability-extras.py",
+      "sha256": "ff3fc75f992bd57d69ca1464bffaf9789d763e092a60caf9110f5599c9562e4a",
+      "canonical_sha256": "ff3fc75f992bd57d69ca1464bffaf9789d763e092a60caf9110f5599c9562e4a"
+    },
+    {
+      "path": ".build-tools/archive-stability.py",
+      "sha256": "bdc272d56d9c172713fec674309e179aaf9a6f1dd020ed65d24b1968c7a101d9",
+      "canonical_sha256": "bdc272d56d9c172713fec674309e179aaf9a6f1dd020ed65d24b1968c7a101d9"
+    },
+    {
+      "path": ".build-tools/retain-hosted-stability.py",
+      "sha256": "1c95e990c221aefc9fcf3fd3d798c03c24883f08b9923c8715a9e4bfe49d3f84",
+      "canonical_sha256": "1c95e990c221aefc9fcf3fd3d798c03c24883f08b9923c8715a9e4bfe49d3f84"
+    },
+    {
+      "path": ".build-tools/retain-stability-iso.py",
+      "sha256": "928b4a73cf53166afe1afeba7c81489997cac130d837e71634c98771af37b8e9",
+      "canonical_sha256": "928b4a73cf53166afe1afeba7c81489997cac130d837e71634c98771af37b8e9"
+    },
+    {
+      "path": ".build-tools/finalize-stability.py",
+      "sha256": "0b61d883e9df5d6150169c1dc36a5a3bcc8dc5a02717ca5ad8d87bac1e56c938",
+      "canonical_sha256": "0b61d883e9df5d6150169c1dc36a5a3bcc8dc5a02717ca5ad8d87bac1e56c938"
+    }
+  ]
+}
