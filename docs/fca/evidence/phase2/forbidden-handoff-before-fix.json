@@ -1,0 +1,1192 @@
+{
+  "schema_version": 1,
+  "config": {
+    "scenario": "handoff-forbidden",
+    "seed": 2111,
+    "items": 128,
+    "chunk": 32,
+    "barrier": 2,
+    "executor": "python",
+    "jitter_us": 1918
+  },
+  "classification": "unexpected_correctness_failure",
+  "expectations_met": false,
+  "explanation": "AssertionError: forbidden handoff mutated authority or killed its current executor",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 319, in run_case\n    result.update(experiment(session, config))\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 274, in experiment\n    check(session.inspect(identity) == before, \"forbidden handoff mutated authority or killed its current executor\")\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 25, in check\n    raise AssertionError(explanation)\nAssertionError: forbidden handoff mutated authority or killed its current executor\n",
+  "evidence": {
+    "events": {
+      "ca_0681614a72ccb1d460df8bba4b479a63": [
+        {
+          "sequence": 1,
+          "payload": {
+            "at": 1795016975518,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "contract_digest": "8ea0b12ccae66037fcb213518b035ec5c510b3e345d62dc617a3d63c5dfcd3c3"
+            },
+            "epoch": 0,
+            "kind": "AuthorityCreated",
+            "schema_version": 1,
+            "sequence": 1
+          },
+          "previous_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+          "hash": "094c624a8ebe75c912b79c3e0ab47da880f9a868a5b9cde33ae10f31400ff02b"
+        },
+        {
+          "sequence": 2,
+          "payload": {
+            "at": 1795016975518,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Created",
+              "to": "Validated"
+            },
+            "epoch": 0,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 2
+          },
+          "previous_hash": "094c624a8ebe75c912b79c3e0ab47da880f9a868a5b9cde33ae10f31400ff02b",
+          "hash": "6354585d354be33ea55b3034b3ef6ef7c8ec18e46cd0d330e7e07fa5e635c24a"
+        },
+        {
+          "sequence": 3,
+          "payload": {
+            "at": 1795016975518,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {},
+            "epoch": 0,
+            "kind": "ContractValidated",
+            "schema_version": 1,
+            "sequence": 3
+          },
+          "previous_hash": "6354585d354be33ea55b3034b3ef6ef7c8ec18e46cd0d330e7e07fa5e635c24a",
+          "hash": "289865bf9ec91811cebdc2a1e080f6e45ccc454bf490b9e51dbab1a2dc91b7e2"
+        },
+        {
+          "sequence": 4,
+          "payload": {
+            "at": 1795016975518,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Validated",
+              "to": "Ready"
+            },
+            "epoch": 0,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 4
+          },
+          "previous_hash": "289865bf9ec91811cebdc2a1e080f6e45ccc454bf490b9e51dbab1a2dc91b7e2",
+          "hash": "a76a35b30639d67b0d04140202deaa79116d6183c24cfde76611162280656135"
+        },
+        {
+          "sequence": 5,
+          "payload": {
+            "at": 1795016975538,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Ready",
+              "to": "Leased"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 5
+          },
+          "previous_hash": "a76a35b30639d67b0d04140202deaa79116d6183c24cfde76611162280656135",
+          "hash": "4f187ea6aeb6a91752cae161fbaa1f4e84982b19b439a0b97de8f7b747c6aa8c"
+        },
+        {
+          "sequence": 6,
+          "payload": {
+            "at": 1795016975538,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "executor_id": "python-reference-v1",
+              "issued_at": 1795016975538,
+              "lease_digest": "abf759714177506111f1101416effacf456d2c617a86e18ab61f6d910ad69d95"
+            },
+            "epoch": 1,
+            "kind": "LeaseGranted",
+            "schema_version": 1,
+            "sequence": 6
+          },
+          "previous_hash": "4f187ea6aeb6a91752cae161fbaa1f4e84982b19b439a0b97de8f7b747c6aa8c",
+          "hash": "3ecd68b47d37583ccb45020950ddd82c867dba5b5e270ed3f25fefac41b9a004"
+        },
+        {
+          "sequence": 7,
+          "payload": {
+            "at": 1795016975549,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Leased",
+              "to": "Running"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 7
+          },
+          "previous_hash": "3ecd68b47d37583ccb45020950ddd82c867dba5b5e270ed3f25fefac41b9a004",
+          "hash": "167d9bc5b772cdc1f1c2f898b89db1ff0856d0402574a28307a052d28f60e3f4"
+        },
+        {
+          "sequence": 8,
+          "payload": {
+            "at": 1795016975549,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "pid": 262820,
+              "process_start_ticks": 9456678
+            },
+            "epoch": 1,
+            "kind": "ExecutorStarted",
+            "schema_version": 1,
+            "sequence": 8
+          },
+          "previous_hash": "167d9bc5b772cdc1f1c2f898b89db1ff0856d0402574a28307a052d28f60e3f4",
+          "hash": "5dbeb7e0219b28c32e59e227ab1a1d9c632b303f7b723a3168dca30653523862"
+        },
+        {
+          "sequence": 9,
+          "payload": {
+            "at": 1795016975552,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "budget": {
+                "cpu_quota": 1,
+                "memory_bytes": 134217728,
+                "pids_max": 8,
+                "strict": false
+              },
+              "cpu": "unavailable",
+              "gpu": "unsupported",
+              "kernel_enforced": false,
+              "memory": "unavailable",
+              "mode": "advisory",
+              "pids": "unavailable",
+              "reason": "DELEGATION_UNAVAILABLE"
+            },
+            "epoch": 1,
+            "kind": "ResourceEnforcement",
+            "schema_version": 1,
+            "sequence": 9
+          },
+          "previous_hash": "5dbeb7e0219b28c32e59e227ab1a1d9c632b303f7b723a3168dca30653523862",
+          "hash": "6905acef92bde4d7e90d1ea2fd071a08497c262b195e2205ea5b8d4e626fb421"
+        },
+        {
+          "sequence": 10,
+          "payload": {
+            "at": 1795016975582,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Running",
+              "to": "Checkpointing"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 10
+          },
+          "previous_hash": "6905acef92bde4d7e90d1ea2fd071a08497c262b195e2205ea5b8d4e626fb421",
+          "hash": "48de7de38afff7ee1ea858673a7adc759dfa1f83d4bc19e7a2ec2e407068a36f"
+        },
+        {
+          "sequence": 11,
+          "payload": {
+            "at": 1795016975582,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "effect_id": "effect_fb47b4792dde50962cb5e77afd5cf602",
+              "request_digest": "2566c4d355bfc3cac998c3d581a1b5c6f86b6e9a75fc514087ab7d9623824ee8",
+              "sequence": 1
+            },
+            "epoch": 1,
+            "kind": "EffectCommitted",
+            "schema_version": 1,
+            "sequence": 11
+          },
+          "previous_hash": "48de7de38afff7ee1ea858673a7adc759dfa1f83d4bc19e7a2ec2e407068a36f",
+          "hash": "b8fd9e332964eddd4354db3756313874d83bacfe0b39793a6344f253c9c0e1e0"
+        },
+        {
+          "sequence": 12,
+          "payload": {
+            "at": 1795016975582,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "accumulated_result": -3246,
+              "last_committed_chunk": 1,
+              "next_input_position": 32,
+              "schema_version": 1
+            },
+            "epoch": 1,
+            "kind": "CheckpointCommitted",
+            "schema_version": 1,
+            "sequence": 12
+          },
+          "previous_hash": "b8fd9e332964eddd4354db3756313874d83bacfe0b39793a6344f253c9c0e1e0",
+          "hash": "ee6fd7a1f6f6b9d957891d2160e5a6495ff02715d1d24d7c8a079b6dc2ea5e64"
+        },
+        {
+          "sequence": 13,
+          "payload": {
+            "at": 1795016975582,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Checkpointing",
+              "to": "Running"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 13
+          },
+          "previous_hash": "ee6fd7a1f6f6b9d957891d2160e5a6495ff02715d1d24d7c8a079b6dc2ea5e64",
+          "hash": "18fc3cf10d7e9cd671909a8a8e2f50f8fe0ec7d2581fea622d656b7569918e61"
+        },
+        {
+          "sequence": 14,
+          "payload": {
+            "at": 1795016975586,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Running",
+              "to": "Checkpointing"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 14
+          },
+          "previous_hash": "18fc3cf10d7e9cd671909a8a8e2f50f8fe0ec7d2581fea622d656b7569918e61",
+          "hash": "06432eef3db5ea3337149f6bd9ef0191eb7dd5c8fc69b2543064dab419a473be"
+        },
+        {
+          "sequence": 15,
+          "payload": {
+            "at": 1795016975586,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "effect_id": "effect_d5823174b1e0a07ec50239717650f407",
+              "request_digest": "5f354f256ae27f7f1225b3a2fad6dbf1ec6146db11c2cdbfe853ab229335184f",
+              "sequence": 2
+            },
+            "epoch": 1,
+            "kind": "EffectCommitted",
+            "schema_version": 1,
+            "sequence": 15
+          },
+          "previous_hash": "06432eef3db5ea3337149f6bd9ef0191eb7dd5c8fc69b2543064dab419a473be",
+          "hash": "0640f92ee17b7c92ba4161305721d2ade85765255e6f1e9a9f51416d0e61b6e3"
+        },
+        {
+          "sequence": 16,
+          "payload": {
+            "at": 1795016975586,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "accumulated_result": 570,
+              "last_committed_chunk": 2,
+              "next_input_position": 64,
+              "schema_version": 1
+            },
+            "epoch": 1,
+            "kind": "CheckpointCommitted",
+            "schema_version": 1,
+            "sequence": 16
+          },
+          "previous_hash": "0640f92ee17b7c92ba4161305721d2ade85765255e6f1e9a9f51416d0e61b6e3",
+          "hash": "0b4b1c24604ec1e072cd5a656303e80fad25b2dd3f7471e04df6a401e28add8a"
+        },
+        {
+          "sequence": 17,
+          "payload": {
+            "at": 1795016975586,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Checkpointing",
+              "to": "Running"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 17
+          },
+          "previous_hash": "0b4b1c24604ec1e072cd5a656303e80fad25b2dd3f7471e04df6a401e28add8a",
+          "hash": "ebbaf6ee202917f04179e16e38c6dde9303266167b172237308e1e6adc516ad1"
+        },
+        {
+          "sequence": 18,
+          "payload": {
+            "at": 1795016975589,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "chunk": 2
+            },
+            "epoch": 1,
+            "kind": "TestBarrierReached",
+            "schema_version": 1,
+            "sequence": 18
+          },
+          "previous_hash": "ebbaf6ee202917f04179e16e38c6dde9303266167b172237308e1e6adc516ad1",
+          "hash": "4877c3a368d50ecf720a7539a4a62724a70570afc799ebf1d07cb6ca354d5380"
+        },
+        {
+          "sequence": 19,
+          "payload": {
+            "at": 1795016975614,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "reason": "operator-handoff"
+            },
+            "epoch": 1,
+            "kind": "HandoffStarted",
+            "schema_version": 1,
+            "sequence": 19
+          },
+          "previous_hash": "4877c3a368d50ecf720a7539a4a62724a70570afc799ebf1d07cb6ca354d5380",
+          "hash": "a77ef8cbd0723c855c1ac256488a11ec4c21dc8bbb95aac22de5aa7c78d2c8d3"
+        },
+        {
+          "sequence": 20,
+          "payload": {
+            "at": 1795016975614,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Running",
+              "to": "Revoking"
+            },
+            "epoch": 1,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 20
+          },
+          "previous_hash": "a77ef8cbd0723c855c1ac256488a11ec4c21dc8bbb95aac22de5aa7c78d2c8d3",
+          "hash": "755cf159a9d5f1f691a7cac7f4ceb9f25d4a0077806755e1a2271bd69ed48746"
+        },
+        {
+          "sequence": 21,
+          "payload": {
+            "at": 1795016975614,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "executor_id": "python-reference-v1",
+              "revoked_epoch": 1
+            },
+            "epoch": 1,
+            "kind": "LeaseRevoked",
+            "schema_version": 1,
+            "sequence": 21
+          },
+          "previous_hash": "755cf159a9d5f1f691a7cac7f4ceb9f25d4a0077806755e1a2271bd69ed48746",
+          "hash": "64e4a8fa06afee28695628087327829c1ad2659857ed97a73d36f6e6efaa712b"
+        },
+        {
+          "sequence": 22,
+          "payload": {
+            "at": 1795016975614,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "epoch": 2
+            },
+            "epoch": 2,
+            "kind": "EpochAdvanced",
+            "schema_version": 1,
+            "sequence": 22
+          },
+          "previous_hash": "64e4a8fa06afee28695628087327829c1ad2659857ed97a73d36f6e6efaa712b",
+          "hash": "b1725ba577ab5bc34138993315caa9f94a633f1a0151bd5ad1cb822bafca1a7f"
+        },
+        {
+          "sequence": 23,
+          "payload": {
+            "at": 1795016975621,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "pid": 262820,
+              "signal": 9,
+              "termination_confirmed": true
+            },
+            "epoch": 2,
+            "kind": "ExecutorTermination",
+            "schema_version": 1,
+            "sequence": 23
+          },
+          "previous_hash": "b1725ba577ab5bc34138993315caa9f94a633f1a0151bd5ad1cb822bafca1a7f",
+          "hash": "cf7fa51af8f0cd90eb3c5fe9ab3982e3b6c887792ef0afb94b81a9f88af8b8df"
+        },
+        {
+          "sequence": 24,
+          "payload": {
+            "at": 1795016975624,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "from": "Revoking",
+              "to": "Ready"
+            },
+            "epoch": 2,
+            "kind": "LifecycleTransition",
+            "schema_version": 1,
+            "sequence": 24
+          },
+          "previous_hash": "cf7fa51af8f0cd90eb3c5fe9ab3982e3b6c887792ef0afb94b81a9f88af8b8df",
+          "hash": "c38818be2ba43c5147b1acb228f0aa643a00c770c777df85a39731ce78b893d4"
+        },
+        {
+          "sequence": 25,
+          "payload": {
+            "at": 1795016975624,
+            "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+            "details": {
+              "continuation": {
+                "accumulated_result": 570,
+                "last_committed_chunk": 2,
+                "next_input_position": 64,
+                "schema_version": 1
+              }
+            },
+            "epoch": 2,
+            "kind": "ExecutorExited",
+            "schema_version": 1,
+            "sequence": 25
+          },
+          "previous_hash": "c38818be2ba43c5147b1acb228f0aa643a00c770c777df85a39731ce78b893d4",
+          "hash": "c9b6f80bb4dedbb937ce16b2204703348d9b13a7e85944e09093442e0aea3d07"
+        }
+      ]
+    },
+    "snapshots": {
+      "ca_0681614a72ccb1d460df8bba4b479a63": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+        "contract": {
+          "schema_version": 1,
+          "workload": {
+            "id": "fetian.sum-i64",
+            "semantic_version": 1,
+            "protocol_version": 1,
+            "checkpoint_schema": "sum-i64-state-v1"
+          },
+          "input": {
+            "kind": "managed_immutable_file",
+            "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+            "digest_algorithm": "sha256"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "permitted_executors": [
+            "python-reference-v1"
+          ],
+          "chunk_size": 32,
+          "completion_condition": "all_input_committed"
+        },
+        "lifecycle": "Ready",
+        "epoch": 2,
+        "continuation": {
+          "schema_version": 1,
+          "next_input_position": 64,
+          "accumulated_result": 570,
+          "last_committed_chunk": 2
+        },
+        "current_executor": null,
+        "previous_executors": [
+          {
+            "executor_id": "python-reference-v1",
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "epoch": 1,
+            "issued_at": 1795016975538,
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          }
+        ]
+      }
+    },
+    "database": {
+      "effects": [
+        {
+          "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "sequence": 1,
+          "effect_id": "effect_fb47b4792dde50962cb5e77afd5cf602",
+          "epoch": 1
+        },
+        {
+          "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "sequence": 2,
+          "effect_id": "effect_d5823174b1e0a07ec50239717650f407",
+          "epoch": 1
+        }
+      ],
+      "integrity_check": "ok"
+    },
+    "log": "",
+    "sizes": {
+      "authorities.sqlite3": 57344,
+      "authorities.sqlite3-shm": 32768,
+      "authorities.sqlite3-wal": 0
+    }
+  },
+  "operations": [
+    {
+      "operation": "import",
+      "arguments": {
+        "content": "-290\n0\n-235\n-67\n918\n264\n-762\n-51\n-534\n-45\n716\n-987\n-322\n175\n698\n643\n385\n93\n-955\n548\n170\n337\n-515\n-938\n-848\n485\n527\n-638\n-578\n-497\n-29\n-914\n-114\n-321\n555\n271\n-125\n442\n993\n657\n517\n29\n-784\n-487\n707\n-640\n360\n-26\n539\n995\n354\n686\n-294\n-70\n-438\n-19\n58\n722\n-119\n-866\n-720\n303\n694\n-43\n552\n746\n745\n621\n393\n479\n922\n335\n-63\n169\n-640\n970\n841\n-579\n702\n-66\n-4\n929\n-932\n-698\n480\n-418\n-948\n296\n-815\n361\n922\n340\n-721\n-629\n-748\n816\n-110\n529\n-425\n159\n946\n327\n213\n-298\n116\n-900\n761\n-943\n365\n126\n-906\n598\n948\n-387\n-159\n182\n-348\n33\n801\n654\n-396\n-504\n-520\n398\n28\n230\n573\n-506\n"
+      },
+      "result": {
+        "input_id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea"
+      },
+      "elapsed_us": 12600.603
+    },
+    {
+      "operation": "create",
+      "arguments": {
+        "contract": {
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "chunk_size": 32,
+          "completion_condition": "all_input_committed",
+          "input": {
+            "digest_algorithm": "sha256",
+            "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+            "kind": "managed_immutable_file"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "permitted_executors": [
+            "python-reference-v1"
+          ],
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "schema_version": 1,
+          "workload": {
+            "checkpoint_schema": "sum-i64-state-v1",
+            "id": "fetian.sum-i64",
+            "protocol_version": 1,
+            "semantic_version": 1
+          }
+        }
+      },
+      "result": {
+        "continuation": {
+          "accumulated_result": 0,
+          "last_committed_chunk": 0,
+          "next_input_position": 0,
+          "schema_version": 1
+        },
+        "contract": {
+          "capabilities": [
+            "input.read",
+            "checkpoint.commit",
+            "result.commit",
+            "authority.inspect"
+          ],
+          "chunk_size": 32,
+          "completion_condition": "all_input_committed",
+          "input": {
+            "digest_algorithm": "sha256",
+            "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+            "kind": "managed_immutable_file"
+          },
+          "outputs": [
+            "sum-i64"
+          ],
+          "permitted_executors": [
+            "python-reference-v1"
+          ],
+          "recovery": {
+            "automatic_resume": false,
+            "failure_behavior": "recover",
+            "require_executor_compatibility": true
+          },
+          "resource_budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "schema_version": 1,
+          "workload": {
+            "checkpoint_schema": "sum-i64-state-v1",
+            "id": "fetian.sum-i64",
+            "protocol_version": 1,
+            "semantic_version": 1
+          }
+        },
+        "current_executor": null,
+        "epoch": 0,
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+        "lifecycle": "Ready",
+        "previous_executors": []
+      },
+      "elapsed_us": 9745.503
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 0,
+            "last_committed_chunk": 0,
+            "next_input_position": 0,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": null,
+          "epoch": 0,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Ready",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 9800.202
+    },
+    {
+      "operation": "run",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+        "executor": "python",
+        "barrier_after": 2
+      },
+      "result": {
+        "authority_id": "ca_0681614a72ccb1d460df8bba4b479a63",
+        "epoch": 1,
+        "executor": "python-reference-v1",
+        "pid": 262820,
+        "resources": {
+          "budget": {
+            "cpu_quota": 1,
+            "memory_bytes": 134217728,
+            "pids_max": 8,
+            "strict": false
+          },
+          "cpu": "unavailable",
+          "gpu": "unsupported",
+          "kernel_enforced": false,
+          "memory": "unavailable",
+          "mode": "advisory",
+          "pids": "unavailable",
+          "reason": "DELEGATION_UNAVAILABLE"
+        }
+      },
+      "elapsed_us": 23669.207
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 0,
+            "last_committed_chunk": 0,
+            "next_input_position": 0,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "python-reference-v1",
+            "issued_at": 1795016975538,
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          },
+          "epoch": 1,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 5388.901
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 0,
+            "last_committed_chunk": 0,
+            "next_input_position": 0,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "python-reference-v1",
+            "issued_at": 1795016975538,
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          },
+          "epoch": 1,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 5315.401
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 570,
+            "last_committed_chunk": 2,
+            "next_input_position": 64,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "python-reference-v1",
+            "issued_at": 1795016975538,
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          },
+          "epoch": 1,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 1877.6
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 570,
+            "last_committed_chunk": 2,
+            "next_input_position": 64,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "python-reference-v1",
+            "issued_at": 1795016975538,
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          },
+          "epoch": 1,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": true,
+        "test_barrier_request_id": 6
+      },
+      "elapsed_us": 3842.301
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 570,
+            "last_committed_chunk": 2,
+            "next_input_position": 64,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": {
+            "epoch": 1,
+            "executor_id": "python-reference-v1",
+            "issued_at": 1795016975538,
+            "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+            "pid": 262820,
+            "process_start_ticks": 9456678
+          },
+          "epoch": 1,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Running",
+          "previous_executors": []
+        },
+        "test_barrier_reached": true,
+        "test_barrier_request_id": 6
+      },
+      "elapsed_us": 5453.902
+    },
+    {
+      "operation": "handoff",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+        "executor": "rust"
+      },
+      "error": "EXECUTOR_NOT_ALLOWED",
+      "elapsed_us": 16525.405
+    },
+    {
+      "operation": "inspect",
+      "arguments": {
+        "id": "ca_0681614a72ccb1d460df8bba4b479a63"
+      },
+      "result": {
+        "authority": {
+          "continuation": {
+            "accumulated_result": 570,
+            "last_committed_chunk": 2,
+            "next_input_position": 64,
+            "schema_version": 1
+          },
+          "contract": {
+            "capabilities": [
+              "input.read",
+              "checkpoint.commit",
+              "result.commit",
+              "authority.inspect"
+            ],
+            "chunk_size": 32,
+            "completion_condition": "all_input_committed",
+            "input": {
+              "digest_algorithm": "sha256",
+              "id": "sha256:828203b7724be6a5180d61c1296506f4d16b995de1644fd212c9f3fce5cfc9ea",
+              "kind": "managed_immutable_file"
+            },
+            "outputs": [
+              "sum-i64"
+            ],
+            "permitted_executors": [
+              "python-reference-v1"
+            ],
+            "recovery": {
+              "automatic_resume": false,
+              "failure_behavior": "recover",
+              "require_executor_compatibility": true
+            },
+            "resource_budget": {
+              "cpu_quota": 1,
+              "memory_bytes": 134217728,
+              "pids_max": 8,
+              "strict": false
+            },
+            "schema_version": 1,
+            "workload": {
+              "checkpoint_schema": "sum-i64-state-v1",
+              "id": "fetian.sum-i64",
+              "protocol_version": 1,
+              "semantic_version": 1
+            }
+          },
+          "current_executor": null,
+          "epoch": 2,
+          "id": "ca_0681614a72ccb1d460df8bba4b479a63",
+          "lifecycle": "Ready",
+          "previous_executors": [
+            {
+              "epoch": 1,
+              "executor_id": "python-reference-v1",
+              "issued_at": 1795016975538,
+              "lease_id": "sha256:ee3fad0cde0ed4336b078f0dff0487cf95834c22f280cc89b39ebf62a1a58b6d",
+              "pid": 262820,
+              "process_start_ticks": 9456678
+            }
+          ]
+        },
+        "test_barrier_reached": false,
+        "test_barrier_request_id": null
+      },
+      "elapsed_us": 5192.301
+    },
+    {
+      "operation": "stop",
+      "arguments": {},
+      "result": {
+        "stopping": true
+      },
+      "elapsed_us": 1853.2
+    }
+  ],
+  "duration_us": 216054.758,
+  "replay": "python3 system/fetian-fca/validation/lab.py replay --case .build-tools/phase2-initial-faults/run-000021-seed-2111.json --output NEW_DIRECTORY"
+}

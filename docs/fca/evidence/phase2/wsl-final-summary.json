@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "mode": "stress",
+  "master_seed": 2090,
+  "completed": 1000,
+  "expectations_met": 995,
+  "counts": {
+    "expected_recovery": 405,
+    "expected_rejection": 512,
+    "safely_detected_unrecoverable": 78,
+    "unexpected_correctness_failure": 5
+  },
+  "failures": [
+    {
+      "index": 227,
+      "seed": 2106025189547588607,
+      "scenario": "pending-restart",
+      "report": "run-000227-seed-2106025189547588607.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 461,
+      "seed": 5877424939789720909,
+      "scenario": "handoff-forbidden",
+      "report": "run-000461-seed-5877424939789720909.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 540,
+      "seed": 16754111227654025402,
+      "scenario": "executor-before-commit",
+      "report": "run-000540-seed-16754111227654025402.json",
+      "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+    },
+    {
+      "index": 557,
+      "seed": 8154431234063168084,
+      "scenario": "forged-result",
+      "report": "run-000557-seed-8154431234063168084.json",
+      "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+    },
+    {
+      "index": 578,
+      "seed": 10758140419924466411,
+      "scenario": "broker-active",
+      "report": "run-000578-seed-10758140419924466411.json",
+      "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+    }
+  ],
+  "recovered": 405,
+  "rejected": 512,
+  "safely_unrecoverable": 78,
+  "unexpected_failures": 5,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

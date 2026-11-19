@@ -28,3 +28,14 @@ The journal protects against accidental inconsistency, not an owner who rewrites
 all state. Durable guarantees depend on SQLite/filesystem/fsync behavior. The
 external crash tests validate process failure, not power-cut or faulty-storage
 behavior. No FCA-enabled ISO, hardware boot or installation has been tested.
+
+## Phase 2 evidence
+
+See [research validation](research-validation.md) for actual 1,000-case Linux CI
+results, failures and exact-seed replays, and [security review](security-review.md)
+for observed same-UID access and duplicate external writes. The new resource
+pressure harness is implemented but actual kernel exhaustion remains unverified
+where delegation is unavailable. WSL showed intermittent timeout failures during
+one full run; their configurations passed isolated replay, and Linux CI passed
+all 1,000. Their underlying timing cause is not established. No production
+readiness or general exactly-once external effects are implied by a green CI.

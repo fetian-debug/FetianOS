@@ -1,0 +1,2036 @@
+{
+  "schema_version": 1,
+  "mode": "stress",
+  "master_seed": 2090,
+  "completed": 1000,
+  "expectations_met": 712,
+  "counts": {
+    "expected_recovery": 408,
+    "unexpected_correctness_failure": 288,
+    "expected_rejection": 227,
+    "safely_detected_unrecoverable": 77
+  },
+  "failures": [
+    {
+      "index": 5,
+      "seed": 18327818273465324350,
+      "scenario": "version",
+      "report": "run-000005-seed-18327818273465324350.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 13,
+      "seed": 13043431763518631860,
+      "scenario": "version",
+      "report": "run-000013-seed-13043431763518631860.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 15,
+      "seed": 1887662761442793106,
+      "scenario": "capability",
+      "report": "run-000015-seed-1887662761442793106.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 16,
+      "seed": 7738981151124481592,
+      "scenario": "invalid-position",
+      "report": "run-000016-seed-7738981151124481592.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 20,
+      "seed": 15347279316215534077,
+      "scenario": "unknown-operation",
+      "report": "run-000020-seed-15347279316215534077.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 21,
+      "seed": 676057045177963980,
+      "scenario": "request-order",
+      "report": "run-000021-seed-676057045177963980.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 10}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 23,
+      "seed": 12981117564321469649,
+      "scenario": "wrong-executor",
+      "report": "run-000023-seed-12981117564321469649.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 24,
+      "seed": 1393301478449551654,
+      "scenario": "forged-result",
+      "report": "run-000024-seed-1393301478449551654.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 27,
+      "seed": 15532491473685534489,
+      "scenario": "forged-result",
+      "report": "run-000027-seed-15532491473685534489.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 30,
+      "seed": 18028815921740152578,
+      "scenario": "stale-epoch",
+      "report": "run-000030-seed-18028815921740152578.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 34,
+      "seed": 105750595628878002,
+      "scenario": "capability",
+      "report": "run-000034-seed-105750595628878002.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 35,
+      "seed": 5107685225587685397,
+      "scenario": "invalid-position",
+      "report": "run-000035-seed-5107685225587685397.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 37,
+      "seed": 14992614664652259044,
+      "scenario": "forged-result",
+      "report": "run-000037-seed-14992614664652259044.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 39,
+      "seed": 11324047319366504610,
+      "scenario": "wrong-executor",
+      "report": "run-000039-seed-11324047319366504610.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 47,
+      "seed": 9650146370321173443,
+      "scenario": "wrong-lease",
+      "report": "run-000047-seed-9650146370321173443.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 53,
+      "seed": 8594923236094048060,
+      "scenario": "unknown-argument",
+      "report": "run-000053-seed-8594923236094048060.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 55,
+      "seed": 3266633317506543550,
+      "scenario": "forged-result",
+      "report": "run-000055-seed-3266633317506543550.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 57,
+      "seed": 5388045050403039939,
+      "scenario": "version",
+      "report": "run-000057-seed-5388045050403039939.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 65,
+      "seed": 15666253286532134007,
+      "scenario": "wrong-executor",
+      "report": "run-000065-seed-15666253286532134007.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 67,
+      "seed": 1149266241959111795,
+      "scenario": "capability",
+      "report": "run-000067-seed-1149266241959111795.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 68,
+      "seed": 7522185847985457625,
+      "scenario": "forged-result",
+      "report": "run-000068-seed-7522185847985457625.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 71,
+      "seed": 7636811802701015339,
+      "scenario": "invalid-position",
+      "report": "run-000071-seed-7636811802701015339.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 72,
+      "seed": 2064645419598331318,
+      "scenario": "cross-authority",
+      "report": "run-000072-seed-2064645419598331318.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 74,
+      "seed": 15593161277320307044,
+      "scenario": "invalid-position",
+      "report": "run-000074-seed-15593161277320307044.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 77,
+      "seed": 16501761163990963141,
+      "scenario": "wrong-lease",
+      "report": "run-000077-seed-16501761163990963141.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 78,
+      "seed": 9424341198795005073,
+      "scenario": "version",
+      "report": "run-000078-seed-9424341198795005073.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 79,
+      "seed": 15095326148457483090,
+      "scenario": "request-order",
+      "report": "run-000079-seed-15095326148457483090.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 8}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 94,
+      "seed": 12845259030834517965,
+      "scenario": "capability",
+      "report": "run-000094-seed-12845259030834517965.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 101,
+      "seed": 12277293213742657989,
+      "scenario": "invalid-position",
+      "report": "run-000101-seed-12277293213742657989.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 102,
+      "seed": 7120805904664359167,
+      "scenario": "wrong-lease",
+      "report": "run-000102-seed-7120805904664359167.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 104,
+      "seed": 7745191268558516546,
+      "scenario": "capability",
+      "report": "run-000104-seed-7745191268558516546.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 108,
+      "seed": 8368433105462029622,
+      "scenario": "request-order",
+      "report": "run-000108-seed-8368433105462029622.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 18}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 109,
+      "seed": 1872965317048524629,
+      "scenario": "unknown-argument",
+      "report": "run-000109-seed-1872965317048524629.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 115,
+      "seed": 13733942404317120798,
+      "scenario": "version",
+      "report": "run-000115-seed-13733942404317120798.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 117,
+      "seed": 3950514025977094270,
+      "scenario": "version",
+      "report": "run-000117-seed-3950514025977094270.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 123,
+      "seed": 12271507091854712105,
+      "scenario": "forged-result",
+      "report": "run-000123-seed-12271507091854712105.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 127,
+      "seed": 14992446278285348874,
+      "scenario": "wrong-executor",
+      "report": "run-000127-seed-14992446278285348874.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 131,
+      "seed": 6102494284588340209,
+      "scenario": "stale-epoch",
+      "report": "run-000131-seed-6102494284588340209.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 135,
+      "seed": 3957335642568092738,
+      "scenario": "request-order",
+      "report": "run-000135-seed-3957335642568092738.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 144,
+      "seed": 8325794073570689064,
+      "scenario": "wrong-executor",
+      "report": "run-000144-seed-8325794073570689064.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 151,
+      "seed": 5265255273803357196,
+      "scenario": "unknown-argument",
+      "report": "run-000151-seed-5265255273803357196.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 155,
+      "seed": 9618186700709658189,
+      "scenario": "stale-epoch",
+      "report": "run-000155-seed-9618186700709658189.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 160,
+      "seed": 6550842312595149323,
+      "scenario": "unknown-operation",
+      "report": "run-000160-seed-6550842312595149323.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 163,
+      "seed": 11529137619967715477,
+      "scenario": "request-order",
+      "report": "run-000163-seed-11529137619967715477.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 167,
+      "seed": 7299860595052308063,
+      "scenario": "unknown-argument",
+      "report": "run-000167-seed-7299860595052308063.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 169,
+      "seed": 15569331707559636103,
+      "scenario": "capability",
+      "report": "run-000169-seed-15569331707559636103.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 170,
+      "seed": 9733866466163531200,
+      "scenario": "capability",
+      "report": "run-000170-seed-9733866466163531200.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 171,
+      "seed": 14106724737081994615,
+      "scenario": "capability",
+      "report": "run-000171-seed-14106724737081994615.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 172,
+      "seed": 12815664542221925734,
+      "scenario": "invalid-position",
+      "report": "run-000172-seed-12815664542221925734.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 173,
+      "seed": 14361019541230580010,
+      "scenario": "wrong-executor",
+      "report": "run-000173-seed-14361019541230580010.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 176,
+      "seed": 14384208923225244459,
+      "scenario": "unknown-operation",
+      "report": "run-000176-seed-14384208923225244459.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 177,
+      "seed": 2796328752653667960,
+      "scenario": "forged-result",
+      "report": "run-000177-seed-2796328752653667960.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 183,
+      "seed": 6056573670564240160,
+      "scenario": "wrong-lease",
+      "report": "run-000183-seed-6056573670564240160.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 185,
+      "seed": 11180494764992658244,
+      "scenario": "wrong-lease",
+      "report": "run-000185-seed-11180494764992658244.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 187,
+      "seed": 2714685373729247199,
+      "scenario": "cross-authority",
+      "report": "run-000187-seed-2714685373729247199.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 188,
+      "seed": 4488879417669507786,
+      "scenario": "version",
+      "report": "run-000188-seed-4488879417669507786.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 189,
+      "seed": 9541445894357750027,
+      "scenario": "request-order",
+      "report": "run-000189-seed-9541445894357750027.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 8}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 191,
+      "seed": 4123786939805863346,
+      "scenario": "wrong-lease",
+      "report": "run-000191-seed-4123786939805863346.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 200,
+      "seed": 2970917098343647750,
+      "scenario": "stale-epoch",
+      "report": "run-000200-seed-2970917098343647750.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 204,
+      "seed": 10526724814527841666,
+      "scenario": "wrong-lease",
+      "report": "run-000204-seed-10526724814527841666.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 208,
+      "seed": 18053705549457974809,
+      "scenario": "wrong-lease",
+      "report": "run-000208-seed-18053705549457974809.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 209,
+      "seed": 13670277214146317700,
+      "scenario": "wrong-lease",
+      "report": "run-000209-seed-13670277214146317700.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 214,
+      "seed": 677162349369547352,
+      "scenario": "stale-epoch",
+      "report": "run-000214-seed-677162349369547352.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 216,
+      "seed": 2028375779296723153,
+      "scenario": "request-order",
+      "report": "run-000216-seed-2028375779296723153.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 217,
+      "seed": 15952276590039998694,
+      "scenario": "cross-authority",
+      "report": "run-000217-seed-15952276590039998694.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 231,
+      "seed": 17215041422744837636,
+      "scenario": "wrong-executor",
+      "report": "run-000231-seed-17215041422744837636.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 232,
+      "seed": 8351776470410687269,
+      "scenario": "forged-result",
+      "report": "run-000232-seed-8351776470410687269.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 235,
+      "seed": 16696665320643304495,
+      "scenario": "invalid-position",
+      "report": "run-000235-seed-16696665320643304495.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 247,
+      "seed": 14145746800311349267,
+      "scenario": "invalid-position",
+      "report": "run-000247-seed-14145746800311349267.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 250,
+      "seed": 3001145000708211988,
+      "scenario": "unknown-argument",
+      "report": "run-000250-seed-3001145000708211988.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 251,
+      "seed": 14413429148318974385,
+      "scenario": "request-order",
+      "report": "run-000251-seed-14413429148318974385.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 260,
+      "seed": 5705698662243213387,
+      "scenario": "forged-result",
+      "report": "run-000260-seed-5705698662243213387.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 263,
+      "seed": 8611052999013975941,
+      "scenario": "stale-epoch",
+      "report": "run-000263-seed-8611052999013975941.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 268,
+      "seed": 2025150894512090725,
+      "scenario": "capability",
+      "report": "run-000268-seed-2025150894512090725.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 274,
+      "seed": 5068530553638949980,
+      "scenario": "request-order",
+      "report": "run-000274-seed-5068530553638949980.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 276,
+      "seed": 10922953100276856974,
+      "scenario": "cross-authority",
+      "report": "run-000276-seed-10922953100276856974.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 279,
+      "seed": 6072042877020395732,
+      "scenario": "unknown-operation",
+      "report": "run-000279-seed-6072042877020395732.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 297,
+      "seed": 14120923203312897497,
+      "scenario": "unknown-operation",
+      "report": "run-000297-seed-14120923203312897497.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 305,
+      "seed": 37395480962844203,
+      "scenario": "forged-result",
+      "report": "run-000305-seed-37395480962844203.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 309,
+      "seed": 1473586201937972605,
+      "scenario": "unknown-argument",
+      "report": "run-000309-seed-1473586201937972605.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 310,
+      "seed": 8079760693666608765,
+      "scenario": "unknown-argument",
+      "report": "run-000310-seed-8079760693666608765.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 312,
+      "seed": 10689542036272013600,
+      "scenario": "wrong-lease",
+      "report": "run-000312-seed-10689542036272013600.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 314,
+      "seed": 14664401218914727871,
+      "scenario": "version",
+      "report": "run-000314-seed-14664401218914727871.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 327,
+      "seed": 1138418041090207189,
+      "scenario": "forged-result",
+      "report": "run-000327-seed-1138418041090207189.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 328,
+      "seed": 13070468846478222784,
+      "scenario": "invalid-position",
+      "report": "run-000328-seed-13070468846478222784.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 331,
+      "seed": 6383689609891207565,
+      "scenario": "capability",
+      "report": "run-000331-seed-6383689609891207565.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 337,
+      "seed": 13427737985955792370,
+      "scenario": "stale-epoch",
+      "report": "run-000337-seed-13427737985955792370.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 341,
+      "seed": 17505759057274132813,
+      "scenario": "request-order",
+      "report": "run-000341-seed-17505759057274132813.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 10}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 344,
+      "seed": 8808102568059593196,
+      "scenario": "version",
+      "report": "run-000344-seed-8808102568059593196.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 349,
+      "seed": 15686422532297909469,
+      "scenario": "wrong-executor",
+      "report": "run-000349-seed-15686422532297909469.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 350,
+      "seed": 3323775156981379138,
+      "scenario": "capability",
+      "report": "run-000350-seed-3323775156981379138.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 352,
+      "seed": 12958392158657776188,
+      "scenario": "invalid-position",
+      "report": "run-000352-seed-12958392158657776188.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 355,
+      "seed": 10465296121119409470,
+      "scenario": "request-order",
+      "report": "run-000355-seed-10465296121119409470.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 14}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 359,
+      "seed": 15501501901211408284,
+      "scenario": "forged-result",
+      "report": "run-000359-seed-15501501901211408284.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 366,
+      "seed": 15070351120904267177,
+      "scenario": "cross-authority",
+      "report": "run-000366-seed-15070351120904267177.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 367,
+      "seed": 10682520832916094666,
+      "scenario": "unknown-argument",
+      "report": "run-000367-seed-10682520832916094666.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 376,
+      "seed": 15333921889503266181,
+      "scenario": "request-order",
+      "report": "run-000376-seed-15333921889503266181.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 8}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 377,
+      "seed": 1246254619446386380,
+      "scenario": "wrong-executor",
+      "report": "run-000377-seed-1246254619446386380.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 378,
+      "seed": 15858177945933111319,
+      "scenario": "stale-epoch",
+      "report": "run-000378-seed-15858177945933111319.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 379,
+      "seed": 9100000944007250599,
+      "scenario": "journal-corrupt",
+      "report": "run-000379-seed-9100000944007250599.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 381,
+      "seed": 6708649957773806690,
+      "scenario": "version",
+      "report": "run-000381-seed-6708649957773806690.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 382,
+      "seed": 5950016479970927231,
+      "scenario": "stale-epoch",
+      "report": "run-000382-seed-5950016479970927231.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 385,
+      "seed": 4693181583092298632,
+      "scenario": "invalid-position",
+      "report": "run-000385-seed-4693181583092298632.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 387,
+      "seed": 15881754073456994183,
+      "scenario": "stale-epoch",
+      "report": "run-000387-seed-15881754073456994183.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 394,
+      "seed": 473539561768073459,
+      "scenario": "unknown-argument",
+      "report": "run-000394-seed-473539561768073459.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 399,
+      "seed": 13280987240700768539,
+      "scenario": "stale-epoch",
+      "report": "run-000399-seed-13280987240700768539.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 401,
+      "seed": 10474289593374474509,
+      "scenario": "unknown-operation",
+      "report": "run-000401-seed-10474289593374474509.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 403,
+      "seed": 10793314357099040321,
+      "scenario": "capability",
+      "report": "run-000403-seed-10793314357099040321.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 409,
+      "seed": 14880905909346546009,
+      "scenario": "wrong-lease",
+      "report": "run-000409-seed-14880905909346546009.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 412,
+      "seed": 12162217806311771853,
+      "scenario": "version",
+      "report": "run-000412-seed-12162217806311771853.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 418,
+      "seed": 12097421094574321343,
+      "scenario": "stale-epoch",
+      "report": "run-000418-seed-12097421094574321343.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 421,
+      "seed": 11028794307553324402,
+      "scenario": "capability",
+      "report": "run-000421-seed-11028794307553324402.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 422,
+      "seed": 12022272169779028948,
+      "scenario": "cross-authority",
+      "report": "run-000422-seed-12022272169779028948.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 423,
+      "seed": 11388838922430926313,
+      "scenario": "wrong-lease",
+      "report": "run-000423-seed-11388838922430926313.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 425,
+      "seed": 1923318429307300316,
+      "scenario": "capability",
+      "report": "run-000425-seed-1923318429307300316.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 429,
+      "seed": 2846313119015244260,
+      "scenario": "capability",
+      "report": "run-000429-seed-2846313119015244260.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 430,
+      "seed": 4265168741227105766,
+      "scenario": "wrong-lease",
+      "report": "run-000430-seed-4265168741227105766.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 432,
+      "seed": 2826334037216657772,
+      "scenario": "version",
+      "report": "run-000432-seed-2826334037216657772.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 433,
+      "seed": 17031934803211577831,
+      "scenario": "version",
+      "report": "run-000433-seed-17031934803211577831.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 434,
+      "seed": 3675359949964219936,
+      "scenario": "wrong-lease",
+      "report": "run-000434-seed-3675359949964219936.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 442,
+      "seed": 17589814355058370447,
+      "scenario": "wrong-lease",
+      "report": "run-000442-seed-17589814355058370447.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 448,
+      "seed": 3448150928786608915,
+      "scenario": "cross-authority",
+      "report": "run-000448-seed-3448150928786608915.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 452,
+      "seed": 6534600340625102092,
+      "scenario": "forged-result",
+      "report": "run-000452-seed-6534600340625102092.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 457,
+      "seed": 6391573878613144454,
+      "scenario": "request-order",
+      "report": "run-000457-seed-6391573878613144454.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 460,
+      "seed": 18043268539341365519,
+      "scenario": "cross-authority",
+      "report": "run-000460-seed-18043268539341365519.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 468,
+      "seed": 10620472078842001571,
+      "scenario": "forged-result",
+      "report": "run-000468-seed-10620472078842001571.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 470,
+      "seed": 10714704117532817051,
+      "scenario": "forged-result",
+      "report": "run-000470-seed-10714704117532817051.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 472,
+      "seed": 18109427058304170492,
+      "scenario": "capability",
+      "report": "run-000472-seed-18109427058304170492.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 475,
+      "seed": 4456926037290751917,
+      "scenario": "version",
+      "report": "run-000475-seed-4456926037290751917.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 480,
+      "seed": 14720243918589455693,
+      "scenario": "version",
+      "report": "run-000480-seed-14720243918589455693.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 481,
+      "seed": 3243601783473669813,
+      "scenario": "wrong-executor",
+      "report": "run-000481-seed-3243601783473669813.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 484,
+      "seed": 16242165092766883696,
+      "scenario": "wrong-executor",
+      "report": "run-000484-seed-16242165092766883696.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 485,
+      "seed": 17688426345866080269,
+      "scenario": "unknown-argument",
+      "report": "run-000485-seed-17688426345866080269.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 489,
+      "seed": 14309114625801370320,
+      "scenario": "wrong-lease",
+      "report": "run-000489-seed-14309114625801370320.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 496,
+      "seed": 9883090221640345633,
+      "scenario": "forged-result",
+      "report": "run-000496-seed-9883090221640345633.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 500,
+      "seed": 9350825000121033637,
+      "scenario": "stale-epoch",
+      "report": "run-000500-seed-9350825000121033637.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 502,
+      "seed": 14512307717867846444,
+      "scenario": "cross-authority",
+      "report": "run-000502-seed-14512307717867846444.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 504,
+      "seed": 17381113669005405843,
+      "scenario": "invalid-position",
+      "report": "run-000504-seed-17381113669005405843.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 505,
+      "seed": 8858982202356700621,
+      "scenario": "cross-authority",
+      "report": "run-000505-seed-8858982202356700621.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 514,
+      "seed": 3044482898706165127,
+      "scenario": "wrong-lease",
+      "report": "run-000514-seed-3044482898706165127.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 518,
+      "seed": 7660651954224192776,
+      "scenario": "cross-authority",
+      "report": "run-000518-seed-7660651954224192776.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 521,
+      "seed": 15769030873580437178,
+      "scenario": "invalid-position",
+      "report": "run-000521-seed-15769030873580437178.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 522,
+      "seed": 11762684073307077331,
+      "scenario": "wrong-executor",
+      "report": "run-000522-seed-11762684073307077331.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 525,
+      "seed": 4193531316863014890,
+      "scenario": "unknown-argument",
+      "report": "run-000525-seed-4193531316863014890.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 534,
+      "seed": 7545178999609343410,
+      "scenario": "unknown-argument",
+      "report": "run-000534-seed-7545178999609343410.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 536,
+      "seed": 10115540076988864373,
+      "scenario": "invalid-position",
+      "report": "run-000536-seed-10115540076988864373.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 542,
+      "seed": 6620275264949275772,
+      "scenario": "forged-result",
+      "report": "run-000542-seed-6620275264949275772.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 545,
+      "seed": 9908867320362088241,
+      "scenario": "wrong-executor",
+      "report": "run-000545-seed-9908867320362088241.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 547,
+      "seed": 548227676924470530,
+      "scenario": "request-order",
+      "report": "run-000547-seed-548227676924470530.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 18}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 548,
+      "seed": 12050103760338198071,
+      "scenario": "capability",
+      "report": "run-000548-seed-12050103760338198071.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 550,
+      "seed": 18111592748583003411,
+      "scenario": "cross-authority",
+      "report": "run-000550-seed-18111592748583003411.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 551,
+      "seed": 15853448999016751358,
+      "scenario": "request-order",
+      "report": "run-000551-seed-15853448999016751358.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 553,
+      "seed": 14574839641669665394,
+      "scenario": "wrong-executor",
+      "report": "run-000553-seed-14574839641669665394.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 557,
+      "seed": 8154431234063168084,
+      "scenario": "forged-result",
+      "report": "run-000557-seed-8154431234063168084.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 565,
+      "seed": 15993944941144697804,
+      "scenario": "stale-epoch",
+      "report": "run-000565-seed-15993944941144697804.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 566,
+      "seed": 10758022357455235969,
+      "scenario": "unknown-operation",
+      "report": "run-000566-seed-10758022357455235969.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 568,
+      "seed": 11533698343674335093,
+      "scenario": "cross-authority",
+      "report": "run-000568-seed-11533698343674335093.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 574,
+      "seed": 14735747317765913974,
+      "scenario": "unknown-argument",
+      "report": "run-000574-seed-14735747317765913974.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 575,
+      "seed": 4980026601541104310,
+      "scenario": "forged-result",
+      "report": "run-000575-seed-4980026601541104310.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 580,
+      "seed": 5894498101313326955,
+      "scenario": "wrong-executor",
+      "report": "run-000580-seed-5894498101313326955.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 581,
+      "seed": 8571157016785817385,
+      "scenario": "wrong-executor",
+      "report": "run-000581-seed-8571157016785817385.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 584,
+      "seed": 17611701525693280560,
+      "scenario": "capability",
+      "report": "run-000584-seed-17611701525693280560.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 585,
+      "seed": 870850353567579816,
+      "scenario": "forged-result",
+      "report": "run-000585-seed-870850353567579816.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 589,
+      "seed": 2534760566131580005,
+      "scenario": "wrong-lease",
+      "report": "run-000589-seed-2534760566131580005.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 590,
+      "seed": 2569936099853987334,
+      "scenario": "unknown-operation",
+      "report": "run-000590-seed-2569936099853987334.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 592,
+      "seed": 13733990081822141142,
+      "scenario": "request-order",
+      "report": "run-000592-seed-13733990081822141142.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 597,
+      "seed": 10344601887120584438,
+      "scenario": "invalid-position",
+      "report": "run-000597-seed-10344601887120584438.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 602,
+      "seed": 12882454087169368235,
+      "scenario": "forged-result",
+      "report": "run-000602-seed-12882454087169368235.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 604,
+      "seed": 7491612216515051391,
+      "scenario": "request-order",
+      "report": "run-000604-seed-7491612216515051391.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 605,
+      "seed": 11286406150666164123,
+      "scenario": "wrong-executor",
+      "report": "run-000605-seed-11286406150666164123.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 608,
+      "seed": 9651343322099449213,
+      "scenario": "wrong-executor",
+      "report": "run-000608-seed-9651343322099449213.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 612,
+      "seed": 10050866374824335957,
+      "scenario": "wrong-executor",
+      "report": "run-000612-seed-10050866374824335957.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 617,
+      "seed": 18343589502002174550,
+      "scenario": "forged-result",
+      "report": "run-000617-seed-18343589502002174550.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 621,
+      "seed": 2088158499599276794,
+      "scenario": "invalid-position",
+      "report": "run-000621-seed-2088158499599276794.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 625,
+      "seed": 9993902288791035606,
+      "scenario": "unknown-operation",
+      "report": "run-000625-seed-9993902288791035606.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 627,
+      "seed": 16662976531461235676,
+      "scenario": "stale-epoch",
+      "report": "run-000627-seed-16662976531461235676.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 629,
+      "seed": 8276314363528031142,
+      "scenario": "request-order",
+      "report": "run-000629-seed-8276314363528031142.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 634,
+      "seed": 6622925276880692738,
+      "scenario": "capability",
+      "report": "run-000634-seed-6622925276880692738.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 635,
+      "seed": 10835930814259610566,
+      "scenario": "unknown-argument",
+      "report": "run-000635-seed-10835930814259610566.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 636,
+      "seed": 13672618554589734424,
+      "scenario": "invalid-position",
+      "report": "run-000636-seed-13672618554589734424.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 637,
+      "seed": 13669258203904347140,
+      "scenario": "request-order",
+      "report": "run-000637-seed-13669258203904347140.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 639,
+      "seed": 15439009170575891874,
+      "scenario": "unknown-operation",
+      "report": "run-000639-seed-15439009170575891874.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 640,
+      "seed": 7759622820228453216,
+      "scenario": "version",
+      "report": "run-000640-seed-7759622820228453216.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 644,
+      "seed": 15851286831991278626,
+      "scenario": "wrong-lease",
+      "report": "run-000644-seed-15851286831991278626.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 655,
+      "seed": 6668943755672778362,
+      "scenario": "wrong-lease",
+      "report": "run-000655-seed-6668943755672778362.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 663,
+      "seed": 3442066094621942575,
+      "scenario": "wrong-executor",
+      "report": "run-000663-seed-3442066094621942575.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 669,
+      "seed": 1665975890857127104,
+      "scenario": "wrong-lease",
+      "report": "run-000669-seed-1665975890857127104.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 670,
+      "seed": 11786789165167119996,
+      "scenario": "version",
+      "report": "run-000670-seed-11786789165167119996.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 671,
+      "seed": 12587533060274226499,
+      "scenario": "unknown-operation",
+      "report": "run-000671-seed-12587533060274226499.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 673,
+      "seed": 9870697569313583408,
+      "scenario": "cross-authority",
+      "report": "run-000673-seed-9870697569313583408.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 677,
+      "seed": 7703270475581336719,
+      "scenario": "unknown-argument",
+      "report": "run-000677-seed-7703270475581336719.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 681,
+      "seed": 9106447977862079931,
+      "scenario": "request-order",
+      "report": "run-000681-seed-9106447977862079931.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 10}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 682,
+      "seed": 15393490510454267755,
+      "scenario": "request-order",
+      "report": "run-000682-seed-15393490510454267755.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 683,
+      "seed": 9794566180749668274,
+      "scenario": "version",
+      "report": "run-000683-seed-9794566180749668274.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 686,
+      "seed": 3135410984866103889,
+      "scenario": "unknown-argument",
+      "report": "run-000686-seed-3135410984866103889.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 691,
+      "seed": 10044508386636427399,
+      "scenario": "unknown-argument",
+      "report": "run-000691-seed-10044508386636427399.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 692,
+      "seed": 752792341056087418,
+      "scenario": "request-order",
+      "report": "run-000692-seed-752792341056087418.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 701,
+      "seed": 11349885067023363926,
+      "scenario": "capability",
+      "report": "run-000701-seed-11349885067023363926.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 702,
+      "seed": 5911305152172441176,
+      "scenario": "forged-result",
+      "report": "run-000702-seed-5911305152172441176.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 705,
+      "seed": 10512362751209418786,
+      "scenario": "unknown-argument",
+      "report": "run-000705-seed-10512362751209418786.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 706,
+      "seed": 6026164746076100897,
+      "scenario": "unknown-argument",
+      "report": "run-000706-seed-6026164746076100897.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 707,
+      "seed": 3918515158227027194,
+      "scenario": "unknown-argument",
+      "report": "run-000707-seed-3918515158227027194.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 709,
+      "seed": 11319162879412791413,
+      "scenario": "wrong-lease",
+      "report": "run-000709-seed-11319162879412791413.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 711,
+      "seed": 11773192087002276415,
+      "scenario": "stale-epoch",
+      "report": "run-000711-seed-11773192087002276415.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 713,
+      "seed": 8701822732956576712,
+      "scenario": "cross-authority",
+      "report": "run-000713-seed-8701822732956576712.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 716,
+      "seed": 691942532405087499,
+      "scenario": "stale-epoch",
+      "report": "run-000716-seed-691942532405087499.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 718,
+      "seed": 14347171820830887499,
+      "scenario": "wrong-lease",
+      "report": "run-000718-seed-14347171820830887499.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 724,
+      "seed": 9321840002306432858,
+      "scenario": "wrong-lease",
+      "report": "run-000724-seed-9321840002306432858.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 725,
+      "seed": 14823301913422632767,
+      "scenario": "wrong-executor",
+      "report": "run-000725-seed-14823301913422632767.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 727,
+      "seed": 4326546044177380197,
+      "scenario": "stale-epoch",
+      "report": "run-000727-seed-4326546044177380197.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 728,
+      "seed": 14449786180537164235,
+      "scenario": "capability",
+      "report": "run-000728-seed-14449786180537164235.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 730,
+      "seed": 1461305723701081159,
+      "scenario": "unknown-operation",
+      "report": "run-000730-seed-1461305723701081159.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 731,
+      "seed": 1290998016019822971,
+      "scenario": "wrong-lease",
+      "report": "run-000731-seed-1290998016019822971.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 738,
+      "seed": 14967987412951591948,
+      "scenario": "request-order",
+      "report": "run-000738-seed-14967987412951591948.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 10}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 748,
+      "seed": 8703602496633475893,
+      "scenario": "unknown-argument",
+      "report": "run-000748-seed-8703602496633475893.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 751,
+      "seed": 9508344788791999108,
+      "scenario": "request-order",
+      "report": "run-000751-seed-9508344788791999108.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 752,
+      "seed": 11902001956961252416,
+      "scenario": "unknown-operation",
+      "report": "run-000752-seed-11902001956961252416.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 753,
+      "seed": 307946347700274906,
+      "scenario": "unknown-operation",
+      "report": "run-000753-seed-307946347700274906.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 755,
+      "seed": 15644427248196687474,
+      "scenario": "cross-authority",
+      "report": "run-000755-seed-15644427248196687474.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 761,
+      "seed": 17397172852920677760,
+      "scenario": "unknown-argument",
+      "report": "run-000761-seed-17397172852920677760.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 764,
+      "seed": 14242705557120997716,
+      "scenario": "capability",
+      "report": "run-000764-seed-14242705557120997716.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 768,
+      "seed": 1743218795970822459,
+      "scenario": "cross-authority",
+      "report": "run-000768-seed-1743218795970822459.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 769,
+      "seed": 2547285436472717794,
+      "scenario": "unknown-operation",
+      "report": "run-000769-seed-2547285436472717794.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 771,
+      "seed": 1820140162564270402,
+      "scenario": "cross-authority",
+      "report": "run-000771-seed-1820140162564270402.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 777,
+      "seed": 8945194736852828429,
+      "scenario": "unknown-argument",
+      "report": "run-000777-seed-8945194736852828429.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 781,
+      "seed": 9575904981440491395,
+      "scenario": "stale-epoch",
+      "report": "run-000781-seed-9575904981440491395.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 782,
+      "seed": 2489019738055681512,
+      "scenario": "request-order",
+      "report": "run-000782-seed-2489019738055681512.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 10}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 785,
+      "seed": 16560310758953256485,
+      "scenario": "unknown-argument",
+      "report": "run-000785-seed-16560310758953256485.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 788,
+      "seed": 17898371065921577553,
+      "scenario": "forged-result",
+      "report": "run-000788-seed-17898371065921577553.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 792,
+      "seed": 7017886138265766890,
+      "scenario": "unknown-argument",
+      "report": "run-000792-seed-7017886138265766890.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 793,
+      "seed": 15572483255211396679,
+      "scenario": "unknown-operation",
+      "report": "run-000793-seed-15572483255211396679.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 805,
+      "seed": 13954156431514081544,
+      "scenario": "wrong-lease",
+      "report": "run-000805-seed-13954156431514081544.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 11}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 806,
+      "seed": 9318853261156505197,
+      "scenario": "capability",
+      "report": "run-000806-seed-9318853261156505197.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 807,
+      "seed": 10325909085543931737,
+      "scenario": "version",
+      "report": "run-000807-seed-10325909085543931737.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 809,
+      "seed": 15125629099405880926,
+      "scenario": "unknown-operation",
+      "report": "run-000809-seed-15125629099405880926.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 810,
+      "seed": 9572619001868591250,
+      "scenario": "wrong-lease",
+      "report": "run-000810-seed-9572619001868591250.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 811,
+      "seed": 8899255540513074327,
+      "scenario": "forged-result",
+      "report": "run-000811-seed-8899255540513074327.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 812,
+      "seed": 8127429161322278245,
+      "scenario": "wrong-executor",
+      "report": "run-000812-seed-8127429161322278245.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 813,
+      "seed": 17818909464813067795,
+      "scenario": "unknown-operation",
+      "report": "run-000813-seed-17818909464813067795.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 816,
+      "seed": 9323116100188321130,
+      "scenario": "invalid-position",
+      "report": "run-000816-seed-9323116100188321130.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 817,
+      "seed": 7987503610242856508,
+      "scenario": "unknown-operation",
+      "report": "run-000817-seed-7987503610242856508.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 818,
+      "seed": 9730193255934367533,
+      "scenario": "unknown-argument",
+      "report": "run-000818-seed-9730193255934367533.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 820,
+      "seed": 8636282050470910460,
+      "scenario": "stale-epoch",
+      "report": "run-000820-seed-8636282050470910460.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 822,
+      "seed": 8848156385976673163,
+      "scenario": "unknown-operation",
+      "report": "run-000822-seed-8848156385976673163.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 835,
+      "seed": 7882184675044299798,
+      "scenario": "unknown-operation",
+      "report": "run-000835-seed-7882184675044299798.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 836,
+      "seed": 10355245635572438736,
+      "scenario": "request-order",
+      "report": "run-000836-seed-10355245635572438736.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 837,
+      "seed": 13866141655211332991,
+      "scenario": "request-order",
+      "report": "run-000837-seed-13866141655211332991.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 841,
+      "seed": 10820433981280054513,
+      "scenario": "unknown-argument",
+      "report": "run-000841-seed-10820433981280054513.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 847,
+      "seed": 2648165065327740739,
+      "scenario": "unknown-operation",
+      "report": "run-000847-seed-2648165065327740739.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 849,
+      "seed": 277011118961101148,
+      "scenario": "unknown-operation",
+      "report": "run-000849-seed-277011118961101148.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 850,
+      "seed": 12533297856673787362,
+      "scenario": "wrong-lease",
+      "report": "run-000850-seed-12533297856673787362.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 853,
+      "seed": 2667246925103132708,
+      "scenario": "unknown-operation",
+      "report": "run-000853-seed-2667246925103132708.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 854,
+      "seed": 3392685702576790083,
+      "scenario": "unknown-argument",
+      "report": "run-000854-seed-3392685702576790083.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 858,
+      "seed": 9118890878411747948,
+      "scenario": "request-order",
+      "report": "run-000858-seed-9118890878411747948.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 865,
+      "seed": 15838739127885965081,
+      "scenario": "cross-authority",
+      "report": "run-000865-seed-15838739127885965081.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 870,
+      "seed": 14529970451696561569,
+      "scenario": "capability",
+      "report": "run-000870-seed-14529970451696561569.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 871,
+      "seed": 937719337264476858,
+      "scenario": "request-order",
+      "report": "run-000871-seed-937719337264476858.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 874,
+      "seed": 15992270346236706587,
+      "scenario": "forged-result",
+      "report": "run-000874-seed-15992270346236706587.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 877,
+      "seed": 10478441880966997236,
+      "scenario": "cross-authority",
+      "report": "run-000877-seed-10478441880966997236.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 882,
+      "seed": 10423334904700599816,
+      "scenario": "unknown-argument",
+      "report": "run-000882-seed-10423334904700599816.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 885,
+      "seed": 4246757198233548323,
+      "scenario": "unknown-operation",
+      "report": "run-000885-seed-4246757198233548323.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 887,
+      "seed": 17303048282042426668,
+      "scenario": "wrong-lease",
+      "report": "run-000887-seed-17303048282042426668.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 890,
+      "seed": 1993006421910218072,
+      "scenario": "request-order",
+      "report": "run-000890-seed-1993006421910218072.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 893,
+      "seed": 1329361891937061677,
+      "scenario": "wrong-lease",
+      "report": "run-000893-seed-1329361891937061677.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 895,
+      "seed": 9018073955800248250,
+      "scenario": "version",
+      "report": "run-000895-seed-9018073955800248250.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 896,
+      "seed": 4175836469852403354,
+      "scenario": "version",
+      "report": "run-000896-seed-4175836469852403354.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 897,
+      "seed": 12067121651440248835,
+      "scenario": "capability",
+      "report": "run-000897-seed-12067121651440248835.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 906,
+      "seed": 1633731047004276879,
+      "scenario": "version",
+      "report": "run-000906-seed-1633731047004276879.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 912,
+      "seed": 18306072244266282993,
+      "scenario": "cross-authority",
+      "report": "run-000912-seed-18306072244266282993.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 916,
+      "seed": 13577986908342920889,
+      "scenario": "stale-epoch",
+      "report": "run-000916-seed-13577986908342920889.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 15}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 933,
+      "seed": 6320870310332784326,
+      "scenario": "forged-result",
+      "report": "run-000933-seed-6320870310332784326.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 938,
+      "seed": 9924032965357070679,
+      "scenario": "invalid-position",
+      "report": "run-000938-seed-9924032965357070679.json",
+      "explanation": "AssertionError: private worker invalid-position probe: expected INVALID_POSITION, observed [{'code': 'INVALID_POSITION', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 940,
+      "seed": 650798818049099149,
+      "scenario": "unknown-operation",
+      "report": "run-000940-seed-650798818049099149.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 941,
+      "seed": 3936256049115701428,
+      "scenario": "wrong-executor",
+      "report": "run-000941-seed-3936256049115701428.json",
+      "explanation": "AssertionError: private worker wrong-executor probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 942,
+      "seed": 14733959446047559214,
+      "scenario": "wrong-lease",
+      "report": "run-000942-seed-14733959446047559214.json",
+      "explanation": "AssertionError: private worker wrong-lease probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 9}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 946,
+      "seed": 5894243065531125372,
+      "scenario": "cross-authority",
+      "report": "run-000946-seed-5894243065531125372.json",
+      "explanation": "AssertionError: private worker cross-authority probe: expected LEASE_REVOKED, observed [{'code': 'LEASE_REVOKED', 'operation': 'read', 'request_id': 17}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 953,
+      "seed": 6267589559232541370,
+      "scenario": "forged-result",
+      "report": "run-000953-seed-6267589559232541370.json",
+      "explanation": "AssertionError: private worker forged-result probe: expected INVALID_RESULT, observed [{'code': 'INVALID_RESULT', 'operation': 'commit', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 959,
+      "seed": 1174357576507114405,
+      "scenario": "stale-epoch",
+      "report": "run-000959-seed-1174357576507114405.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 962,
+      "seed": 13078364320164070296,
+      "scenario": "unknown-argument",
+      "report": "run-000962-seed-13078364320164070296.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 969,
+      "seed": 5870411489480124564,
+      "scenario": "version",
+      "report": "run-000969-seed-5870411489480124564.json",
+      "explanation": "AssertionError: private worker version probe: expected UNSUPPORTED_VERSION, observed [{'code': 'UNSUPPORTED_VERSION', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 974,
+      "seed": 17573281342247710330,
+      "scenario": "unknown-argument",
+      "report": "run-000974-seed-17573281342247710330.json",
+      "explanation": "AssertionError: private worker unknown-argument probe: expected UNKNOWN_FIELD, observed [{'code': 'UNKNOWN_FIELD', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 976,
+      "seed": 1292563186818039349,
+      "scenario": "stale-epoch",
+      "report": "run-000976-seed-1292563186818039349.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 981,
+      "seed": 1057439508844150222,
+      "scenario": "stale-epoch",
+      "report": "run-000981-seed-1057439508844150222.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 982,
+      "seed": 7510749876601965844,
+      "scenario": "unknown-operation",
+      "report": "run-000982-seed-7510749876601965844.json",
+      "explanation": "AssertionError: private worker unknown-operation probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'shell', 'request_id': 7}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 986,
+      "seed": 502072302149486905,
+      "scenario": "stale-epoch",
+      "report": "run-000986-seed-502072302149486905.json",
+      "explanation": "AssertionError: private worker stale-epoch probe: expected STALE_EPOCH, observed [{'code': 'STALE_EPOCH', 'operation': 'read', 'request_id': 5}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 988,
+      "seed": 5641470679930378109,
+      "scenario": "request-order",
+      "report": "run-000988-seed-5641470679930378109.json",
+      "explanation": "AssertionError: private worker request-order probe: expected REQUEST_ORDER, observed [{'code': 'REQUEST_ORDER', 'operation': 'read', 'request_id': 6}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    },
+    {
+      "index": 994,
+      "seed": 3127745455801679182,
+      "scenario": "wrong-lease",
+      "report": "run-000994-seed-3127745455801679182.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 999,
+      "seed": 645439093284026913,
+      "scenario": "capability",
+      "report": "run-000999-seed-645439093284026913.json",
+      "explanation": "AssertionError: private worker capability probe: expected CAPABILITY_DENIED, observed [{'code': 'CAPABILITY_DENIED', 'operation': 'inspect', 'request_id': 13}, {'code': 'IO_ERROR', 'epoch': 1}]"
+    }
+  ],
+  "recovered": 408,
+  "rejected": 227,
+  "safely_unrecoverable": 77,
+  "unexpected_failures": 288,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

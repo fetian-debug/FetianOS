@@ -1,5 +1,7 @@
 # FCA engineering validation report
 
+This is the retained Phase 1 report. See [Phase 2 research validation](research-validation.md) for the newer randomized, fault, security and performance evidence.
+
 Recorded 18 November 2026 on x86_64 WSL2, kernel
 `6.18.33.2-microsoft-standard-WSL2`, Python 3.10.12. FCA uses the isolated Rust
 1.89.0 toolchain and its own locked Cargo graph. Measurements use optimized

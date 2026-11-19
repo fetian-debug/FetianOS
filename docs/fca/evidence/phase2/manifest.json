@@ -1,0 +1,64 @@
+{
+  "workflow": "https://github.com/fetian-debug/FetianOS/actions/runs/44480983113",
+  "source_revision": "7723bda6e2902d44c351fe7edf59d30ff3cdb707",
+  "files": {
+    "default-checks.log": {
+      "bytes": 1752,
+      "sha256": "f5e83f3b28b9cab78e3316dc64dbca80113592e6681ba9ed24a6e86f13c314dc"
+    },
+    "fault-summary.json": {
+      "bytes": 469,
+      "sha256": "21a62195ca0a7dc0d430df09391cfc4b81c3c56880ca08ea4373b60379707d05"
+    },
+    "forbidden-handoff-before-fix.json": {
+      "bytes": 40162,
+      "sha256": "d42dbb6491a3449d47af0c432ee75f4725b957dbf05a1ba6e0ac6b256033ff3b"
+    },
+    "forbidden-handoff-fixed-replay.json": {
+      "bytes": 48686,
+      "sha256": "b2588be9cffe6c95282240873cb891a8f53e1191e55a62e0340e4ea43c385e15"
+    },
+    "performance.json": {
+      "bytes": 337844,
+      "sha256": "cce377cd1e5c4e4b560099d9275f0a2107e9ce157a3b8ef917f53ee236e669c2"
+    },
+    "protocol-summary.json": {
+      "bytes": 396,
+      "sha256": "21c0b0d988a36b17e833d967d89eb8618b93264afa24c9bcebcf253bf4884035"
+    },
+    "randomized-runs.jsonl.gz": {
+      "bytes": 4961338,
+      "sha256": "2120d0327148fad5a9779a0d6076dd617cd681727efd36d927fa15119eb47ac3"
+    },
+    "security.json": {
+      "bytes": 2990,
+      "sha256": "451fcfd462ec019fcb7c5ad7eb5d5d7153cb4240e89f90997ba64c1b70aec748"
+    },
+    "stress-plan.json": {
+      "bytes": 196112,
+      "sha256": "c4420a98ba3cf28bf1fc12ec5aa7d3dd560cbba40ccb0f42e1db22b4bc123519"
+    },
+    "stress-summary.json": {
+      "bytes": 474,
+      "sha256": "a266a2e4732b570c53d3080f9e2ab25b27d58b6c14edadb3c5f3e0845de084d4"
+    },
+    "wsl-delegated-unavailable.json": {
+      "bytes": 2980,
+      "sha256": "03f8a3338469b8f836b015a77259e3568b82875db233ce499ba0528d1143c513"
+    },
+    "wsl-final-summary.json": {
+      "bytes": 2101,
+      "sha256": "8b7842adf60ad5813c229c67ef4bc1c468ee12e94bf295d49bb113a025398217"
+    },
+    "wsl-initial-summary.json": {
+      "bytes": 107901,
+      "sha256": "62c557ca32f9995fd709bfbe02dde4354dd98a29632c3946fd7f26f2c449f6a1"
+    },
+    "wsl-timeout-replays.json": {
+      "bytes": 4604,
+      "sha256": "d221e48d4ebc53514d5836a0cea9d7da2dfdc0a4e61fe99585e93742f13cd3ad"
+    }
+  },
+  "authenticity": "Local retention of downloaded GitHub Actions evidence; checksums are not signatures",
+  "randomized_archive": "One complete experiment per gzip-compressed JSON line; 1000 lines, credentials redacted in traces/snapshots"
+}

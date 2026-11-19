@@ -86,13 +86,16 @@ pub fn run() -> Result<()> {
         )?;
         checkpoint = serde_json::from_value(outcome["checkpoint"].clone())?;
         if start["barrier_after"].as_u64() == Some(checkpoint.last_committed_chunk) {
-            request(
+            let barrier = request(
                 &mut input,
                 &mut output,
                 &mut seq,
                 "barrier",
                 json!({"credential":credential}),
             )?;
+            if start["test_faults"] == true && barrier["research_probe"].is_object() {
+                return crate::research::probe(&mut input, &mut output, &barrier["research_probe"]);
+            }
         }
     }
 }

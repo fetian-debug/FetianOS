@@ -35,3 +35,4 @@ fetian-hardware-report.json
 /system/fetian-fca/target/
 /.build-tools/
 /profile/sway/airootfs/usr/bin/fetian-health-rs
+/fca-evidence/

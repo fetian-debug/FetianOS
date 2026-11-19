@@ -3,13 +3,15 @@ on:
   pull_request:
     paths: ['system/fetian-fca/**', 'scripts/build-fca.sh', '.github/workflows/fca-checks.yml']
   push:
-    branches: [main]
+    branches: [main, fca-phase-2-validation]
     paths: ['system/fetian-fca/**', 'scripts/build-fca.sh', '.github/workflows/fca-checks.yml']
   workflow_dispatch:
+  schedule:
+    - cron: '23 3 * * 1'
 permissions:
   contents: read
 jobs:
-  fca:
+  fast:
     runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
@@ -18,21 +20,71 @@ jobs:
           persist-credentials: false
       - name: Install isolated supported Rust toolchain
         run: rustup toolchain install 1.89.0 --profile minimal --component rustfmt --component clippy
-      - name: Check formatting, lints and store/model tests
+      - name: Formatting, lints, store/model and harness oracle tests
         run: |
           cargo +1.89.0 fetch --manifest-path system/fetian-fca/Cargo.toml --locked
           cargo +1.89.0 fmt --manifest-path system/fetian-fca/Cargo.toml -- --check
           cargo +1.89.0 clippy --manifest-path system/fetian-fca/Cargo.toml --locked --offline --all-targets -- -D warnings
           cargo +1.89.0 test --manifest-path system/fetian-fca/Cargo.toml --locked --offline
-      - name: Build reference programs and run real process/crash tests
-        run: |
+          python3 -m unittest discover -s system/fetian-fca/validation -p 'test_*.py' -v
           RUSTUP_TOOLCHAIN=1.89.0 bash scripts/build-fca.sh --release --offline
-          FCA_BIN_DIR="$PWD/system/fetian-fca/target/release" python3 system/fetian-fca/tests/process_tests.py
-          mkdir -p fca-evidence
-          system/fetian-fca/target/release/fetian-authority --json demo-handoff > fca-evidence/handoff.json
-          FCA_BIN_DIR="$PWD/system/fetian-fca/target/release" python3 system/fetian-fca/tests/benchmark.py > fca-evidence/benchmark.json
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
-          name: fca-handoff-${{ github.sha }}
-          path: fca-evidence/
+          name: fca-programs-${{ github.sha }}
+          path: |
+            system/fetian-fca/target/release/fetian-authority
+            system/fetian-fca/target/release/fetian-authorityd
+            system/fetian-fca/target/release/fetian-executor-rust
+            system/fetian-fca/target/release/fetian-fca-launcher
+            system/fetian-fca/target/release/fetian-executor-python.py
           if-no-files-found: error
+  research:
+    needs: fast
+    name: ${{ matrix.suite }}
+    strategy:
+      fail-fast: false
+      matrix:
+        suite: [fault, security, stress, performance]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.1
+        with:
+          name: fca-programs-${{ github.sha }}
+          path: system/fetian-fca/target/release
+      - name: Prepare isolated test programs
+        run: chmod +x system/fetian-fca/target/release/fetian-*
+      - name: Deterministic faults and real-process regressions
+        if: matrix.suite == 'fault'
+        env:
+          FCA_BIN_DIR: ${{ github.workspace }}/system/fetian-fca/target/release
+        run: |
+          python3 system/fetian-fca/tests/process_tests.py
+          python3 system/fetian-fca/validation/lab.py deterministic --include-expiry --output fca-evidence/fault
+      - name: Private IPC probes and security boundaries
+        if: matrix.suite == 'security'
+        env:
+          FCA_BIN_DIR: ${{ github.workspace }}/system/fetian-fca/target/release
+        run: |
+          python3 system/fetian-fca/validation/lab.py security --output fca-evidence/probes
+          python3 system/fetian-fca/validation/security.py --output fca-evidence/security
+      - name: Run all 1,000 seeded randomized experiments
+        if: matrix.suite == 'stress' && (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule')
+        env:
+          FCA_BIN_DIR: ${{ github.workspace }}/system/fetian-fca/target/release
+        run: python3 system/fetian-fca/validation/lab.py stress --runs 1000 --seed 2090 --output fca-evidence/stress
+      - name: Measure workload and authority population scaling
+        if: matrix.suite == 'performance' && (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule')
+        env:
+          FCA_BIN_DIR: ${{ github.workspace }}/system/fetian-fca/target/release
+        run: python3 system/fetian-fca/validation/performance.py --output fca-evidence/performance
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        if: always()
+        with:
+          name: fca-${{ matrix.suite }}-${{ github.sha }}
+          path: fca-evidence/
+          if-no-files-found: ignore
+          retention-days: 14
