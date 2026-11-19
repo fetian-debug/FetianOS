@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "config": {
+    "scenario": "cross-authority",
+    "seed": 2714685373729247199,
+    "items": 256,
+    "chunk": 32,
+    "barrier": 5,
+    "executor": "rust",
+    "jitter_us": 1608
+  },
+  "classification": "unexpected_correctness_failure",
+  "expectations_met": false,
+  "explanation": "TimeoutError: broker startup did not reach a verified status",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 321, in run_case\n    session = Session()\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 100, in __init__\n    super().__init__(faults=faults)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 53, in __init__\n    self.start()\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 133, in start\n    raise TimeoutError(\"broker startup did not reach a verified status\")\nTimeoutError: broker startup did not reach a verified status\n",
+  "duration_us": 14243412.42,
+  "replay": "python3 system/fetian-fca/validation/lab.py replay --case /mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/final/fca-stress/run-000187-seed-2714685373729247199.json --output NEW_DIRECTORY"
+}

@@ -36,13 +36,26 @@ def main():
     signal.signal(signal.SIGTERM, stop)
     signal.signal(signal.SIGINT, stop)
     try:
-        for command in commands:
-            children.append(subprocess.Popen(command, start_new_session=True))
+        panel = None
+        for index, command in enumerate(commands):
+            try:
+                child = subprocess.Popen(command, start_new_session=True)
+            except OSError as error:
+                if index == 0: raise  # The panel is the required shell component.
+                print(f"fetian-shell: optional {command[0]} unavailable: {error}; other components continue", file=sys.stderr)
+                continue
+            children.append(child)
+            if index == 0: panel = child
         while not stopping:
-            # A failed required component is visible in the journal and restarts
-            # the owned shell group, without touching the compositor or metrics.
-            if any(child.poll() is not None for child in children):
-                return 1
+            for child in children[:]:
+                code = child.poll()
+                if code is None: continue
+                if child is panel:
+                    print(f"fetian-shell: required panel exited ({code})", file=sys.stderr)
+                    return 1
+                print(f"fetian-shell: optional child {child.args[0]} exited ({code}); other components continue; restart fetian-shell.service after resolving the cause", file=sys.stderr)
+                child.wait()  # Reap exited children; do not accumulate handles.
+                children.remove(child)
             time.sleep(1)
         return 0
     except OSError as error:

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "system": {
+    "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+    "VERSION_ID": "22.04",
+    "ID": "ubuntu"
+  },
+  "architecture": "x86_64",
+  "tools": {
+    "mkarchiso": null,
+    "pacman": null,
+    "pacman-key": null,
+    "cargo": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/cargo",
+    "rustc": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/rustc",
+    "cc": "/usr/bin/cc",
+    "python3": "/usr/bin/python3",
+    "xorriso": null,
+    "isoinfo": null,
+    "unsquashfs": "/usr/bin/unsquashfs",
+    "qemu-system-x86_64": null,
+    "qemu-img": null,
+    "mcopy": null
+  },
+  "missing_tools": [
+    "mkarchiso",
+    "pacman",
+    "pacman-key",
+    "xorriso",
+    "isoinfo",
+    "qemu-system-x86_64",
+    "qemu-img",
+    "mcopy"
+  ],
+  "image_host_supported": false,
+  "kvm_usable": false,
+  "ovmf_code": null,
+  "ovmf_variables": null,
+  "uefi_vm_dependencies_available": false,
+  "graphical_display_configured": true,
+  "workspace_free_bytes": 82137206784,
+  "tests_executed": [],
+  "hardware_validated": false
+}

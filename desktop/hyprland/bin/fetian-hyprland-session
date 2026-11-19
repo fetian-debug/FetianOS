@@ -27,6 +27,7 @@ cleanup() {
 trap cleanup EXIT
 trap 'exit 143' TERM
 trap 'exit 130' INT
-Hyprland --config /usr/share/fetian/hyprland/hyprland.lua &
+# The wrapper retains the lock until cleanup; compositor children must not.
+Hyprland --config /usr/share/fetian/hyprland/hyprland.lua 9>&- &
 compositor_pid=$!
 wait "$compositor_pid"

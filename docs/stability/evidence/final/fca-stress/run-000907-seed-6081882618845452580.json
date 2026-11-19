@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "config": {
+    "scenario": "terminal-cancel",
+    "seed": 6081882618845452580,
+    "items": 32,
+    "chunk": 16,
+    "barrier": 1,
+    "executor": "python",
+    "jitter_us": 1516
+  },
+  "classification": "unexpected_correctness_failure",
+  "expectations_met": false,
+  "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 100, in __init__\n    super().__init__(faults=faults)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 53, in __init__\n    self.start()\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 133, in start\n    raise TimeoutError(\"broker startup did not reach a verified status\")\nTimeoutError: broker startup did not reach a verified status\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 241, in close\n    self.call(\"stop\")\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 139, in call\n    result = super().call(operation, **arguments)\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/tests/process_tests.py\", line 67, in call\n    stream.connect(str(self.socket))\nFileNotFoundError: [Errno 2] No such file or directory\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/lab.py\", line 321, in run_case\n    session = Session()\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 103, in __init__\n    self.close()\n  File \"/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/validation/common.py\", line 245, in close\n    self.process.wait(timeout=5)\n  File \"/usr/lib/python3.10/subprocess.py\", line 1209, in wait\n    return self._wait(timeout=timeout)\n  File \"/usr/lib/python3.10/subprocess.py\", line 1951, in _wait\n    raise TimeoutExpired(self.args, timeout)\nsubprocess.TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds\n",
+  "duration_us": 18813833.886,
+  "replay": "python3 system/fetian-fca/validation/lab.py replay --case /mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/final/fca-stress/run-000907-seed-6081882618845452580.json --output NEW_DIRECTORY"
+}

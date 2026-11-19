@@ -1,0 +1,89 @@
+[
+  {
+    "name": "rust-version",
+    "command": [
+      "rustc",
+      "--version",
+      "--verbose"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 1.34,
+    "log": "rust-version.log",
+    "log_sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+  },
+  {
+    "name": "native-clean-debug",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "Cargo.toml",
+      "--locked",
+      "--offline",
+      "--target-dir",
+      "/tmp/fetian-clean-build-u1d15osv"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 8.203,
+    "log": "native-clean-debug.log",
+    "log_sha256": "056890617765ddcc44da4944609f3796a5bbc6b24f2ea4e57159c8c8f177af22"
+  },
+  {
+    "name": "native-clean-release",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "Cargo.toml",
+      "--locked",
+      "--offline",
+      "--target-dir",
+      "/tmp/fetian-clean-build-u1d15osv",
+      "--release"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 11.523,
+    "log": "native-clean-release.log",
+    "log_sha256": "01c3b2d33f9d1e5aa7aef82571e59efb6117a37140257a023662353e8919ef00"
+  },
+  {
+    "name": "fca-clean-debug",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--locked",
+      "--offline",
+      "--target-dir",
+      "/tmp/fetian-clean-build-zf0m4pc4"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 46.452,
+    "log": "fca-clean-debug.log",
+    "log_sha256": "b81ee0b70bf126a37542c421402b2cd8b76456a45c99f54dacde852b296d8127"
+  },
+  {
+    "name": "fca-clean-release",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--locked",
+      "--offline",
+      "--target-dir",
+      "/tmp/fetian-clean-build-zf0m4pc4",
+      "--release"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 208.027,
+    "log": "fca-clean-release.log",
+    "log_sha256": "a2d616ca31a75d583edf08d9fe0420dee137ee7bae6a0c0ee6d0901b03d78431"
+  }
+]

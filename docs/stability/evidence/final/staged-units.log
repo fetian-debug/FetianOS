@@ -1,0 +1,7 @@
+netplan-ovs-cleanup.service: Failed to open /run/systemd/system/netplan-ovs-cleanup.service: Permission denied
+/lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.
+netplan-ovs-cleanup.service: Failed to open /run/systemd/system/netplan-ovs-cleanup.service: Permission denied
+/lib/systemd/system/snapd.service:23: Unknown key name 'RestartMode' in section 'Service', ignoring.
+sway: staged; 8 user-unit syntax checks (temporary ExecStart=/usr/bin/true)
+hyprland: staged; 12 user-unit syntax checks (temporary ExecStart=/usr/bin/true)
+Metrics and live-user unit syntax passed. No services installed or started; runtime sandbox/session behavior remains unverified.

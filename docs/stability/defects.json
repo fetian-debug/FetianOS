@@ -1,0 +1,62 @@
+[
+  {
+    "id": "STAB-001", "severity": "P2", "classification": "reproduced defect",
+    "reproduction": "Place a FIFO at a disposable FetianFiles preferences path and load it in a child with a two-second deadline.",
+    "root_cause": "Path stat permits non-regular files and read_text blocks on a FIFO; the earlier size check also does not bound a later read.",
+    "files_changed": ["apps/fetian-files/preferences.py", "tests/test_stability.py"],
+    "fix": "Nonblocking no-follow open, fstat regular-file validation, bounded byte read.",
+    "regression_test": "test_preferences_fifo_cannot_hang_startup",
+    "before": "failed: child exceeded deadline", "after": "passed: safe defaults without FIFO hang",
+    "remaining_limitations": "Regular/network filesystem I/O has no hard deadline; no arbitrary disk fault claim."
+  },
+  {
+    "id": "STAB-002", "severity": "P2", "classification": "reproduced defect",
+    "reproduction": "Load an invalid bracketed URI together with a valid bookmark, Dark theme and a null tabs field.",
+    "root_cause": "A field validation exception discards the whole valid loaded configuration.",
+    "files_changed": ["apps/fetian-files/preferences.py", "tests/test_stability.py"],
+    "fix": "Validate field types separately and skip malformed individual URIs.",
+    "regression_test": "test_malformed_fields_do_not_discard_valid_preferences",
+    "before": "failed: valid bookmark and theme lost in loaded state", "after": "passed: valid fields retained",
+    "remaining_limitations": "Malformed on-disk content is not automatically repaired or migrated; no new backup schema."
+  },
+  {
+    "id": "STAB-003", "severity": "P2", "classification": "reproduced descriptor ownership defect",
+    "reproduction": "Run each complete session wrapper unprivileged with a fixture compositor that returns 42 if fd 9 is open.",
+    "root_cause": "The wrapper's flock descriptor is inherited by the compositor and can be retained by descendants.",
+    "files_changed": ["system/boot/airootfs/usr/bin/fetian-sway-session", "desktop/hyprland/bin/fetian-hyprland-session", "tests/test_stability.py"],
+    "fix": "Close fd 9 only in the compositor child; parent retains lock through cleanup.",
+    "regression_test": "test_session_lock_is_not_inherited_by_compositor",
+    "before": "both wrappers returned fixture exit 42", "after": "both returned 0 and wrapper lock could be reacquired",
+    "remaining_limitations": "Real Wayland descendant behavior and graphical relogin remain untested."
+  },
+  {
+    "id": "STAB-004", "severity": "P2", "classification": "reproduced child-supervision defect with mocks",
+    "reproduction": "Inject missing nm-applet or its immediate exit while the panel and other children remain healthy.",
+    "root_cause": "Any child failure returned shell failure and terminated all healthy siblings.",
+    "files_changed": ["desktop/hyprland/fetian_shell.py", "tests/test_stability.py"],
+    "fix": "Log/isolate optional startup and exit failures, reap exited children, retain required panel failures.",
+    "regression_test": ["test_optional_shell_child_exit_does_not_stop_panel", "test_missing_optional_shell_child_does_not_stop_panel", "test_required_panel_exit_remains_a_visible_failure"],
+    "before": "optional failure tests failed; required-panel control already passed", "after": "all three passed",
+    "remaining_limitations": "Optional helpers require explicit shell restart after resolving their cause; no actual compositor crash test."
+  },
+  {
+    "id": "STAB-005", "severity": "P3", "classification": "reproduced temporary-file leak",
+    "reproduction": "Inject ENOSPC at fsync while replacing a temporary live-state fixture.",
+    "root_cause": "Write/flush/fsync occurred outside the temporary cleanup finally block.",
+    "files_changed": ["system/boot/live_setup.py", "tests/test_stability.py"],
+    "fix": "Cover creation and write stages with cleanup while propagating the error and preserving prior state.",
+    "regression_test": "test_live_state_fsync_failure_cleans_temporary_and_preserves_previous",
+    "before": "old state preserved but a .fetian-* file leaked", "after": "old state preserved and no leaked temporary",
+    "remaining_limitations": "No physical power-cut or complete disk-full VM test; interrupted account creation still needs manual recovery."
+  },
+  {
+    "id": "STAB-006", "severity": "P3", "classification": "confirmed configuration gap; live restart storm not reproduced",
+    "reproduction": "Inspect the four optional on-failure unit policies and compare their retry delays with an explicit rate window.",
+    "root_cause": "No per-unit bounds; common manager defaults may not catch retries spaced beyond their short interval.",
+    "files_changed": ["system/boot/airootfs/usr/lib/systemd/user/fetian-bluetooth-agent.service", "system/boot/airootfs/usr/lib/systemd/user/fetian-sway-idle.service", "desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-idle.service", "desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-shell.service", "tests/test_stability.py"],
+    "fix": "Explicit three-start/120-second rate window, preserving on-failure restart delays and optional dependencies.",
+    "regression_test": "test_optional_restart_policy_has_an_effective_explicit_limit",
+    "before": "four missing-bound subtests failed", "after": "configuration checks and staged unit syntax passed",
+    "remaining_limitations": "Start-rate bound is not a lifetime retry cap; actual user-manager rate limiting and lock/idle runtime remain untested."
+  }
+]

@@ -1,0 +1,11 @@
+test_empty_distribution_does_not_invent_a_measurement (test_evidence.EvidenceTests) ... ok
+test_evidence_is_valid_json_after_atomic_write (test_evidence.EvidenceTests) ... ok
+test_invalid_barrier_cannot_claim_a_fault_window (test_evidence.EvidenceTests) ... ok
+test_oracle_rejects_corrupt_sum_and_cursor (test_evidence.EvidenceTests) ... ok
+test_redaction_preserves_epoch_without_usable_lease (test_evidence.EvidenceTests) ... ok
+test_seed_reproduces_fault_configuration (test_evidence.EvidenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.032s
+
+OK

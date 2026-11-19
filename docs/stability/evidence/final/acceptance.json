@@ -1,0 +1,15 @@
+{
+  "stable": false,
+  "untested": [
+    "ISO build of this branch",
+    "UEFI/BIOS boot of this branch",
+    "graphical login/lock/logout",
+    "physical GPU/network/audio/USB/storage",
+    "suspend/resume",
+    "24-hour soak",
+    "installed-system upgrades/reboot",
+    "OS idle CPU/RAM, journal and filesystem health"
+  ],
+  "local_checks_passed": false,
+  "note": "No blanket acceptance. Dependency lock checks are not vulnerability audits."
+}

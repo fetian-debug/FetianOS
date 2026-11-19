@@ -1,0 +1,22 @@
+{
+  "phase": "final",
+  "started_utc": "2026-11-19T10:01:53Z",
+  "revision": "06aa67fc4a1ee25d37211c288d0fa0630c9b44dc",
+  "worktree": " M apps/fetian-files/preferences.py\n M desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-idle.service\n M desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-shell.service\n M desktop/hyprland/bin/fetian-hyprland-session\n M desktop/hyprland/fetian_shell.py\n M system/boot/airootfs/usr/bin/fetian-sway-session\n M system/boot/airootfs/usr/lib/systemd/user/fetian-bluetooth-agent.service\n M system/boot/airootfs/usr/lib/systemd/user/fetian-sway-idle.service\n M system/boot/live_setup.py\n?? docs/stability/\n?? scripts/stability-check.py\n?? tests/test_stability.py\n",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "python": "3.10.12",
+  "uid": 1000,
+  "gid": 1000,
+  "toolchain": "1.89.0",
+  "tools": {
+    "cargo": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/cargo",
+    "rustc": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/rustc",
+    "systemd-analyze": "/usr/bin/systemd-analyze",
+    "qemu-system-x86_64": null,
+    "mkarchiso": null,
+    "docker": null,
+    "xvfb-run": "/usr/bin/xvfb-run"
+  },
+  "scope": "Local source/process tests only. No installed FetianOS, graphical login or hardware acceptance inferred."
+}

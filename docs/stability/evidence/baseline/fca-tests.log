@@ -1,0 +1,59 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.07s
+     Running unittests src/lib.rs (system/fetian-fca/target/debug/deps/fetian_fca-8a90fee3ddb28bbd)
+
+running 6 tests
+test model::tests::terminal_states_never_resume ... ok
+test model::tests::leases_use_monotonic_time_and_fencing ... ok
+test model::tests::input_representation_is_language_independent ... ok
+test model::tests::identities_are_distinct_and_validated ... ok
+test model::tests::contracts_are_explicit_and_bounded ... ok
+test wire::tests::frames_reject_truncation_oversize_and_unknown_fields ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running unittests src/bin/cli.rs (system/fetian-fca/target/debug/deps/fetian_authority-37841fc29986fb7b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/daemon.rs (system/fetian-fca/target/debug/deps/fetian_authorityd-24f00abe6341bda8)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/executor.rs (system/fetian-fca/target/debug/deps/fetian_executor_rust-867ae23c8d002568)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/bin/launcher.rs (system/fetian-fca/target/debug/deps/fetian_fca_launcher-3e542aa5f59354bd)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/store_tests.rs (system/fetian-fca/target/debug/deps/store_tests-594b253d4c8ad073)
+
+running 10 tests
+test invalid_cursor_result_and_lease_never_commit ... ok
+test identical_retries_ack_same_effect_conflicting_retries_fail ... ok
+test missing_capability_is_denied_at_store_boundary ... ok
+test append_only_guards_and_schema_versions_are_checked ... ok
+test fencing_precedes_duplicate_ack_and_survives_reopen ... ok
+test symlink_store_and_runtime_directory_are_rejected ... ok
+test orphaned_authority_cannot_issue_replacement_lease ... ok
+test transaction_failure_has_no_partial_effect_checkpoint_or_event ... ok
+test snapshot_corruption_is_rejected_on_open ... ok
+test input_and_event_corruption_are_detected_after_restart ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.39s
+
+   Doc-tests fetian_fca
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

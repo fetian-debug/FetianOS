@@ -1,0 +1,382 @@
+[
+  {
+    "name": "rust-version",
+    "command": [
+      "rustc",
+      "--version",
+      "--verbose"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 5.681,
+    "log": "rust-version.log",
+    "log_sha256": "48cee7c7fa47e58de4f15a9bebf677bf7ad098f625aedfe1f7b827a97e3797c7"
+  },
+  {
+    "name": "native-fmt",
+    "command": [
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 6.17,
+    "log": "native-fmt.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "native-clippy",
+    "command": [
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "Cargo.toml",
+      "--all-targets",
+      "--locked",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 18.037,
+    "log": "native-clippy.log",
+    "log_sha256": "7fd39e8f56d48d58937642a67819987719b88225415b17530f597c46dcdf7106"
+  },
+  {
+    "name": "native-tests",
+    "command": [
+      "cargo",
+      "test",
+      "--manifest-path",
+      "Cargo.toml",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 44.652,
+    "log": "native-tests.log",
+    "log_sha256": "cfab408d637fa2a6c62e63b5ca62ccd01fdf0e4057c340a000c353f66300f552"
+  },
+  {
+    "name": "native-debug-build",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "Cargo.toml",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 0.679,
+    "log": "native-debug-build.log",
+    "log_sha256": "8a2933ae25e59188be988ea6218274cb341f13d8bc4b533f57b12ececd4be8b3"
+  },
+  {
+    "name": "native-release-build",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "Cargo.toml",
+      "--release",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 11.613,
+    "log": "native-release-build.log",
+    "log_sha256": "82dd8ae3aa306e230948eaebb185d76874980cf98746723ceaba5b2cd8af7595"
+  },
+  {
+    "name": "native-dependency-lock",
+    "command": [
+      "cargo",
+      "metadata",
+      "--manifest-path",
+      "Cargo.toml",
+      "--locked",
+      "--offline",
+      "--format-version",
+      "1"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 0.38,
+    "log": "native-dependency-lock.log",
+    "log_sha256": "ff6271b80ac0d78830f480765728108886ad901f88c8d5e39fc333b12a598189"
+  },
+  {
+    "name": "fca-fmt",
+    "command": [
+      "cargo",
+      "fmt",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--",
+      "--check"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 1.479,
+    "log": "fca-fmt.log",
+    "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "fca-clippy",
+    "command": [
+      "cargo",
+      "clippy",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--all-targets",
+      "--locked",
+      "--offline",
+      "--",
+      "-D",
+      "warnings"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 6.296,
+    "log": "fca-clippy.log",
+    "log_sha256": "041c80b1ec2eb3bb8a3f248bc8a5efd454d5da125b9a7235a5c98573b0590197"
+  },
+  {
+    "name": "fca-tests",
+    "command": [
+      "cargo",
+      "test",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 7.77,
+    "log": "fca-tests.log",
+    "log_sha256": "f6cd7188f4c0679a695f6f86ed61a7a738932e1ff6a7c153ab0ffc9cc089dc19"
+  },
+  {
+    "name": "fca-debug-build",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 3.696,
+    "log": "fca-debug-build.log",
+    "log_sha256": "5021bbccb443543558073cbfdd57c6e7b5e57c57ee1f7357a9b9fc61bf030fc6"
+  },
+  {
+    "name": "fca-release-build",
+    "command": [
+      "cargo",
+      "build",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--release",
+      "--locked",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 48.591,
+    "log": "fca-release-build.log",
+    "log_sha256": "fc8531b620bb39d25608f7f2d2d48a40798d51abddab5aa1c073609dc8f23836"
+  },
+  {
+    "name": "fca-dependency-lock",
+    "command": [
+      "cargo",
+      "metadata",
+      "--manifest-path",
+      "system/fetian-fca/Cargo.toml",
+      "--locked",
+      "--offline",
+      "--format-version",
+      "1"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 3.573,
+    "log": "fca-dependency-lock.log",
+    "log_sha256": "176f9af84a671a1929559d898a56d401fee5cb359785bcca1795f391849c2df8"
+  },
+  {
+    "name": "dependency-audit",
+    "command": [
+      "cargo",
+      "audit",
+      "--version"
+    ],
+    "status": "failed",
+    "exit_code": 101,
+    "seconds": 3.459,
+    "log": "dependency-audit.log",
+    "log_sha256": "cc66102068fe5a405328602ccf03ed7e0134a42ee26544fb0d4e1d399bc52c13"
+  },
+  {
+    "name": "python-regressions",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 82.733,
+    "log": "python-regressions.log",
+    "log_sha256": "74d15bd4deb93a228dab10d4414e1db6fd342c428a1741240c48b8a9d837fe85"
+  },
+  {
+    "name": "fca-harness-oracles",
+    "command": [
+      "/usr/bin/python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "system/fetian-fca/validation",
+      "-p",
+      "test_*.py",
+      "-v"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 0.576,
+    "log": "fca-harness-oracles.log",
+    "log_sha256": "00ebb221cf176b2554b655979e622a7d14e3cac6d6d0ffcb4fce2c515eb03411"
+  },
+  {
+    "name": "profile",
+    "command": [
+      "bash",
+      "scripts/validate-profile.sh"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 1.23,
+    "log": "profile.log",
+    "log_sha256": "f3f01f847a65b37039a45526cebbfcd8c8f83a8b566ff06191b2637f785ccd55"
+  },
+  {
+    "name": "staged-units",
+    "command": [
+      "/usr/bin/python3",
+      "scripts/verify-staged.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 4.784,
+    "log": "staged-units.log",
+    "log_sha256": "5377ff80c6a4f4071f0ceac439aefcc3c7a1761a35d898032f60452a1ff3ba3f"
+  },
+  {
+    "name": "environment-capabilities",
+    "command": [
+      "/usr/bin/python3",
+      "scripts/build-environment.py",
+      "--json"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 0.171,
+    "log": "environment-capabilities.log",
+    "log_sha256": "547bdca83e2189dd3ade180213df2ae608f7ccec1d4bbea8b4cf6c45180a794e"
+  },
+  {
+    "name": "fca-stage-executor",
+    "command": [
+      "bash",
+      "scripts/build-fca.sh",
+      "--release",
+      "--offline"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 4.284,
+    "log": "fca-stage-executor.log",
+    "log_sha256": "799f0be03e7ccb762ea1a1d03b665f7f49a903b1f4131829ec0b454f0d86f5d9"
+  },
+  {
+    "name": "fca-process",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/tests/process_tests.py"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 9.011,
+    "log": "fca-process.log",
+    "log_sha256": "0b513c32607132c1dc6e23abfd1c6486aeee5af25b42c8311bd71eeb82a92703"
+  },
+  {
+    "name": "fca-deterministic",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/lab.py",
+      "deterministic",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/baseline/fca-deterministic",
+      "--include-expiry"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 41.243,
+    "log": "fca-deterministic.log",
+    "log_sha256": "b5711fa42620af822c873e6c23e68916cbdee0b3f7e241eef2893635b9d47fda"
+  },
+  {
+    "name": "fca-security",
+    "command": [
+      "/usr/bin/python3",
+      "system/fetian-fca/validation/lab.py",
+      "security",
+      "--output",
+      "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/docs/stability/evidence/baseline/fca-security"
+    ],
+    "status": "passed",
+    "exit_code": 0,
+    "seconds": 16.569,
+    "log": "fca-security.log",
+    "log_sha256": "95b96aba5ff5b33bd475ba1a0e53ddaa6a1b56dcc72cce0a45b12e9c738cc1b8"
+  },
+  {
+    "name": "gtk-files",
+    "command": [
+      "dbus-run-session",
+      "--",
+      "xvfb-run",
+      "-a",
+      "/usr/bin/python3",
+      "tests/gtk_files_smoke.py"
+    ],
+    "status": "failed",
+    "exit_code": 1,
+    "seconds": 81.024,
+    "log": "gtk-files.log",
+    "log_sha256": "bb1fe370a73d6db08760c94c64745a5f54ddf6d6789d9e3ae91553d8626aaaca"
+  }
+]

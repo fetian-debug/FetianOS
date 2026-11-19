@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "mode": "stress",
+  "master_seed": 2090,
+  "completed": 1000,
+  "expectations_met": 995,
+  "counts": {
+    "expected_recovery": 408,
+    "expected_rejection": 509,
+    "safely_detected_unrecoverable": 78,
+    "unexpected_correctness_failure": 5
+  },
+  "failures": [
+    {
+      "index": 186,
+      "seed": 6527194823182779136,
+      "scenario": "duplicate-start",
+      "report": "run-000186-seed-6527194823182779136.json",
+      "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+    },
+    {
+      "index": 187,
+      "seed": 2714685373729247199,
+      "scenario": "cross-authority",
+      "report": "run-000187-seed-2714685373729247199.json",
+      "explanation": "TimeoutError: broker startup did not reach a verified status"
+    },
+    {
+      "index": 409,
+      "seed": 14880905909346546009,
+      "scenario": "wrong-lease",
+      "report": "run-000409-seed-14880905909346546009.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 689,
+      "seed": 18085918250417703917,
+      "scenario": "duplicate-start",
+      "report": "run-000689-seed-18085918250417703917.json",
+      "explanation": "TimeoutError: timed out"
+    },
+    {
+      "index": 907,
+      "seed": 6081882618845452580,
+      "scenario": "terminal-cancel",
+      "report": "run-000907-seed-6081882618845452580.json",
+      "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"
+    }
+  ],
+  "recovered": 408,
+  "rejected": 509,
+  "safely_unrecoverable": 78,
+  "unexpected_failures": 5,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

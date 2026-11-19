@@ -1,6 +1,8 @@
 [Unit]
 Description=FetianOS Sway idle and suspend locking
 PartOf=fetian-sway.target
+StartLimitIntervalSec=120
+StartLimitBurst=3
 
 [Service]
 ExecStart=/usr/bin/swayidle -w timeout 300 'systemctl --user start fetian-sway-lock.service' before-sleep 'systemctl --user start fetian-sway-lock.service'

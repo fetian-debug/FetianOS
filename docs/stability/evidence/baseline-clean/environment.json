@@ -1,0 +1,20 @@
+{
+  "phase": "baseline",
+  "started_utc": "2026-11-19T09:53:44Z",
+  "revision": "06aa67fc4a1ee25d37211c288d0fa0630c9b44dc",
+  "worktree": "?? docs/stability/\n?? scripts/stability-check.py\n",
+  "kernel": "6.18.33.2-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "python": "3.10.12",
+  "toolchain": "1.89.0",
+  "tools": {
+    "cargo": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/cargo",
+    "rustc": "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/cargo/bin/rustc",
+    "systemd-analyze": "/usr/bin/systemd-analyze",
+    "qemu-system-x86_64": null,
+    "mkarchiso": null,
+    "docker": null,
+    "xvfb-run": "/usr/bin/xvfb-run"
+  },
+  "scope": "Local source/process tests only. No installed FetianOS, graphical login or hardware acceptance inferred."
+}

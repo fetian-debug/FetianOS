@@ -1,0 +1,37 @@
+{
+  "version": "0.23.0",
+  "asset_sha256": "4f01c74ed84b2dffd0b1d37012a62cdf2a92c96e25bdf8eec7fcc0d4d3eb7811",
+  "source": "https://github.com/rustsec/rustsec/releases/tag/cargo-audit/v0.23.0",
+  "results": [
+    {
+      "name": "native",
+      "command": [
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/audit/cargo-audit",
+        "audit",
+        "--file",
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/Cargo.lock",
+        "--json",
+        "--db",
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/audit/advisory-db"
+      ],
+      "exit_code": 0,
+      "lock_sha256": "e6b9cce1306985c3df1d8d2bf4a58e57e74a70c26b7a4cc9a134ae90c08d5162"
+    },
+    {
+      "name": "fca",
+      "command": [
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/audit/cargo-audit",
+        "audit",
+        "--file",
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/Cargo.lock",
+        "--json",
+        "--db",
+        "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/audit/advisory-db"
+      ],
+      "exit_code": 0,
+      "lock_sha256": "9a48c394d796e0566a8c82d8eacb71c746cd344c74edf9dded68b9d227afcfd0"
+    }
+  ],
+  "advisory_revision": "7133866a6b44d6d3e1994ae6a48a296553c3c3da",
+  "recorded_utc": "2026-11-19T10:12:04Z"
+}

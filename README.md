@@ -38,6 +38,12 @@ Do not use it on critical systems without backups. It is not yet a production-ce
 
 ### Boot/login and daily-use integration
 
+The dedicated stabilization work records reproduced reliability fixes and
+remaining acceptance gaps in [the stability report](docs/stability/final-stability-report.md).
+It does not replace the published ISO or certify daily-use readiness. Boot,
+graphical sessions, hardware and long-duration checks apply only when actually
+completed for an identified build.
+
 Both staged images now include guarded live-account provisioning, SDDM login,
 Sway recovery and an explicit text-recovery boot entry. The image pipeline builds
 Archiso initramfs artifacts and checks boot references, executable permissions

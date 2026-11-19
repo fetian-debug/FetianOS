@@ -1,0 +1,17 @@
+test_live_state_fsync_failure_cleans_temporary_and_preserves_previous (test_stability.StabilityTests) ... ok
+test_malformed_fields_do_not_discard_valid_preferences (test_stability.StabilityTests) ... ok
+test_missing_optional_shell_child_does_not_stop_panel (test_stability.StabilityTests) ... fetian-shell: optional nm-applet unavailable: missing optional network applet; other components continue
+ok
+test_optional_restart_policy_has_an_effective_explicit_limit (test_stability.StabilityTests) ... ok
+test_optional_shell_child_exit_does_not_stop_panel (test_stability.StabilityTests) ... fetian-shell: optional child nm-applet exited (23); other components continue; restart fetian-shell.service after resolving the cause
+ok
+test_preferences_fifo_cannot_hang_startup (test_stability.StabilityTests) ... ok
+test_preferences_interrupted_replace_preserves_existing_data (test_stability.StabilityTests) ... ok
+test_required_panel_exit_remains_a_visible_failure (test_stability.StabilityTests) ... fetian-shell: missing panel
+ok
+test_session_lock_is_not_inherited_by_compositor (test_stability.StabilityTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.256s
+
+OK

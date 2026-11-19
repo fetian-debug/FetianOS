@@ -2,6 +2,7 @@
 import json
 import os
 from pathlib import Path
+import stat
 import tempfile
 from urllib.parse import urlsplit
 
@@ -11,13 +12,20 @@ def default_path():
 
 
 def validate(value):
+    if not isinstance(value, dict): value = {}
     bookmarks = []
-    for uri in value.get("bookmarks", [])[:30]:
+    candidates = value.get("bookmarks", [])
+    if not isinstance(candidates, list): candidates = []
+    for uri in candidates[:30]:
         if not isinstance(uri, str) or len(uri) > 4096: continue
-        parsed = urlsplit(uri)
+        if any(ord(character) < 32 for character in uri): continue
+        try: parsed = urlsplit(uri)
+        except ValueError: continue
         if parsed.password is not None or parsed.query or parsed.fragment: continue
         if parsed.scheme in ("file", "smb", "sftp", "ftp", "dav", "davs", "mtp") and uri not in bookmarks: bookmarks.append(uri)
-    tabs = [path for path in value.get("tabs", [])[:10] if isinstance(path, str) and len(path) <= 4096 and Path(path).is_absolute() and "\0" not in path]
+    candidates = value.get("tabs", [])
+    if not isinstance(candidates, list): candidates = []
+    tabs = [path for path in candidates[:10] if isinstance(path, str) and len(path) <= 4096 and Path(path).is_absolute() and "\0" not in path]
     return {"bookmarks": bookmarks, "tabs": tabs, "theme": value.get("theme") if value.get("theme") in ("System", "Light", "Dark") else "System",
             "preview": value.get("preview", True) is True, "reduced_motion": value.get("reduced_motion", False) is True}
 
@@ -25,8 +33,16 @@ def validate(value):
 def load(path=None):
     path = path or default_path()
     try:
-        if path.is_symlink() or path.stat().st_size > 65536: raise ValueError("Invalid preferences")
-        value = json.loads(path.read_text())
+        if path.is_symlink(): raise ValueError("Invalid preferences")
+        # Inspect the opened object, not an earlier pathname stat. Nonblocking
+        # open prevents an accidental FIFO from hanging the GTK startup thread.
+        flags = os.O_RDONLY | getattr(os, "O_NOFOLLOW", 0) | getattr(os, "O_NONBLOCK", 0)
+        with os.fdopen(os.open(path, flags), "rb") as stream:
+            info = os.fstat(stream.fileno())
+            if not stat.S_ISREG(info.st_mode) or info.st_size > 65536: raise ValueError("Invalid preferences")
+            content = stream.read(65537)
+        if len(content) > 65536: raise ValueError("Invalid preferences")
+        value = json.loads(content)
         if not isinstance(value, dict): raise ValueError("Invalid preferences")
         return validate(value)
     except (OSError, ValueError, TypeError): return validate({})

@@ -2,18 +2,22 @@
 
 The current milestone is documented in [verification-2026-11-18.md](verification-2026-11-18.md).
 FetianFiles remains a preview; see [its feature matrix](fetian-files.md).
-No packages were removed. Actual image build, UEFI boot, target graphical login,
-installation and installed reboot remain blocked/unverified here. Installer
-configuration is inactive and target cleanup is not implemented.
+No packages were removed. Preview 7-1 has a recorded image build and UEFI
+live-account boot; see [the identified release evidence](verification-2026-11-18-uefi.md).
+Graphical sign-in, installation, installed reboot and physical-device acceptance
+remain separate. The stabilization branch's own image/runtime gates are recorded
+in [its report](stability/final-stability-report.md). Installer configuration is
+inactive and target cleanup is not implemented.
 
-- No ISO has been built, booted or installed as part of the Rust port until
-  explicitly recorded with an image checksum and VM results.
+- The published preview's checksum and UEFI evidence do not validate later source
+  branches. No successful installation is recorded.
 - Both staged images now include guarded live-user provisioning, SDDM and Sway
-  recovery; actual boot, login and lock behavior remain unverified in a VM.
+  recovery; the published preview has bounded serial/live-account boot evidence,
+  while graphical login and lock behavior remain unverified.
   Calamares configuration and installed-user cleanup remain unfinished.
 - An image-only hook now generates fixed kernel/initramfs names from the kernel
   package's files. EFI consistency and build-state checks gate publication, but
-  no real image has yet been built with this hook.
+  the published preview passed these checks. Later changes need new image tests.
 - The compositor cohort has strict version/archive pins. Remaining distribution
   dependencies and build tools still need an immutable repository snapshot.
 - The QEMU probe checks serial Linux userspace evidence, not GUI functionality.

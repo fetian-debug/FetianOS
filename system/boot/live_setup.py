@@ -46,16 +46,17 @@ def safe_regular(path, owner):
 def write_state(path, text, owner, mode=0o600):
     if path.exists() or path.is_symlink():
         safe_regular(path, owner)
-    with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", prefix=".fetian-", dir=path.parent, delete=False) as stream:
-        temporary = Path(stream.name)
-        stream.write(text)
-        stream.flush()
-        os.fsync(stream.fileno())
+    temporary = None
     try:
+        with tempfile.NamedTemporaryFile(mode="w", encoding="utf-8", prefix=".fetian-", dir=path.parent, delete=False) as stream:
+            temporary = Path(stream.name)
+            stream.write(text)
+            stream.flush()
+            os.fsync(stream.fileno())
         temporary.chmod(mode)
         os.replace(temporary, path)
     finally:
-        temporary.unlink(missing_ok=True)
+        if temporary is not None: temporary.unlink(missing_ok=True)
 
 
 def account(run):

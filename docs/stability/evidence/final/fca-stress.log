@@ -1,0 +1,46 @@
+{"completed": 1, "planned": 1000, "counts": {"expected_recovery": 1}}
+{"completed": 26, "planned": 1000, "counts": {"expected_recovery": 14, "expected_rejection": 12}}
+{"completed": 51, "planned": 1000, "counts": {"expected_recovery": 24, "expected_rejection": 25, "safely_detected_unrecoverable": 2}}
+{"completed": 76, "planned": 1000, "counts": {"expected_recovery": 34, "expected_rejection": 38, "safely_detected_unrecoverable": 4}}
+{"completed": 101, "planned": 1000, "counts": {"expected_recovery": 46, "expected_rejection": 48, "safely_detected_unrecoverable": 7}}
+{"completed": 126, "planned": 1000, "counts": {"expected_recovery": 55, "expected_rejection": 63, "safely_detected_unrecoverable": 8}}
+{"completed": 151, "planned": 1000, "counts": {"expected_recovery": 68, "expected_rejection": 75, "safely_detected_unrecoverable": 8}}
+{"completed": 176, "planned": 1000, "counts": {"expected_recovery": 78, "expected_rejection": 88, "safely_detected_unrecoverable": 10}}
+{"completed": 187, "planned": 1000, "counts": {"expected_recovery": 83, "expected_rejection": 93, "safely_detected_unrecoverable": 10, "unexpected_correctness_failure": 1}}
+{"completed": 188, "planned": 1000, "counts": {"expected_recovery": 83, "expected_rejection": 93, "safely_detected_unrecoverable": 10, "unexpected_correctness_failure": 2}}
+{"completed": 201, "planned": 1000, "counts": {"expected_recovery": 91, "expected_rejection": 98, "safely_detected_unrecoverable": 10, "unexpected_correctness_failure": 2}}
+{"completed": 226, "planned": 1000, "counts": {"expected_recovery": 103, "expected_rejection": 111, "safely_detected_unrecoverable": 10, "unexpected_correctness_failure": 2}}
+{"completed": 251, "planned": 1000, "counts": {"expected_recovery": 120, "expected_rejection": 119, "safely_detected_unrecoverable": 10, "unexpected_correctness_failure": 2}}
+{"completed": 276, "planned": 1000, "counts": {"expected_recovery": 129, "expected_rejection": 131, "safely_detected_unrecoverable": 14, "unexpected_correctness_failure": 2}}
+{"completed": 301, "planned": 1000, "counts": {"expected_recovery": 140, "expected_rejection": 140, "safely_detected_unrecoverable": 19, "unexpected_correctness_failure": 2}}
+{"completed": 326, "planned": 1000, "counts": {"expected_recovery": 151, "expected_rejection": 153, "safely_detected_unrecoverable": 20, "unexpected_correctness_failure": 2}}
+{"completed": 351, "planned": 1000, "counts": {"expected_recovery": 156, "expected_rejection": 169, "safely_detected_unrecoverable": 24, "unexpected_correctness_failure": 2}}
+{"completed": 376, "planned": 1000, "counts": {"expected_recovery": 168, "expected_rejection": 179, "safely_detected_unrecoverable": 27, "unexpected_correctness_failure": 2}}
+{"completed": 401, "planned": 1000, "counts": {"expected_recovery": 176, "expected_rejection": 193, "safely_detected_unrecoverable": 30, "unexpected_correctness_failure": 2}}
+{"completed": 410, "planned": 1000, "counts": {"expected_recovery": 180, "expected_rejection": 196, "safely_detected_unrecoverable": 31, "unexpected_correctness_failure": 3}}
+{"completed": 426, "planned": 1000, "counts": {"expected_recovery": 184, "expected_rejection": 205, "safely_detected_unrecoverable": 34, "unexpected_correctness_failure": 3}}
+{"completed": 451, "planned": 1000, "counts": {"expected_recovery": 194, "expected_rejection": 217, "safely_detected_unrecoverable": 37, "unexpected_correctness_failure": 3}}
+{"completed": 476, "planned": 1000, "counts": {"expected_recovery": 204, "expected_rejection": 231, "safely_detected_unrecoverable": 38, "unexpected_correctness_failure": 3}}
+{"completed": 501, "planned": 1000, "counts": {"expected_recovery": 213, "expected_rejection": 243, "safely_detected_unrecoverable": 42, "unexpected_correctness_failure": 3}}
+{"completed": 526, "planned": 1000, "counts": {"expected_recovery": 222, "expected_rejection": 255, "safely_detected_unrecoverable": 46, "unexpected_correctness_failure": 3}}
+{"completed": 551, "planned": 1000, "counts": {"expected_recovery": 234, "expected_rejection": 267, "safely_detected_unrecoverable": 47, "unexpected_correctness_failure": 3}}
+{"completed": 576, "planned": 1000, "counts": {"expected_recovery": 241, "expected_rejection": 283, "safely_detected_unrecoverable": 49, "unexpected_correctness_failure": 3}}
+{"completed": 601, "planned": 1000, "counts": {"expected_recovery": 247, "expected_rejection": 298, "safely_detected_unrecoverable": 53, "unexpected_correctness_failure": 3}}
+{"completed": 626, "planned": 1000, "counts": {"expected_recovery": 256, "expected_rejection": 311, "safely_detected_unrecoverable": 56, "unexpected_correctness_failure": 3}}
+{"completed": 651, "planned": 1000, "counts": {"expected_recovery": 266, "expected_rejection": 326, "safely_detected_unrecoverable": 56, "unexpected_correctness_failure": 3}}
+{"completed": 676, "planned": 1000, "counts": {"expected_recovery": 276, "expected_rejection": 340, "safely_detected_unrecoverable": 57, "unexpected_correctness_failure": 3}}
+{"completed": 690, "planned": 1000, "counts": {"expected_recovery": 281, "expected_rejection": 347, "safely_detected_unrecoverable": 58, "unexpected_correctness_failure": 4}}
+{"completed": 701, "planned": 1000, "counts": {"expected_recovery": 287, "expected_rejection": 352, "safely_detected_unrecoverable": 58, "unexpected_correctness_failure": 4}}
+{"completed": 726, "planned": 1000, "counts": {"expected_recovery": 293, "expected_rejection": 368, "safely_detected_unrecoverable": 61, "unexpected_correctness_failure": 4}}
+{"completed": 751, "planned": 1000, "counts": {"expected_recovery": 305, "expected_rejection": 379, "safely_detected_unrecoverable": 63, "unexpected_correctness_failure": 4}}
+{"completed": 776, "planned": 1000, "counts": {"expected_recovery": 312, "expected_rejection": 396, "safely_detected_unrecoverable": 64, "unexpected_correctness_failure": 4}}
+{"completed": 801, "planned": 1000, "counts": {"expected_recovery": 322, "expected_rejection": 408, "safely_detected_unrecoverable": 67, "unexpected_correctness_failure": 4}}
+{"completed": 826, "planned": 1000, "counts": {"expected_recovery": 332, "expected_rejection": 423, "safely_detected_unrecoverable": 67, "unexpected_correctness_failure": 4}}
+{"completed": 851, "planned": 1000, "counts": {"expected_recovery": 341, "expected_rejection": 438, "safely_detected_unrecoverable": 68, "unexpected_correctness_failure": 4}}
+{"completed": 876, "planned": 1000, "counts": {"expected_recovery": 352, "expected_rejection": 450, "safely_detected_unrecoverable": 70, "unexpected_correctness_failure": 4}}
+{"completed": 901, "planned": 1000, "counts": {"expected_recovery": 365, "expected_rejection": 461, "safely_detected_unrecoverable": 71, "unexpected_correctness_failure": 4}}
+{"completed": 908, "planned": 1000, "counts": {"expected_recovery": 368, "expected_rejection": 464, "safely_detected_unrecoverable": 71, "unexpected_correctness_failure": 5}}
+{"completed": 926, "planned": 1000, "counts": {"expected_recovery": 379, "expected_rejection": 471, "safely_detected_unrecoverable": 71, "unexpected_correctness_failure": 5}}
+{"completed": 951, "planned": 1000, "counts": {"expected_recovery": 388, "expected_rejection": 485, "safely_detected_unrecoverable": 73, "unexpected_correctness_failure": 5}}
+{"completed": 976, "planned": 1000, "counts": {"expected_recovery": 398, "expected_rejection": 498, "safely_detected_unrecoverable": 75, "unexpected_correctness_failure": 5}}
+{"schema_version": 1, "mode": "stress", "master_seed": 2090, "completed": 1000, "expectations_met": 995, "counts": {"expected_recovery": 408, "expected_rejection": 509, "safely_detected_unrecoverable": 78, "unexpected_correctness_failure": 5}, "failures": [{"index": 186, "seed": 6527194823182779136, "scenario": "duplicate-start", "report": "run-000186-seed-6527194823182779136.json", "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"}, {"index": 187, "seed": 2714685373729247199, "scenario": "cross-authority", "report": "run-000187-seed-2714685373729247199.json", "explanation": "TimeoutError: broker startup did not reach a verified status"}, {"index": 409, "seed": 14880905909346546009, "scenario": "wrong-lease", "report": "run-000409-seed-14880905909346546009.json", "explanation": "TimeoutError: timed out"}, {"index": 689, "seed": 18085918250417703917, "scenario": "duplicate-start", "report": "run-000689-seed-18085918250417703917.json", "explanation": "TimeoutError: timed out"}, {"index": 907, "seed": 6081882618845452580, "scenario": "terminal-cancel", "report": "run-000907-seed-6081882618845452580.json", "explanation": "TimeoutExpired: Command '['/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/system/fetian-fca/target/release/fetian-authorityd', '--allow-test-faults']' timed out after 5 seconds"}], "recovered": 408, "rejected": 509, "safely_unrecoverable": 78, "unexpected_failures": 5, "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"}

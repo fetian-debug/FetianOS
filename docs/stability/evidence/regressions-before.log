@@ -1,0 +1,129 @@
+test_live_state_fsync_failure_cleans_temporary_and_preserves_previous (__main__.StabilityTests) ... FAIL
+test_malformed_fields_do_not_discard_valid_preferences (__main__.StabilityTests) ... FAIL
+test_missing_optional_shell_child_does_not_stop_panel (__main__.StabilityTests) ... fetian-shell: missing optional network applet
+FAIL
+test_optional_restart_policy_has_an_effective_explicit_limit (__main__.StabilityTests) ... test_optional_shell_child_exit_does_not_stop_panel (__main__.StabilityTests) ... FAIL
+test_preferences_fifo_cannot_hang_startup (__main__.StabilityTests) ... FAIL
+test_preferences_interrupted_replace_preserves_existing_data (__main__.StabilityTests) ... ok
+test_required_panel_exit_remains_a_visible_failure (__main__.StabilityTests) ... fetian-shell: missing panel
+ok
+test_session_lock_is_not_inherited_by_compositor (__main__.StabilityTests) ... 
+======================================================================
+FAIL: test_live_state_fsync_failure_cleans_temporary_and_preserves_previous (__main__.StabilityTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 72, in test_live_state_fsync_failure_cleans_temporary_and_preserves_previous
+    self.assertEqual(list(Path(directory).glob('.fetian-*')), [])
+AssertionError: Lists differ: [PosixPath('/tmp/tmp_mwgulgw/.fetian-f2dpsq9s')] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+PosixPath('/tmp/tmp_mwgulgw/.fetian-f2dpsq9s')
+
+- [PosixPath('/tmp/tmp_mwgulgw/.fetian-f2dpsq9s')]
++ []
+
+======================================================================
+FAIL: test_malformed_fields_do_not_discard_valid_preferences (__main__.StabilityTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 52, in test_malformed_fields_do_not_discard_valid_preferences
+    self.assertEqual(state['bookmarks'], ['file:///tmp'])
+AssertionError: Lists differ: [] != ['file:///tmp']
+
+Second list contains 1 additional elements.
+First extra element 0:
+'file:///tmp'
+
+- []
++ ['file:///tmp']
+
+======================================================================
+FAIL: test_missing_optional_shell_child_does_not_stop_panel (__main__.StabilityTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 111, in test_missing_optional_shell_child_does_not_stop_panel
+    self.assertEqual(self.shell_result(missing=True), 0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_optional_restart_policy_has_an_effective_explicit_limit (__main__.StabilityTests) (unit='system/boot/airootfs/usr/lib/systemd/user/fetian-bluetooth-agent.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 134, in test_optional_restart_policy_has_an_effective_explicit_limit
+    self.assertGreater(burst, 0)
+AssertionError: 0 not greater than 0
+
+======================================================================
+FAIL: test_optional_restart_policy_has_an_effective_explicit_limit (__main__.StabilityTests) (unit='system/boot/airootfs/usr/lib/systemd/user/fetian-sway-idle.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 134, in test_optional_restart_policy_has_an_effective_explicit_limit
+    self.assertGreater(burst, 0)
+AssertionError: 0 not greater than 0
+
+======================================================================
+FAIL: test_optional_restart_policy_has_an_effective_explicit_limit (__main__.StabilityTests) (unit='desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-idle.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 134, in test_optional_restart_policy_has_an_effective_explicit_limit
+    self.assertGreater(burst, 0)
+AssertionError: 0 not greater than 0
+
+======================================================================
+FAIL: test_optional_restart_policy_has_an_effective_explicit_limit (__main__.StabilityTests) (unit='desktop/hyprland/airootfs/usr/lib/systemd/user/fetian-shell.service')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 134, in test_optional_restart_policy_has_an_effective_explicit_limit
+    self.assertGreater(burst, 0)
+AssertionError: 0 not greater than 0
+
+======================================================================
+FAIL: test_optional_shell_child_exit_does_not_stop_panel (__main__.StabilityTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 108, in test_optional_shell_child_exit_does_not_stop_panel
+    self.assertEqual(self.shell_result(), 0)
+AssertionError: 1 != 0
+
+======================================================================
+FAIL: test_preferences_fifo_cannot_hang_startup (__main__.StabilityTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 40, in test_preferences_fifo_cannot_hang_startup
+    output, error = child.communicate(timeout=2)
+  File "/usr/lib/python3.10/subprocess.py", line 1154, in communicate
+    stdout, stderr = self._communicate(input, endtime, timeout)
+  File "/usr/lib/python3.10/subprocess.py", line 2022, in _communicate
+    self._check_timeout(endtime, orig_timeout, stdout, stderr)
+  File "/usr/lib/python3.10/subprocess.py", line 1198, in _check_timeout
+    raise TimeoutExpired(
+subprocess.TimeoutExpired: Command '['/usr/bin/python3', '-c', 'import sys; sys.path.insert(0, sys.argv[1]); import preferences; print(preferences.load(__import__("pathlib").Path(sys.argv[2])))', '/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/apps/fetian-files', '/tmp/tmpzrwxt_vc/state.json']' timed out after 2 seconds
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 43, in test_preferences_fifo_cannot_hang_startup
+    self.fail('FIFO preferences blocked startup instead of returning safe defaults')
+AssertionError: FIFO preferences blocked startup instead of returning safe defaults
+
+======================================================================
+FAIL: test_session_lock_is_not_inherited_by_compositor (__main__.StabilityTests) (script='system/boot/airootfs/usr/bin/fetian-sway-session')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 90, in test_session_lock_is_not_inherited_by_compositor
+    self.assertEqual(result.returncode, 0, result.stderr or 'session lock leaked into compositor')
+AssertionError: 42 != 0 : session lock leaked into compositor
+
+======================================================================
+FAIL: test_session_lock_is_not_inherited_by_compositor (__main__.StabilityTests) (script='desktop/hyprland/bin/fetian-hyprland-session')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/.build-tools/test_stability_regressions.py", line 90, in test_session_lock_is_not_inherited_by_compositor
+    self.assertEqual(result.returncode, 0, result.stderr or 'session lock leaked into compositor')
+AssertionError: 42 != 0 : session lock leaked into compositor
+
+----------------------------------------------------------------------
+Ran 9 tests in 2.775s
+
+FAILED (failures=11)

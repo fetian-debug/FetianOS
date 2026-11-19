@@ -1,0 +1,9 @@
+{
+  "base_revision": "06aa67fc4a1ee25d37211c288d0fa0630c9b44dc",
+  "command": "python3 .build-tools/test_stability_regressions.py",
+  "exit_code": 1,
+  "tests": 9,
+  "failure_records_including_subtests": 11,
+  "source_sha256": "2e488c0fe634cb5f5458d2ae3eaea112c8107133821ceae0e9a2950341981381",
+  "scope": "Isolated fixtures and child mocks; session wrappers execute unprivileged fixture compositors; no actual compositor or systemd manager started."
+}

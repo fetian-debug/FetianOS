@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/tests/gtk_files_smoke.py", line 119, in <module>
+    window.preview_selection(); pump(lambda: not window.jobs)
+  File "/mnt/c/Users/DELL/Desktop/work/Coding/FetianOS-main/FetianOS-main/tests/gtk_files_smoke.py", line 30, in pump
+    raise AssertionError("GTK asynchronous operation timed out")
+AssertionError: GTK asynchronous operation timed out

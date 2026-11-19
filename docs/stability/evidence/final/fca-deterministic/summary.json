@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "mode": "deterministic",
+  "master_seed": 2090,
+  "completed": 23,
+  "expectations_met": 22,
+  "counts": {
+    "expected_recovery": 15,
+    "unexpected_correctness_failure": 1,
+    "expected_rejection": 4,
+    "safely_detected_unrecoverable": 3
+  },
+  "failures": [
+    {
+      "index": 10,
+      "seed": 2100,
+      "scenario": "competing-executors",
+      "report": "run-000010-seed-2100.json",
+      "explanation": "TimeoutError: timed out"
+    }
+  ],
+  "recovered": 15,
+  "rejected": 4,
+  "safely_unrecoverable": 3,
+  "unexpected_failures": 1,
+  "replay_contract": "same configuration and logical fault boundary; OS scheduling/IDs/latencies are not bit-identical"
+}

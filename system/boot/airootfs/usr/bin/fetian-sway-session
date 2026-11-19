@@ -24,6 +24,8 @@ cleanup() {
 trap cleanup EXIT
 trap 'exit 143' TERM
 trap 'exit 130' INT
-sway --config "$config" &
+# Only the wrapper owns the session lock. A surviving application must not
+# retain it and prevent a subsequent recovery session after compositor exit.
+sway --config "$config" 9>&- &
 compositor_pid=$!
 wait "$compositor_pid"
